@@ -4,15 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DGElasticPullToRefreshKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WaniKani.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WaniKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>WaniModel.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>430876E51D902FE800FE71FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>430876F61D902FF500FE71FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>430876FE1D902FF500FE71FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>43620A391D8C28FA00C1BA72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43620ACA1D8DD2F300C1BA72</key>
 		<dict>
 			<key>primary</key>
 			<true/>

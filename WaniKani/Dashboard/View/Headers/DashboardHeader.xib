@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardHeader" id="U6b-Vx-4bR" customClass="DashboardHeader" customModule="WaniKani" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="43"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMs-uk-sTY">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-8S-eJs" customClass="SliceView" customModule="WaniKani" customModuleProvider="target">
+                            <color key="backgroundColor" red="0.86666666670000003" green="0.1137254902" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="g1Y-8S-eJs" secondAttribute="height" multiplier="53:43" id="g0n-Rc-tLx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5aH-kZ-wim">
+                            <color key="backgroundColor" red="0.86666666670000003" green="0.1137254902" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="oMd-L5-ay8">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5aH-kZ-wim" secondAttribute="trailing" id="1K7-sb-Al5"/>
+                        <constraint firstItem="oMd-L5-ay8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IMs-uk-sTY" secondAttribute="top" id="EyN-vc-hCU"/>
+                        <constraint firstItem="g1Y-8S-eJs" firstAttribute="top" secondItem="IMs-uk-sTY" secondAttribute="top" id="KMv-5N-U4R"/>
+                        <constraint firstItem="g1Y-8S-eJs" firstAttribute="leading" secondItem="IMs-uk-sTY" secondAttribute="leading" id="Tk9-kp-SlG"/>
+                        <constraint firstItem="5aH-kZ-wim" firstAttribute="leading" secondItem="g1Y-8S-eJs" secondAttribute="trailing" id="XZb-Ta-Cbk"/>
+                        <constraint firstAttribute="bottom" secondItem="5aH-kZ-wim" secondAttribute="bottom" id="epN-J2-s88"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oMd-L5-ay8" secondAttribute="bottom" id="etZ-5o-7aY"/>
+                        <constraint firstAttribute="bottom" secondItem="g1Y-8S-eJs" secondAttribute="bottom" id="hf2-wH-pNL"/>
+                        <constraint firstAttribute="centerY" secondItem="oMd-L5-ay8" secondAttribute="centerY" id="mpG-yO-zk3"/>
+                        <constraint firstItem="5aH-kZ-wim" firstAttribute="top" secondItem="IMs-uk-sTY" secondAttribute="top" id="pzy-gI-aof"/>
+                        <constraint firstItem="oMd-L5-ay8" firstAttribute="leading" secondItem="g1Y-8S-eJs" secondAttribute="trailing" constant="5" id="wJv-ao-hAL"/>
+                        <constraint firstAttribute="width" priority="750" constant="493" id="xI9-L1-byN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IMs-uk-sTY" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="CRJ-zX-rKj"/>
+                <constraint firstAttribute="trailing" secondItem="IMs-uk-sTY" secondAttribute="trailing" priority="250" id="EDk-HT-71N"/>
+                <constraint firstItem="IMs-uk-sTY" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="G9J-o2-12U"/>
+                <constraint firstItem="IMs-uk-sTY" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" priority="250" id="JQu-UA-SXn"/>
+                <constraint firstItem="IMs-uk-sTY" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="width" id="Vud-mI-c1j"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IMs-uk-sTY" secondAttribute="trailing" id="cFy-ft-7ug"/>
+                <constraint firstItem="IMs-uk-sTY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="ePL-Yy-y7L"/>
+                <constraint firstAttribute="bottom" secondItem="IMs-uk-sTY" secondAttribute="bottom" id="piO-cF-yVd"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Vud-mI-c1j"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="realHeader" destination="IMs-uk-sTY" id="66n-Y4-88o"/>
+                <outlet property="realHeaderWidthConstraint" destination="xI9-L1-byN" id="J1k-Ym-eDB"/>
+                <outlet property="titleLabel" destination="oMd-L5-ay8" id="NWN-2U-hbx"/>
+                <outletCollection property="coloredViews" destination="5aH-kZ-wim" collectionClass="NSMutableArray" id="b63-pk-Onl"/>
+                <outletCollection property="coloredViews" destination="g1Y-8S-eJs" collectionClass="NSMutableArray" id="U3p-Z4-nk2"/>
+            </connections>
+            <point key="canvasLocation" x="580.5" y="431.5"/>
+        </collectionReusableView>
+    </objects>
+</document>
