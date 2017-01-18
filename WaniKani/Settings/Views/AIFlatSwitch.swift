@@ -167,7 +167,7 @@ import UIKit
     }
     CATransaction.commit()
   }
-
+  // swiftlint:disable:next function_body_length
   fileprivate func addAnimationsForSelected(_ selected: Bool) {
     let circleAnimationDuration = animationDuration * 0.5
 
