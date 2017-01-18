@@ -15,35 +15,35 @@ protocol DashboardViewControllerDelegate: class {
 }
 
 class DashboardViewController: SingleTabViewController, StoryboardInstantiable, UICollectionViewDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-  
+
   // MARK: Outlets
   @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var doubleProgressBar: DoubleProgressBar!
   private let srsVC: SRSViewController = DashboardViewController.instantiateViewController("qqqq", nil)
   fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("gggg", nil)
   fileprivate var pageViewController: UIPageViewController?
-  
+
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
     guard viewController !=  progressVC else { return nil }
     return progressVC
   }
-  
+
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
     guard viewController !=  srsVC else { return nil }
     return srsVC
   }
-  
+
   func presentationCount(for pageViewController: UIPageViewController) -> Int {
     return 2
   }
-  
+
   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
     guard pageViewController.viewControllers?.first == progressVC else {
       return 1
     }
     return 0
   }
-  
+
   func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     if previousViewControllers.contains(srsVC) {
       UIApplication.shared.isStatusBarHidden = !completed
@@ -51,8 +51,7 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
       UIApplication.shared.isStatusBarHidden = completed
     }
   }
-  
-  
+
   @IBOutlet fileprivate weak var collectionView: UICollectionView! {
     didSet {
       collectionView?.alwaysBounceVertical = true
@@ -64,70 +63,68 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
       collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: DashboardHeader.identifier)
     }
   }
-  
+
   // MARK: Public API
   weak var delegate: DashboardViewControllerDelegate?
-  
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
-    
     if let pageVC = segue.destination as? UIPageViewController {
       pageViewController = pageVC
     }
   }
-  
+
   func updateDashboardWithViewModels(progressViewModel: DoubleProgressViewModel, collectionViewModel: ListViewModel, srsViewModel: SRSDistributionViewModel, isOld: Bool = false) {
     srsVC.setupWith(srs: srsViewModel)
     progressVC.setupWith(progressViewModel: progressViewModel)
     self.collectionViewModel = collectionViewModel
     reloadCollectionView((isOld==false))
   }
-  
+
   func endLoadingIfNeeded() {
     if isPulledDown == true {
       isPulledDown = false
       collectionView.dg_stopLoading()
     }
   }
-  
+
   // MARK: Private
   fileprivate var collectionViewModel: ListViewModel?
   fileprivate var isHeaderShrinked = false
   fileprivate var isPulledDown = false
-  fileprivate var stratchyLayout: DashboardLayout {
-    return collectionView.collectionViewLayout as! DashboardLayout
+  fileprivate var stratchyLayout: DashboardLayout? {
+    return collectionView.collectionViewLayout as? DashboardLayout
   }
-  
+
 }
 
 // MARK: - SingleTabViewController
 extension DashboardViewController {
-  
+
   override func didShrink() {
     super.didShrink()
     headerHeightConstraint.constant = 0
   }
-  
+
   override func didUnshrink() {
     super.didUnshrink()
     refreshProgressConstraint()
   }
-  
-}
 
+}
 
 // MARK: - UICollectionViewDataSource
 extension DashboardViewController : UICollectionViewDataSource, BluredBackground {
-  
+
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     guard let collectionViewModel = collectionViewModel else { return 0 }
     return collectionViewModel.numberOfSections()
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return collectionViewModel?.numberOfItemsInSection(section: section) ?? 0
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     var cell: UICollectionViewCell!
     guard let item = collectionViewModel?.cellDataItemForIndexPath(indexPath: indexPath) else { return cell }
@@ -135,13 +132,13 @@ extension DashboardViewController : UICollectionViewDataSource, BluredBackground
     (cell as? ViewModelSetupable)?.setupWithViewModel(item.viewModel)
     return cell
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
     guard let _ = collectionViewModel?.headerItem(section: section) else { return CGSize.zero }
     guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize.zero }
     return flowLayout.headerReferenceSize
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     var header: UICollectionReusableView!
     guard let item = collectionViewModel?.headerItem(section: indexPath.section) else { return header }
@@ -152,26 +149,25 @@ extension DashboardViewController : UICollectionViewDataSource, BluredBackground
     (header as? DashboardHeader)?.resize(size.width)
     return header
   }
-  
-  
+
   @objc(collectionView:didSelectItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     delegate?.didSelectCell(indexPath)
   }
-  
+
 }
 
 // MARK: - UIViewController
 extension DashboardViewController {
-  
+
   override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
     collectionView?.collectionViewLayout.invalidateLayout()
   }
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     let _ = addBackground(BackgroundOptions.Dashboard.rawValue)
-    
+
     addPullToRefresh()
     refreshProgressConstraint()
     //
@@ -192,7 +188,7 @@ extension DashboardViewController {
     pageViewController.delegate = self
     pageViewController.setViewControllers([progressVC], direction: .forward, animated: false, completion: nil)
   }
-  
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     let top = self.topLayoutGuide.length
@@ -201,12 +197,12 @@ extension DashboardViewController {
     self.collectionView.contentInset = newInsets
     collectionView.reloadData()
   }
-  
+
 }
 
 // MARK: - Private functions
 extension DashboardViewController {
-  
+
   fileprivate func addPullToRefresh() {
     let loadingView = DGElasticPullToRefreshLoadingViewCircle()
     loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
@@ -219,7 +215,7 @@ extension DashboardViewController {
     collectionView.dg_setPullToRefreshFillColor(fillColor)
     collectionView.dg_setPullToRefreshBackgroundColor(UIColor.clear)
   }
-  
+
   fileprivate func reloadCollectionView(_ flipCells: Bool) {
     endLoadingIfNeeded()
     if flipCells {
@@ -227,35 +223,35 @@ extension DashboardViewController {
     }
     collectionView?.reloadData()
   }
-  
+
   fileprivate func reloadProgressBarProgression(_ viewModel: DoubleProgressViewModel?) {
     guard let viewModel = viewModel else { return }
     doubleProgressBar?.setup(viewModel)
   }
-  
+
   fileprivate func flipVisibleCells() {
-    var delayFromFirst:Float = 0.0
-    let deltaTime:Float = 0.1
+    var delayFromFirst: Float = 0.0
+    let deltaTime: Float = 0.1
     guard let cells = collectionView?.visibleCells else { return }
-    for cell in cells{
+    for cell in cells {
       delayFromFirst += deltaTime
       (cell as? FlippableView)?.flip({
         }, delay: TimeInterval(delayFromFirst))
     }
   }
-  
+
   func refreshProgressConstraint() {
     headerHeightConstraint.constant = view.bounds.height * 0.15
   }
-  
+
 }
 
 extension DashboardViewController {
-  
-  override var canBecomeFirstResponder : Bool {
+
+  override var canBecomeFirstResponder: Bool {
     return true
   }
-  
+
   override var keyCommands: [UIKeyCommand]? {
     if #available(iOS 9.0, *) {
       return [
@@ -266,15 +262,15 @@ extension DashboardViewController {
       // Fallback on earlier versions
       return [
         UIKeyCommand(input: "1", modifierFlags: .command, action: #selector(itemSelected(_:))),
-        UIKeyCommand(input: "2", modifierFlags: .command, action: #selector(itemSelected(_:))),
+        UIKeyCommand(input: "2", modifierFlags: .command, action: #selector(itemSelected(_:)))
       ]
     }
   }
-  
+
   func itemSelected(_ sender: UIKeyCommand) {
     guard let index = Int(sender.input) else { return }
     let indexPath = IndexPath(row: index - 1, section: 1)
     delegate?.didSelectCell(indexPath)
   }
-  
+
 }

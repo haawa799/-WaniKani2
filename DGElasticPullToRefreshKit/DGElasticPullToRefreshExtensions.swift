@@ -31,10 +31,9 @@ import ObjectiveC
 // MARK: (NSObject) Extension
 
 public extension NSObject {
-    
     // MARK: -
     // MARK: Vars
-    
+
     fileprivate struct dg_associatedKeys {
         static var observersArray = "observers"
     }

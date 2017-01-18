@@ -7,7 +7,7 @@
 //
 
 protocol ViewModel {
-  
+
 }
 
 protocol ViewModelSetupable {

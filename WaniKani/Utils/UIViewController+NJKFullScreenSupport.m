@@ -152,8 +152,6 @@
 - (void)showTabBar:(BOOL)animated
 {
     CGSize viewSize = self.tabBarController.view.frame.size;
-    CGFloat viewHeight = [self bottomBarViewControlleViewHeightFromViewSize:viewSize];
-    CGFloat toolbarHeight = self.tabBarController.tabBar.frame.size.height;
     [self tabBarShowPlacement];
 }
 
@@ -194,14 +192,7 @@
   CGRect frame = self.tabBarController.tabBar.frame;
   CGFloat toolBarHeight = frame.size.height;
   CGSize viewSize = self.tabBarController.view.frame.size;
-  
-  CGFloat viewHeight = [self bottomBarViewControlleViewHeightFromViewSize:viewSize];
-  
-  CGFloat topLimit = viewHeight - toolBarHeight;
-  CGFloat bottomLimit = viewHeight;
-  
   frame.origin.y = viewSize.height - toolBarHeight;
-  
   [UIView animateWithDuration:true ? 0.1 : 0 animations:^{
     self.tabBarController.tabBar.frame = frame;
   }];

@@ -14,9 +14,9 @@ struct ListSection {
 }
 
 public struct ListViewModel {
-  
+
   private let sections: [ListSection]
-  
+
   var notEmpty: Bool {
     if sections.count == 0 {
       return false
@@ -28,28 +28,28 @@ public struct ListViewModel {
     }
     return true
   }
-  
+
   init(sections: [ListSection]) {
     self.sections = sections
   }
-  
+
   func cellDataItemForIndexPath(indexPath: IndexPath) -> ListCellDataItem? {
     guard sections.count > indexPath.section else { return nil}
     let section = sections[indexPath.section]
     guard section.items.count > indexPath.item else { return nil }
     return section.items[indexPath.item]
   }
-  
+
   func headerItem(section: Int) -> ListCellDataItem? {
     guard sections.count > section else { return nil}
     let section = sections[section]
     return section.header
   }
-  
+
   func numberOfSections() -> Int {
     return sections.count
   }
-  
+
   func numberOfItemsInSection(section: Int) -> Int? {
     guard sections.count > section else { return nil}
     let section = sections[section]

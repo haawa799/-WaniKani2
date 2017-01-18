@@ -11,7 +11,7 @@ import WaniModel
 
 // MARK: - Dashboard data fetch
 public extension DashboardCoordinator {
-  
+
   public func fetchAllDashboardData() {
     dataProvider.fetchDashboard { (dashboard) in
       guard let dashboard = dashboard else { return }
@@ -21,5 +21,5 @@ public extension DashboardCoordinator {
       self.dashboardViewController.updateDashboardWithViewModels(progressViewModel: progressViewModel, collectionViewModel: dashboardViewModel.listViewModel, srsViewModel: srsViewModel, isOld: false)
     }
   }
-  
+
 }

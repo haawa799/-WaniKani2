@@ -27,19 +27,19 @@ struct Setting: Equatable {
   let key: SettingSuitKey
   let script: UserScript?
   let description: String?
-  
+
   var delegate: SettingsDelegate?
-  
+
   var isEnabled: Bool {
     return UserDefaults.standard.bool(forKey: key.rawValue)
   }
-  
+
   func setEnabled(_ state: Bool) {
     UserDefaults.standard.set(state, forKey: key.rawValue)
     UserDefaults.standard.synchronize()
     delegate?.settingDidChange(self)
   }
-  
+
   init(key: SettingSuitKey, script: UserScript?, description: String?) {
     self.key = key
     self.description = description
@@ -47,6 +47,6 @@ struct Setting: Equatable {
   }
 }
 
-func ==(lhs: Setting, rhs: Setting) -> Bool {
+func == (lhs: Setting, rhs: Setting) -> Bool {
   return lhs.key.rawValue == rhs.key.rawValue
 }

@@ -14,25 +14,25 @@ protocol SettingsScriptCellDataSource: SingleTitleViewModel {
 }
 
 protocol SettingsScriptCellDelegate: class {
-  func scriptCellChangedState(_ cell: SettingsScriptCell ,state: Bool)
+  func scriptCellChangedState(_ cell: SettingsScriptCell, state: Bool)
 }
 
 class SettingsScriptCell: UICollectionViewCell, FlippableView, SingleReuseIdentifier {
-  
+
   weak var delegate: SettingsScriptCellDelegate?
-  var id: String?
-  
+  var identifier: String?
+
   @IBOutlet fileprivate weak var titleLabel: UILabel!
   @IBOutlet fileprivate weak var flatSwitch: AIFlatSwitch!
-  
+
   @objc @IBAction fileprivate func switchValueChanged(_ sender: AIFlatSwitch) {
     delegate?.scriptCellChangedState(self, state: sender.isSelected)
   }
-  
+
   func setupWith(_ dataSource: SettingsScriptCellDataSource, state: Bool) {
     titleLabel.text = dataSource.title
     flatSwitch.isSelected = state
-    id = dataSource.scriptID
+    identifier = dataSource.scriptID
   }
-  
+
 }

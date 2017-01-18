@@ -9,14 +9,14 @@
 import UIKit
 
 open class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
-  
+
   let presenter: UINavigationController
   let settingsViewController: SettingsViewController
   let childrenCoordinators: [Coordinator]
   let suit: SettingsSuit
-  
+
 //  let dataProvider = DataProvider()
-  
+
   public init(presenter: UINavigationController, settingsSuit: SettingsSuit) {
     self.presenter = presenter
     suit = settingsSuit
@@ -25,25 +25,24 @@ open class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
     presenter.tabBarItem = tabItem
     childrenCoordinators = []
   }
-  
-  
+
   func start() {
     presenter.pushViewController(settingsViewController, animated: false)
     settingsViewController.delegate = self
     settingsViewController.settingSuit = suit
   }
-  
+
 }
 
 // SettingsViewControllerDelegate
 extension SettingsCoordinator {
-  
+
   func cellPressed(_ indexPath: IndexPath) {
     print("indexPath: \(indexPath)")
   }
-  
-  func cellCheckboxStateChange(_ id: String, state: Bool) {
-    suit.changeSetting(id, state: state)
+
+  func cellCheckboxStateChange(identifier: String, state: Bool) {
+    suit.changeSetting(identifier: identifier, state: state)
   }
-  
+
 }

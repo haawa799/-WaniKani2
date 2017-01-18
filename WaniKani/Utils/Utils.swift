@@ -40,8 +40,8 @@ public protocol FlippableView {
 }
 
 public extension FlippableView where Self: UIView {
-  func flip(_ animations: @escaping () -> Void, delay: TimeInterval){
-    DispatchQueue.main.asyncAfter(deadline: .now() + delay) { 
+  func flip(_ animations: @escaping () -> Void, delay: TimeInterval) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
       UIView.transition(with: self, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromTop, animations: animations, completion: nil)
     }
   }
@@ -93,12 +93,12 @@ public extension FlippableView where Self: UIView {
 //}
 
 extension UIView {
-  class func fromNib<T : UIView>(_ nibNameOrNil: String? = nil) -> T {
+  class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil) -> T {
     let v: T? = fromNib(nibNameOrNil)
     return v!
   }
-  
-  class func fromNib<T : UIView>(_ nibNameOrNil: String? = nil) -> T? {
+
+  class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil) -> T? {
     var view: T?
     let name: String
     if let nibName = nibNameOrNil {
@@ -116,4 +116,3 @@ extension UIView {
     return view
   }
 }
-

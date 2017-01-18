@@ -10,20 +10,19 @@ import UIKit
 import WaniModel
 
 struct SRSViewModel: SRSViewDataSource {
-  
+
   fileprivate let topTitleString: String
-  
+
   init(srs: SRSLevelInfo) {
     topTitleString = "\(srs.total)"
   }
 }
 
-
 // MARK: - DashboardHeaderDatasource
 extension SRSViewModel {
-  
+
   var topTitle: String {
     return topTitleString
   }
-  
+
 }

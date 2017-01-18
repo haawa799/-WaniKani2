@@ -8,23 +8,22 @@ public protocol RawResponseProvider: class {
   var rawResponse: RawResponse? { get }
 }
 
-
 public protocol ParseOperationDelegate: class {
   func dataParsed<T>(data: T)
 }
 
 public class ParseOperation <T> : PSOperations.Operation {
-  
+
   public weak var rawResponseDataSource: RawResponseProvider?
   public weak var parseDelegate: ParseOperationDelegate?
-  
+
   override public func execute() {
-    
+
     guard let rawResponse = rawResponseDataSource?.rawResponse, let data = rawResponse.data else {
       finish()
       return
     }
-    
+
     do {
       let json = try JSONSerialization.jsonObject(with: data, options: [])
       var array = [[String: AnyObject]]()
@@ -37,14 +36,13 @@ public class ParseOperation <T> : PSOperations.Operation {
       }
       if let parsedValues = parsedValue(rootDictionary: array) { parseDelegate?.dataParsed(data: parsedValues) }
       finish()
-    }
-    catch _ {
+    } catch _ {
       finish()
     }
   }
-  
+
   func parsedValue(rootDictionary: [[String: AnyObject]]) -> T? {
     return nil
   }
-  
+
 }

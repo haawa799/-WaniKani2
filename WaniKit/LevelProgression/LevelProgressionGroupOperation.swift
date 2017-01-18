@@ -5,19 +5,18 @@ import Foundation
 import WaniModel
 
 public class LevelProgressionGroupOperation: BaseGetOperation<LevelProgressionInfo> {
-  
+
   private struct Constants {
     static let endpoint = "/level-progression"
   }
-  
-  
+
   public init(baseURL: URL, handler: @escaping DataResponseHandler) {
-    
+
     let url = baseURL.appendingPathComponent(Constants.endpoint)
-    
+
     let downloadOperation = NetworkRequestOperation(url: url)
     let parseOperation = ParseLevelProgressionOperation()
-    
+
     super.init(downloadOperation: downloadOperation, parseOperation: parseOperation, handler: handler)
   }
 }

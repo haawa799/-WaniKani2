@@ -8,8 +8,9 @@
 
 import Foundation
 
+// swiftlint:disable force_cast
 public struct UserInfo {
-  
+
   struct DictionaryKey {
     static let username = "username"
     static let gravatar = "gravatar"
@@ -22,7 +23,7 @@ public struct UserInfo {
     static let postsCount = "posts_count"
     static let creationDate = "creation_date"
   }
-  
+
   public var username: String
   public var gravatar: String?
   public var level: Int?
@@ -33,25 +34,25 @@ public struct UserInfo {
   public var topicsCount: Int?
   public var postsCount: Int?
   public var creationDate: Date?
-  
+
 }
 
 extension UserInfo {
-  
+
   public init(dict: [String : AnyObject]) {
     username = dict[DictionaryKey.username] as! String
     if let creation = dict[DictionaryKey.creationDate] as? Int {
       creationDate = Date(timeIntervalSince1970: TimeInterval(creation))
     }
-    
+
     gravatar = (dict[DictionaryKey.gravatar] as? String)
     level = (dict[DictionaryKey.level] as? Int)
     title = (dict[DictionaryKey.title] as? String)
-    
+
     about = (dict[DictionaryKey.about] as? String)
     website = (dict[DictionaryKey.website] as? String)
     twitter = (dict[DictionaryKey.twitter] as? String)
-    
+
     topicsCount = (dict[DictionaryKey.topicsCount] as? Int)
     postsCount = (dict[DictionaryKey.postsCount] as? Int)
   }

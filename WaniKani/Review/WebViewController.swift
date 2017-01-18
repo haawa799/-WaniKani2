@@ -8,25 +8,22 @@
 
 import UIKit
 
-
 protocol WebViewControllerDelegate: class {
-  func webViewControllerBecomeReadyForLoad(_ vc: WebViewController)
+  func webViewControllerBecomeReadyForLoad(viewController: WebViewController)
 }
 
-
 class WebViewController: UIViewController, StoryboardInstantiable {
-  
-  
+
   fileprivate var settingsSuit: SettingsSuit?
-  
+
   // Public API:
   convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, settingsSuit: SettingsSuit?) {
     self.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     self.settingsSuit = settingsSuit
   }
-  
+
   weak var delegate: WebViewControllerDelegate?
-  
+
   func loadReviews(_ type: WebSessionType) {
     self.type = type
     if let realURL = URL(string: type.url) {
@@ -35,21 +32,20 @@ class WebViewController: UIViewController, StoryboardInstantiable {
       webView?.keyboardDisplayRequiresUserAction = false
     }
   }
-  
-  
+
   fileprivate var type = WebSessionType.lesson
-  
+
   fileprivate var newScoreEarned = 0
   fileprivate var oldOffset: CGFloat?
-  
+
   @IBOutlet weak var webView: UIWebView! {
     didSet {
       webView.accessibilityIdentifier = "WebView"
       webView.delegate = self
-      delegate?.webViewControllerBecomeReadyForLoad(self)
+      delegate?.webViewControllerBecomeReadyForLoad(viewController: self)
     }
   }
-  
+
   func character() -> String? {
     if let response = webView.stringByEvaluatingJavaScript(from: "getCharacter();") {
       return response
@@ -59,20 +55,20 @@ class WebViewController: UIViewController, StoryboardInstantiable {
 }
 
 extension WebViewController: UIWebViewDelegate {
-  
+
   fileprivate func checkForNewScore() {
     if let response = webView.stringByEvaluatingJavaScript(from: "getScore();"),
-      let score = Int(response) , score != 0 {
+      let score = Int(response), score != 0 {
         newScoreEarned += score
     }
   }
-  
+
   fileprivate func submitScore() {
     //AwardsManager.sharedInstance.saveHighscore(newScoreEarned)
   }
-  
+
   func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-    
+
     if type.url.contains(request.url!.absoluteString) {
       checkForNewScore()
       return true
@@ -80,18 +76,17 @@ extension WebViewController: UIWebViewDelegate {
       return request.url!.absoluteString == "https://www.wanikani.com/login"
     }
   }
-  
-  
+
   func webViewDidFinishLoad(_ webView: UIWebView) {
     SettingsSuit.applyUserScriptsToWebView(webView, type: type)
   }
-  
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     settingsSuit?.applyResizingScriptsToWebView(webView, type: type)
     print("QQQ")
   }
-  
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     print("RRR")

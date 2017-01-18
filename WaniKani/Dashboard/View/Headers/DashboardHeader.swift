@@ -23,12 +23,12 @@ extension DashboardHeaderDatasource {
 }
 
 class DashboardHeader: UICollectionReusableView, SingleReuseIdentifier, ViewModelSetupable {
-  
+
   @IBOutlet weak var realHeaderWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var realHeader: UIView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet fileprivate var coloredViews: [UIView]!
-  
+
   var color: UIColor? = nil {
     didSet {
       guard let coloredViews = coloredViews else {return}
@@ -37,12 +37,12 @@ class DashboardHeader: UICollectionReusableView, SingleReuseIdentifier, ViewMode
       }
     }
   }
-  
+
   func setupWith(_ viewModel: DashboardHeaderDatasource) {
     titleLabel?.text = viewModel.title
     color = viewModel.bgColor
   }
-  
+
   func resize(_ newWidth: CGFloat) {
     realHeaderWidthConstraint.constant = newWidth
   }

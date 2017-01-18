@@ -9,19 +9,19 @@
 import Foundation
 
 public struct SRSLevelInfo {
-  
+
   struct DictionaryKey {
     static let radicals = "radicals"
     static let kanji = "kanji"
     static let vocabulary = "vocabulary"
     static let total = "total"
   }
-  
+
   public let radicals: Int
   public let kanji: Int
   public let vocabulary: Int
   public let total: Int
-  
+
   public init(radicals: Int, kanji: Int, vocabulary: Int, total: Int? = nil) {
     self.radicals = radicals
     self.kanji = kanji
@@ -31,7 +31,7 @@ public struct SRSLevelInfo {
 }
 
 extension SRSLevelInfo {
-  
+
   public init(dict: [String : AnyObject]) {
     let radicals = dict[DictionaryKey.radicals] as? Int ?? 0
     let kanji = dict[DictionaryKey.kanji] as? Int ?? 0

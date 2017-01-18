@@ -9,19 +9,17 @@
 import UIKit
 
 open class ApplicationCoordinator: Coordinator {
-  
+
   fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: UserDefaults.standard)
-  
   fileprivate let dashboardNavigationController = UINavigationController()
   fileprivate let dashboardCoordinator: DashboardCoordinator
-  
   fileprivate let settingsNavigationController = UINavigationController()
   fileprivate let settingsCoordinator: SettingsCoordinator
-  
+
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
   let childrenCoordinators: [Coordinator]
-  
+
   init(window: UIWindow) {
     self.window = window
     dashboardNavigationController.isNavigationBarHidden = true
@@ -30,10 +28,8 @@ open class ApplicationCoordinator: Coordinator {
     rootViewController.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(presenter: dashboardNavigationController)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
-//
     childrenCoordinators = [dashboardCoordinator, settingsCoordinator]
   }
-  
 }
 
 // MARK: - Coordinator

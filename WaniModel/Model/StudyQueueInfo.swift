@@ -9,7 +9,7 @@
 import Foundation
 
 public struct StudyQueueInfo {
-  
+
   struct DictionaryKey {
     static let avaliableLessons = "lessons_available"
     static let avaliableReviews = "reviews_available"
@@ -17,17 +17,17 @@ public struct StudyQueueInfo {
     static let reviewsNextHour = "reviews_available_next_hour"
     static let reviewsNextDay = "reviews_available_next_day"
   }
-  
+
   public var lessonsAvaliable: Int?
   public var reviewsAvaliable: Int?
   public var nextReviewDate: Date?
   public var reviewsNextHour: Int?
   public var reviewsNextDay: Int?
-  
+
 }
 
 extension StudyQueueInfo {
-  
+
   public init(dict: [String : AnyObject]) {
     lessonsAvaliable = (dict[DictionaryKey.avaliableLessons] as? Int)
     reviewsAvaliable = (dict[DictionaryKey.avaliableReviews] as? Int)

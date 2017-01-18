@@ -9,19 +9,19 @@
 import Foundation
 
 struct GameCenterCellViewModel: SingleTitleViewModel {
-  
+
   fileprivate let titleString: String
-  
+
   init(setting: Setting) {
     titleString = setting.description ?? ""
   }
-  
+
 }
 
 extension GameCenterCellViewModel {
-  
+
   var title: String {
     return titleString
   }
-  
+
 }

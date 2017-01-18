@@ -28,7 +28,7 @@ class ReviewCell: UICollectionViewCell, FlippableView, SingleReuseIdentifier, Vi
 
   @IBOutlet weak var numberLabel: UILabel!
   @IBOutlet weak var titleLabel: UILabel!
-  
+
   func setupWith(_ datasource: LeftRightTitleDatasource) {
     titleLabel?.text = datasource.leftTitle
     numberLabel?.text = datasource.rightTitle
@@ -39,18 +39,18 @@ class ReviewCell: UICollectionViewCell, FlippableView, SingleReuseIdentifier, Vi
 
 // MARK: - UICollectionViewCell
 extension ReviewCell {
-  
+
   override func prepareForReuse() {
     super.prepareForReuse()
     titleLabel?.text = nil
     numberLabel?.text = nil
   }
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     prepareForReuse()
   }
-  
+
 }
 
 // MARK: - ViewModelSetupable

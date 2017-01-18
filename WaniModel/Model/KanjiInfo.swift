@@ -8,8 +8,9 @@
 
 import Foundation
 
+// swiftlint:disable force_cast
 public struct KanjiInfo {
-  
+
   struct DictionaryKey {
     static let character = "character"
     static let meaning = "meaning"
@@ -22,7 +23,7 @@ public struct KanjiInfo {
     static let percentage = "percentage"
     static let unlockedDate = "unlocked_date"
   }
-  
+
   public var character: String
   public var meaning: String?
   public var onyomi: String?
@@ -33,7 +34,7 @@ public struct KanjiInfo {
   public var percentage: String?
   public var unlockedDate: Date?
   public var userSpecific: UserSpecific?
-  
+
   public var reading: String? {
     guard let importantReading = importantReading else { return nil }
     switch importantReading {
@@ -46,7 +47,7 @@ public struct KanjiInfo {
 }
 
 extension KanjiInfo {
-  
+
   public init(dict: [String : AnyObject]) {
     character = dict[KanjiInfo.DictionaryKey.character] as! String
     meaning = dict[KanjiInfo.DictionaryKey.meaning] as? String

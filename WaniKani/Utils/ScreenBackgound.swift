@@ -21,7 +21,7 @@ protocol BluredBackground {
 extension BluredBackground where Self: UIViewController {
   func addBackground(_ imageName: String) -> Bool {
     guard let image = UIImage(named: imageName) else { return false }
-    
+
     let imageView = UIImageView(image: image)
     imageView.frame = view.bounds
     imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ extension BluredBackground where Self: UIViewController {
     view.addConstraints(hConstraints)
     let wConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[imageView]-0-|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views)
     view.addConstraints(wConstraints)
-    
+
     return true
   }
 }

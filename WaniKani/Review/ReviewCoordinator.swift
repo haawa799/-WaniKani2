@@ -13,26 +13,26 @@ public protocol ReviewCoordinatorDelegate: class {
 }
 
 open class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
-  
+
   let presenter: UINavigationController
   let containerViewController: BottomBarContainerViewController
   let sideMenuController: SideMenuHolderViewController
-  
+
   let childrenCoordinators: [Coordinator]
-  
+
 //  let dataProvider = DataProvider()
-  
+
   fileprivate var sideMenuVisible = false
-  
+
   weak var delegate: ReviewCoordinatorDelegate?
-  
+
   public init(presenter: UINavigationController, type: WebSessionType) {
     self.presenter = presenter
     containerViewController = BottomBarContainerViewController.instantiateViewController()
     sideMenuController = SideMenuHolderViewController(type: .review, settingsSuit: nil)
     childrenCoordinators = []
   }
-  
+
   func start() {
     containerViewController.delegate = self
     sideMenuController.delegate = self
@@ -40,16 +40,16 @@ open class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate 
     presenter.present(containerViewController, animated: true, completion: nil)
     containerViewController.childViewController = sideMenuController
   }
-  
+
 }
 
 public extension ReviewCoordinator {
   func leftButtonPressed() {
-    presenter.dismiss(animated: true) { 
+    presenter.dismiss(animated: true) {
       self.delegate?.reviewCompleted(self)
     }
   }
-  
+
   func rightButtonPressed() {
     if sideMenuVisible == true {
       sideMenuController.hideViewController()
@@ -60,23 +60,22 @@ public extension ReviewCoordinator {
       sideMenuVisible = true
       hideBar()
     }
-    
+
   }
 }
 
 public extension ReviewCoordinator {
-  
+
   func hideBar() {
     containerViewController.hideBar()
   }
-  
+
   func showBar() {
     containerViewController.showBar()
   }
-  
+
   func focusShortcutUsed() {
 //    sideMenuController.focus()
   }
-  
-}
 
+}

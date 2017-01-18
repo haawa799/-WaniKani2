@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 struct ColorConstants {
   static let dashboardColor = UIColor(red:0.92, green:0.12, blue:0.39, alpha:1)
   static let dataColor = UIColor(red:1, green:0.55, blue:0, alpha:1)
@@ -17,26 +16,26 @@ struct ColorConstants {
 }
 
 class ColorfullTabBarController: UITabBarController, UITabBarControllerDelegate {
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.delegate = self
   }
-  
+
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
-  
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     assignColors()
   }
-  
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     assignColors()
   }
-  
+
   private func assignColors() {
     switch selectedIndex {
     case 0: view.window?.tintColor = ColorConstants.dashboardColor
@@ -46,13 +45,11 @@ class ColorfullTabBarController: UITabBarController, UITabBarControllerDelegate 
     default: break
     }
   }
-  
-  
+
   // MARK: - UITabBarControllerDelegate
-  
+
   func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
     self.assignColors()
   }
-  
-  
+
 }

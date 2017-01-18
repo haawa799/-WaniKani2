@@ -9,15 +9,15 @@
 import UIKit
 
 extension CGRect {
-  func centerAndAdjustPercentage(percentage p: CGFloat) -> CGRect {
+  func centerAndAdjustPercentage(percentage: CGFloat) -> CGRect {
     let w = self.width
     let h = self.height
-    
-    let newW = w * p
-    let newH = h * p
+
+    let newW = w * percentage
+    let newH = h * percentage
     let newX = (w - newW) / 2
     let newY = (h - newH) / 2
-    
+
     return CGRect(x: newX, y: newY, width: newW, height: newH)
   }
 }

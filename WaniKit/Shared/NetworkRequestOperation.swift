@@ -18,7 +18,6 @@ public enum Result<T, U> {
   case Error(() -> U)
 }
 
-
 public typealias RawResponse = (data: Data?, responseCode: NetworkOperationResponseCode)
 
 public protocol NetworkRequestOperationDelegate: class {
@@ -26,28 +25,26 @@ public protocol NetworkRequestOperationDelegate: class {
 }
 
 public class NetworkRequestOperation: GroupOperation {
-  
+
   public weak var delegate: NetworkRequestOperationDelegate?
-  
+
   init(requestMethod: NetworkRequestMethod = .GET,
        url: URL) {
-    
+
     super.init(operations: [])
-    
+
     let sessionConfig = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
     var request = URLRequest(url: url)
-    
-    
+
     request.httpMethod = requestMethod.rawValue
-    
-    
-    let task = session.downloadTask(with: request) { (url, response, error) -> Void in
-      
+
+    let task = session.downloadTask(with: request) { (url, response, _) -> Void in
+
       // Get data from cache
       var data: Data? = nil
       if let url = url { data = try? Data(contentsOf: url) }
-      
+
       // Check for different responses
       guard let response = response as? HTTPURLResponse else { return }
       let responseCode = NetworkOperationResponseCode(code: response.statusCode)
@@ -57,14 +54,14 @@ public class NetworkRequestOperation: GroupOperation {
       // Call delegate with collected data and response code
       self.delegate?.newResponse(response: (data, responseCode))
     }
-    
+
     let taskOperation = URLSessionTaskOperation(task: task)
     addOperation(taskOperation)
   }
-  
+
   public override func execute() {
     super.execute()
     print(":")
   }
-  
+
 }

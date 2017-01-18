@@ -10,13 +10,13 @@ import UIKit
 import WaniModel
 
 struct DoubleProgressViewModel: DoubleProgressBarProgressDataSource {
-  
+
   fileprivate let topProgressString: String
   fileprivate let botProgressString: String
   fileprivate let topProgress: CGFloat
   fileprivate let botProgress: CGFloat
   fileprivate let userLevelString: String
-  
+
   init(dashboard: DashboardInfo) {
     guard let topMax = dashboard.levelProgressionInfo.kanjiTotal,
       let topCur = dashboard.levelProgressionInfo.kanjiProgress,
@@ -29,15 +29,15 @@ struct DoubleProgressViewModel: DoubleProgressBarProgressDataSource {
         userLevelString = ""
         return
     }
-    
+
     topProgressString = "\(topCur)/\(topMax)"
     botProgressString = "\(botCur)/\(botMax)"
-    
+
     topProgress = CGFloat(topCur)/CGFloat(topMax)
     botProgress = CGFloat(botCur)/CGFloat(botMax)
     userLevelString = "\(dashboard.levelProgressionInfo.currentLevel)"
   }
-  
+
 }
 
 // MARK: - DoubleProgressBarProgressDataSource

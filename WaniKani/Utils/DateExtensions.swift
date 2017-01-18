@@ -9,21 +9,21 @@
 import Foundation
 
 extension Date {
-  
+
   func waitingTime() -> (string: String, hours: Int)? {
     let calendar = Calendar.current
     let flags = Set<Calendar.Component>([.year, .month, .day, .hour, .minute])
-    
+
     let components = calendar.dateComponents(flags, from: Date(), to: self)
-    
+
     var nextReviewString = "今"
-    
+
     guard let years = components.year,
     let months = components.month,
     let days = components.day,
     let hours = components.hour,
       let minutes = components.minute else { return nil }
-    
+
     if years <= 0 {
       if months <= 0 {
         if days <= 0 {
@@ -57,5 +57,5 @@ extension Date {
     }
     return (nextReviewString, hours)
   }
-  
+
 }

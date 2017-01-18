@@ -9,26 +9,25 @@
 import UIKit
 
 struct DashboardHeaderViewModel: DashboardHeaderDatasource {
-  
+
   fileprivate let titleString: String
   fileprivate var color: UIColor?
-  
+
   init(title: String, color: UIColor?) {
     titleString = title
     self.color = color
   }
 }
 
-
 // MARK: - DashboardHeaderDatasource
 extension DashboardHeaderViewModel {
-  
+
   var title: String {
     return titleString
   }
-  
+
   var bgColor: UIColor? {
     return self.color
   }
-  
+
 }

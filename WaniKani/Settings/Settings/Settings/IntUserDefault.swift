@@ -10,10 +10,10 @@ import Foundation
 
 struct IntUserDefault {
   let key: String
-  
+
   var delegate: SettingsDelegate?
   fileprivate var internalValue: AnyObject!
-  
+
   var value: Int {
     didSet {
       if value != oldValue {
@@ -22,7 +22,7 @@ struct IntUserDefault {
       }
     }
   }
-  
+
   init(key: String) {
     self.key = key
     self.value = UserDefaults.standard.integer(forKey: key)

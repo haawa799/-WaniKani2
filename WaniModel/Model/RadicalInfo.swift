@@ -8,8 +8,9 @@
 
 import Foundation
 
+// swiftlint:disable force_cast
 public struct RadicalInfo {
-  
+
   struct DictionaryKey {
     static let character = "character"
     static let meaning = "meaning"
@@ -19,7 +20,7 @@ public struct RadicalInfo {
     static let percentage = "percentage"
     static let unlockedDate = "unlocked_date"
   }
-  
+
   public var character: String?
   public var meaning: String?
   public var image: String?
@@ -30,7 +31,7 @@ public struct RadicalInfo {
 }
 
 extension RadicalInfo {
-  
+
   public init(dict: [String : AnyObject]) {
     character = dict[DictionaryKey.character] as? String
     meaning = dict[DictionaryKey.meaning] as? String

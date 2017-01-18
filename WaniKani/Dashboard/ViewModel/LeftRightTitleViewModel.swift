@@ -11,7 +11,7 @@ import Foundation
 struct LeftRightTitleViewModel: LeftRightTitleDatasource {
   fileprivate let leftTitleString: String
   fileprivate let rightTitleString: String
-  
+
   init(left: String, right: String) {
     leftTitleString = left
     rightTitleString = right
@@ -23,7 +23,7 @@ extension LeftRightTitleViewModel {
   var leftTitle: String {
     return leftTitleString
   }
-  
+
   var rightTitle: String {
     return rightTitleString
   }

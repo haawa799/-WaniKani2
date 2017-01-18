@@ -9,7 +9,7 @@
 import Foundation
 
 public struct UserSpecific {
-  
+
   struct DictionaryKey {
     static let srs = "srs"
     static let srsNumeric = "srs_numeric"
@@ -29,8 +29,7 @@ public struct UserSpecific {
     static let userSynonyms = "user_synonyms"
     static let readingNote = "reading_note"
   }
-  
-  
+
   // Fields
   public var srs: String?
   public var srsNumeric: Int?
@@ -49,14 +48,11 @@ public struct UserSpecific {
   public var meaningNote: String?
   public var userSynonyms: String?
   public var readingNote: String?
-  
-  
+
   public init(dict: [String : AnyObject]) {
-    
     srs = (dict[DictionaryKey.srs] as? String)
     srsNumeric = (dict[DictionaryKey.srsNumeric] as? Int)
-    burned = (dict[DictionaryKey.burned] as! Bool)
-    
+    burned = (dict[DictionaryKey.burned] as! Bool) // swiftlint:disable:this force_cast
     if let unlock = dict[DictionaryKey.unlockDate] as? Int {
       unlockedDate = Date(timeIntervalSince1970: TimeInterval(unlock))
     }
@@ -66,7 +62,6 @@ public struct UserSpecific {
     if let burnedDateInt = dict[DictionaryKey.burnedDate] as? Int {
       burnedDate = Date(timeIntervalSince1970: TimeInterval(burnedDateInt))
     }
-    
     meaningCorrect = (dict[DictionaryKey.meaningCorrect] as? Int)
     meaningIncorrect = (dict[DictionaryKey.meaningIncorrect] as? Int)
     meaningMaxStreak = (dict[DictionaryKey.meaningMaxStreak] as? Int)
@@ -79,5 +74,5 @@ public struct UserSpecific {
     userSynonyms = (dict[DictionaryKey.userSynonyms] as? String)
     readingNote = (dict[DictionaryKey.readingNote] as? String)
   }
-  
+
 }

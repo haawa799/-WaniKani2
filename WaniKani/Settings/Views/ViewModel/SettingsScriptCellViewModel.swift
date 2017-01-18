@@ -9,31 +9,31 @@
 import Foundation
 
 struct SettingsScriptCellViewModel: SettingsScriptCellDataSource {
-  
+
   fileprivate let titleString: String
   fileprivate let state: Bool
-  fileprivate let id: String
-  
+  fileprivate let identifier: String
+
   init(setting: Setting) {
-    id = setting.key.rawValue
+    identifier = setting.key.rawValue
     titleString = setting.description ?? ""
     state = setting.isEnabled
   }
-  
+
 }
 
 extension SettingsScriptCellViewModel {
-  
+
   var scriptID: String {
-    return id
+    return identifier
   }
-  
+
   var switchState: Bool {
     return state
   }
-  
+
   var title: String {
     return titleString
   }
-  
+
 }

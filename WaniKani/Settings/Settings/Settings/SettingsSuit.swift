@@ -14,7 +14,7 @@ private struct ScriptSetting {
   static let smartResizingScript = UserScript(filename: "resize", scriptName: "Smart resize")
   static let reorderScript = UserScript(filename: "reorder", scriptName: "Reorder script")
   static let scoreScript = UserScript(filename: "score", scriptName: "Score script")
-  
+
   static func resizingScriptForCurrentMetrics(_ statusBarHidden: Bool) -> UserScript {
     var resizingScriptCopy = ScriptSetting.smartResizingScript
     resizingScriptCopy.modifyScript({ (script) -> (String) in
@@ -26,7 +26,7 @@ private struct ScriptSetting {
 }
 
 private struct SettingsSuitSettings {
-  
+
   static let fastForwardSetting: Setting = Setting(key: SettingSuitKey.fastForwardEnabledKey, script: ScriptSetting.fastForwardScript, description: ScriptSetting.fastForwardScript.name)
   static let ignoreButtonSetting: Setting = Setting(key: SettingSuitKey.ignoreButtonEnabledKey, script: ScriptSetting.ignoreButtonScript, description: ScriptSetting.ignoreButtonScript.name)
   static let reorderSetting: Setting = Setting(key: SettingSuitKey.reorderEnabledKey, script: ScriptSetting.reorderScript, description: ScriptSetting.reorderScript.name)
@@ -36,7 +36,7 @@ private struct SettingsSuitSettings {
   static let shouldUseGCSetting: Setting = Setting(key: SettingSuitKey.shouldUseGameCenterKey, script: nil, description: "Use GameCenter")
   static let gameCenterDummySetting: Setting = Setting(key: SettingSuitKey.gameCenterKey, script: nil, description: "Game center")
   static let ignoreLessonsInIconCounter: Setting = Setting(key: SettingSuitKey.ignoreLessonsInIconBadgeKey, script: nil, description: "Ignore lessons in icon badge")
-  
+
   static var userScriptsForReview: [UserScript] {
     var scripts = [UserScript]()
     if fastForwardSetting.isEnabled == true { scripts.append(ScriptSetting.fastForwardScript) }
@@ -46,7 +46,7 @@ private struct SettingsSuitSettings {
     if smartResizingSetting.isEnabled == true { _ = ScriptSetting.resizingScriptForCurrentMetrics(hideStatusBarSetting.isEnabled) }
     return scripts
   }
-  
+
   static var allSettings: [Setting] {
     return [
       SettingsSuitSettings.fastForwardSetting,
@@ -61,7 +61,7 @@ private struct SettingsSuitSettings {
 }
 
 public struct SettingsSuit {
-  
+
   public let userDefaults: UserDefaults
 //  fileprivate let keychainManager: KeychainManager
 //  
@@ -69,17 +69,16 @@ public struct SettingsSuit {
 //    self.userDefaults = userDefaults
 //    self.keychainManager = keychainManager
 //  }
-  
-  
-  fileprivate func settingWithID(_ id: String) -> Setting? {
-    let setting = SettingsSuitSettings.allSettings.filter ({ $0.key.rawValue == id }).first
+
+  fileprivate func settingWithID(identifier: String) -> Setting? {
+    let setting = SettingsSuitSettings.allSettings.filter ({ $0.key.rawValue == identifier }).first
     return setting
   }
 }
 
 // Public API
 extension SettingsSuit {
-  
+
   var collectionViewViewModel: ListViewModel {
     let headerColor = ColorConstants.settingsTintColor
     let sections = [
@@ -105,46 +104,42 @@ extension SettingsSuit {
     ]
     return ListViewModel(sections: sections)
   }
-  
+
   var hideStatusBarEnabled: Bool {
     return SettingsSuitSettings.hideStatusBarSetting.isEnabled
   }
-  
+
   var shouldUseGameCenter: Bool {
     return SettingsSuitSettings.shouldUseGCSetting.isEnabled
   }
-  
-  func changeSetting(_ id: String, state: Bool) {
-    guard let setting = settingWithID(id) else { return }
+
+  func changeSetting(identifier: String, state: Bool) {
+    guard let setting = settingWithID(identifier: identifier) else { return }
     setting.setEnabled(state)
   }
-  
+
   func applyResizingScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
     guard type == .review else { return }
     let script = ScriptSetting.resizingScriptForCurrentMetrics(SettingsSuitSettings.hideStatusBarSetting.isEnabled)
     webView.stringByEvaluatingJavaScript(from: script.script)
   }
-  
+
   static func applyUserScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
-    
+
     var scripts = [UserScript]()
     switch type {
     case .review: scripts = SettingsSuitSettings.userScriptsForReview
     case .lesson: break
     }
-    
+
     for script in scripts {
       webView.stringByEvaluatingJavaScript(from: script.script)
     }
-    
-//    if let user = self.keychainManager.user, let password = keychainManager.password {
-//      webView.stringByEvaluatingJavaScript(from: "loginIfNeeded('\(user)','\(password)');");
-//    }
   }
-  
-  func stateOfSetting(_ id: String) -> Bool? {
-    guard let setting = settingWithID(id) else { return nil }
+
+  func stateOfSetting(identifier: String) -> Bool? {
+    guard let setting = settingWithID(identifier: identifier) else { return nil }
     return setting.isEnabled
   }
-  
+
 }

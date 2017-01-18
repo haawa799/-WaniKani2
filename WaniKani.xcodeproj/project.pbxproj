@@ -230,7 +230,7 @@
 		430876A61D9021A200FE71FE /* AvaliableItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliableItemCellViewModel.swift; sourceTree = "<group>"; };
 		430876A71D9021A200FE71FE /* CollectionViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModel.swift; sourceTree = "<group>"; };
 		430876A81D9021A200FE71FE /* DashboardHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardHeaderViewModel.swift; sourceTree = "<group>"; };
-		430876A91D9021A200FE71FE /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		430876A91D9021A200FE71FE /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; usesTabs = 1; };
 		430876AA1D9021A200FE71FE /* DoubleProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleProgressViewModel.swift; sourceTree = "<group>"; };
 		430876AB1D9021A200FE71FE /* LeftRightTitleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftRightTitleViewModel.swift; sourceTree = "<group>"; };
 		430876C11D9021B300FE71FE /* ColorfullTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorfullTabBarController.swift; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 		43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
 		43F4F3751D9031B100A9BB08 /* PSOperations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSOperations.framework; path = Carthage/Build/iOS/PSOperations.framework; sourceTree = "<group>"; };
 		43F4F37B1D91527900A9BB08 /* SRSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewController.swift; sourceTree = "<group>"; };
-		43F4F37D1D9152A200A9BB08 /* SRSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSView.swift; sourceTree = "<group>"; };
+		43F4F37D1D9152A200A9BB08 /* SRSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSView.swift; sourceTree = "<group>"; usesTabs = 1; };
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };

@@ -10,13 +10,13 @@ import UIKit
 import WaniModel
 
 struct SRSDistributionViewModel {
-  
+
   let apprentice: SRSViewModel
   let guru: SRSViewModel
   let master: SRSViewModel
   let enlighten: SRSViewModel
   let burned: SRSViewModel
-  
+
   init(srs: SRSDistributionInfo) {
     apprentice = SRSViewModel(srs: srs.apprentice)
     guru = SRSViewModel(srs: srs.guru)

@@ -9,12 +9,12 @@
 import Foundation
 
 extension Array where Element : Equatable {
-  
+
   // Remove first collection element that is equal to the given `object`:
-  mutating func removeObject(_ object : Iterator.Element) {
+  mutating func removeObject(_ object: Iterator.Element) {
     if let index = self.index(of: object) {
       self.remove(at: index)
     }
   }
-  
+
 }
