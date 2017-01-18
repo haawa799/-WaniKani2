@@ -97,6 +97,8 @@
 		43620ADF1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADA1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift */; };
 		43620AE01D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADB1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
 		43620AE11D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADC1D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift */; };
+		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
+		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
 		43D99C531D9919560071C26D /* api_key_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C391D9919560071C26D /* api_key_script.js */; };
 		43D99C541D9919560071C26D /* fast_forward.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3A1D9919560071C26D /* fast_forward.js */; };
@@ -120,8 +122,6 @@
 		43D99C721D99333F0071C26D /* UserScriptsSuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C441D9919560071C26D /* UserScriptsSuit.swift */; };
 		43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C451D9919560071C26D /* SettingsCoordinator.swift */; };
 		43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C4F1D9919560071C26D /* SettingsLayout.swift */; };
-		43D99C7A1D993A090071C26D /* NJKScrollFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C771D993A090071C26D /* NJKScrollFullScreen.m */; };
-		43D99C7B1D993A090071C26D /* UIViewController+NJKFullScreenSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C791D993A090071C26D /* UIViewController+NJKFullScreenSupport.m */; };
 		43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */; };
 		43D99C871D994D1B0071C26D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C811D994D1B0071C26D /* WebViewController.swift */; };
 		43D99C881D994D1B0071C26D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C821D994D1B0071C26D /* WebViewController.xib */; };
@@ -193,6 +193,7 @@
 				43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */,
 				430876EE1D902FE800FE71FE /* WaniModel.framework in Embed Frameworks */,
 				4308770D1D902FF500FE71FE /* WaniKit.framework in Embed Frameworks */,
+				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +306,7 @@
 		43620ADA1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		43620ADB1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		43620ADC1D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		43D99C391D9919560071C26D /* api_key_script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api_key_script.js; sourceTree = "<group>"; };
 		43D99C3A1D9919560071C26D /* fast_forward.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fast_forward.js; sourceTree = "<group>"; };
@@ -329,10 +331,6 @@
 		43D99C521D9919560071C26D /* SettingsScriptCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScriptCellViewModel.swift; sourceTree = "<group>"; };
 		43D99C6D1D9923E70071C26D /* AIFlatSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIFlatSwitch.swift; sourceTree = "<group>"; };
 		43D99C751D993A080071C26D /* WaniKani-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaniKani-Bridging-Header.h"; sourceTree = "<group>"; };
-		43D99C761D993A090071C26D /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
-		43D99C771D993A090071C26D /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
-		43D99C781D993A090071C26D /* UIViewController+NJKFullScreenSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJKFullScreenSupport.h"; sourceTree = "<group>"; };
-		43D99C791D993A090071C26D /* UIViewController+NJKFullScreenSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJKFullScreenSupport.m"; sourceTree = "<group>"; };
 		43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BottomBarContainerViewController.storyboard; sourceTree = "<group>"; };
 		43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarContainerViewController.swift; sourceTree = "<group>"; };
 		43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoordinator+SideMenu.swift"; sourceTree = "<group>"; };
@@ -388,6 +386,7 @@
 				430876DC1D902F1E00FE71FE /* WaniKit.framework in Frameworks */,
 				4308770C1D902FF500FE71FE /* WaniKit.framework in Frameworks */,
 				430876DE1D902F3500FE71FE /* WaniModel.framework in Frameworks */,
+				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
 				430876ED1D902FE800FE71FE /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,10 +496,6 @@
 		430876C41D9021B300FE71FE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				43D99C761D993A090071C26D /* NJKScrollFullScreen.h */,
-				43D99C771D993A090071C26D /* NJKScrollFullScreen.m */,
-				43D99C781D993A090071C26D /* UIViewController+NJKFullScreenSupport.h */,
-				43D99C791D993A090071C26D /* UIViewController+NJKFullScreenSupport.m */,
 				43D99C751D993A080071C26D /* WaniKani-Bridging-Header.h */,
 				43B89E421D94140F0047380B /* DateExtensions.swift */,
 				430876C51D9021B300FE71FE /* Array.swift */,
@@ -519,6 +514,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */,
 				43F4F3751D9031B100A9BB08 /* PSOperations.framework */,
 			);
 			name = Frameworks;
@@ -1212,8 +1208,6 @@
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
 				430876D31D9021B300FE71FE /* DrawingUtils.swift in Sources */,
-				43D99C7B1D993A090071C26D /* UIViewController+NJKFullScreenSupport.m in Sources */,
-				43D99C7A1D993A090071C26D /* NJKScrollFullScreen.m in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
 				43D99C871D994D1B0071C26D /* WebViewController.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NJKScrollFullscreenKit
 
 protocol BottomBarContainerDelegate: class {
   func leftButtonPressed()
