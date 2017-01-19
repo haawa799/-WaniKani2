@@ -89,16 +89,19 @@
 		4308776A1D90302400FE71FE /* ParseWordListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877501D90302400FE71FE /* ParseWordListOperation.swift */; };
 		4308776B1D90302400FE71FE /* WordListGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877511D90302400FE71FE /* WordListGroupOperation.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
-		43620ACF1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 43620ACD1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43620AD21D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43620ACB1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework */; };
-		43620AD31D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43620ACB1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43620ADD1D8DD31100C1BA72 /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620AD81D8DD31100C1BA72 /* DGElasticPullToRefreshConstants.swift */; };
-		43620ADE1D8DD31100C1BA72 /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620AD91D8DD31100C1BA72 /* DGElasticPullToRefreshExtensions.swift */; };
-		43620ADF1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADA1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift */; };
-		43620AE01D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADB1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
-		43620AE11D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43620ADC1D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
 		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; };
+		43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; };
+		43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A21E30E27200DABAAB /* Cely.framework */; };
+		43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A21E30E27200DABAAB /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A31E30E27200DABAAB /* Locksmith.framework */; };
+		43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A31E30E27200DABAAB /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354A91E30E27200DABAAB /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A41E30E27200DABAAB /* WaniLoginKit.framework */; };
+		43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A41E30E27200DABAAB /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
 		43D99C531D9919560071C26D /* api_key_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C391D9919560071C26D /* api_key_script.js */; };
 		43D99C541D9919560071C26D /* fast_forward.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3A1D9919560071C26D /* fast_forward.js */; };
@@ -125,9 +128,6 @@
 		43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */; };
 		43D99C871D994D1B0071C26D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C811D994D1B0071C26D /* WebViewController.swift */; };
 		43D99C881D994D1B0071C26D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C821D994D1B0071C26D /* WebViewController.xib */; };
-		43D99C901D994DCB0071C26D /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C8B1D994DCB0071C26D /* RECommonFunctions.m */; };
-		43D99C911D994DCB0071C26D /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C8D1D994DCB0071C26D /* RESideMenu.m */; };
-		43D99C921D994DCB0071C26D /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C8F1D994DCB0071C26D /* UIViewController+RESideMenu.m */; };
 		43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */; };
 		43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */; };
 		43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */; };
@@ -173,13 +173,6 @@
 			remoteGlobalIDString = 430876F61D902FF500FE71FE;
 			remoteInfo = WaniKit;
 		};
-		43620AD01D8DD2F300C1BA72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43620ACA1D8DD2F300C1BA72;
-			remoteInfo = DGElasticPullToRefreshKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -189,9 +182,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				43620AD31D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
+				43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */,
+				43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */,
 				43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */,
+				43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */,
+				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
 				430876EE1D902FE800FE71FE /* WaniModel.framework in Embed Frameworks */,
+				43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */,
 				4308770D1D902FF500FE71FE /* WaniKit.framework in Embed Frameworks */,
 				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
 			);
@@ -298,15 +295,13 @@
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43620ACB1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGElasticPullToRefreshKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43620ACD1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefreshKit.h; sourceTree = "<group>"; };
-		43620ACE1D8DD2F300C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43620AD81D8DD31100C1BA72 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
-		43620AD91D8DD31100C1BA72 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
-		43620ADA1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
-		43620ADB1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
-		43620ADC1D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
+		43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
+		43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
+		43B354A21E30E27200DABAAB /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
+		43B354A31E30E27200DABAAB /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		43B354A41E30E27200DABAAB /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
+		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		43D99C391D9919560071C26D /* api_key_script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api_key_script.js; sourceTree = "<group>"; };
 		43D99C3A1D9919560071C26D /* fast_forward.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fast_forward.js; sourceTree = "<group>"; };
@@ -330,19 +325,12 @@
 		43D99C511D9919560071C26D /* GameCenterCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterCellViewModel.swift; sourceTree = "<group>"; };
 		43D99C521D9919560071C26D /* SettingsScriptCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScriptCellViewModel.swift; sourceTree = "<group>"; };
 		43D99C6D1D9923E70071C26D /* AIFlatSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIFlatSwitch.swift; sourceTree = "<group>"; };
-		43D99C751D993A080071C26D /* WaniKani-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaniKani-Bridging-Header.h"; sourceTree = "<group>"; };
 		43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BottomBarContainerViewController.storyboard; sourceTree = "<group>"; };
 		43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarContainerViewController.swift; sourceTree = "<group>"; };
 		43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoordinator+SideMenu.swift"; sourceTree = "<group>"; };
 		43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCoordinator.swift; sourceTree = "<group>"; };
 		43D99C811D994D1B0071C26D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		43D99C821D994D1B0071C26D /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
-		43D99C8A1D994DCB0071C26D /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		43D99C8B1D994DCB0071C26D /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
-		43D99C8C1D994DCB0071C26D /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
-		43D99C8D1D994DCB0071C26D /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
-		43D99C8E1D994DCB0071C26D /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		43D99C8F1D994DCB0071C26D /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHolderViewController.swift; sourceTree = "<group>"; };
 		43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
@@ -382,19 +370,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43620AD21D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				43B354A91E30E27200DABAAB /* WaniLoginKit.framework in Frameworks */,
+				43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */,
 				430876DC1D902F1E00FE71FE /* WaniKit.framework in Frameworks */,
 				4308770C1D902FF500FE71FE /* WaniKit.framework in Frameworks */,
 				430876DE1D902F3500FE71FE /* WaniModel.framework in Frameworks */,
 				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
+				43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
 				430876ED1D902FE800FE71FE /* WaniModel.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43620AC71D8DD2F300C1BA72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,8 +414,8 @@
 		430876971D9021A200FE71FE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				430876981D9021A200FE71FE /* Cells */,
 				4308769D1D9021A200FE71FE /* DashboardLayout.swift */,
+				430876981D9021A200FE71FE /* Cells */,
 				4308769E1D9021A200FE71FE /* Headers */,
 				430876A11D9021A200FE71FE /* View */,
 			);
@@ -496,7 +481,6 @@
 		430876C41D9021B300FE71FE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				43D99C751D993A080071C26D /* WaniKani-Bridging-Header.h */,
 				43B89E421D94140F0047380B /* DateExtensions.swift */,
 				430876C51D9021B300FE71FE /* Array.swift */,
 				430876C61D9021B300FE71FE /* ColorUtils.swift */,
@@ -514,6 +498,11 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43B354A21E30E27200DABAAB /* Cely.framework */,
+				43B354A31E30E27200DABAAB /* Locksmith.framework */,
+				43B354A41E30E27200DABAAB /* WaniLoginKit.framework */,
+				43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */,
+				43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */,
 				436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */,
 				43F4F3751D9031B100A9BB08 /* PSOperations.framework */,
 			);
@@ -700,7 +689,6 @@
 			isa = PBXGroup;
 			children = (
 				43620A3C1D8C28FA00C1BA72 /* WaniKani */,
-				43620ACC1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit */,
 				430876E71D902FE800FE71FE /* WaniModel */,
 				430876F81D902FF500FE71FE /* WaniKit */,
 				430877051D902FF500FE71FE /* WaniKitTests */,
@@ -713,7 +701,6 @@
 			isa = PBXGroup;
 			children = (
 				43620A3A1D8C28FA00C1BA72 /* WaniKani.app */,
-				43620ACB1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework */,
 				430876E61D902FE800FE71FE /* WaniModel.framework */,
 				430876F71D902FF500FE71FE /* WaniKit.framework */,
 				430876FF1D902FF500FE71FE /* WaniKitTests.xctest */,
@@ -724,13 +711,13 @@
 		43620A3C1D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXGroup;
 			children = (
-				43D99C891D994DCB0071C26D /* RESideMenu */,
 				43D99C7C1D994D1B0071C26D /* Review */,
 				43D99C361D9919560071C26D /* Settings */,
 				430876C01D9021B300FE71FE /* Shared */,
 				430876C41D9021B300FE71FE /* Utils */,
 				430876921D9021A200FE71FE /* Dashboard */,
 				4308768B1D90216F00FE71FE /* Application */,
+				43B354AB1E30FBC100DABAAB /* Tabs */,
 				43620A441D8C28FA00C1BA72 /* Assets.xcassets */,
 				43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */,
 				43620A491D8C28FB00C1BA72 /* Info.plist */,
@@ -738,18 +725,12 @@
 			path = WaniKani;
 			sourceTree = "<group>";
 		};
-		43620ACC1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit */ = {
+		43B354AB1E30FBC100DABAAB /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				43620AD81D8DD31100C1BA72 /* DGElasticPullToRefreshConstants.swift */,
-				43620AD91D8DD31100C1BA72 /* DGElasticPullToRefreshExtensions.swift */,
-				43620ADA1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift */,
-				43620ADB1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift */,
-				43620ADC1D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift */,
-				43620ACD1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.h */,
-				43620ACE1D8DD2F300C1BA72 /* Info.plist */,
+				43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */,
 			);
-			path = DGElasticPullToRefreshKit;
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		43D99C361D9919560071C26D /* Settings */ = {
@@ -853,19 +834,6 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
-		43D99C891D994DCB0071C26D /* RESideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				43D99C8A1D994DCB0071C26D /* RECommonFunctions.h */,
-				43D99C8B1D994DCB0071C26D /* RECommonFunctions.m */,
-				43D99C8C1D994DCB0071C26D /* RESideMenu.h */,
-				43D99C8D1D994DCB0071C26D /* RESideMenu.m */,
-				43D99C8E1D994DCB0071C26D /* UIViewController+RESideMenu.h */,
-				43D99C8F1D994DCB0071C26D /* UIViewController+RESideMenu.m */,
-			);
-			path = RESideMenu;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -882,14 +850,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				430877091D902FF500FE71FE /* WaniKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43620AC81D8DD2F300C1BA72 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43620ACF1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,7 +925,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				43620AD11D8DD2F300C1BA72 /* PBXTargetDependency */,
 				430876EC1D902FE800FE71FE /* PBXTargetDependency */,
 				4308770B1D902FF500FE71FE /* PBXTargetDependency */,
 			);
@@ -973,24 +932,6 @@
 			productName = WaniKani;
 			productReference = 43620A3A1D8C28FA00C1BA72 /* WaniKani.app */;
 			productType = "com.apple.product-type.application";
-		};
-		43620ACA1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43620AD41D8DD2F300C1BA72 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefreshKit" */;
-			buildPhases = (
-				43620AC61D8DD2F300C1BA72 /* Sources */,
-				43620AC71D8DD2F300C1BA72 /* Frameworks */,
-				43620AC81D8DD2F300C1BA72 /* Headers */,
-				43620AC91D8DD2F300C1BA72 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DGElasticPullToRefreshKit;
-			productName = DGElasticPullToRefreshKit;
-			productReference = 43620ACB1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -1025,12 +966,6 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
-					43620ACA1D8DD2F300C1BA72 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S55BP53VB8;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 43620A351D8C28FA00C1BA72 /* Build configuration list for PBXProject "WaniKani" */;
@@ -1047,7 +982,6 @@
 			projectRoot = "";
 			targets = (
 				43620A391D8C28FA00C1BA72 /* WaniKani */,
-				43620ACA1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit */,
 				430876E51D902FE800FE71FE /* WaniModel */,
 				430876F61D902FF500FE71FE /* WaniKit */,
 				430876FE1D902FF500FE71FE /* WaniKitTests */,
@@ -1098,13 +1032,6 @@
 				43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */,
 				43D99C581D9919560071C26D /* score.js in Resources */,
 				43D99C621D9919560071C26D /* GameCenterCollectionViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43620AC91D8DD2F300C1BA72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,7 +1130,6 @@
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,
-				43D99C901D994DCB0071C26D /* RECommonFunctions.m in Sources */,
 				430876CF1D9021B300FE71FE /* DataProvider.swift in Sources */,
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
@@ -1221,16 +1147,15 @@
 				430876BD1D9021A200FE71FE /* DashboardViewModel.swift in Sources */,
 				43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */,
 				430876B71D9021A200FE71FE /* DoubleProgressBar.swift in Sources */,
-				43D99C921D994DCB0071C26D /* UIViewController+RESideMenu.m in Sources */,
 				43D99C9B1D9A623C0071C26D /* RightMenuViewController.swift in Sources */,
 				43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */,
 				43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */,
-				43D99C911D994DCB0071C26D /* RESideMenu.m in Sources */,
 				430876901D90216F00FE71FE /* ApplicationCoordinator.swift in Sources */,
 				43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */,
 				430876B21D9021A200FE71FE /* ReviewCell.swift in Sources */,
 				43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */,
 				430876B81D9021A200FE71FE /* LabelWithAdaptiveTextHeight.swift in Sources */,
+				43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */,
 				43D99C721D99333F0071C26D /* UserScriptsSuit.swift in Sources */,
 				43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */,
 				430876B41D9021A200FE71FE /* DashboardLayout.swift in Sources */,
@@ -1248,18 +1173,6 @@
 				430876BB1D9021A200FE71FE /* CollectionViewViewModel.swift in Sources */,
 				430876911D90216F00FE71FE /* Coordinator.swift in Sources */,
 				430876D51D9021B300FE71FE /* LabelExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43620AC61D8DD2F300C1BA72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43620AE11D8DD31100C1BA72 /* DGElasticPullToRefreshView.swift in Sources */,
-				43620ADE1D8DD31100C1BA72 /* DGElasticPullToRefreshExtensions.swift in Sources */,
-				43620ADD1D8DD31100C1BA72 /* DGElasticPullToRefreshConstants.swift in Sources */,
-				43620AE01D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
-				43620ADF1D8DD31100C1BA72 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,11 +1198,6 @@
 			isa = PBXTargetDependency;
 			target = 430876F61D902FF500FE71FE /* WaniKit */;
 			targetProxy = 4308770A1D902FF500FE71FE /* PBXContainerItemProxy */;
-		};
-		43620AD11D8DD2F300C1BA72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43620ACA1D8DD2F300C1BA72 /* DGElasticPullToRefreshKit */;
-			targetProxy = 43620AD01D8DD2F300C1BA72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1535,7 +1443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = S55BP53VB8;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1543,13 +1451,14 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/WaniKani",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WaniKani/Utils/WaniKani-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1567,63 +1476,15 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/WaniKani",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WaniKani/Utils/WaniKani-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		43620AD51D8DD2F300C1BA72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DGElasticPullToRefreshKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.DGElasticPullToRefreshKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		43620AD61D8DD2F300C1BA72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DGElasticPullToRefreshKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.DGElasticPullToRefreshKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1671,15 +1532,6 @@
 			buildConfigurations = (
 				43620A4D1D8C28FB00C1BA72 /* Debug */,
 				43620A4E1D8C28FB00C1BA72 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43620AD41D8DD2F300C1BA72 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefreshKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43620AD51D8DD2F300C1BA72 /* Debug */,
-				43620AD61D8DD2F300C1BA72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

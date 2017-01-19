@@ -17,10 +17,6 @@ public protocol WaniApiManagerDelegate: class {
 
 public struct WaniKitAPIManager {
 
-  public init() {
-
-  }
-
   struct WaniKitConstants {
     struct URL {
       static let baseURL = "https://www.wanikani.com/api/user/"
@@ -28,21 +24,13 @@ public struct WaniKitAPIManager {
   }
 
   public let operationQueue = PSOperations.OperationQueue()
-  private var _apiKey: String?
+  public let apiKey: String
 
-  public var apiKey: String? {
-    return _apiKey
-  }
-
-  public mutating func changeApiKey(newKey: String) {
-    _apiKey = newKey
+  public init(apiKey: String) {
+    self.apiKey = apiKey
   }
 
   var basicURL: URL {
-    guard let apiKey = apiKey else {
-      assert(true, "Set API key before using")
-      return URL(string: "")!
-    }
     let string = "\(WaniKitConstants.URL.baseURL)\(apiKey)"
     return URL(string: string)!
   }

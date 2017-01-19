@@ -8,15 +8,16 @@
 
 import UIKit
 
-open class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, ReviewCoordinatorDelegate*/ {
+class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, ReviewCoordinatorDelegate*/ {
 
   let presenter: UINavigationController
   let dashboardViewController: DashboardViewController
-  let dataProvider = DataProvider()
+  let dataProvider: DataProvider
 
   fileprivate var reviewCoordinator: ReviewCoordinator?
 
-  public init(presenter: UINavigationController) {
+  init(dataProvider: DataProvider, presenter: UINavigationController) {
+    self.dataProvider = dataProvider
     self.presenter = presenter
     dashboardViewController = DashboardViewController.instantiateViewController()
     let tabItem: UITabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(named: "dashboard"), selectedImage: nil)

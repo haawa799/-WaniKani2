@@ -12,14 +12,10 @@ import WaniModel
 
 struct DataProvider {
 
-  private var apiManager: WaniKitAPIManager = {
-    var manager = WaniKitAPIManager()
-    manager.changeApiKey(newKey: "c6ce4072cf1bd37b407f2c86d69137e3")
-    return manager
-  }()
+  private let apiManager: WaniKitAPIManager
 
-  mutating func setNewAPIKey(newKey: String) {
-    apiManager.changeApiKey(newKey: "c6ce4072cf1bd37b407f2c86d69137e3")
+  init(apiKey: String) {
+    apiManager = WaniKitAPIManager(apiKey: apiKey)
   }
 
   func fetchDashboard(handler: @escaping (DashboardInfo?) -> Void) {

@@ -10,7 +10,7 @@ import UIKit
 import WaniModel
 
 // MARK: - Dashboard data fetch
-public extension DashboardCoordinator {
+extension DashboardCoordinator {
 
   public func fetchAllDashboardData() {
     dataProvider.fetchDashboard { (dashboard) in

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RESideMenuKit
 
 protocol SideMenuHolderViewControllerDelegate: class {
   func didShowMenu()

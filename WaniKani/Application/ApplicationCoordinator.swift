@@ -7,38 +7,48 @@
 //
 
 import UIKit
+import WaniLoginKit
+import Cely
 
-open class ApplicationCoordinator: Coordinator {
+class ApplicationCoordinator: Coordinator {
 
-  fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: UserDefaults.standard)
-  fileprivate let dashboardNavigationController = UINavigationController()
-  fileprivate let dashboardCoordinator: DashboardCoordinator
-  fileprivate let settingsNavigationController = UINavigationController()
-  fileprivate let settingsCoordinator: SettingsCoordinator
+  fileprivate var tabsCoordinator: TabsCoordinator?
+  fileprivate let waniLoginCoordinator: WaniLoginCoordinator
 
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
-  let childrenCoordinators: [Coordinator]
 
   init(window: UIWindow) {
     self.window = window
-    dashboardNavigationController.isNavigationBarHidden = true
-    settingsNavigationController.isNavigationBarHidden = true
-    let viewControllers = [dashboardNavigationController, settingsNavigationController]
-    rootViewController.setViewControllers(viewControllers, animated: false)
-    dashboardCoordinator = DashboardCoordinator(presenter: dashboardNavigationController)
-    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
-    childrenCoordinators = [dashboardCoordinator, settingsCoordinator]
+    waniLoginCoordinator = WaniLoginCoordinator()
   }
+
+  func presentTabs(apiKey: String) {
+    window.rootViewController = rootViewController
+    let dataProvider = DataProvider(apiKey: apiKey)
+    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, presenter: rootViewController)
+    tabsCoordinator.start()
+    self.tabsCoordinator = tabsCoordinator
+  }
+
 }
 
 // MARK: - Coordinator
-extension ApplicationCoordinator {
+extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
-//    DataProvider.makeInitialPreperations()
     window.rootViewController = rootViewController
-    dashboardCoordinator.start()
-    settingsCoordinator.start()
+    waniLoginCoordinator.start(delegate: self, window: window)
     window.makeKeyAndVisible()
   }
+
+  var shouldTryUsingMainStoryboard: Bool {
+    return false
+  }
+
+  func presentingCallback(window: UIWindow, status: CelyStatus) {
+    guard status == .loggedIn else { return }
+    guard let apiKey = waniLoginCoordinator.apiKey else { return }
+    presentTabs(apiKey: apiKey)
+  }
+
 }
