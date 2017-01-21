@@ -10,6 +10,16 @@ import UIKit
 
 class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, ReviewCoordinatorDelegate*/ {
 
+  struct Constants {
+    static let dashboardTitle = "Dashboard"
+    static let dashboardTabIconName = "dashboard"
+
+    struct Path {
+      static let lesson = IndexPath(item: 0, section: 1)
+      static let review = IndexPath(item: 1, section: 1)
+    }
+  }
+
   let presenter: UINavigationController
   let dashboardViewController: DashboardViewController
   let dataProvider: DataProvider
@@ -20,7 +30,7 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
     self.dataProvider = dataProvider
     self.presenter = presenter
     dashboardViewController = DashboardViewController.instantiateViewController()
-    let tabItem: UITabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(named: "dashboard"), selectedImage: nil)
+    let tabItem: UITabBarItem = UITabBarItem(title: Constants.dashboardTitle, image: UIImage(named: Constants.dashboardTabIconName), selectedImage: nil)
     presenter.tabBarItem = tabItem
   }
 
@@ -40,9 +50,9 @@ extension DashboardCoordinator {
   }
 
   func didSelectCell(_ indexPath: IndexPath) {
-    switch (indexPath.section, indexPath.item) {
-    case (1, 0): print("Lessons")
-    case (1, 1): showReviews()
+    switch indexPath {
+    case Constants.Path.lesson: showLessons()
+    case Constants.Path.review: showReviews()
     default:
       break
     }
@@ -51,6 +61,10 @@ extension DashboardCoordinator {
   func showReviews() {
     reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .review)
     reviewCoordinator?.start()
+  }
+
+  func showLessons() {
+
   }
 
 }
