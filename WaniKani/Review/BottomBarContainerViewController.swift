@@ -10,9 +10,19 @@ import UIKit
 import NJKScrollFullscreenKit
 
 protocol BottomBarContainerDelegate: class {
-  func leftButtonPressed()
-  func rightButtonPressed()
+  func toolBarItemPressed(index: Int)
   func focusShortcutUsed()
+}
+
+protocol BottomBarContainerDataSource: class {
+  func itemForIndex(index: Int) -> BarItemData
+  /// This includes spaceing items
+  func numberOfItems() -> Int
+}
+
+enum BarItemData {
+  case item(title: String)
+  case spacing
 }
 
 class BottomBarContainerViewController: UIViewController, StoryboardInstantiable {
@@ -22,6 +32,27 @@ class BottomBarContainerViewController: UIViewController, StoryboardInstantiable
   @IBOutlet weak var toolBar: UIToolbar!
 
   weak var delegate: BottomBarContainerDelegate?
+  weak var dataSource: BottomBarContainerDataSource? {
+    didSet {
+      guard let dataSource = dataSource else { return }
+      reloadToolBarItems(dataSource: dataSource)
+    }
+  }
+
+  fileprivate func reloadToolBarItems(dataSource: BottomBarContainerDataSource) {
+    var items = [UIBarButtonItem]()
+    for index in 0..<dataSource.numberOfItems() {
+      let item: UIBarButtonItem
+      let data = dataSource.itemForIndex(index: index)
+      switch data {
+      case .item(let title): item = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(toolBarItemsAction(_:)))
+      case .spacing: item = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+      }
+      item.tag = index
+      items.append(item)
+    }
+    toolBar?.items = items
+  }
 
   var childViewController: UIViewController? {
     didSet {
@@ -40,6 +71,8 @@ extension BottomBarContainerViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.showToolbar(false)
+    guard let dataSource = dataSource else { return }
+    reloadToolBarItems(dataSource: dataSource)
   }
 
   override var prefersStatusBarHidden: Bool {
@@ -51,12 +84,9 @@ extension BottomBarContainerViewController {
 // MARK: - Actions
 extension BottomBarContainerViewController {
 
-  @IBAction func leftButtonPressed(_ sender: UIBarButtonItem) {
-    delegate?.leftButtonPressed()
-  }
-
-  @IBAction func rightButtonPressed(_ sender: UIBarButtonItem) {
-    delegate?.rightButtonPressed()
+  func toolBarItemsAction(_ sender: UIBarButtonItem) {
+    let index = sender.tag
+    delegate?.toolBarItemPressed(index: index)
   }
 
 }
@@ -86,11 +116,11 @@ extension BottomBarContainerViewController {
   }
 
   func escapePressed(_ sender: UIKeyCommand) {
-    delegate?.leftButtonPressed()
+    // delegate?.leftButtonPressed()
   }
 
   func leftArrowPressed(_ sender: UIKeyCommand) {
-    delegate?.rightButtonPressed()
+    // delegate?.rightButtonPressed()
   }
 
   func focusPressed(_ sender: UIKeyCommand) {

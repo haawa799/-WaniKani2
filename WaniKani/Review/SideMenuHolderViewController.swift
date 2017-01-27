@@ -49,11 +49,6 @@ class SideMenuHolderViewController: RESideMenu {
     contentViewController.view.backgroundColor = UIColor.clear
     view.clipsToBounds = true
 
-//    if type == .Review {
-//      delay(45) { () -> () in
-//        self.dumpAnimation()
-//      }
-//    }
   }
 
   func dumpAnimation() {

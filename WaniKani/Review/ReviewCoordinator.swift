@@ -8,19 +8,17 @@
 
 import UIKit
 
-public protocol ReviewCoordinatorDelegate: class {
+protocol ReviewCoordinatorDelegate: class {
   func reviewCompleted(_ coordinator: ReviewCoordinator)
 }
 
-open class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
+class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate, BottomBarContainerDataSource {
 
   let presenter: UINavigationController
   let containerViewController: BottomBarContainerViewController
   let sideMenuController: SideMenuHolderViewController
 
   let childrenCoordinators: [Coordinator]
-
-//  let dataProvider = DataProvider()
 
   fileprivate var sideMenuVisible = false
 
@@ -35,22 +33,37 @@ open class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate 
 
   func start() {
     containerViewController.delegate = self
+    containerViewController.dataSource = self
     sideMenuController.delegate = self
     presenter.modalPresentationCapturesStatusBarAppearance = true
     presenter.present(containerViewController, animated: true, completion: nil)
     containerViewController.childViewController = sideMenuController
+    sideMenuController.didMove(toParentViewController: containerViewController)
   }
 
 }
 
-public extension ReviewCoordinator {
-  func leftButtonPressed() {
+// MARK: - BottomBarContainerDelegate
+extension ReviewCoordinator {
+
+  func toolBarItemPressed(index: Int) {
+    switch index {
+    case 0: leftButtonPressed()
+    case 2: rightButtonPressed()
+    default: break
+    }
+  }
+
+  func focusShortcutUsed() {
+  }
+
+  private func leftButtonPressed() {
     presenter.dismiss(animated: true) {
       self.delegate?.reviewCompleted(self)
     }
   }
 
-  func rightButtonPressed() {
+  private func rightButtonPressed() {
     if sideMenuVisible == true {
       sideMenuController.hideViewController()
       sideMenuVisible = false
@@ -64,7 +77,22 @@ public extension ReviewCoordinator {
   }
 }
 
-public extension ReviewCoordinator {
+// MARK: - BottomBarContainerDataSource
+extension ReviewCoordinator {
+  func itemForIndex(index: Int) -> BarItemData {
+    switch index {
+    case 0: return BarItemData.item(title: "Submit To GC")
+    case 2: return BarItemData.item(title: "StrokesSSSsss")
+    default: return BarItemData.spacing
+    }
+  }
+
+  func numberOfItems() -> Int {
+    return 3
+  }
+}
+
+extension ReviewCoordinator {
 
   func hideBar() {
     containerViewController.hideBar()
@@ -72,10 +100,6 @@ public extension ReviewCoordinator {
 
   func showBar() {
     containerViewController.showBar()
-  }
-
-  func focusShortcutUsed() {
-//    sideMenuController.focus()
   }
 
 }
