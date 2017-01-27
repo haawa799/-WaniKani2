@@ -454,17 +454,6 @@
             </objects>
             <point key="canvasLocation" x="3110" y="-419"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="5RG-fK-xlI">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="huX-FL-M5h" sceneMemberID="viewController">
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="102"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-8f-hEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3111" y="-801"/>
-        </scene>
     </scenes>
     <resources>
         <image name="apprentice" width="150" height="150"/>
