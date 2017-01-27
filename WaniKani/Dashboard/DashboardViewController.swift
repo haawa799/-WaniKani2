@@ -8,49 +8,23 @@
 
 import UIKit
 import DGElasticPullToRefreshKit
+import EMPageViewController
 
 protocol DashboardViewControllerDelegate: class {
   func dashboardPullToRefreshAction()
   func didSelectCell(_ indexPath: IndexPath)
 }
 
-class DashboardViewController: SingleTabViewController, StoryboardInstantiable, UICollectionViewDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class DashboardViewController: SingleTabViewController, StoryboardInstantiable, UICollectionViewDelegate, EMPageViewControllerDataSource, EMPageViewControllerDelegate {
 
   // MARK: Outlets
   @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var doubleProgressBar: DoubleProgressBar!
-  private let srsVC: SRSViewController = DashboardViewController.instantiateViewController("qqqq", nil)
+  @IBOutlet weak var topView: UIView!
+
+  fileprivate let srsVC: SRSViewController = DashboardViewController.instantiateViewController("qqqq", nil)
   fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("gggg", nil)
-  fileprivate var pageViewController: UIPageViewController?
-
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-    guard viewController !=  progressVC else { return nil }
-    return progressVC
-  }
-
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-    guard viewController !=  srsVC else { return nil }
-    return srsVC
-  }
-
-  func presentationCount(for pageViewController: UIPageViewController) -> Int {
-    return 2
-  }
-
-  func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-    guard pageViewController.viewControllers?.first == progressVC else {
-      return 1
-    }
-    return 0
-  }
-
-  func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-    if previousViewControllers.contains(srsVC) {
-      UIApplication.shared.isStatusBarHidden = !completed
-    } else {
-      UIApplication.shared.isStatusBarHidden = completed
-    }
-  }
+  fileprivate var pageViewController: EMPageViewController?
 
   @IBOutlet fileprivate weak var collectionView: UICollectionView! {
     didSet {
@@ -66,13 +40,6 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
 
   // MARK: Public API
   weak var delegate: DashboardViewControllerDelegate?
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    super.prepare(for: segue, sender: sender)
-    if let pageVC = segue.destination as? UIPageViewController {
-      pageViewController = pageVC
-    }
-  }
 
   func updateDashboardWithViewModels(progressViewModel: DoubleProgressViewModel, collectionViewModel: ListViewModel, srsViewModel: SRSDistributionViewModel, isOld: Bool = false) {
     srsVC.setupWith(srs: srsViewModel)
@@ -96,6 +63,28 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
     return collectionView.collectionViewLayout as? DashboardLayout
   }
 
+}
+
+extension DashboardViewController {
+
+  func em_pageViewController(_ pageViewController: EMPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    guard viewController !=  srsVC else { return nil }
+    return srsVC
+  }
+
+  func em_pageViewController(_ pageViewController: EMPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    guard viewController !=  progressVC else { return nil }
+    return progressVC
+  }
+}
+
+// MARK: - EMPageViewControllerDelegate
+extension DashboardViewController {
+
+  func em_pageViewController(_ pageViewController: EMPageViewController, isScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController, progress: CGFloat) {
+    let alpha = 1 - progress
+    setStatusBarAlpha(alpha: alpha)
+  }
 }
 
 // MARK: - SingleTabViewController
@@ -167,26 +156,19 @@ extension DashboardViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let _ = addBackground(BackgroundOptions.Dashboard.rawValue)
-
     addPullToRefresh()
     refreshProgressConstraint()
-    //
-    guard let pageViewController = pageViewController else { return }
-    let subviews = pageViewController.view.subviews
-    var pageControl: UIPageControl? = nil
-    for subview in subviews {
-      if let subview = subview as? UIPageControl {
-        pageControl = subview
-        pageControl?.backgroundColor = UIColor.clear
-        break
-      }
-    }
-    pageControl?.pageIndicatorTintColor = UIColor.darkGray
-    pageControl?.isHidden = true
-    pageViewController.view.frame.size.height += 36
+
+    let pageViewController = EMPageViewController(navigationOrientation: .horizontal)
     pageViewController.dataSource = self
     pageViewController.delegate = self
-    pageViewController.setViewControllers([progressVC], direction: .forward, animated: false, completion: nil)
+
+    pageViewController.selectViewController(progressVC, direction: .forward, animated: false, completion: nil)
+    self.addChildViewController(pageViewController)
+    pageViewController.view.frame = topView.bounds
+    self.topView.addSubview(pageViewController.view)
+    pageViewController.didMove(toParentViewController: self)
+    self.pageViewController = pageViewController
   }
 
   override func viewDidLayoutSubviews() {

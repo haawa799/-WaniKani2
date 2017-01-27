@@ -13,7 +13,7 @@ class ProgressViewController: UIViewController {
   @IBOutlet weak var doubleProgressView: DoubleProgressBar!
 
   func setupWith(progressViewModel: DoubleProgressViewModel) {
-    doubleProgressView.setup(progressViewModel)
+    doubleProgressView?.setup(progressViewModel)
   }
 
 }

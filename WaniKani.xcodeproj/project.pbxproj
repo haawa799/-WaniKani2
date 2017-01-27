@@ -88,6 +88,10 @@
 		430877691D90302400FE71FE /* WaniKitAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308774E1D90302400FE71FE /* WaniKitAPIManager.swift */; };
 		4308776A1D90302400FE71FE /* ParseWordListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877501D90302400FE71FE /* ParseWordListOperation.swift */; };
 		4308776B1D90302400FE71FE /* WordListGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877511D90302400FE71FE /* WordListGroupOperation.swift */; };
+		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
+		433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; };
+		433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
 		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -184,6 +188,7 @@
 			files = (
 				43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */,
 				43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */,
+				433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */,
 				43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */,
 				43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */,
 				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
@@ -291,6 +296,9 @@
 		4308774E1D90302400FE71FE /* WaniKitAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitAPIManager.swift; sourceTree = "<group>"; };
 		430877501D90302400FE71FE /* ParseWordListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseWordListOperation.swift; sourceTree = "<group>"; };
 		430877511D90302400FE71FE /* WordListGroupOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListGroupOperation.swift; sourceTree = "<group>"; };
+		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		433D3D631E3B9B48001C631D /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
+		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -377,6 +385,7 @@
 				430876DE1D902F3500FE71FE /* WaniModel.framework in Frameworks */,
 				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
 				43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */,
 				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
 				430876ED1D902FE800FE71FE /* WaniModel.framework in Frameworks */,
 				43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */,
@@ -474,6 +483,7 @@
 				430876C11D9021B300FE71FE /* ColorfullTabBarController.swift */,
 				430876C21D9021B300FE71FE /* DataProvider.swift */,
 				430876C31D9021B300FE71FE /* SingleTabViewController.swift */,
+				433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -498,6 +508,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				433D3D631E3B9B48001C631D /* EMPageViewController.framework */,
 				43B354A21E30E27200DABAAB /* Cely.framework */,
 				43B354A31E30E27200DABAAB /* Locksmith.framework */,
 				43B354A41E30E27200DABAAB /* WaniLoginKit.framework */,
@@ -688,6 +699,7 @@
 		43620A311D8C28FA00C1BA72 = {
 			isa = PBXGroup;
 			children = (
+				433D3D5E1E3B9020001C631D /* Cartfile */,
 				43620A3C1D8C28FA00C1BA72 /* WaniKani */,
 				430876E71D902FE800FE71FE /* WaniModel */,
 				430876F81D902FF500FE71FE /* WaniKit */,
@@ -1015,6 +1027,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433D3D5F1E3B9020001C631D /* Cartfile in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
@@ -1124,6 +1137,7 @@
 				43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */,
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
+				433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */,
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,

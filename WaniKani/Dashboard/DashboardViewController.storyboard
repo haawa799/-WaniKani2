@@ -25,22 +25,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-Bq-PFo" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
-                                <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaw-KV-Vva">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
-                                        <connections>
-                                            <segue destination="huX-FL-M5h" kind="embed" id="bJp-bi-n8T"/>
-                                        </connections>
-                                    </containerView>
-                                </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eyr-Bq-PFo" secondAttribute="height" multiplier="150:23" id="Cbm-Bz-bAW"/>
-                                    <constraint firstAttribute="bottom" secondItem="gaw-KV-Vva" secondAttribute="bottom" id="LTJ-dK-1Q5"/>
-                                    <constraint firstItem="gaw-KV-Vva" firstAttribute="leading" secondItem="eyr-Bq-PFo" secondAttribute="leading" id="SqF-JM-eAe"/>
-                                    <constraint firstAttribute="trailing" secondItem="gaw-KV-Vva" secondAttribute="trailing" id="kZd-dI-C09"/>
                                     <constraint firstAttribute="height" constant="102" id="m40-wj-rp5"/>
-                                    <constraint firstItem="gaw-KV-Vva" firstAttribute="top" secondItem="eyr-Bq-PFo" secondAttribute="top" id="uNZ-P4-Byf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -103,6 +91,7 @@
                         <outlet property="collectionView" destination="jZj-Be-2Zg" id="L0D-Ej-QsR"/>
                         <outlet property="doubleProgressBar" destination="5aa-H9-VSg" id="qXZ-vy-w8H"/>
                         <outlet property="headerHeightConstraint" destination="m40-wj-rp5" id="bWI-9X-gbL"/>
+                        <outlet property="topView" destination="eyr-Bq-PFo" id="Ofg-UT-3qA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ0-M4-Otq" sceneMemberID="firstResponder"/>
