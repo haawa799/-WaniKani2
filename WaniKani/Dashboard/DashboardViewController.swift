@@ -82,7 +82,13 @@ extension DashboardViewController {
 extension DashboardViewController {
 
   func em_pageViewController(_ pageViewController: EMPageViewController, isScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController, progress: CGFloat) {
-    let alpha = 1 - progress
+    let prg: CGFloat = abs(progress)
+    let alpha: CGFloat
+    if startingViewController == progressVC {
+      alpha = 1 - prg
+    } else {
+      alpha = prg
+    }
     setStatusBarAlpha(alpha: alpha)
   }
 }
