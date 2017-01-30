@@ -117,7 +117,7 @@ extension DoubleProgressBar {
     topPath.drawInView(drawingData: topDrawingData, view: self, animated: true)
     oldTopProgress = topProgress
     let botDrawingData = DoubleProgressBarDrawingData(bezier: botLayer!, strokeColor: botColor, lineWidth: 2.0, oldProgress: oldBotProgress, progress: botProgress)
-    topPath.drawInView(drawingData: botDrawingData, view: self, animated: true)
+    bottomPath.drawInView(drawingData: botDrawingData, view: self, animated: true)
     oldBotProgress = botProgress
   }
 
