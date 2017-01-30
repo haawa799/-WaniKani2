@@ -101,7 +101,7 @@
         <!--View Controller-->
         <scene sceneID="16p-Qi-lbK">
             <objects>
-                <viewController storyboardIdentifier="qqqq" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oAF-Jx-9ed" customClass="SRSViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="srs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oAF-Jx-9ed" customClass="SRSViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Km-4L-E4T"/>
                         <viewControllerLayoutGuide type="bottom" id="Stf-9C-tmi"/>
@@ -412,12 +412,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sW-OE-DyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663" y="-661"/>
+            <point key="canvasLocation" x="2972" y="-684"/>
         </scene>
         <!--Progress View Controller-->
         <scene sceneID="F6R-Qd-4J5">
             <objects>
-                <viewController storyboardIdentifier="gggg" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SH8-JT-2FH" customClass="ProgressViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="progress" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SH8-JT-2FH" customClass="ProgressViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqz-jR-ubx"/>
                         <viewControllerLayoutGuide type="bottom" id="eEo-VT-2OB"/>
@@ -452,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1k-Sb-Sav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663" y="-510"/>
+            <point key="canvasLocation" x="2972" y="-497"/>
         </scene>
     </scenes>
     <resources>

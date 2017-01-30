@@ -61,7 +61,6 @@ public class NetworkRequestOperation: GroupOperation {
 
   public override func execute() {
     super.execute()
-    print(":")
   }
 
 }

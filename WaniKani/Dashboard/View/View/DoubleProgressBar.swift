@@ -185,7 +185,7 @@ extension DoubleProgressBar {
     if inCircleLabel == nil {
       inCircleLabel = LabelWithAdaptiveTextHeight(frame: CGRect.zero)
       inCircleLabel.heightKoefitient = 0.4
-      inCircleLabel.text = "17"
+      inCircleLabel.text = ""
       inCircleLabel.textAlignment = NSTextAlignment.center
       inCircleLabel.backgroundColor = UIColor.clear
       addSubview(inCircleLabel)

@@ -84,11 +84,6 @@ extension WebViewController: UIWebViewDelegate {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     settingsSuit?.applyResizingScriptsToWebView(webView, type: type)
-    print("QQQ")
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    print("RRR")
-  }
 }

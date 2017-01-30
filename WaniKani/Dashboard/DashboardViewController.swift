@@ -22,8 +22,8 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
   @IBOutlet weak var doubleProgressBar: DoubleProgressBar!
   @IBOutlet weak var topView: UIView!
 
-  fileprivate let srsVC: SRSViewController = DashboardViewController.instantiateViewController("qqqq", nil)
-  fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("gggg", nil)
+  fileprivate let srsVC: SRSViewController = DashboardViewController.instantiateViewController("srs", nil)
+  fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("progress", nil)
   fileprivate var pageViewController: EMPageViewController?
 
   @IBOutlet fileprivate weak var collectionView: UICollectionView! {
