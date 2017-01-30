@@ -14,7 +14,7 @@ protocol BottomBarContainerDelegate: class {
   func focusShortcutUsed()
 }
 
-protocol BottomBarContainerDataSource: class {
+protocol BottomBarContainerDataSource {
   func itemForIndex(index: Int) -> BarItemData
   /// This includes spaceing items
   func numberOfItems() -> Int
@@ -32,7 +32,7 @@ class BottomBarContainerViewController: UIViewController, StoryboardInstantiable
   @IBOutlet weak var toolBar: UIToolbar!
 
   weak var delegate: BottomBarContainerDelegate?
-  weak var dataSource: BottomBarContainerDataSource? {
+  var dataSource: BottomBarContainerDataSource? {
     didSet {
       guard let dataSource = dataSource else { return }
       reloadToolBarItems(dataSource: dataSource)

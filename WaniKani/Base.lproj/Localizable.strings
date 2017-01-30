@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  WaniKani
+
+  Created by Andriy K. on 1/30/17.
+  Copyright © 2017 haawa. All rights reserved.
+*/
+"review.bottombar.button.title.submit.to.gamcenter"="Submit to Game center";
+"review.bottombar.button.title.strokes"="Strokes";
+"review.bottombar.button.title.finish"="Finish";

@@ -12,11 +12,12 @@ protocol ReviewCoordinatorDelegate: class {
   func reviewCompleted(_ coordinator: ReviewCoordinator)
 }
 
-class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate, BottomBarContainerDataSource {
+class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
 
   let presenter: UINavigationController
   let containerViewController: BottomBarContainerViewController
   let sideMenuController: SideMenuHolderViewController
+  let type: WebSessionType
 
   let childrenCoordinators: [Coordinator]
 
@@ -26,14 +27,15 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate, Bott
 
   public init(presenter: UINavigationController, type: WebSessionType) {
     self.presenter = presenter
+    self.type = type
     containerViewController = BottomBarContainerViewController.instantiateViewController()
-    sideMenuController = SideMenuHolderViewController(type: .review, settingsSuit: nil)
+    sideMenuController = SideMenuHolderViewController(type: type, settingsSuit: nil)
     childrenCoordinators = []
   }
 
   func start() {
     containerViewController.delegate = self
-    containerViewController.dataSource = self
+    containerViewController.dataSource = type
     sideMenuController.delegate = self
     presenter.modalPresentationCapturesStatusBarAppearance = true
     presenter.present(containerViewController, animated: true, completion: nil)
@@ -47,10 +49,10 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate, Bott
 extension ReviewCoordinator {
 
   func toolBarItemPressed(index: Int) {
-    switch index {
-    case 0: leftButtonPressed()
-    case 2: rightButtonPressed()
-    default: break
+    let action = type.barActionForIndex(index: index)
+    switch action {
+      case .finish, .submitToGameCenter: leftButtonPressed()
+      case .strokes: rightButtonPressed()
     }
   }
 
@@ -74,21 +76,6 @@ extension ReviewCoordinator {
       hideBar()
     }
 
-  }
-}
-
-// MARK: - BottomBarContainerDataSource
-extension ReviewCoordinator {
-  func itemForIndex(index: Int) -> BarItemData {
-    switch index {
-    case 0: return BarItemData.item(title: "Submit To GC")
-    case 2: return BarItemData.item(title: "StrokesSSSsss")
-    default: return BarItemData.spacing
-    }
-  }
-
-  func numberOfItems() -> Int {
-    return 3
   }
 }
 

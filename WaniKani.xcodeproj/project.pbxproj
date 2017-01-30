@@ -106,6 +106,9 @@
 		43BE75F81E3E5E730032950B /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
 		43BE75FC1E3E5E790032950B /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43BE76031E3F39F30032950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BE76051E3F39F30032950B /* Localizable.strings */; };
+		43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76061E3F3A870032950B /* Strings+Localization.swift */; };
+		43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76081E3F3C240032950B /* WebSessionType.swift */; };
 		43D99C531D9919560071C26D /* api_key_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C391D9919560071C26D /* api_key_script.js */; };
 		43D99C541D9919560071C26D /* fast_forward.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3A1D9919560071C26D /* fast_forward.js */; };
 		43D99C551D9919560071C26D /* ignore.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3B1D9919560071C26D /* ignore.js */; };
@@ -308,6 +311,9 @@
 		43B354A41E30E27200DABAAB /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		43BE76041E3F39F30032950B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43BE76061E3F3A870032950B /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
+		43BE76081E3F3C240032950B /* WebSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionType.swift; sourceTree = "<group>"; };
 		43D99C391D9919560071C26D /* api_key_script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api_key_script.js; sourceTree = "<group>"; };
 		43D99C3A1D9919560071C26D /* fast_forward.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fast_forward.js; sourceTree = "<group>"; };
 		43D99C3B1D9919560071C26D /* ignore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ignore.js; sourceTree = "<group>"; };
@@ -729,6 +735,8 @@
 				43620A441D8C28FA00C1BA72 /* Assets.xcassets */,
 				43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */,
 				43620A491D8C28FB00C1BA72 /* Info.plist */,
+				43BE76051E3F39F30032950B /* Localizable.strings */,
+				43BE76061E3F3A870032950B /* Strings+Localization.swift */,
 			);
 			path = WaniKani;
 			sourceTree = "<group>";
@@ -783,6 +791,7 @@
 				43D99C421D9919560071C26D /* SettingsSuit.swift */,
 				43D99C431D9919560071C26D /* UserScript.swift */,
 				43D99C441D9919560071C26D /* UserScriptsSuit.swift */,
+				43BE76081E3F3C240032950B /* WebSessionType.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1039,6 +1048,7 @@
 				430876B11D9021A200FE71FE /* AvaliableItemCell.xib in Resources */,
 				43D99C561D9919560071C26D /* reorder.js in Resources */,
 				43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */,
+				43BE76031E3F39F30032950B /* Localizable.strings in Resources */,
 				43D99C581D9919560071C26D /* score.js in Resources */,
 				43D99C621D9919560071C26D /* GameCenterCollectionViewCell.xib in Resources */,
 			);
@@ -1137,6 +1147,7 @@
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
+				43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */,
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,
@@ -1167,6 +1178,7 @@
 				430876B81D9021A200FE71FE /* LabelWithAdaptiveTextHeight.swift in Sources */,
 				43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */,
 				43D99C721D99333F0071C26D /* UserScriptsSuit.swift in Sources */,
+				43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */,
 				43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */,
 				430876B41D9021A200FE71FE /* DashboardLayout.swift in Sources */,
 				430876BE1D9021A200FE71FE /* DoubleProgressViewModel.swift in Sources */,
@@ -1218,6 +1230,14 @@
 				43620A471D8C28FB00C1BA72 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43BE76051E3F39F30032950B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43BE76041E3F39F30032950B /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

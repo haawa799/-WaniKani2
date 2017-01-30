@@ -8,19 +8,6 @@
 
 import UIKit
 
-public enum WebSessionType {
-  case lesson
-  case review
-
-  var url: String {
-    switch self {
-      case .lesson: return "https://www.wanikani.com/lesson/session"
-      case .review: return "https://www.wanikani.com/review/session"
-    }
-  }
-
-}
-
 class UserScriptsSuit: NSObject {
 
 //  static let sharedInstance = UserScriptsSuit()
