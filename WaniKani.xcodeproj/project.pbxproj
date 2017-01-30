@@ -41,16 +41,10 @@
 		430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */; };
 		430876D81D9021B300FE71FE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CC1D9021B300FE71FE /* Utils.swift */; };
 		430876D91D9021B300FE71FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CD1D9021B300FE71FE /* ViewModel.swift */; };
-		430876DC1D902F1E00FE71FE /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876DB1D902F1E00FE71FE /* WaniKit.framework */; };
-		430876DE1D902F3500FE71FE /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876DD1D902F3500FE71FE /* WaniModel.framework */; };
 		430876EA1D902FE800FE71FE /* WaniModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876E81D902FE800FE71FE /* WaniModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		430876ED1D902FE800FE71FE /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; };
-		430876EE1D902FE800FE71FE /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
 		430877071D902FF500FE71FE /* WaniKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877061D902FF500FE71FE /* WaniKitTests.swift */; };
 		430877091D902FF500FE71FE /* WaniKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876F91D902FF500FE71FE /* WaniKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4308770C1D902FF500FE71FE /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
-		4308770D1D902FF500FE71FE /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		430877201D90300F00FE71FE /* DashboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877151D90300F00FE71FE /* DashboardInfo.swift */; };
 		430877211D90300F00FE71FE /* KanjiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877161D90300F00FE71FE /* KanjiInfo.swift */; };
 		430877221D90300F00FE71FE /* LevelProgressionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877171D90300F00FE71FE /* LevelProgressionInfo.swift */; };
@@ -107,6 +101,11 @@
 		43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A41E30E27200DABAAB /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
+		43BE75F61E3E5E5C0032950B /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; };
+		43BE75F71E3E5E730032950B /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; };
+		43BE75F81E3E5E730032950B /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
+		43BE75FC1E3E5E790032950B /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43D99C531D9919560071C26D /* api_key_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C391D9919560071C26D /* api_key_script.js */; };
 		43D99C541D9919560071C26D /* fast_forward.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3A1D9919560071C26D /* fast_forward.js */; };
 		43D99C551D9919560071C26D /* ignore.js in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C3B1D9919560071C26D /* ignore.js */; };
@@ -149,13 +148,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		430876EB1D902FE800FE71FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 430876E51D902FE800FE71FE;
-			remoteInfo = WaniModel;
-		};
 		430877011D902FF500FE71FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
@@ -170,7 +162,14 @@
 			remoteGlobalIDString = 43620A391D8C28FA00C1BA72;
 			remoteInfo = WaniKani;
 		};
-		4308770A1D902FF500FE71FE /* PBXContainerItemProxy */ = {
+		43BE75F91E3E5E730032950B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 430876E51D902FE800FE71FE;
+			remoteInfo = WaniModel;
+		};
+		43BE75FD1E3E5E790032950B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
 			proxyType = 1;
@@ -187,14 +186,14 @@
 			dstSubfolderSpec = 10;
 			files = (
 				43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */,
+				43BE75F81E3E5E730032950B /* WaniModel.framework in Embed Frameworks */,
+				43BE75FC1E3E5E790032950B /* WaniKit.framework in Embed Frameworks */,
 				43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */,
 				433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */,
 				43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */,
 				43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */,
 				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
-				430876EE1D902FE800FE71FE /* WaniModel.framework in Embed Frameworks */,
 				43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */,
-				4308770D1D902FF500FE71FE /* WaniKit.framework in Embed Frameworks */,
 				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -248,8 +247,6 @@
 		430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
 		430876CC1D9021B300FE71FE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		430876CD1D9021B300FE71FE /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		430876DB1D902F1E00FE71FE /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = "/Users/haawa799/Library/Mobile Documents/com~apple~CloudDocs/projects/WaniKani/Carthage/Build/iOS/WaniKit.framework"; sourceTree = "<absolute>"; };
-		430876DD1D902F3500FE71FE /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = "/Users/haawa799/Library/Mobile Documents/com~apple~CloudDocs/projects/WaniKani/Carthage/Build/iOS/WaniModel.framework"; sourceTree = "<absolute>"; };
 		430876E61D902FE800FE71FE /* WaniModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WaniModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430876E81D902FE800FE71FE /* WaniModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaniModel.h; sourceTree = "<group>"; };
 		430876E91D902FE800FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -363,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F4F3761D9031B100A9BB08 /* PSOperations.framework in Frameworks */,
+				43BE75F61E3E5E5C0032950B /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,15 +378,13 @@
 			files = (
 				43B354A91E30E27200DABAAB /* WaniLoginKit.framework in Frameworks */,
 				43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */,
-				430876DC1D902F1E00FE71FE /* WaniKit.framework in Frameworks */,
-				4308770C1D902FF500FE71FE /* WaniKit.framework in Frameworks */,
-				430876DE1D902F3500FE71FE /* WaniModel.framework in Frameworks */,
+				43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */,
 				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
 				43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */,
 				433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */,
 				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
-				430876ED1D902FE800FE71FE /* WaniModel.framework in Frameworks */,
 				43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */,
+				43BE75F71E3E5E730032950B /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,8 +933,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				430876EC1D902FE800FE71FE /* PBXTargetDependency */,
-				4308770B1D902FF500FE71FE /* PBXTargetDependency */,
+				43BE75FA1E3E5E730032950B /* PBXTargetDependency */,
+				43BE75FE1E3E5E790032950B /* PBXTargetDependency */,
 			);
 			name = WaniKani;
 			productName = WaniKani;
@@ -1193,11 +1189,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		430876EC1D902FE800FE71FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 430876E51D902FE800FE71FE /* WaniModel */;
-			targetProxy = 430876EB1D902FE800FE71FE /* PBXContainerItemProxy */;
-		};
 		430877021D902FF500FE71FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 430876F61D902FF500FE71FE /* WaniKit */;
@@ -1208,10 +1199,15 @@
 			target = 43620A391D8C28FA00C1BA72 /* WaniKani */;
 			targetProxy = 430877031D902FF500FE71FE /* PBXContainerItemProxy */;
 		};
-		4308770B1D902FF500FE71FE /* PBXTargetDependency */ = {
+		43BE75FA1E3E5E730032950B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 430876E51D902FE800FE71FE /* WaniModel */;
+			targetProxy = 43BE75F91E3E5E730032950B /* PBXContainerItemProxy */;
+		};
+		43BE75FE1E3E5E790032950B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 430876F61D902FF500FE71FE /* WaniKit */;
-			targetProxy = 4308770A1D902FF500FE71FE /* PBXContainerItemProxy */;
+			targetProxy = 43BE75FD1E3E5E790032950B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
