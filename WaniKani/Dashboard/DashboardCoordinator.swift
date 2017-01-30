@@ -38,6 +38,7 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
     dashboardViewController.delegate = self
     presenter.pushViewController(dashboardViewController, animated: false)
     _ = dashboardViewController.view
+    fetchAllDashboardData()
   }
 
 }
@@ -64,7 +65,8 @@ extension DashboardCoordinator {
   }
 
   func showLessons() {
-
+    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .lesson)
+    reviewCoordinator?.start()
   }
 
 }
