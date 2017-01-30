@@ -25,11 +25,11 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
 
   weak var delegate: ReviewCoordinatorDelegate?
 
-  public init(presenter: UINavigationController, type: WebSessionType) {
+  public init(presenter: UINavigationController, type: WebSessionType, settingsSuit: SettingsSuit?) {
     self.presenter = presenter
     self.type = type
     containerViewController = BottomBarContainerViewController.instantiateViewController()
-    sideMenuController = SideMenuHolderViewController(type: type, settingsSuit: nil)
+    sideMenuController = SideMenuHolderViewController(type: type, settingsSuit: settingsSuit)
     childrenCoordinators = []
   }
 

@@ -23,12 +23,14 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
   let presenter: UINavigationController
   let dashboardViewController: DashboardViewController
   let dataProvider: DataProvider
+  let settingsSuit: SettingsSuit?
 
   fileprivate var reviewCoordinator: ReviewCoordinator?
 
-  init(dataProvider: DataProvider, presenter: UINavigationController) {
+  init(dataProvider: DataProvider, presenter: UINavigationController, settingsSuit: SettingsSuit?) {
     self.dataProvider = dataProvider
     self.presenter = presenter
+    self.settingsSuit = settingsSuit
     dashboardViewController = DashboardViewController.instantiateViewController()
     let tabItem: UITabBarItem = UITabBarItem(title: Constants.dashboardTitle, image: UIImage(named: Constants.dashboardTabIconName), selectedImage: nil)
     presenter.tabBarItem = tabItem
@@ -60,12 +62,12 @@ extension DashboardCoordinator {
   }
 
   func showReviews() {
-    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .review)
+    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .review, settingsSuit: settingsSuit)
     reviewCoordinator?.start()
   }
 
   func showLessons() {
-    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .lesson)
+    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .lesson, settingsSuit: nil)
     reviewCoordinator?.start()
   }
 
