@@ -23,11 +23,11 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
   let presenter: UINavigationController
   let dashboardViewController: DashboardViewController
   let dataProvider: DataProvider
-  let settingsSuit: SettingsSuit?
+  let settingsSuit: SettingsSuit
 
   fileprivate var reviewCoordinator: ReviewCoordinator?
 
-  init(dataProvider: DataProvider, presenter: UINavigationController, settingsSuit: SettingsSuit?) {
+  init(dataProvider: DataProvider, presenter: UINavigationController, settingsSuit: SettingsSuit) {
     self.dataProvider = dataProvider
     self.presenter = presenter
     self.settingsSuit = settingsSuit
@@ -67,7 +67,7 @@ extension DashboardCoordinator {
   }
 
   func showLessons() {
-    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .lesson, settingsSuit: nil)
+    reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .lesson, settingsSuit: settingsSuit)
     reviewCoordinator?.start()
   }
 

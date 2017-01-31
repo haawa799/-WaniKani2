@@ -17,6 +17,7 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
   let presenter: UINavigationController
   let containerViewController: BottomBarContainerViewController
   let sideMenuController: SideMenuHolderViewController
+  fileprivate let settingsSuit: SettingsSuit
   let type: WebSessionType
 
   let childrenCoordinators: [Coordinator]
@@ -25,8 +26,9 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
 
   weak var delegate: ReviewCoordinatorDelegate?
 
-  public init(presenter: UINavigationController, type: WebSessionType, settingsSuit: SettingsSuit?) {
+  public init(presenter: UINavigationController, type: WebSessionType, settingsSuit: SettingsSuit) {
     self.presenter = presenter
+    self.settingsSuit = settingsSuit
     self.type = type
     containerViewController = BottomBarContainerViewController.instantiateViewController()
     sideMenuController = SideMenuHolderViewController(type: type, settingsSuit: settingsSuit)
@@ -41,8 +43,12 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
     presenter.present(containerViewController, animated: true, completion: nil)
     containerViewController.childViewController = sideMenuController
     sideMenuController.didMove(toParentViewController: containerViewController)
+    updateStatusBar(hide: settingsSuit.hideStatusBarEnabled)
   }
 
+  fileprivate func updateStatusBar(hide: Bool) {
+    UIApplication.shared.isStatusBarHidden = hide
+  }
 }
 
 // MARK: - BottomBarContainerDelegate
@@ -63,6 +69,7 @@ extension ReviewCoordinator {
     presenter.dismiss(animated: true) {
       self.delegate?.reviewCompleted(self)
     }
+    updateStatusBar(hide: false)
   }
 
   private func rightButtonPressed() {
@@ -82,10 +89,12 @@ extension ReviewCoordinator {
 extension ReviewCoordinator {
 
   func hideBar() {
+    updateStatusBar(hide: false)
     containerViewController.hideBar()
   }
 
   func showBar() {
+    updateStatusBar(hide: settingsSuit.hideStatusBarEnabled)
     containerViewController.showBar()
   }
 
