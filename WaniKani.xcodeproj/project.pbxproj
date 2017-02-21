@@ -89,6 +89,7 @@
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
 		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */; };
 		43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; };
 		43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; };
@@ -128,7 +129,6 @@
 		43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C511D9919560071C26D /* GameCenterCellViewModel.swift */; };
 		43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C4A1D9919560071C26D /* GameCenterCollectionViewCell.swift */; };
 		43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C401D9919560071C26D /* IntUserDefault.swift */; };
-		43D99C721D99333F0071C26D /* UserScriptsSuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C441D9919560071C26D /* UserScriptsSuit.swift */; };
 		43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C451D9919560071C26D /* SettingsCoordinator.swift */; };
 		43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C4F1D9919560071C26D /* SettingsLayout.swift */; };
 		43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */; };
@@ -304,6 +304,7 @@
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
+		43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingScriptUtils.swift; sourceTree = "<group>"; };
 		43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
 		43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
 		43B354A21E30E27200DABAAB /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
@@ -324,7 +325,6 @@
 		43D99C411D9919560071C26D /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		43D99C421D9919560071C26D /* SettingsSuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSuit.swift; sourceTree = "<group>"; };
 		43D99C431D9919560071C26D /* UserScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScript.swift; sourceTree = "<group>"; };
-		43D99C441D9919560071C26D /* UserScriptsSuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScriptsSuit.swift; sourceTree = "<group>"; };
 		43D99C451D9919560071C26D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		43D99C461D9919560071C26D /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		43D99C471D9919560071C26D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -503,6 +503,7 @@
 				430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */,
 				430876CC1D9021B300FE71FE /* Utils.swift */,
 				430876CD1D9021B300FE71FE /* ViewModel.swift */,
+				43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -790,7 +791,6 @@
 				43D99C411D9919560071C26D /* Setting.swift */,
 				43D99C421D9919560071C26D /* SettingsSuit.swift */,
 				43D99C431D9919560071C26D /* UserScript.swift */,
-				43D99C441D9919560071C26D /* UserScriptsSuit.swift */,
 				43BE76081E3F3C240032950B /* WebSessionType.swift */,
 			);
 			path = Settings;
@@ -982,6 +982,11 @@
 						DevelopmentTeam = S55BP53VB8;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1140,6 +1145,7 @@
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
+				43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */,
 				43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */,
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
@@ -1177,7 +1183,6 @@
 				43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */,
 				430876B81D9021A200FE71FE /* LabelWithAdaptiveTextHeight.swift in Sources */,
 				43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */,
-				43D99C721D99333F0071C26D /* UserScriptsSuit.swift in Sources */,
 				43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */,
 				43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */,
 				430876B41D9021A200FE71FE /* DashboardLayout.swift in Sources */,

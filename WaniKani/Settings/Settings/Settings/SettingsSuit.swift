@@ -15,10 +15,13 @@ private struct ScriptSetting {
   static let reorderScript = UserScript(filename: "reorder", scriptName: "Reorder script")
   static let scoreScript = UserScript(filename: "score", scriptName: "Score script")
 
-  static func resizingScriptForCurrentMetrics(_ statusBarHidden: Bool) -> UserScript {
+  static func resizingScriptForCurrentMetrics(size: CGSize, statusBarHidden: Bool) -> UserScript? {
+    guard let configuration = ScreenLayoutConfiguration(size: size) else { return nil }
     var resizingScriptCopy = ScriptSetting.smartResizingScript
     resizingScriptCopy.modifyScript({ (script) -> (String) in
-      let s = script
+      var s = script.replacingOccurrences(of: "HHH", with: "\(configuration.height)")
+      s = s.replacingOccurrences(of: "WWW", with: "\(configuration.width)")
+      s = s.replacingOccurrences(of: "FFF", with: "\(configuration.font)")
       return s
     })
     return resizingScriptCopy
@@ -43,7 +46,6 @@ private struct SettingsSuitSettings {
     if ignoreButtonSetting.isEnabled == true { scripts.append(ScriptSetting.ignoreButtonScript) }
     if reorderSetting.isEnabled == true { scripts.append(ScriptSetting.reorderScript) }
     scripts.append(ScriptSetting.scoreScript)
-    if smartResizingSetting.isEnabled == true { _ = ScriptSetting.resizingScriptForCurrentMetrics(hideStatusBarSetting.isEnabled) }
     return scripts
   }
 
@@ -118,10 +120,12 @@ extension SettingsSuit {
     setting.setEnabled(state)
   }
 
-  func applyResizingScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
+  func applyResizingScriptsToWebView(size: CGSize, webView: UIWebView, type: WebSessionType) {
     guard type == .review else { return }
-    let script = ScriptSetting.resizingScriptForCurrentMetrics(SettingsSuitSettings.hideStatusBarSetting.isEnabled)
-    webView.stringByEvaluatingJavaScript(from: script.script)
+    if let script = ScriptSetting.resizingScriptForCurrentMetrics(size: size, statusBarHidden: SettingsSuitSettings.hideStatusBarSetting.isEnabled) {
+      let q = webView.stringByEvaluatingJavaScript(from: script.script)
+      debugPrint(q)
+    }
   }
 
   static func applyUserScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
