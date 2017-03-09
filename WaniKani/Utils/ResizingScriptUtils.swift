@@ -69,14 +69,14 @@ struct ScreenLayoutConfiguration {
   var height: Int {
     var height: Int
     switch layout {
-      case .iPhone7Plus_Portrait: height = 100
-      case .iPhone7Plus_Landscape: height = 100
-      case .iPhone7_Portrait: height = 100
-      case .iPhone7_Landscape: height = 100
-      case .iPhoneSE_Portrait: height = 100
-      case .iPhoneSE_Landscape: height = 100
-      case .iPhone4s_Portrait: height = 100
-      case .iPhone4s_Landscape: height = 100
+      case .iPhone7Plus_Portrait: height = 300
+      case .iPhone7Plus_Landscape: height = 75
+      case .iPhone7_Portrait: height = 250
+      case .iPhone7_Landscape: height = 40
+      case .iPhoneSE_Portrait: height = 180
+      case .iPhoneSE_Landscape: height = 40
+      case .iPhone4s_Portrait: height = 90
+      case .iPhone4s_Landscape: height = 90
       case .iPad_Portrait: height = 460
       case .iPad_Landscape: height = 130
       case .iPadSlideOverSmall_Portrait: height = 460
@@ -85,21 +85,21 @@ struct ScreenLayoutConfiguration {
       case .iPadSlideOverMedium_Landscape: height = 240
       case .iPadSlideOverLarge_Landscape: height = 240
     }
-    return height
+    return height // - 20
   }
 
   var font: Int {
     switch layout {
-      case .iPhone7Plus_Portrait: return 100
-      case .iPhone7Plus_Landscape: return 100
-      case .iPhone7_Portrait: return 100
-      case .iPhone7_Landscape: return 100
+      case .iPhone7Plus_Portrait: return 250
+      case .iPhone7Plus_Landscape: return 110
+      case .iPhone7_Portrait: return 230
+      case .iPhone7_Landscape: return 60
       case .iPhoneSE_Portrait: return 100
-      case .iPhoneSE_Landscape: return 100
-      case .iPhone4s_Portrait: return 100
-      case .iPhone4s_Landscape: return 100
+      case .iPhoneSE_Landscape: return 50
+      case .iPhone4s_Portrait: return 60
+      case .iPhone4s_Landscape: return 60
       case .iPad_Portrait: return 100
-      case .iPad_Landscape: return 60
+      case .iPad_Landscape: return 30
       case .iPadSlideOverSmall_Portrait: return 500
       case .iPadSlideOverSmall_Landscape: return 150 //
       case .iPadSlideOverMedium_Portrait: return 200
