@@ -94,7 +94,10 @@ extension WebViewController: UIWebViewDelegate {
   }
 
   func webViewDidFinishLoad(_ webView: UIWebView) {
-    SettingsSuit.applyUserScriptsToWebView(webView, type: type)
+    DispatchQueue.main.async {
+      let size = self.view.window?.bounds.size ?? CGSize.zero
+      self.settingsSuit?.applyResizingScriptsToWebView(size: size, webView: self.webView, type: self.type)
+    }
   }
 
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -103,7 +106,7 @@ extension WebViewController: UIWebViewDelegate {
     guard size.width != lastSize.width else { return }
     guard ignoreResizing == false else { return }
     coordinator.animateAlongsideTransition(in: nil, animation: nil) { (_) in
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+      DispatchQueue.main.async {
         self.settingsSuit?.applyResizingScriptsToWebView(size: size, webView: self.webView, type: self.type)
       }
     }

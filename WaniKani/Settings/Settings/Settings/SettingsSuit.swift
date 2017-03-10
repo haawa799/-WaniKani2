@@ -123,8 +123,7 @@ extension SettingsSuit {
   func applyResizingScriptsToWebView(size: CGSize, webView: UIWebView, type: WebSessionType) {
     guard type == .review else { return }
     if let script = ScriptSetting.resizingScriptForCurrentMetrics(size: size, statusBarHidden: SettingsSuitSettings.hideStatusBarSetting.isEnabled) {
-      let q = webView.stringByEvaluatingJavaScript(from: script.script)
-      debugPrint(q)
+      _ = webView.stringByEvaluatingJavaScript(from: script.script)
     }
   }
 
