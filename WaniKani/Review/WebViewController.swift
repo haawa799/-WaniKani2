@@ -97,6 +97,7 @@ extension WebViewController: UIWebViewDelegate {
     DispatchQueue.main.async {
       let size = self.view.window?.bounds.size ?? CGSize.zero
       self.settingsSuit?.applyResizingScriptsToWebView(size: size, webView: self.webView, type: self.type)
+      SettingsSuit.applyUserScriptsToWebView(webView, type: self.type)
     }
   }
 

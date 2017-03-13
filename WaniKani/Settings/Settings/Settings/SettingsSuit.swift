@@ -17,9 +17,13 @@ private struct ScriptSetting {
 
   static func resizingScriptForCurrentMetrics(size: CGSize, statusBarHidden: Bool) -> UserScript? {
     guard let configuration = ScreenLayoutConfiguration(size: size) else { return nil }
+    var height = configuration.height
+    if statusBarHidden == false {
+      height -= 20
+    }
     var resizingScriptCopy = ScriptSetting.smartResizingScript
     resizingScriptCopy.modifyScript({ (script) -> (String) in
-      var s = script.replacingOccurrences(of: "HHH", with: "\(configuration.height)")
+      var s = script.replacingOccurrences(of: "HHH", with: "\(height)")
       s = s.replacingOccurrences(of: "WWW", with: "\(configuration.width)")
       s = s.replacingOccurrences(of: "FFF", with: "\(configuration.font)")
       return s
