@@ -36,6 +36,7 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
   }
 
   func start() {
+    CookiesStorage.loadCookies()
     containerViewController.delegate = self
     containerViewController.dataSource = type
     sideMenuController.delegate = self

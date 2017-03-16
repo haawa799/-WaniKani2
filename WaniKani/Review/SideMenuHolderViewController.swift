@@ -27,7 +27,7 @@ class SideMenuHolderViewController: RESideMenu {
     let b = UIViewController()
     b.view.backgroundColor = UIColor.yellow
 
-    let middleViewController = WebViewController(nibName: WebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
+    let middleViewController = ReviewWebViewController(nibName: ReviewWebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
     let rightViewController = RightMenuViewController(contentViewController: q)
     let _ = rightViewController.view
 
@@ -41,7 +41,7 @@ class SideMenuHolderViewController: RESideMenu {
   override func viewDidLoad() {
 
     delegate = self
-    (contentViewController as? WebViewController)?.delegate = self
+    (contentViewController as? ReviewWebViewController)?.delegate = self
 
     super.viewDidLoad()
 
@@ -97,9 +97,9 @@ extension SideMenuHolderViewController {
   }
 }
 
-extension SideMenuHolderViewController: WebViewControllerDelegate {
+extension SideMenuHolderViewController: ReviewWebViewControllerDelegate {
 
-  func webViewControllerBecomeReadyForLoad(viewController: WebViewController) {
+  func webViewControllerBecomeReadyForLoad(viewController: ReviewWebViewController) {
     guard let type = type else { return }
     viewController.loadReviews(type)
   }

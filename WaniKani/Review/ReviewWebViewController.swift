@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol WebViewControllerDelegate: class {
-  func webViewControllerBecomeReadyForLoad(viewController: WebViewController)
+protocol ReviewWebViewControllerDelegate: class {
+  func webViewControllerBecomeReadyForLoad(viewController: ReviewWebViewController)
 }
 
-class WebViewController: UIViewController, StoryboardInstantiable {
+class ReviewWebViewController: UIViewController, StoryboardInstantiable {
 
   fileprivate var settingsSuit: SettingsSuit?
   fileprivate var lastSize = CGSize.zero
@@ -23,7 +23,7 @@ class WebViewController: UIViewController, StoryboardInstantiable {
     self.settingsSuit = settingsSuit
   }
 
-  weak var delegate: WebViewControllerDelegate?
+  weak var delegate: ReviewWebViewControllerDelegate?
 
   func loadReviews(_ type: WebSessionType) {
     self.type = type
@@ -71,7 +71,7 @@ class WebViewController: UIViewController, StoryboardInstantiable {
   }
 }
 
-extension WebViewController: UIWebViewDelegate {
+extension ReviewWebViewController: UIWebViewDelegate {
 
   fileprivate func checkForNewScore() {
     if let response = webView.stringByEvaluatingJavaScript(from: "getScore();"),

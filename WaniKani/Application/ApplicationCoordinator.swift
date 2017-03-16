@@ -49,6 +49,7 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     guard status == .loggedIn else { return }
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
     presentTabs(apiKey: apiKey)
+    CookiesStorage.saveCookies()
   }
 
 }

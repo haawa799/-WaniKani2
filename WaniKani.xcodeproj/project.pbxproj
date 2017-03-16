@@ -90,6 +90,7 @@
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
 		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */; };
+		43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A431E7A98C600F6874A /* CookiesStorage.swift */; };
 		43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; };
 		43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; };
@@ -132,8 +133,8 @@
 		43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C451D9919560071C26D /* SettingsCoordinator.swift */; };
 		43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C4F1D9919560071C26D /* SettingsLayout.swift */; };
 		43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */; };
-		43D99C871D994D1B0071C26D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C811D994D1B0071C26D /* WebViewController.swift */; };
-		43D99C881D994D1B0071C26D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C821D994D1B0071C26D /* WebViewController.xib */; };
+		43D99C871D994D1B0071C26D /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */; };
+		43D99C881D994D1B0071C26D /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */; };
 		43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */; };
 		43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */; };
 		43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */; };
@@ -305,6 +306,7 @@
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
 		43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingScriptUtils.swift; sourceTree = "<group>"; };
+		43B02A431E7A98C600F6874A /* CookiesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesStorage.swift; sourceTree = "<group>"; };
 		43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
 		43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
 		43B354A21E30E27200DABAAB /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
@@ -340,8 +342,8 @@
 		43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarContainerViewController.swift; sourceTree = "<group>"; };
 		43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoordinator+SideMenu.swift"; sourceTree = "<group>"; };
 		43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCoordinator.swift; sourceTree = "<group>"; };
-		43D99C811D994D1B0071C26D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		43D99C821D994D1B0071C26D /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
+		43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
 		43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHolderViewController.swift; sourceTree = "<group>"; };
 		43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				430876CC1D9021B300FE71FE /* Utils.swift */,
 				430876CD1D9021B300FE71FE /* ViewModel.swift */,
 				43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */,
+				43B02A431E7A98C600F6874A /* CookiesStorage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -843,8 +846,8 @@
 				43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */,
 				43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */,
 				43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */,
-				43D99C811D994D1B0071C26D /* WebViewController.swift */,
-				43D99C821D994D1B0071C26D /* WebViewController.xib */,
+				43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */,
+				43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */,
 				43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */,
 				43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */,
 			);
@@ -1041,7 +1044,7 @@
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
-				43D99C881D994D1B0071C26D /* WebViewController.xib in Resources */,
+				43D99C881D994D1B0071C26D /* ReviewWebViewController.xib in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
 				43D99C5F1D9919560071C26D /* SettingsViewController.storyboard in Resources */,
@@ -1142,6 +1145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D99C6C1D9923290071C26D /* SettingsScriptCellViewModel.swift in Sources */,
+				43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */,
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
@@ -1162,7 +1166,7 @@
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
 				430876D31D9021B300FE71FE /* DrawingUtils.swift in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
-				43D99C871D994D1B0071C26D /* WebViewController.swift in Sources */,
+				43D99C871D994D1B0071C26D /* ReviewWebViewController.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,
 				430876AD1D9021A200FE71FE /* DashboardCoordinator.swift in Sources */,
 				430876D11D9021B300FE71FE /* Array.swift in Sources */,
