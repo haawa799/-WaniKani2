@@ -8,8 +8,7 @@
 
 import Foundation
 
-// swiftlint:disable force_cast
-public struct SRSDistributionInfo {
+public struct SRSDistributionInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let apprentice = "apprentice"
@@ -33,25 +32,26 @@ public struct SRSDistributionInfo {
 
 extension SRSDistributionInfo {
 
-  public init(dict: [String : AnyObject]) {
+  public init(dict: [String : Any]) throws {
+    guard let apprenticeDict = dict[DictionaryKey.apprentice] as? [String: Any],
+          let guruDict = dict[DictionaryKey.guru] as? [String : Any],
+          let masterDict = dict[DictionaryKey.master] as? [String : Any],
+          let enlightenDict = dict[DictionaryKey.enlighten] as? [String : Any],
+          let burnedDict = dict[DictionaryKey.burned] as? [String : Any] else { throw InitialisationError.mandatoryFieldsMissing }
+
     // Apprentice
-    let apprenticeDict = dict[DictionaryKey.apprentice] as! [String : AnyObject]
     apprentice = SRSLevelInfo(dict: apprenticeDict)
 
     // Guru
-    let guruDict = dict[DictionaryKey.guru] as! [String : AnyObject]
     guru = SRSLevelInfo(dict: guruDict)
 
     // Master
-    let masterDict = dict[DictionaryKey.master] as! [String : AnyObject]
     master = SRSLevelInfo(dict: masterDict)
 
     // Enlighten
-    let enlightenDict = dict[DictionaryKey.enlighten] as! [String : AnyObject]
     enlighten = SRSLevelInfo(dict: enlightenDict)
 
     // Burned
-    let burnedDict = dict[DictionaryKey.burned] as! [String : AnyObject]
     burned = SRSLevelInfo(dict: burnedDict)
   }
 }

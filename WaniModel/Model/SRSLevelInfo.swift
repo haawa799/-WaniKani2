@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SRSLevelInfo {
+public struct SRSLevelInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let radicals = "radicals"
@@ -32,7 +32,7 @@ public struct SRSLevelInfo {
 
 extension SRSLevelInfo {
 
-  public init(dict: [String : AnyObject]) {
+  public init(dict: [String : Any]) {
     let radicals = dict[DictionaryKey.radicals] as? Int ?? 0
     let kanji = dict[DictionaryKey.kanji] as? Int ?? 0
     let vocabulary = dict[DictionaryKey.vocabulary] as? Int ?? 0

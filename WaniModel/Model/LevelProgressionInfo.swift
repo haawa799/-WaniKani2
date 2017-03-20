@@ -8,8 +8,7 @@
 
 import Foundation
 
-// swiftlint:disable force_cast
-public struct LevelProgressionInfo {
+public struct LevelProgressionInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let radicalsProgress = "radicals_progress"
@@ -25,22 +24,19 @@ public struct LevelProgressionInfo {
   public var radicalsTotal: Int?
   public var kanjiProgress: Int?
   public var kanjiTotal: Int?
-  public let currentLevel: Int
+  public let userInfo: UserInfo
 
 }
 
 public extension LevelProgressionInfo {
 
-  public init(dict: [String : AnyObject]) {
-
-    let levelProgressionDict = dict[DictionaryKey.requestedInfo] as! [String : AnyObject]
-    let userInfoDict = dict[DictionaryKey.userInfo] as! [String : AnyObject]
-
-    radicalsProgress = (levelProgressionDict[DictionaryKey.radicalsProgress] as? Int)
-    radicalsTotal = (levelProgressionDict[DictionaryKey.radicalsTotal] as? Int)
-    kanjiProgress = (levelProgressionDict[DictionaryKey.kanjiProgress] as? Int)
-    kanjiTotal = (levelProgressionDict[DictionaryKey.kanjiTotal] as? Int)
-    currentLevel = userInfoDict[DictionaryKey.level] as! Int
+  public init(userInfoDict: [String : Any], requestedInfoDict: [String : Any]) throws {
+    self.userInfo = try UserInfo(dict: userInfoDict)
+    // Optional fields
+    radicalsProgress = (requestedInfoDict[DictionaryKey.radicalsProgress] as? Int)
+    radicalsTotal = (requestedInfoDict[DictionaryKey.radicalsTotal] as? Int)
+    kanjiProgress = (requestedInfoDict[DictionaryKey.kanjiProgress] as? Int)
+    kanjiTotal = (requestedInfoDict[DictionaryKey.kanjiTotal] as? Int)
   }
 
 }

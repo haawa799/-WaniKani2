@@ -9,6 +9,8 @@
 import UIKit
 import WaniLoginKit
 import Cely
+import WaniKit
+import Promise
 
 class ApplicationCoordinator: Coordinator {
 
@@ -17,6 +19,7 @@ class ApplicationCoordinator: Coordinator {
 
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
+  var promise: Promise<(Data, HTTPURLResponse)>!
 
   init(window: UIWindow) {
     self.window = window

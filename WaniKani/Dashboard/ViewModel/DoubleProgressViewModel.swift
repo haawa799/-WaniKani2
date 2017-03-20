@@ -35,7 +35,7 @@ struct DoubleProgressViewModel: DoubleProgressBarProgressDataSource {
 
     topProgress = CGFloat(topCur)/CGFloat(topMax)
     botProgress = CGFloat(botCur)/CGFloat(botMax)
-    userLevelString = "\(dashboard.levelProgressionInfo.currentLevel)"
+    userLevelString = "\(dashboard.levelProgressionInfo.userInfo.level)"
   }
 
 }

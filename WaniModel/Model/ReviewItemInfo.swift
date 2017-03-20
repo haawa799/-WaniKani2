@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ReviewItemInfo {
+public enum ReviewItemInfo: WaniKaniDataStructure {
 
   struct DictKeys {
     static let type = "type"
@@ -21,20 +21,19 @@ public enum ReviewItemInfo {
   case word(WordInfo)
   case radical(RadicalInfo)
 
-  public init?(dict: [String : AnyObject]) {
-    guard let type = dict[DictKeys.type] as? String else { return nil }
+  public init(dict: [String : Any]) throws {
+    guard let type = dict[DictKeys.type] as? String else { throw InitialisationError.initialisationProblem }
     switch type {
     case DictKeys.radical:
-      self = ReviewItemInfo.radical(RadicalInfo(dict: dict))
+      self = try ReviewItemInfo.radical(RadicalInfo(dict: dict))
       return
     case DictKeys.kanji:
-      self = ReviewItemInfo.kanji(KanjiInfo(dict: dict))
+      self = try ReviewItemInfo.kanji(KanjiInfo(dict: dict))
       return
     case DictKeys.word:
-      self = ReviewItemInfo.word(WordInfo(dict: dict))
+      self = try ReviewItemInfo.word(WordInfo(dict: dict))
       return
-    default:
-      return nil
+    default: throw InitialisationError.initialisationProblem
     }
   }
 

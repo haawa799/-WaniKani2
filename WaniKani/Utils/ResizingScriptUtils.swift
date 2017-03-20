@@ -85,7 +85,7 @@ struct ScreenLayoutConfiguration {
       case .iPadSlideOverMedium_Landscape: height = 240
       case .iPadSlideOverLarge_Landscape: height = 240
     }
-    return height // - 20
+    return height
   }
 
   var font: Int {
@@ -101,10 +101,10 @@ struct ScreenLayoutConfiguration {
       case .iPad_Portrait: return 100
       case .iPad_Landscape: return 30
       case .iPadSlideOverSmall_Portrait: return 500
-      case .iPadSlideOverSmall_Landscape: return 150 //
+      case .iPadSlideOverSmall_Landscape: return 150
       case .iPadSlideOverMedium_Portrait: return 200
-      case .iPadSlideOverMedium_Landscape: return 190 //
-      case .iPadSlideOverLarge_Landscape: return 250 //
+      case .iPadSlideOverMedium_Landscape: return 190
+      case .iPadSlideOverLarge_Landscape: return 250
     }
   }
 }

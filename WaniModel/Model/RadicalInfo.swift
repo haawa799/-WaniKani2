@@ -8,8 +8,7 @@
 
 import Foundation
 
-// swiftlint:disable force_cast
-public struct RadicalInfo {
+public struct RadicalInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let character = "character"
@@ -32,11 +31,14 @@ public struct RadicalInfo {
 
 extension RadicalInfo {
 
-  public init(dict: [String : AnyObject]) {
+  public init(dict: [String : Any]) throws {
+    guard let level = dict[DictionaryKey.level] as? Int else { throw InitialisationError.mandatoryFieldsMissing }
+    self.level = level
+
+    // Optional fields
     character = dict[DictionaryKey.character] as? String
     meaning = dict[DictionaryKey.meaning] as? String
     image = dict[DictionaryKey.image] as? String
-    level = dict[DictionaryKey.level] as! Int
     percentage = dict[DictionaryKey.percentage] as? String
     if let unlockedDateInt = dict[DictionaryKey.unlockedDate] as? Int {
       unlockedDate = Date(timeIntervalSince1970: TimeInterval(unlockedDateInt))

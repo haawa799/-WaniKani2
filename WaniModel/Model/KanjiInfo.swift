@@ -8,8 +8,7 @@
 
 import Foundation
 
-// swiftlint:disable force_cast
-public struct KanjiInfo {
+public struct KanjiInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let character = "character"
@@ -38,9 +37,9 @@ public struct KanjiInfo {
   public var reading: String? {
     guard let importantReading = importantReading else { return nil }
     switch importantReading {
-    case "kunyomi": return kunyomi
-    case "onyomi": return onyomi
-    case "nanori": return nanori
+    case DictionaryKey.kunyomi: return kunyomi
+    case DictionaryKey.onyomi: return onyomi
+    case DictionaryKey.nanori: return nanori
     default: return nil
     }
   }
@@ -48,14 +47,19 @@ public struct KanjiInfo {
 
 extension KanjiInfo {
 
-  public init(dict: [String : AnyObject]) {
-    character = dict[KanjiInfo.DictionaryKey.character] as! String
+  public init(dict: [String : Any]) throws {
+    guard let character = dict[KanjiInfo.DictionaryKey.character] as? String,
+          let level = dict[KanjiInfo.DictionaryKey.level] as? Int else { throw InitialisationError.mandatoryFieldsMissing }
+    // Mandatory fields
+    self.character = character
+    self.level = level
+
+    // Optional fiels
     meaning = dict[KanjiInfo.DictionaryKey.meaning] as? String
     onyomi = dict[KanjiInfo.DictionaryKey.onyomi] as? String
     kunyomi = dict[KanjiInfo.DictionaryKey.kunyomi] as? String
     nanori = dict[KanjiInfo.DictionaryKey.nanori] as? String
     importantReading = dict[KanjiInfo.DictionaryKey.importantReading] as? String
-    level = dict[KanjiInfo.DictionaryKey.level] as! Int
     percentage = dict[DictionaryKey.percentage] as? String
     if let unlockedDateInt = dict[DictionaryKey.unlockedDate] as? Int {
       unlockedDate = Date(timeIntervalSince1970: TimeInterval(unlockedDateInt))

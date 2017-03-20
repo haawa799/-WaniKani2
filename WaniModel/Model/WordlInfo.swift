@@ -8,8 +8,7 @@
 
 import Foundation
 
-// swiftlint:disable force_cast
-public struct WordInfo {
+public struct WordInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let character = "character"
@@ -32,11 +31,15 @@ public struct WordInfo {
 
 extension WordInfo {
 
-  public init(dict: [String : AnyObject]) {
-    character = dict[DictionaryKey.character] as! String
+  public init(dict: [String : Any]) throws {
+    guard let level = dict[DictionaryKey.level] as? Int,
+          let character = dict[DictionaryKey.character] as? String else { throw InitialisationError.mandatoryFieldsMissing }
+    self.character = character
+    self.level = level
+
+    // Optional fields
     meaning = dict[DictionaryKey.meaning] as? String
     kana = dict[DictionaryKey.kana] as? String
-    level = dict[DictionaryKey.level] as! Int
     percentage = dict[DictionaryKey.percentage] as? String
     if let unlockedDateInt = dict[DictionaryKey.unlockedDate] as? Int {
       unlockedDate = Date(timeIntervalSince1970: TimeInterval(unlockedDateInt))

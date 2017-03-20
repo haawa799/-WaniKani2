@@ -2,7 +2,7 @@ github "haawa799/DGElasticPullToRefresh" "d02f7bb5c3d9a3b8059fcb3fc9d9877bdc062a
 github "haawa799/EMPageViewController" "3.0.0"
 github "matthewpalmer/Locksmith" "3.0.0"
 github "haawa799/NJKScrollFullScreen" "e43255f235c1684df7b16e6dd1a03c099324e258"
-github "pluralsight/PSOperations" "3aa11ebb3c20337427bfd3180a6bf9a2ffa99285"
+github "haawa799/Promise" "337c639f38c550a7409c1ce8c306fb54443cca6d"
 github "haawa799/RESideMenu" "521588087c6c35ad45f1294a55f26b5d4e7cc14b"
 github "haawa799/Cely" "0cf789faa958b9c9c4dbc471052f2abcf3e21a23"
 github "haawa799/WaniLogin" "4c93d8faec6751949ab26c88bb4a2ecf76f9a150"

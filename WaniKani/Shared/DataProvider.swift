@@ -12,14 +12,14 @@ import WaniModel
 
 struct DataProvider {
 
-  private let apiManager: WaniKitAPIManager
+  private let apiManager: WaniKitManager
 
   init(apiKey: String) {
-    apiManager = WaniKitAPIManager(apiKey: apiKey)
+    apiManager = WaniKitManager(apiKey: apiKey)
   }
 
   func fetchDashboard(handler: @escaping (DashboardInfo?) -> Void) {
-    apiManager.fetchDashboard(handler: handler)
+//    apiManager.fetchDashboard(handler: handler)
   }
 
 }

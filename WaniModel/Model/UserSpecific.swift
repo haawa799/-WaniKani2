@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UserSpecific {
+public struct UserSpecific: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let srs = "srs"

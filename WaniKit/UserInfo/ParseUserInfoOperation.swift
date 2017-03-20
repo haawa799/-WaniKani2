@@ -11,7 +11,7 @@ public class ParseUserInfoOperation: ParseOperation<UserInfo> {
   override func parsedValue(rootDictionary: [[String: AnyObject]]) -> UserInfo? {
     guard let rootDictionary = rootDictionary.first else { return nil}
     guard let userInfoDict = rootDictionary[ParseUserInfoOperation.key] as? [String : AnyObject] else { return nil }
-    let userInfo = UserInfo(dict: userInfoDict)
+    let userInfo = try? UserInfo(dict: userInfoDict)
     return userInfo
   }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct StudyQueueInfo {
+public struct StudyQueueInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let avaliableLessons = "lessons_available"

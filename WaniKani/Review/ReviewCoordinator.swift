@@ -83,7 +83,6 @@ extension ReviewCoordinator {
       sideMenuVisible = true
       hideBar()
     }
-
   }
 }
 

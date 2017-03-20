@@ -8,8 +8,13 @@
 
 import Foundation
 
+public enum InitialisationError: Error {
+  case mandatoryFieldsMissing
+  case noTransformationFunctionProvided
+  case initialisationProblem
+}
 // swiftlint:disable force_cast
-public struct UserInfo {
+public struct UserInfo: WaniKaniDataStructure {
 
   struct DictionaryKey {
     static let username = "username"
@@ -25,8 +30,8 @@ public struct UserInfo {
   }
 
   public var username: String
+  public var level: Int
   public var gravatar: String?
-  public var level: Int?
   public var title: String?
   public var about: String?
   public var website: String?
@@ -39,20 +44,21 @@ public struct UserInfo {
 
 extension UserInfo {
 
-  public init(dict: [String : AnyObject]) {
-    username = dict[DictionaryKey.username] as! String
+  public init(dict: [String : Any]) throws {
+    guard let userName = dict[DictionaryKey.username] as? String, let level = (dict[DictionaryKey.level] as? Int) else { throw InitialisationError.mandatoryFieldsMissing }
+    // Mandatory fields
+    self.username = userName
+    self.level = level
+
+    // Optional fields
     if let creation = dict[DictionaryKey.creationDate] as? Int {
       creationDate = Date(timeIntervalSince1970: TimeInterval(creation))
     }
-
     gravatar = (dict[DictionaryKey.gravatar] as? String)
-    level = (dict[DictionaryKey.level] as? Int)
     title = (dict[DictionaryKey.title] as? String)
-
     about = (dict[DictionaryKey.about] as? String)
     website = (dict[DictionaryKey.website] as? String)
     twitter = (dict[DictionaryKey.twitter] as? String)
-
     topicsCount = (dict[DictionaryKey.topicsCount] as? Int)
     postsCount = (dict[DictionaryKey.postsCount] as? Int)
   }

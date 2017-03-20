@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct DashboardInfo {
+public struct DashboardInfo: WaniKaniDataStructure {
 
   public let levelProgressionInfo: LevelProgressionInfo
   public let studyQueueInfo: StudyQueueInfo

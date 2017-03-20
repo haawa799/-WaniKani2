@@ -56,36 +56,22 @@
 		430877281D90300F00FE71FE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771D1D90300F00FE71FE /* UserInfo.swift */; };
 		430877291D90300F00FE71FE /* UserSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771E1D90300F00FE71FE /* UserSpecific.swift */; };
 		4308772A1D90300F00FE71FE /* WordlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771F1D90300F00FE71FE /* WordlInfo.swift */; };
-		430877521D90302400FE71FE /* AllKanjiGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308772C1D90302300FE71FE /* AllKanjiGroupOperation.swift */; };
-		430877531D90302400FE71FE /* CriticalItemsGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308772E1D90302300FE71FE /* CriticalItemsGroupOperation.swift */; };
-		430877541D90302400FE71FE /* ParseCriticalItemsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308772F1D90302300FE71FE /* ParseCriticalItemsOperation.swift */; };
-		430877551D90302400FE71FE /* DashboardInfoGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877311D90302300FE71FE /* DashboardInfoGroupOperation.swift */; };
-		430877561D90302400FE71FE /* KanjiListGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877331D90302300FE71FE /* KanjiListGroupOperation.swift */; };
-		430877571D90302400FE71FE /* ParseKanjiListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877341D90302300FE71FE /* ParseKanjiListOperation.swift */; };
-		430877581D90302400FE71FE /* LastLevelUpGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877361D90302300FE71FE /* LastLevelUpGroupOperation.swift */; };
-		430877591D90302400FE71FE /* LevelProgressionGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877381D90302400FE71FE /* LevelProgressionGroupOperation.swift */; };
-		4308775A1D90302400FE71FE /* ParseLevelProgressionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877391D90302400FE71FE /* ParseLevelProgressionOperation.swift */; };
-		4308775B1D90302400FE71FE /* ParseRadicalListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308773B1D90302400FE71FE /* ParseRadicalListOperation.swift */; };
-		4308775C1D90302400FE71FE /* RadicalListGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308773C1D90302400FE71FE /* RadicalListGroupOperation.swift */; };
-		4308775D1D90302400FE71FE /* ParseRecentUnlocksOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308773E1D90302400FE71FE /* ParseRecentUnlocksOperation.swift */; };
-		4308775E1D90302400FE71FE /* RecentUnlocksGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308773F1D90302400FE71FE /* RecentUnlocksGroupOperation.swift */; };
-		4308775F1D90302400FE71FE /* BaseGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877411D90302400FE71FE /* BaseGetOperation.swift */; };
-		430877601D90302400FE71FE /* NetworkOperationResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877421D90302400FE71FE /* NetworkOperationResponseCode.swift */; };
-		430877611D90302400FE71FE /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877431D90302400FE71FE /* NetworkRequestOperation.swift */; };
-		430877621D90302400FE71FE /* ParseOpertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877441D90302400FE71FE /* ParseOpertion.swift */; };
-		430877631D90302400FE71FE /* ParseSRSDistributionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877461D90302400FE71FE /* ParseSRSDistributionOperation.swift */; };
-		430877641D90302400FE71FE /* SRSDistributionGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877471D90302400FE71FE /* SRSDistributionGroupOperation.swift */; };
-		430877651D90302400FE71FE /* ParseStudyQueueOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877491D90302400FE71FE /* ParseStudyQueueOperation.swift */; };
-		430877661D90302400FE71FE /* StudyQueueGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308774A1D90302400FE71FE /* StudyQueueGroupOperation.swift */; };
-		430877671D90302400FE71FE /* ParseUserInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308774C1D90302400FE71FE /* ParseUserInfoOperation.swift */; };
-		430877681D90302400FE71FE /* UserInfoGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308774D1D90302400FE71FE /* UserInfoGroupOperation.swift */; };
-		430877691D90302400FE71FE /* WaniKitAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308774E1D90302400FE71FE /* WaniKitAPIManager.swift */; };
-		4308776A1D90302400FE71FE /* ParseWordListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877501D90302400FE71FE /* ParseWordListOperation.swift */; };
-		4308776B1D90302400FE71FE /* WordListGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877511D90302400FE71FE /* WordListGroupOperation.swift */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
 		433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; };
 		433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
+		434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
+		434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		434CB6A91E7AF14C00C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; };
+		434CB6B11E7C10F400C6A69C /* WaniParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */; };
+		434CB6B31E7C15B300C6A69C /* WaniPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B21E7C15B300C6A69C /* WaniPromises.swift */; };
+		434CB6B51E7C16AE00C6A69C /* WaniEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */; };
+		434CB6B71E7C21B900C6A69C /* WaniKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */; };
+		434CB6B91E7FD83600C6A69C /* WaniKaniDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */; };
+		434CB6BB1E7FEB0C00C6A69C /* ProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */; };
+		434CB6BD1E7FF06400C6A69C /* KanjiProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */; };
+		434CF9401E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */; };
+		4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
 		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -199,6 +185,7 @@
 				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
 				43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */,
 				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
+				434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +287,16 @@
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D631E3B9B48001C631D /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
+		434CB6A71E7AF13F00C6A69C /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
+		434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniParsedData.swift; sourceTree = "<group>"; };
+		434CB6B21E7C15B300C6A69C /* WaniPromises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniPromises.swift; sourceTree = "<group>"; };
+		434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniEndpoints.swift; sourceTree = "<group>"; };
+		434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitManager.swift; sourceTree = "<group>"; };
+		434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKaniDataStructure.swift; sourceTree = "<group>"; };
+		434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderPromise.swift; sourceTree = "<group>"; };
+		434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiProviderPromise.swift; sourceTree = "<group>"; };
+		434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoints+DataTransform.swift"; sourceTree = "<group>"; };
+		4360EAB01E7AC67800ECC5FD /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -369,6 +366,7 @@
 			files = (
 				43F4F3761D9031B100A9BB08 /* PSOperations.framework in Frameworks */,
 				43BE75F61E3E5E5C0032950B /* WaniModel.framework in Frameworks */,
+				4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */,
+				434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +392,7 @@
 				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
 				43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */,
 				43BE75F71E3E5E730032950B /* WaniModel.framework in Frameworks */,
+				434CB6A91E7AF14C00C6A69C /* Promise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +514,8 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				434CB6A71E7AF13F00C6A69C /* Promise.framework */,
+				4360EAB01E7AC67800ECC5FD /* Promise.framework */,
 				433D3D631E3B9B48001C631D /* EMPageViewController.framework */,
 				43B354A21E30E27200DABAAB /* Cely.framework */,
 				43B354A31E30E27200DABAAB /* Locksmith.framework */,
@@ -539,20 +541,27 @@
 		430876F81D902FF500FE71FE /* WaniKit */ = {
 			isa = PBXGroup;
 			children = (
-				4308772B1D90302300FE71FE /* AllKanji */,
-				4308772D1D90302300FE71FE /* CriticalItems */,
-				430877301D90302300FE71FE /* Dashboard */,
-				430877321D90302300FE71FE /* KanjiList */,
-				430877351D90302300FE71FE /* LastLevelUp */,
+				4308774B1D90302400FE71FE /* UserInfo */,
 				430877371D90302400FE71FE /* LevelProgression */,
+				4308772D1D90302300FE71FE /* CriticalItems */,
 				4308773A1D90302400FE71FE /* RadicalList */,
+				430877321D90302300FE71FE /* KanjiList */,
+				4308774F1D90302400FE71FE /* WordList */,
 				4308773D1D90302400FE71FE /* RecentUnlocks */,
-				430877401D90302400FE71FE /* Shared */,
 				430877451D90302400FE71FE /* SRSDistribution */,
 				430877481D90302400FE71FE /* StudyQueue */,
-				4308774B1D90302400FE71FE /* UserInfo */,
+				430877351D90302300FE71FE /* LastLevelUp */,
+				430877301D90302300FE71FE /* Dashboard */,
+				4308772B1D90302300FE71FE /* AllKanji */,
+				430877401D90302400FE71FE /* Shared */,
 				4308774E1D90302400FE71FE /* WaniKitAPIManager.swift */,
-				4308774F1D90302400FE71FE /* WordList */,
+				434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */,
+				434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */,
+				434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */,
+				434CB6B21E7C15B300C6A69C /* WaniPromises.swift */,
+				434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */,
+				434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */,
+				434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */,
 				430876F91D902FF500FE71FE /* WaniKit.h */,
 				430876FA1D902FF500FE71FE /* Info.plist */,
 			);
@@ -582,6 +591,7 @@
 				4308771D1D90300F00FE71FE /* UserInfo.swift */,
 				4308771E1D90300F00FE71FE /* UserSpecific.swift */,
 				4308771F1D90300F00FE71FE /* WordlInfo.swift */,
+				434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -967,12 +977,10 @@
 				TargetAttributes = {
 					430876E51D902FE800FE71FE = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S55BP53VB8;
 						ProvisioningStyle = Automatic;
 					};
 					430876F61D902FF500FE71FE = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S55BP53VB8;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -1124,6 +1132,7 @@
 				430877211D90300F00FE71FE /* KanjiInfo.swift in Sources */,
 				430877281D90300F00FE71FE /* UserInfo.swift in Sources */,
 				430877221D90300F00FE71FE /* LevelProgressionInfo.swift in Sources */,
+				434CB6B91E7FD83600C6A69C /* WaniKaniDataStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,32 +1140,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430877591D90302400FE71FE /* LevelProgressionGroupOperation.swift in Sources */,
-				430877541D90302400FE71FE /* ParseCriticalItemsOperation.swift in Sources */,
-				430877671D90302400FE71FE /* ParseUserInfoOperation.swift in Sources */,
-				4308775B1D90302400FE71FE /* ParseRadicalListOperation.swift in Sources */,
-				4308775E1D90302400FE71FE /* RecentUnlocksGroupOperation.swift in Sources */,
-				4308776B1D90302400FE71FE /* WordListGroupOperation.swift in Sources */,
-				430877631D90302400FE71FE /* ParseSRSDistributionOperation.swift in Sources */,
-				430877601D90302400FE71FE /* NetworkOperationResponseCode.swift in Sources */,
-				430877581D90302400FE71FE /* LastLevelUpGroupOperation.swift in Sources */,
-				430877571D90302400FE71FE /* ParseKanjiListOperation.swift in Sources */,
-				430877521D90302400FE71FE /* AllKanjiGroupOperation.swift in Sources */,
-				430877551D90302400FE71FE /* DashboardInfoGroupOperation.swift in Sources */,
-				430877531D90302400FE71FE /* CriticalItemsGroupOperation.swift in Sources */,
-				430877651D90302400FE71FE /* ParseStudyQueueOperation.swift in Sources */,
-				4308775D1D90302400FE71FE /* ParseRecentUnlocksOperation.swift in Sources */,
-				4308775C1D90302400FE71FE /* RadicalListGroupOperation.swift in Sources */,
-				430877611D90302400FE71FE /* NetworkRequestOperation.swift in Sources */,
-				4308775F1D90302400FE71FE /* BaseGetOperation.swift in Sources */,
-				4308776A1D90302400FE71FE /* ParseWordListOperation.swift in Sources */,
-				430877641D90302400FE71FE /* SRSDistributionGroupOperation.swift in Sources */,
-				4308775A1D90302400FE71FE /* ParseLevelProgressionOperation.swift in Sources */,
-				430877681D90302400FE71FE /* UserInfoGroupOperation.swift in Sources */,
-				430877621D90302400FE71FE /* ParseOpertion.swift in Sources */,
-				430877661D90302400FE71FE /* StudyQueueGroupOperation.swift in Sources */,
-				430877691D90302400FE71FE /* WaniKitAPIManager.swift in Sources */,
-				430877561D90302400FE71FE /* KanjiListGroupOperation.swift in Sources */,
+				434CB6B31E7C15B300C6A69C /* WaniPromises.swift in Sources */,
+				434CB6B71E7C21B900C6A69C /* WaniKitManager.swift in Sources */,
+				434CB6BD1E7FF06400C6A69C /* KanjiProviderPromise.swift in Sources */,
+				434CB6BB1E7FEB0C00C6A69C /* ProviderPromise.swift in Sources */,
+				434CF9401E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift in Sources */,
+				434CB6B51E7C16AE00C6A69C /* WaniEndpoints.swift in Sources */,
+				434CB6B11E7C10F400C6A69C /* WaniParsedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,13 +1276,13 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = WaniModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1309,13 +1299,13 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = WaniModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1333,7 +1323,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1343,7 +1333,7 @@
 				);
 				INFOPLIST_FILE = WaniKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1362,7 +1352,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1372,7 +1362,7 @@
 				);
 				INFOPLIST_FILE = WaniKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1388,6 +1378,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = S55BP53VB8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WaniKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKitTests;
@@ -1402,6 +1396,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = S55BP53VB8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WaniKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKitTests;

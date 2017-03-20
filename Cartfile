@@ -3,5 +3,5 @@ github "haawa799/RESideMenu" "521588087c6c35ad45f1294a55f26b5d4e7cc14b"
 github "haawa799/DGElasticPullToRefresh" "d02f7bb5c3d9a3b8059fcb3fc9d9877bdc062a49"
 github "haawa799/WaniLogin" "4c93d8faec6751949ab26c88bb4a2ecf76f9a150"
 
-github "pluralsight/PSOperations" "swift3"
+github "haawa799/Promise" "337c639f38c550a7409c1ce8c306fb54443cca6d"
 github "haawa799/EMPageViewController"
