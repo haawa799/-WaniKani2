@@ -28,7 +28,7 @@ public struct StudyQueueInfo: WaniKaniDataStructure {
 
 extension StudyQueueInfo {
 
-  public init(dict: [String : AnyObject]) {
+  public init(dict: [String : Any]) {
     lessonsAvaliable = (dict[DictionaryKey.avaliableLessons] as? Int)
     reviewsAvaliable = (dict[DictionaryKey.avaliableReviews] as? Int)
     if let reviewDate = dict[DictionaryKey.nextReviewDate] as? Int {

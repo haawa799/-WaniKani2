@@ -14,6 +14,7 @@ import WaniModel
 class WaniKitTests: XCTestCase {
 
   let manager = WaniKitManager(apiKey: "c6ce4072cf1bd37b407f2c86d69137e3")
+  let timeOut: TimeInterval = 2
 
   func testUserInfo() {
     let exp = expectation(description: "userInfo")
@@ -23,7 +24,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testLevelProgression() {
@@ -35,7 +36,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testCriticalItems() {
@@ -46,7 +47,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testRadicals() {
@@ -57,7 +58,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testKanji() {
@@ -68,7 +69,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testVocab() {
@@ -79,28 +80,61 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testRecents() {
-    let exp = expectation(description: "resents")
+    let exp = expectation(description: "recents")
     manager.fetchRecentUnlocks(limit: 20).then { (items) in
       assert(items.count == 20)
       exp.fulfill()
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testSrs() {
-    let exp = expectation(description: "resents")
+    let exp = expectation(description: "srs")
     manager.fetchSRS().then { (srs) in
       assert(srs.burned.kanji > 500)
       exp.fulfill()
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
+  }
+
+  func testStudyQueue() {
+    let exp = expectation(description: "studyQueue")
+    manager.fetchStudyQueue().then { (studyQueue) in
+      assert(studyQueue.lessonsAvaliable! > 0)
+      exp.fulfill()
+      }.catch { (error) in
+        debugPrint(error)
+    }
+    waitForExpectations(timeout: timeOut, handler: nil)
+  }
+
+  func testLastLevelUp() {
+    let exp = expectation(description: "levelUp")
+    manager.fetchLastLevelUp().then { (date) in
+      assert(date.timeIntervalSince1970 > 0)
+      exp.fulfill()
+      }.catch { (error) in
+        debugPrint(error)
+    }
+    waitForExpectations(timeout: timeOut, handler: nil)
+  }
+
+  func testDashboard() {
+    let exp = expectation(description: "dashboard")
+    manager.fetchDashboard().then { (dashboard) in
+      assert(dashboard.levelProgressionInfo.kanjiTotal == 31)
+      exp.fulfill()
+      }.catch { (error) in
+        debugPrint(error)
+    }
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 }

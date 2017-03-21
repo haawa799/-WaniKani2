@@ -24,6 +24,15 @@ public extension WaniEndpoints {
 }
 
 public struct WaniKitManager {
+  
+  public enum Errors: Error {
+    case noRecentUnlocks
+    case studyQueueNotLoaded
+    case levelProgressionNotLoaded
+    case srsNotLoaded
+    case lastLevelUpNotLoaded
+    case onOfFieldsNotLoadedButCounterIncreased
+  }
 
   fileprivate let apiKey: String
 
@@ -43,7 +52,7 @@ public struct WaniKitManager {
 
   public func fetchCriticalItems(percentage: Int) -> Promise<[ReviewItemInfo]> {
     let endpoint = WaniEndpoints.criticalItems(apiKey: apiKey, percentage: percentage)
-    return CriticalItemsProviderPromise.providerPromise(endpoint: endpoint)
+    return ItemsProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchRadicalPromise(level: Int) -> Promise<[RadicalInfo]> {
@@ -63,11 +72,79 @@ public struct WaniKitManager {
 
   public func fetchRecentUnlocks(limit: Int) -> Promise<[ReviewItemInfo]> {
     let endpoint = WaniEndpoints.recentUnlocks(apiKey: apiKey, limit: limit)
-    return CriticalItemsProviderPromise.providerPromise(endpoint: endpoint)
+    return ItemsProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchSRS() -> Promise<SRSDistributionInfo> {
     let endpoint = WaniEndpoints.srsDistribution(apiKey: apiKey)
     return SRSProviderPromise.providerPromise(endpoint: endpoint)
+  }
+
+  public func fetchStudyQueue() -> Promise<StudyQueueInfo> {
+    let endpoint = WaniEndpoints.studyQueue(apiKey: apiKey)
+    return StudyQueueProviderPromise.providerPromise(endpoint: endpoint)
+  }
+
+  public func fetchLastLevelUp() -> Promise<Date> {
+    let endpoint = WaniEndpoints.recentUnlocks(apiKey: apiKey, limit: 1)
+    return ItemsProviderPromise.providerPromise(endpoint: endpoint).then { (items) -> Promise<Date> in
+      guard let first = items.first, let date = first.unlockedDate else { throw WaniKitManager.Errors.noRecentUnlocks }
+      return Promise(value: date)
+    }
+  }
+  
+  public func fetchDashboard() -> Promise<DashboardInfo> {
+
+    let studyQueuePromise = fetchStudyQueue()
+    let levelProgressionPromise = fetchLevelProgression()
+    let srsPromise = fetchSRS()
+    let lastLevelUpPromise = fetchLastLevelUp()
+
+    return Promise<(DashboardInfo)>(work: { fulfill, reject in
+
+      // Resources
+      let allPromisesCount = 4
+      var counter = 0
+      var date: Date?
+      var studyQueue: StudyQueueInfo?
+      var levelProgression: LevelProgressionInfo?
+      var srs: SRSDistributionInfo?
+      
+      func tryToFulfillPromise() throws {
+        guard counter == allPromisesCount else { return }
+        guard let studyQueue = studyQueue, let levelProgression = levelProgression, let srs = srs else { throw WaniKitManager.Errors.onOfFieldsNotLoadedButCounterIncreased }
+        let dashboard = DashboardInfo(levelProgressionInfo: levelProgression, studyQueueInfo: studyQueue, srs: srs, lastLevelUpDate: date)
+        fulfill(dashboard)
+      }
+      
+      // study queue promise
+      studyQueuePromise.then({ (queue) in
+        studyQueue = queue
+        counter += 1
+        try tryToFulfillPromise()
+      }).catch({ _ in reject(WaniKitManager.Errors.studyQueueNotLoaded) })
+
+      // level progression promise
+      levelProgressionPromise.then({ (progression) in
+        levelProgression = progression
+        counter += 1
+        try tryToFulfillPromise()
+      }).catch({ _ in reject(WaniKitManager.Errors.levelProgressionNotLoaded) })
+
+      // srs promise
+      srsPromise.then({ (srsDistribution) in
+        srs = srsDistribution
+        counter += 1
+        try tryToFulfillPromise()
+      }).catch({ _ in reject(WaniKitManager.Errors.srsNotLoaded) })
+
+      // lastLevelUp promise
+      lastLevelUpPromise.then({ (levelUpDate) in
+        date = levelUpDate
+        counter += 1
+        try tryToFulfillPromise()
+      }).catch({ _ in reject(WaniKitManager.Errors.lastLevelUpNotLoaded) })
+      
+    })
   }
 }

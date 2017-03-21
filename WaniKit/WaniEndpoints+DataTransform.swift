@@ -37,7 +37,9 @@ public extension WaniEndpoints {
     case .srsDistribution(_):
       guard case let .dictionary(dict) = data.requestedInfo else { throw InitialisationError.mandatoryFieldsMissing }
       return try SRSDistributionInfo(dict: dict)
-    default: throw InitialisationError.noTransformationFunctionProvided
+    case .studyQueue(_):
+      guard case let .dictionary(dict) = data.requestedInfo else { throw InitialisationError.mandatoryFieldsMissing }
+      return StudyQueueInfo(dict: dict)
     }
   }
 }
