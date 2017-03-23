@@ -24,7 +24,7 @@ public extension WaniEndpoints {
 }
 
 public struct WaniKitManager {
-  
+
   public enum Errors: Error {
     case noRecentUnlocks
     case studyQueueNotLoaded
@@ -92,7 +92,7 @@ public struct WaniKitManager {
       return Promise(value: date)
     }
   }
-  
+
   public func fetchDashboard() -> Promise<DashboardInfo> {
 
     let studyQueuePromise = fetchStudyQueue()
@@ -109,14 +109,14 @@ public struct WaniKitManager {
       var studyQueue: StudyQueueInfo?
       var levelProgression: LevelProgressionInfo?
       var srs: SRSDistributionInfo?
-      
+
       func tryToFulfillPromise() throws {
         guard counter == allPromisesCount else { return }
         guard let studyQueue = studyQueue, let levelProgression = levelProgression, let srs = srs else { throw WaniKitManager.Errors.onOfFieldsNotLoadedButCounterIncreased }
         let dashboard = DashboardInfo(levelProgressionInfo: levelProgression, studyQueueInfo: studyQueue, srs: srs, lastLevelUpDate: date)
         fulfill(dashboard)
       }
-      
+
       // study queue promise
       studyQueuePromise.then({ (queue) in
         studyQueue = queue
@@ -144,7 +144,7 @@ public struct WaniKitManager {
         counter += 1
         try tryToFulfillPromise()
       }).catch({ _ in reject(WaniKitManager.Errors.lastLevelUpNotLoaded) })
-      
+
     })
   }
 }

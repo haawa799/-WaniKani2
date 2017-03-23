@@ -5,3 +5,4 @@ github "haawa799/WaniLogin" "4c93d8faec6751949ab26c88bb4a2ecf76f9a150"
 
 github "haawa799/Promise" "337c639f38c550a7409c1ce8c306fb54443cca6d"
 github "haawa799/EMPageViewController"
+github "AliSoftware/OHHTTPStubs" "swift-3.0"

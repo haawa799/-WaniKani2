@@ -11,12 +11,18 @@ import XCTest
 import Promise
 import WaniModel
 
-class WaniKitTests: XCTestCase {
+class WaniKitManagerTests: XCTestCase {
 
   let manager = WaniKitManager(apiKey: "c6ce4072cf1bd37b407f2c86d69137e3")
   let timeOut: TimeInterval = 2
 
+  override func tearDown() {
+    super.tearDown()
+    removeAllStubs()
+  }
+
   func testUserInfo() {
+    stubJson("level-progression")
     let exp = expectation(description: "userInfo")
     manager.fetchUserInfo().then { (userInfo) in
       assert(userInfo.username == "haawa")
@@ -24,7 +30,7 @@ class WaniKitTests: XCTestCase {
       }.catch { (error) in
         debugPrint(error)
     }
-    waitForExpectations(timeout: timeOut, handler: nil)
+    waitForExpectations(timeout: 0.1, handler: nil)
   }
 
   func testLevelProgression() {

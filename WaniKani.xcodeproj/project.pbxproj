@@ -43,7 +43,7 @@
 		430876D91D9021B300FE71FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CD1D9021B300FE71FE /* ViewModel.swift */; };
 		430876EA1D902FE800FE71FE /* WaniModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876E81D902FE800FE71FE /* WaniModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
-		430877071D902FF500FE71FE /* WaniKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877061D902FF500FE71FE /* WaniKitTests.swift */; };
+		430877071D902FF500FE71FE /* WaniKitManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877061D902FF500FE71FE /* WaniKitManagerTests.swift */; };
 		430877091D902FF500FE71FE /* WaniKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876F91D902FF500FE71FE /* WaniKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		430877201D90300F00FE71FE /* DashboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877151D90300F00FE71FE /* DashboardInfo.swift */; };
 		430877211D90300F00FE71FE /* KanjiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877161D90300F00FE71FE /* KanjiInfo.swift */; };
@@ -71,6 +71,11 @@
 		434CB6BB1E7FEB0C00C6A69C /* ProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */; };
 		434CB6BD1E7FF06400C6A69C /* KanjiProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */; };
 		434CF9401E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */; };
+		434FECB01E83D743006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
+		434FECB21E83D9E6006EA7ED /* wsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECB11E83D9E6006EA7ED /* wsresponse.json */; };
+		434FECB51E83DBB3006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
+		434FECB61E83DBB3006EA7ED /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		434FECB81E83DC9B006EA7ED /* XCTests+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */; };
 		4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
@@ -145,7 +150,7 @@
 			remoteGlobalIDString = 430876F61D902FF500FE71FE;
 			remoteInfo = WaniKit;
 		};
-		430877031D902FF500FE71FE /* PBXContainerItemProxy */ = {
+		434FECB31E83DAE2006EA7ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
 			proxyType = 1;
@@ -184,6 +189,7 @@
 				43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */,
 				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
 				43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */,
+				434FECB61E83DBB3006EA7ED /* OHHTTPStubs.framework in Embed Frameworks */,
 				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
 				434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */,
 			);
@@ -245,7 +251,7 @@
 		430876F91D902FF500FE71FE /* WaniKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaniKit.h; sourceTree = "<group>"; };
 		430876FA1D902FF500FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430876FF1D902FF500FE71FE /* WaniKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaniKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		430877061D902FF500FE71FE /* WaniKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniKitTests.swift; sourceTree = "<group>"; };
+		430877061D902FF500FE71FE /* WaniKitManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniKitManagerTests.swift; sourceTree = "<group>"; };
 		430877081D902FF500FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430877151D90300F00FE71FE /* DashboardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardInfo.swift; sourceTree = "<group>"; };
 		430877161D90300F00FE71FE /* KanjiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiInfo.swift; sourceTree = "<group>"; };
@@ -296,6 +302,9 @@
 		434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderPromise.swift; sourceTree = "<group>"; };
 		434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiProviderPromise.swift; sourceTree = "<group>"; };
 		434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoints+DataTransform.swift"; sourceTree = "<group>"; };
+		434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		434FECB11E83D9E6006EA7ED /* wsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsresponse.json; sourceTree = "<group>"; };
+		434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTests+Stub.swift"; sourceTree = "<group>"; };
 		4360EAB01E7AC67800ECC5FD /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -376,6 +385,7 @@
 			files = (
 				430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */,
 				434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */,
+				434FECB01E83D743006EA7ED /* OHHTTPStubs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +397,7 @@
 				43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */,
 				43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */,
 				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
+				434FECB51E83DBB3006EA7ED /* OHHTTPStubs.framework in Frameworks */,
 				43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */,
 				433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */,
 				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
@@ -514,6 +525,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */,
 				434CB6A71E7AF13F00C6A69C /* Promise.framework */,
 				4360EAB01E7AC67800ECC5FD /* Promise.framework */,
 				433D3D631E3B9B48001C631D /* EMPageViewController.framework */,
@@ -571,8 +583,10 @@
 		430877051D902FF500FE71FE /* WaniKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				430877061D902FF500FE71FE /* WaniKitTests.swift */,
+				430877061D902FF500FE71FE /* WaniKitManagerTests.swift */,
+				434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */,
 				430877081D902FF500FE71FE /* Info.plist */,
+				434FECB11E83D9E6006EA7ED /* wsresponse.json */,
 			);
 			path = WaniKitTests;
 			sourceTree = "<group>";
@@ -936,8 +950,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				434FECB41E83DAE2006EA7ED /* PBXTargetDependency */,
 				430877021D902FF500FE71FE /* PBXTargetDependency */,
-				430877041D902FF500FE71FE /* PBXTargetDependency */,
 			);
 			name = WaniKitTests;
 			productName = WaniKitTests;
@@ -1043,6 +1057,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434FECB21E83D9E6006EA7ED /* wsresponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,7 +1169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430877071D902FF500FE71FE /* WaniKitTests.swift in Sources */,
+				434FECB81E83DC9B006EA7ED /* XCTests+Stub.swift in Sources */,
+				430877071D902FF500FE71FE /* WaniKitManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,10 +1249,10 @@
 			target = 430876F61D902FF500FE71FE /* WaniKit */;
 			targetProxy = 430877011D902FF500FE71FE /* PBXContainerItemProxy */;
 		};
-		430877041D902FF500FE71FE /* PBXTargetDependency */ = {
+		434FECB41E83DAE2006EA7ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 43620A391D8C28FA00C1BA72 /* WaniKani */;
-			targetProxy = 430877031D902FF500FE71FE /* PBXContainerItemProxy */;
+			targetProxy = 434FECB31E83DAE2006EA7ED /* PBXContainerItemProxy */;
 		};
 		43BE75FA1E3E5E730032950B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
