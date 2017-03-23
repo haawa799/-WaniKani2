@@ -10,18 +10,12 @@ import Foundation
 import Promise
 import WaniModel
 
-public enum ProviderPromiseError: Error {
-  case transformWasNotOverrided
-  case selfWasRemovedFromMemory
-  case castError
-}
+internal class ProviderPromise <T> {
 
-public class ProviderPromise <T> {
-
-  public static func providerPromise(endpoint: WaniEndpoints) -> Promise<T> {
+  internal static func providerPromise(endpoint: WaniEndpoint) -> Promise<T> {
     return endpoint.promiseWithFetchAndParse.then({ (parsedData) -> Promise<T> in
       let value = try endpoint.dataTransformer(data: parsedData)
-      guard let castedValue = value as? T else { throw ProviderPromiseError.castError }
+      guard let castedValue = value as? T else { throw WaniKitError.typeCastError }
       return Promise(value: castedValue)
     })
   }

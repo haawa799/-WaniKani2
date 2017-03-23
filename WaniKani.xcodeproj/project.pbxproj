@@ -63,14 +63,7 @@
 		434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
 		434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		434CB6A91E7AF14C00C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; };
-		434CB6B11E7C10F400C6A69C /* WaniParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */; };
-		434CB6B31E7C15B300C6A69C /* WaniPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B21E7C15B300C6A69C /* WaniPromises.swift */; };
-		434CB6B51E7C16AE00C6A69C /* WaniEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */; };
-		434CB6B71E7C21B900C6A69C /* WaniKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */; };
 		434CB6B91E7FD83600C6A69C /* WaniKaniDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */; };
-		434CB6BB1E7FEB0C00C6A69C /* ProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */; };
-		434CB6BD1E7FF06400C6A69C /* KanjiProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */; };
-		434CF9401E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */; };
 		434FECB01E83D743006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
 		434FECB51E83DBB3006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
 		434FECB61E83DBB3006EA7ED /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,7 +76,17 @@
 		434FECC91E840A1B006EA7ED /* recent-unlocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC81E840A1B006EA7ED /* recent-unlocks.json */; };
 		434FECCB1E840B4B006EA7ED /* srs-distribution.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECCA1E840B4B006EA7ED /* srs-distribution.json */; };
 		434FECCD1E840C3F006EA7ED /* study-queue.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECCC1E840C3F006EA7ED /* study-queue.json */; };
-		434FECCF1E8412B7006EA7ED /* WaniEndpoint+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECCE1E8412B7006EA7ED /* WaniEndpoint+Promises.swift */; };
+		434FECDA1E841A52006EA7ED /* KanjiProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */; };
+		434FECDB1E841A52006EA7ED /* PromiseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD21E841A52006EA7ED /* PromiseBuilder.swift */; };
+		434FECDC1E841A52006EA7ED /* ProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD31E841A52006EA7ED /* ProviderPromise.swift */; };
+		434FECDD1E841A52006EA7ED /* WaniEndpoint+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */; };
+		434FECDE1E841A52006EA7ED /* WaniEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD51E841A52006EA7ED /* WaniEndpoint.swift */; };
+		434FECDF1E841A52006EA7ED /* WaniEndpoints+DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */; };
+		434FECE01E841A52006EA7ED /* WaniParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD71E841A52006EA7ED /* WaniParsedData.swift */; };
+		434FECE11E841A52006EA7ED /* WaniKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD91E841A52006EA7ED /* WaniKitManager.swift */; };
+		434FECE31E841A7C006EA7ED /* WaniKitManager+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */; };
+		434FECE51E841ADA006EA7ED /* WaniKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE41E841ADA006EA7ED /* WaniKitError.swift */; };
+		434FECE71E841D06006EA7ED /* InitialisationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE61E841D06006EA7ED /* InitialisationError.swift */; };
 		4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
@@ -276,14 +279,7 @@
 		433D3D631E3B9B48001C631D /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		434CB6A71E7AF13F00C6A69C /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
-		434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniParsedData.swift; sourceTree = "<group>"; };
-		434CB6B21E7C15B300C6A69C /* WaniPromises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniPromises.swift; sourceTree = "<group>"; };
-		434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniEndpoints.swift; sourceTree = "<group>"; };
-		434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitManager.swift; sourceTree = "<group>"; };
 		434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKaniDataStructure.swift; sourceTree = "<group>"; };
-		434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderPromise.swift; sourceTree = "<group>"; };
-		434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiProviderPromise.swift; sourceTree = "<group>"; };
-		434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoints+DataTransform.swift"; sourceTree = "<group>"; };
 		434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTests+Stub.swift"; sourceTree = "<group>"; };
 		434FECBA1E83ED98006EA7ED /* level-progression.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "level-progression.json"; sourceTree = "<group>"; };
@@ -294,7 +290,17 @@
 		434FECC81E840A1B006EA7ED /* recent-unlocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "recent-unlocks.json"; sourceTree = "<group>"; };
 		434FECCA1E840B4B006EA7ED /* srs-distribution.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "srs-distribution.json"; sourceTree = "<group>"; };
 		434FECCC1E840C3F006EA7ED /* study-queue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "study-queue.json"; sourceTree = "<group>"; };
-		434FECCE1E8412B7006EA7ED /* WaniEndpoint+Promises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoint+Promises.swift"; sourceTree = "<group>"; };
+		434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiProviderPromise.swift; sourceTree = "<group>"; };
+		434FECD21E841A52006EA7ED /* PromiseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseBuilder.swift; sourceTree = "<group>"; };
+		434FECD31E841A52006EA7ED /* ProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderPromise.swift; sourceTree = "<group>"; };
+		434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoint+Promises.swift"; sourceTree = "<group>"; };
+		434FECD51E841A52006EA7ED /* WaniEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniEndpoint.swift; sourceTree = "<group>"; };
+		434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoints+DataTransform.swift"; sourceTree = "<group>"; };
+		434FECD71E841A52006EA7ED /* WaniParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniParsedData.swift; sourceTree = "<group>"; };
+		434FECD91E841A52006EA7ED /* WaniKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitManager.swift; sourceTree = "<group>"; };
+		434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniKitManager+Fetch.swift"; sourceTree = "<group>"; };
+		434FECE41E841ADA006EA7ED /* WaniKitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitError.swift; sourceTree = "<group>"; };
+		434FECE61E841D06006EA7ED /* InitialisationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialisationError.swift; sourceTree = "<group>"; };
 		4360EAB01E7AC67800ECC5FD /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 				430877141D90300F00FE71FE /* Model */,
 				430876E81D902FE800FE71FE /* WaniModel.h */,
 				430876E91D902FE800FE71FE /* Info.plist */,
+				434FECE61E841D06006EA7ED /* InitialisationError.swift */,
 			);
 			path = WaniModel;
 			sourceTree = "<group>";
@@ -543,14 +550,8 @@
 		430876F81D902FF500FE71FE /* WaniKit */ = {
 			isa = PBXGroup;
 			children = (
-				434CB6B41E7C16AE00C6A69C /* WaniEndpoints.swift */,
-				434FECCE1E8412B7006EA7ED /* WaniEndpoint+Promises.swift */,
-				434CF93F1E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift */,
-				434CB6B01E7C10F400C6A69C /* WaniParsedData.swift */,
-				434CB6B21E7C15B300C6A69C /* WaniPromises.swift */,
-				434CB6B61E7C21B900C6A69C /* WaniKitManager.swift */,
-				434CB6BA1E7FEB0C00C6A69C /* ProviderPromise.swift */,
-				434CB6BC1E7FF06400C6A69C /* KanjiProviderPromise.swift */,
+				434FECD01E841A52006EA7ED /* internal */,
+				434FECD81E841A52006EA7ED /* public */,
 				430876F91D902FF500FE71FE /* WaniKit.h */,
 				430876FA1D902FF500FE71FE /* Info.plist */,
 			);
@@ -600,6 +601,30 @@
 				434FECBA1E83ED98006EA7ED /* level-progression.json */,
 			);
 			path = responses;
+			sourceTree = "<group>";
+		};
+		434FECD01E841A52006EA7ED /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */,
+				434FECD21E841A52006EA7ED /* PromiseBuilder.swift */,
+				434FECD31E841A52006EA7ED /* ProviderPromise.swift */,
+				434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */,
+				434FECD51E841A52006EA7ED /* WaniEndpoint.swift */,
+				434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */,
+				434FECD71E841A52006EA7ED /* WaniParsedData.swift */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		434FECD81E841A52006EA7ED /* public */ = {
+			isa = PBXGroup;
+			children = (
+				434FECD91E841A52006EA7ED /* WaniKitManager.swift */,
+				434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */,
+				434FECE41E841ADA006EA7ED /* WaniKitError.swift */,
+			);
+			path = public;
 			sourceTree = "<group>";
 		};
 		43620A311D8C28FA00C1BA72 = {
@@ -1024,6 +1049,7 @@
 				430877241D90300F00FE71FE /* ReviewItemInfo.swift in Sources */,
 				430877271D90300F00FE71FE /* StudyQueueInfo.swift in Sources */,
 				430877231D90300F00FE71FE /* RadicalInfo.swift in Sources */,
+				434FECE71E841D06006EA7ED /* InitialisationError.swift in Sources */,
 				430877261D90300F00FE71FE /* SRSLevelInfo.swift in Sources */,
 				430877251D90300F00FE71FE /* SRSDistributionInfo.swift in Sources */,
 				430877201D90300F00FE71FE /* DashboardInfo.swift in Sources */,
@@ -1038,14 +1064,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434CB6B31E7C15B300C6A69C /* WaniPromises.swift in Sources */,
-				434CB6B71E7C21B900C6A69C /* WaniKitManager.swift in Sources */,
-				434CB6BD1E7FF06400C6A69C /* KanjiProviderPromise.swift in Sources */,
-				434FECCF1E8412B7006EA7ED /* WaniEndpoint+Promises.swift in Sources */,
-				434CB6BB1E7FEB0C00C6A69C /* ProviderPromise.swift in Sources */,
-				434CF9401E7FFD2400DD2D46 /* WaniEndpoints+DataTransform.swift in Sources */,
-				434CB6B51E7C16AE00C6A69C /* WaniEndpoints.swift in Sources */,
-				434CB6B11E7C10F400C6A69C /* WaniParsedData.swift in Sources */,
+				434FECDE1E841A52006EA7ED /* WaniEndpoint.swift in Sources */,
+				434FECE11E841A52006EA7ED /* WaniKitManager.swift in Sources */,
+				434FECDA1E841A52006EA7ED /* KanjiProviderPromise.swift in Sources */,
+				434FECDF1E841A52006EA7ED /* WaniEndpoints+DataTransform.swift in Sources */,
+				434FECE31E841A7C006EA7ED /* WaniKitManager+Fetch.swift in Sources */,
+				434FECDB1E841A52006EA7ED /* PromiseBuilder.swift in Sources */,
+				434FECE51E841ADA006EA7ED /* WaniKitError.swift in Sources */,
+				434FECDC1E841A52006EA7ED /* ProviderPromise.swift in Sources */,
+				434FECE01E841A52006EA7ED /* WaniParsedData.swift in Sources */,
+				434FECDD1E841A52006EA7ED /* WaniEndpoint+Promises.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

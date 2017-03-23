@@ -8,11 +8,6 @@
 
 import Foundation
 
-public enum InitialisationError: Error {
-  case mandatoryFieldsMissing
-  case noTransformationFunctionProvided
-  case initialisationProblem
-}
 // swiftlint:disable force_cast
 public struct UserInfo: WaniKaniDataStructure {
 

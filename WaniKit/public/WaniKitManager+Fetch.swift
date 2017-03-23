@@ -1,8 +1,8 @@
 //
-//  WaniKitManager.swift
+//  WaniKitManager+Fetch.swift
 //  WaniKani
 //
-//  Created by Andriy K. on 3/17/17.
+//  Created by Andriy K. on 3/23/17.
 //  Copyright © 2017 haawa. All rights reserved.
 //
 
@@ -10,72 +10,57 @@ import Foundation
 import Promise
 import WaniModel
 
-public struct WaniKitManager {
-
-  public enum Errors: Error {
-    case noRecentUnlocks
-    case studyQueueNotLoaded
-    case levelProgressionNotLoaded
-    case srsNotLoaded
-    case lastLevelUpNotLoaded
-    case onOfFieldsNotLoadedButCounterIncreased
-  }
-
-  fileprivate let apiKey: String
-
-  public init(apiKey: String) {
-    self.apiKey = apiKey
-  }
+public extension WaniKitManager {
 
   public func fetchUserInfo() -> Promise<UserInfo> {
-    let endpoint = WaniEndpoints.userInfo(apiKey: apiKey)
+    let endpoint = WaniEndpoint.userInfo(apiKey: apiKey)
     return UserInfoProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchLevelProgression() -> Promise<LevelProgressionInfo> {
-    let endpoint = WaniEndpoints.levelProgression(apiKey: apiKey)
+    let endpoint = WaniEndpoint.levelProgression(apiKey: apiKey)
     return LevelProgressionProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchCriticalItems(percentage: Int) -> Promise<[ReviewItemInfo]> {
-    let endpoint = WaniEndpoints.criticalItems(apiKey: apiKey, percentage: percentage)
+    let endpoint = WaniEndpoint.criticalItems(apiKey: apiKey, percentage: percentage)
     return ItemsProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchRadicalPromise(level: Int) -> Promise<[RadicalInfo]> {
-    let endpoint = WaniEndpoints.radicalList(apiKey: apiKey, level: level)
+    let endpoint = WaniEndpoint.radicalList(apiKey: apiKey, level: level)
     return RadicalProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchKanjiPromise(level: Int) -> Promise<[KanjiInfo]> {
-    let endpoint = WaniEndpoints.kanjiList(apiKey: apiKey, level: level)
+    let endpoint = WaniEndpoint.kanjiList(apiKey: apiKey, level: level)
     return KanjiProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchVocabPromise(level: Int) -> Promise<[WordInfo]> {
-    let endpoint = WaniEndpoints.wordList(apiKey: apiKey, level: level)
+    let endpoint = WaniEndpoint.wordList(apiKey: apiKey, level: level)
     return VocabProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchRecentUnlocks(limit: Int) -> Promise<[ReviewItemInfo]> {
-    let endpoint = WaniEndpoints.recentUnlocks(apiKey: apiKey, limit: limit)
+    let endpoint = WaniEndpoint.recentUnlocks(apiKey: apiKey, limit: limit)
     return ItemsProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchSRS() -> Promise<SRSDistributionInfo> {
-    let endpoint = WaniEndpoints.srsDistribution(apiKey: apiKey)
+    let endpoint = WaniEndpoint.srsDistribution(apiKey: apiKey)
     return SRSProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchStudyQueue() -> Promise<StudyQueueInfo> {
-    let endpoint = WaniEndpoints.studyQueue(apiKey: apiKey)
+    let endpoint = WaniEndpoint.studyQueue(apiKey: apiKey)
     return StudyQueueProviderPromise.providerPromise(endpoint: endpoint)
   }
 
   public func fetchLastLevelUp() -> Promise<Date> {
-    let endpoint = WaniEndpoints.recentUnlocks(apiKey: apiKey, limit: 1)
+    let endpoint = WaniEndpoint.recentUnlocks(apiKey: apiKey, limit: 1)
     return ItemsProviderPromise.providerPromise(endpoint: endpoint).then { (items) -> Promise<Date> in
-      guard let first = items.first, let date = first.unlockedDate else { throw WaniKitManager.Errors.noRecentUnlocks }
+      guard let first = items.first, let date = first.unlockedDate else { throw WaniKitError.noRecentUnlocks }
       return Promise(value: date)
     }
   }
@@ -99,7 +84,7 @@ public struct WaniKitManager {
 
       func tryToFulfillPromise() throws {
         guard counter == allPromisesCount else { return }
-        guard let studyQueue = studyQueue, let levelProgression = levelProgression, let srs = srs else { throw WaniKitManager.Errors.onOfFieldsNotLoadedButCounterIncreased }
+        guard let studyQueue = studyQueue, let levelProgression = levelProgression, let srs = srs else { throw WaniKitError.onOfFieldsNotLoadedButCounterIncreased }
         let dashboard = DashboardInfo(levelProgressionInfo: levelProgression, studyQueueInfo: studyQueue, srs: srs, lastLevelUpDate: date)
         fulfill(dashboard)
       }
@@ -109,28 +94,28 @@ public struct WaniKitManager {
         studyQueue = queue
         counter += 1
         try tryToFulfillPromise()
-      }).catch({ _ in reject(WaniKitManager.Errors.studyQueueNotLoaded) })
+      }).catch({ _ in reject(WaniKitError.studyQueueNotLoaded) })
 
       // level progression promise
       levelProgressionPromise.then({ (progression) in
         levelProgression = progression
         counter += 1
         try tryToFulfillPromise()
-      }).catch({ _ in reject(WaniKitManager.Errors.levelProgressionNotLoaded) })
+      }).catch({ _ in reject(WaniKitError.levelProgressionNotLoaded) })
 
       // srs promise
       srsPromise.then({ (srsDistribution) in
         srs = srsDistribution
         counter += 1
         try tryToFulfillPromise()
-      }).catch({ _ in reject(WaniKitManager.Errors.srsNotLoaded) })
+      }).catch({ _ in reject(WaniKitError.srsNotLoaded) })
 
       // lastLevelUp promise
       lastLevelUpPromise.then({ (levelUpDate) in
         date = levelUpDate
         counter += 1
         try tryToFulfillPromise()
-      }).catch({ _ in reject(WaniKitManager.Errors.lastLevelUpNotLoaded) })
+      }).catch({ _ in reject(WaniKitError.lastLevelUpNotLoaded) })
 
     })
   }

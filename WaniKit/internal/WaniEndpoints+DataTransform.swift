@@ -1,5 +1,5 @@
 //
-//  WaniEndpoints+DataTransform.swift
+//  WaniEndpoint+DataTransform.swift
 //  WaniKani
 //
 //  Created by Andriy K. on 3/20/17.
@@ -11,8 +11,8 @@ import Promise
 import WaniModel
 
 // swiftlint:disable cyclomatic_complexity
-public extension WaniEndpoints {
-  public func dataTransformer(data: WaniParsedData) throws -> Any {
+internal extension WaniEndpoint {
+  func dataTransformer(data: WaniParsedData) throws -> Any {
     switch self {
     case .userInfo(_):
       return try UserInfo(dict: data.userInfoDictionary)

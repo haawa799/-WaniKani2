@@ -8,15 +8,9 @@
 
 import Foundation
 
-public enum ParsingError: Error {
-  case noRoot
-  case noUserInfo
-  case noRequestedInfo
-}
+internal struct WaniParsedData {
 
-public struct WaniParsedData {
-
-  public enum RequestedInfo {
+  enum RequestedInfo {
     case array(items: [[String: Any]])
     case dictionary(dict: [String: Any])
 
@@ -29,10 +23,10 @@ public struct WaniParsedData {
     }
   }
 
-  public let userInfoDictionary: [String: Any]
-  public let requestedInfo: RequestedInfo
+  let userInfoDictionary: [String: Any]
+  let requestedInfo: RequestedInfo
 
-  public init(root: [String : Any]) throws {
+  init(root: [String : Any]) throws {
     guard let userDict = root[Key.userInfo] as? [String: Any] else { throw ParsingError.noUserInfo }
     guard let requestedInfoValue = root[Key.requestedInfo] else { throw ParsingError.noRequestedInfo }
     guard let requestedInfo = RequestedInfo(value: requestedInfoValue) else { throw ParsingError.noRequestedInfo }

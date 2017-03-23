@@ -1,5 +1,5 @@
 //
-//  WaniEndpoints.swift
+//  WaniEndpoint.swift
 //  WaniKani
 //
 //  Created by Andriy K. on 3/17/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum WaniEndpoints {
+internal enum WaniEndpoint {
 
   struct Constants {
     static let baseURL = "https://www.wanikani.com/api/user"

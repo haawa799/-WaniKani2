@@ -9,11 +9,12 @@
 import Foundation
 import Promise
 
-public struct WaniPromises {
+internal struct PromiseBuilder {
 
-  public static func newFetchPromise(url: URL) -> Promise<(Data, HTTPURLResponse)> {
+  /// This method creates a Promise around the dataTask, for downloading endpoint
+  internal static func newFetchPromise(url: URL) -> Promise<(Data, HTTPURLResponse)> {
     return Promise<(Data, HTTPURLResponse)>(work: { fulfill, reject in
-      self.dataTask(url: url, completionHandler: { data, response, error in
+      PromiseBuilder.dataTask(url: url, completionHandler: { data, response, error in
         if let error = error {
           reject(error)
         } else if let data = data, let response = response as? HTTPURLResponse {
@@ -25,7 +26,8 @@ public struct WaniPromises {
     })
   }
 
-  public static func newParsePromise(data: Data) -> Promise<(WaniParsedData)> {
+  /// This method creates a parsing Promise
+  internal static func newParsePromise(data: Data) -> Promise<(WaniParsedData)> {
     return Promise<(WaniParsedData)>(work: { fulfill, reject in
       let json = try JSONSerialization.jsonObject(with: data, options: [])
       guard let root = json as? [String : Any] else {
@@ -36,6 +38,7 @@ public struct WaniPromises {
     })
   }
 
+  /// Helper function for URLSession setup
   private static func dataTask(url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTask {
     let sessionConfig = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
