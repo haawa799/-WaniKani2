@@ -1,0 +1,47 @@
+{
+  "user_information": {
+    "username": "haawa",
+    "gravatar": "bd2e9da5bf6c3c5c0e7eb1ff5bf7998e",
+    "level": 22,
+    "title": "Turtles",
+    "about": "iOS, SpriteKit, OpenGL ES and Metal enthusiast. Tutorial team member @rwenderlich\n\nオタク。\n\nLatest app http://tinyurl.com/pdcq7sn",
+    "website": null,
+    "twitter": "haawa",
+    "topics_count": 4,
+    "posts_count": 98,
+    "creation_date": 1438687727,
+    "vacation_date": null
+  },
+  "requested_information": {
+    "apprentice": {
+      "radicals": 0,
+      "kanji": 8,
+      "vocabulary": 37,
+      "total": 45
+    },
+    "guru": {
+      "radicals": 0,
+      "kanji": 7,
+      "vocabulary": 90,
+      "total": 97
+    },
+    "master": {
+      "radicals": 8,
+      "kanji": 35,
+      "vocabulary": 113,
+      "total": 156
+    },
+    "enlighten": {
+      "radicals": 16,
+      "kanji": 95,
+      "vocabulary": 706,
+      "total": 817
+    },
+    "burned": {
+      "radicals": 303,
+      "kanji": 577,
+      "vocabulary": 1375,
+      "total": 2255
+    }
+  }
+}

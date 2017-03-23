@@ -10,19 +10,6 @@ import Foundation
 import Promise
 import WaniModel
 
-public extension WaniEndpoints {
-
-  public var promiseWithFetchAndParse: Promise<WaniParsedData> {
-    return WaniPromises.newFetchPromise(url: url).then { (data, _) -> Promise<Data> in
-      // Networking promise
-      return Promise(value: data)
-      }.then { (data) -> Promise<WaniParsedData> in
-        // Parse promise
-        return WaniPromises.newParsePromise(data: data)
-    }
-  }
-}
-
 public struct WaniKitManager {
 
   public enum Errors: Error {

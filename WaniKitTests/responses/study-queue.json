@@ -1,0 +1,22 @@
+{
+  "user_information": {
+    "username": "haawa",
+    "gravatar": "bd2e9da5bf6c3c5c0e7eb1ff5bf7998e",
+    "level": 22,
+    "title": "Turtles",
+    "about": "iOS, SpriteKit, OpenGL ES and Metal enthusiast. Tutorial team member @rwenderlich\n\nオタク。\n\nLatest app http://tinyurl.com/pdcq7sn",
+    "website": null,
+    "twitter": "haawa",
+    "topics_count": 4,
+    "posts_count": 98,
+    "creation_date": 1438687727,
+    "vacation_date": null
+  },
+  "requested_information": {
+    "lessons_available": 63,
+    "reviews_available": 416,
+    "next_review_date": 1490264690,
+    "reviews_available_next_hour": 0,
+    "reviews_available_next_day": 3
+  }
+}
