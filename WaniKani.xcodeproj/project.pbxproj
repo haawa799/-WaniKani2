@@ -41,75 +41,23 @@
 		430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */; };
 		430876D81D9021B300FE71FE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CC1D9021B300FE71FE /* Utils.swift */; };
 		430876D91D9021B300FE71FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CD1D9021B300FE71FE /* ViewModel.swift */; };
-		430876EA1D902FE800FE71FE /* WaniModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876E81D902FE800FE71FE /* WaniModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
-		430877071D902FF500FE71FE /* WaniKitManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877061D902FF500FE71FE /* WaniKitManagerTests.swift */; };
-		430877091D902FF500FE71FE /* WaniKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 430876F91D902FF500FE71FE /* WaniKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		430877201D90300F00FE71FE /* DashboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877151D90300F00FE71FE /* DashboardInfo.swift */; };
-		430877211D90300F00FE71FE /* KanjiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877161D90300F00FE71FE /* KanjiInfo.swift */; };
-		430877221D90300F00FE71FE /* LevelProgressionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877171D90300F00FE71FE /* LevelProgressionInfo.swift */; };
-		430877231D90300F00FE71FE /* RadicalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877181D90300F00FE71FE /* RadicalInfo.swift */; };
-		430877241D90300F00FE71FE /* ReviewItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430877191D90300F00FE71FE /* ReviewItemInfo.swift */; };
-		430877251D90300F00FE71FE /* SRSDistributionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771A1D90300F00FE71FE /* SRSDistributionInfo.swift */; };
-		430877261D90300F00FE71FE /* SRSLevelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771B1D90300F00FE71FE /* SRSLevelInfo.swift */; };
-		430877271D90300F00FE71FE /* StudyQueueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771C1D90300F00FE71FE /* StudyQueueInfo.swift */; };
-		430877281D90300F00FE71FE /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771D1D90300F00FE71FE /* UserInfo.swift */; };
-		430877291D90300F00FE71FE /* UserSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771E1D90300F00FE71FE /* UserSpecific.swift */; };
-		4308772A1D90300F00FE71FE /* WordlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308771F1D90300F00FE71FE /* WordlInfo.swift */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
-		433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; };
-		433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 433D3D631E3B9B48001C631D /* EMPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
-		434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
-		434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		434CB6A91E7AF14C00C6A69C /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434CB6A71E7AF13F00C6A69C /* Promise.framework */; };
-		434CB6B91E7FD83600C6A69C /* WaniKaniDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */; };
-		434FECB01E83D743006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
-		434FECB51E83DBB3006EA7ED /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; };
-		434FECB61E83DBB3006EA7ED /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		434FECB81E83DC9B006EA7ED /* XCTests+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */; };
-		434FECBB1E83ED98006EA7ED /* level-progression.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECBA1E83ED98006EA7ED /* level-progression.json */; };
-		434FECC31E8404C5006EA7ED /* critical-items.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC01E8404C5006EA7ED /* critical-items.json */; };
-		434FECC41E8404C5006EA7ED /* kanji.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC11E8404C5006EA7ED /* kanji.json */; };
-		434FECC51E8404C5006EA7ED /* radicals.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC21E8404C5006EA7ED /* radicals.json */; };
-		434FECC71E840590006EA7ED /* vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC61E840590006EA7ED /* vocabulary.json */; };
-		434FECC91E840A1B006EA7ED /* recent-unlocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECC81E840A1B006EA7ED /* recent-unlocks.json */; };
-		434FECCB1E840B4B006EA7ED /* srs-distribution.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECCA1E840B4B006EA7ED /* srs-distribution.json */; };
-		434FECCD1E840C3F006EA7ED /* study-queue.json in Resources */ = {isa = PBXBuildFile; fileRef = 434FECCC1E840C3F006EA7ED /* study-queue.json */; };
-		434FECDA1E841A52006EA7ED /* KanjiProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */; };
-		434FECDB1E841A52006EA7ED /* PromiseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD21E841A52006EA7ED /* PromiseBuilder.swift */; };
-		434FECDC1E841A52006EA7ED /* ProviderPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD31E841A52006EA7ED /* ProviderPromise.swift */; };
-		434FECDD1E841A52006EA7ED /* WaniEndpoint+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */; };
-		434FECDE1E841A52006EA7ED /* WaniEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD51E841A52006EA7ED /* WaniEndpoint.swift */; };
-		434FECDF1E841A52006EA7ED /* WaniEndpoints+DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */; };
-		434FECE01E841A52006EA7ED /* WaniParsedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD71E841A52006EA7ED /* WaniParsedData.swift */; };
-		434FECE11E841A52006EA7ED /* WaniKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECD91E841A52006EA7ED /* WaniKitManager.swift */; };
-		434FECE31E841A7C006EA7ED /* WaniKitManager+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */; };
-		434FECE51E841ADA006EA7ED /* WaniKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE41E841ADA006EA7ED /* WaniKitError.swift */; };
-		434FECE71E841D06006EA7ED /* InitialisationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FECE61E841D06006EA7ED /* InitialisationError.swift */; };
-		4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4360EAB01E7AC67800ECC5FD /* Promise.framework */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
-		436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; };
-		436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */; };
 		43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A431E7A98C600F6874A /* CookiesStorage.swift */; };
-		43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; };
-		43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; };
-		43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A21E30E27200DABAAB /* Cely.framework */; };
-		43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A21E30E27200DABAAB /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A31E30E27200DABAAB /* Locksmith.framework */; };
-		43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A31E30E27200DABAAB /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43B354A91E30E27200DABAAB /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A41E30E27200DABAAB /* WaniLoginKit.framework */; };
-		43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43B354A41E30E27200DABAAB /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
-		43BE75F61E3E5E5C0032950B /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; };
-		43BE75F71E3E5E730032950B /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; };
-		43BE75F81E3E5E730032950B /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876E61D902FE800FE71FE /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; };
-		43BE75FC1E3E5E790032950B /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430876F71D902FF500FE71FE /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
+		43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */; };
+		43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */; };
+		43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B831E8AAEC60021BB20 /* Locksmith.framework */; };
+		43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */; };
+		43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B851E8AAEC60021BB20 /* Promise.framework */; };
+		43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */; };
+		43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B871E8AAEC60021BB20 /* WaniKit.framework */; };
+		43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */; };
+		43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; };
 		43BE76031E3F39F30032950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BE76051E3F39F30032950B /* Localizable.strings */; };
 		43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76061E3F3A870032950B /* Strings+Localization.swift */; };
 		43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76081E3F3C240032950B /* WebSessionType.swift */; };
@@ -143,46 +91,12 @@
 		43D99C981D99563C0071C26D /* SideMenuHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */; };
 		43D99C9B1D9A623C0071C26D /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */; };
 		43D99C9F1D9A640A0071C26D /* RightMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */; };
-		43F4F3761D9031B100A9BB08 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4F3751D9031B100A9BB08 /* PSOperations.framework */; };
-		43F4F3781D90324E00A9BB08 /* PSOperations.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43F4F3751D9031B100A9BB08 /* PSOperations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4F3751D9031B100A9BB08 /* PSOperations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37B1D91527900A9BB08 /* SRSViewController.swift */; };
 		43F4F37E1D9152A200A9BB08 /* SRSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37D1D9152A200A9BB08 /* SRSView.swift */; };
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		430877011D902FF500FE71FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 430876F61D902FF500FE71FE;
-			remoteInfo = WaniKit;
-		};
-		434FECB31E83DAE2006EA7ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43620A391D8C28FA00C1BA72;
-			remoteInfo = WaniKani;
-		};
-		43BE75F91E3E5E730032950B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 430876E51D902FE800FE71FE;
-			remoteInfo = WaniModel;
-		};
-		43BE75FD1E3E5E790032950B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 430876F61D902FF500FE71FE;
-			remoteInfo = WaniKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		43620AD71D8DD2F300C1BA72 /* Embed Frameworks */ = {
@@ -191,31 +105,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				43B354941E30CB2D00DABAAB /* RESideMenuKit.framework in Embed Frameworks */,
-				43BE75F81E3E5E730032950B /* WaniModel.framework in Embed Frameworks */,
-				43BE75FC1E3E5E790032950B /* WaniKit.framework in Embed Frameworks */,
-				43B354A61E30E27200DABAAB /* Cely.framework in Embed Frameworks */,
-				433D3D651E3B9B48001C631D /* EMPageViewController.framework in Embed Frameworks */,
-				43F4F37A1D90345A00A9BB08 /* PSOperations.framework in Embed Frameworks */,
-				43B354AA1E30E27200DABAAB /* WaniLoginKit.framework in Embed Frameworks */,
-				43B354A11E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
-				43B354A81E30E27200DABAAB /* Locksmith.framework in Embed Frameworks */,
-				434FECB61E83DBB3006EA7ED /* OHHTTPStubs.framework in Embed Frameworks */,
-				436D5B821E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
-				434CB6A81E7AF13F00C6A69C /* Promise.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43F4F3771D90323E00A9BB08 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				43F4F3781D90324E00A9BB08 /* PSOperations.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -255,67 +147,26 @@
 		430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
 		430876CC1D9021B300FE71FE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		430876CD1D9021B300FE71FE /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		430876E61D902FE800FE71FE /* WaniModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WaniModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		430876E81D902FE800FE71FE /* WaniModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaniModel.h; sourceTree = "<group>"; };
-		430876E91D902FE800FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430876F71D902FF500FE71FE /* WaniKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WaniKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		430876F91D902FF500FE71FE /* WaniKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaniKit.h; sourceTree = "<group>"; };
-		430876FA1D902FF500FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430876FF1D902FF500FE71FE /* WaniKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaniKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		430877061D902FF500FE71FE /* WaniKitManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniKitManagerTests.swift; sourceTree = "<group>"; };
-		430877081D902FF500FE71FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430877151D90300F00FE71FE /* DashboardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardInfo.swift; sourceTree = "<group>"; };
-		430877161D90300F00FE71FE /* KanjiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiInfo.swift; sourceTree = "<group>"; };
-		430877171D90300F00FE71FE /* LevelProgressionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelProgressionInfo.swift; sourceTree = "<group>"; };
-		430877181D90300F00FE71FE /* RadicalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalInfo.swift; sourceTree = "<group>"; };
-		430877191D90300F00FE71FE /* ReviewItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewItemInfo.swift; sourceTree = "<group>"; };
-		4308771A1D90300F00FE71FE /* SRSDistributionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionInfo.swift; sourceTree = "<group>"; };
-		4308771B1D90300F00FE71FE /* SRSLevelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSLevelInfo.swift; sourceTree = "<group>"; };
-		4308771C1D90300F00FE71FE /* StudyQueueInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyQueueInfo.swift; sourceTree = "<group>"; };
-		4308771D1D90300F00FE71FE /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		4308771E1D90300F00FE71FE /* UserSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSpecific.swift; sourceTree = "<group>"; };
-		4308771F1D90300F00FE71FE /* WordlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordlInfo.swift; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		433D3D631E3B9B48001C631D /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
-		434CB6A71E7AF13F00C6A69C /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
-		434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKaniDataStructure.swift; sourceTree = "<group>"; };
-		434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
-		434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTests+Stub.swift"; sourceTree = "<group>"; };
-		434FECBA1E83ED98006EA7ED /* level-progression.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "level-progression.json"; sourceTree = "<group>"; };
-		434FECC01E8404C5006EA7ED /* critical-items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "critical-items.json"; sourceTree = "<group>"; };
-		434FECC11E8404C5006EA7ED /* kanji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kanji.json; sourceTree = "<group>"; };
-		434FECC21E8404C5006EA7ED /* radicals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radicals.json; sourceTree = "<group>"; };
-		434FECC61E840590006EA7ED /* vocabulary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vocabulary.json; sourceTree = "<group>"; };
-		434FECC81E840A1B006EA7ED /* recent-unlocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "recent-unlocks.json"; sourceTree = "<group>"; };
-		434FECCA1E840B4B006EA7ED /* srs-distribution.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "srs-distribution.json"; sourceTree = "<group>"; };
-		434FECCC1E840C3F006EA7ED /* study-queue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "study-queue.json"; sourceTree = "<group>"; };
-		434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiProviderPromise.swift; sourceTree = "<group>"; };
-		434FECD21E841A52006EA7ED /* PromiseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseBuilder.swift; sourceTree = "<group>"; };
-		434FECD31E841A52006EA7ED /* ProviderPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderPromise.swift; sourceTree = "<group>"; };
-		434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoint+Promises.swift"; sourceTree = "<group>"; };
-		434FECD51E841A52006EA7ED /* WaniEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniEndpoint.swift; sourceTree = "<group>"; };
-		434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniEndpoints+DataTransform.swift"; sourceTree = "<group>"; };
-		434FECD71E841A52006EA7ED /* WaniParsedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniParsedData.swift; sourceTree = "<group>"; };
-		434FECD91E841A52006EA7ED /* WaniKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitManager.swift; sourceTree = "<group>"; };
-		434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WaniKitManager+Fetch.swift"; sourceTree = "<group>"; };
-		434FECE41E841ADA006EA7ED /* WaniKitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniKitError.swift; sourceTree = "<group>"; };
-		434FECE61E841D06006EA7ED /* InitialisationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialisationError.swift; sourceTree = "<group>"; };
-		4360EAB01E7AC67800ECC5FD /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43620A441D8C28FA00C1BA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
 		43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingScriptUtils.swift; sourceTree = "<group>"; };
 		43B02A431E7A98C600F6874A /* CookiesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesStorage.swift; sourceTree = "<group>"; };
-		43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
-		43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
-		43B354A21E30E27200DABAAB /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
-		43B354A31E30E27200DABAAB /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
-		43B354A41E30E27200DABAAB /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
+		43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
+		43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
+		43BA2B831E8AAEC60021BB20 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
+		43BA2B851E8AAEC60021BB20 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
+		43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
+		43BA2B871E8AAEC60021BB20 /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = Carthage/Build/iOS/WaniKit.framework; sourceTree = "<group>"; };
+		43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
+		43BA2B891E8AAEC60021BB20 /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = Carthage/Build/iOS/WaniModel.framework; sourceTree = "<group>"; };
 		43BE76041E3F39F30032950B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43BE76061E3F3A870032950B /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		43BE76081E3F3C240032950B /* WebSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionType.swift; sourceTree = "<group>"; };
@@ -349,7 +200,6 @@
 		43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHolderViewController.swift; sourceTree = "<group>"; };
 		43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
-		43F4F3751D9031B100A9BB08 /* PSOperations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSOperations.framework; path = Carthage/Build/iOS/PSOperations.framework; sourceTree = "<group>"; };
 		43F4F37B1D91527900A9BB08 /* SRSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewController.swift; sourceTree = "<group>"; };
 		43F4F37D1D9152A200A9BB08 /* SRSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSView.swift; sourceTree = "<group>"; usesTabs = 1; };
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
@@ -358,48 +208,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		430876E21D902FE800FE71FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876F31D902FF500FE71FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F4F3761D9031B100A9BB08 /* PSOperations.framework in Frameworks */,
-				43BE75F61E3E5E5C0032950B /* WaniModel.framework in Frameworks */,
-				4360EAB11E7AC67800ECC5FD /* Promise.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876FC1D902FF500FE71FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				430877001D902FF500FE71FE /* WaniKit.framework in Frameworks */,
-				434CB6A61E7AF06100C6A69C /* Promise.framework in Frameworks */,
-				434FECB01E83D743006EA7ED /* OHHTTPStubs.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43620A371D8C28FA00C1BA72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43B354A91E30E27200DABAAB /* WaniLoginKit.framework in Frameworks */,
-				43B354A71E30E27200DABAAB /* Locksmith.framework in Frameworks */,
-				43BE75FB1E3E5E790032950B /* WaniKit.framework in Frameworks */,
-				436D5B811E2FB4450015DEFE /* NJKScrollFullscreenKit.framework in Frameworks */,
-				434FECB51E83DBB3006EA7ED /* OHHTTPStubs.framework in Frameworks */,
-				43B354A01E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework in Frameworks */,
-				433D3D641E3B9B48001C631D /* EMPageViewController.framework in Frameworks */,
-				43B354931E30CB2D00DABAAB /* RESideMenuKit.framework in Frameworks */,
-				43B354A51E30E27200DABAAB /* Cely.framework in Frameworks */,
-				43BE75F71E3E5E730032950B /* WaniModel.framework in Frameworks */,
-				434CB6A91E7AF14C00C6A69C /* Promise.framework in Frameworks */,
+				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
+				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */,
+				43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */,
+				43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */,
+				43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */,
+				43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */,
+				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
+				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
+				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,110 +343,18 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				434FECAF1E83D743006EA7ED /* OHHTTPStubs.framework */,
-				434CB6A71E7AF13F00C6A69C /* Promise.framework */,
-				4360EAB01E7AC67800ECC5FD /* Promise.framework */,
-				433D3D631E3B9B48001C631D /* EMPageViewController.framework */,
-				43B354A21E30E27200DABAAB /* Cely.framework */,
-				43B354A31E30E27200DABAAB /* Locksmith.framework */,
-				43B354A41E30E27200DABAAB /* WaniLoginKit.framework */,
-				43B3549F1E30D6F400DABAAB /* DGElasticPullToRefreshKit.framework */,
-				43B354921E30CB2D00DABAAB /* RESideMenuKit.framework */,
-				436D5B801E2FB4450015DEFE /* NJKScrollFullscreenKit.framework */,
-				43F4F3751D9031B100A9BB08 /* PSOperations.framework */,
+				43BA2B801E8AAEC60021BB20 /* Cely.framework */,
+				43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */,
+				43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */,
+				43BA2B831E8AAEC60021BB20 /* Locksmith.framework */,
+				43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */,
+				43BA2B851E8AAEC60021BB20 /* Promise.framework */,
+				43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */,
+				43BA2B871E8AAEC60021BB20 /* WaniKit.framework */,
+				43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */,
+				43BA2B891E8AAEC60021BB20 /* WaniModel.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		430876E71D902FE800FE71FE /* WaniModel */ = {
-			isa = PBXGroup;
-			children = (
-				430877141D90300F00FE71FE /* Model */,
-				430876E81D902FE800FE71FE /* WaniModel.h */,
-				430876E91D902FE800FE71FE /* Info.plist */,
-				434FECE61E841D06006EA7ED /* InitialisationError.swift */,
-			);
-			path = WaniModel;
-			sourceTree = "<group>";
-		};
-		430876F81D902FF500FE71FE /* WaniKit */ = {
-			isa = PBXGroup;
-			children = (
-				434FECD01E841A52006EA7ED /* internal */,
-				434FECD81E841A52006EA7ED /* public */,
-				430876F91D902FF500FE71FE /* WaniKit.h */,
-				430876FA1D902FF500FE71FE /* Info.plist */,
-			);
-			path = WaniKit;
-			sourceTree = "<group>";
-		};
-		430877051D902FF500FE71FE /* WaniKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				434FECB91E83ED8B006EA7ED /* responses */,
-				430877061D902FF500FE71FE /* WaniKitManagerTests.swift */,
-				434FECB71E83DC9B006EA7ED /* XCTests+Stub.swift */,
-				430877081D902FF500FE71FE /* Info.plist */,
-			);
-			path = WaniKitTests;
-			sourceTree = "<group>";
-		};
-		430877141D90300F00FE71FE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				430877151D90300F00FE71FE /* DashboardInfo.swift */,
-				430877161D90300F00FE71FE /* KanjiInfo.swift */,
-				430877171D90300F00FE71FE /* LevelProgressionInfo.swift */,
-				430877181D90300F00FE71FE /* RadicalInfo.swift */,
-				430877191D90300F00FE71FE /* ReviewItemInfo.swift */,
-				4308771A1D90300F00FE71FE /* SRSDistributionInfo.swift */,
-				4308771B1D90300F00FE71FE /* SRSLevelInfo.swift */,
-				4308771C1D90300F00FE71FE /* StudyQueueInfo.swift */,
-				4308771D1D90300F00FE71FE /* UserInfo.swift */,
-				4308771E1D90300F00FE71FE /* UserSpecific.swift */,
-				4308771F1D90300F00FE71FE /* WordlInfo.swift */,
-				434CB6B81E7FD83600C6A69C /* WaniKaniDataStructure.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		434FECB91E83ED8B006EA7ED /* responses */ = {
-			isa = PBXGroup;
-			children = (
-				434FECCC1E840C3F006EA7ED /* study-queue.json */,
-				434FECCA1E840B4B006EA7ED /* srs-distribution.json */,
-				434FECC81E840A1B006EA7ED /* recent-unlocks.json */,
-				434FECC61E840590006EA7ED /* vocabulary.json */,
-				434FECC01E8404C5006EA7ED /* critical-items.json */,
-				434FECC11E8404C5006EA7ED /* kanji.json */,
-				434FECC21E8404C5006EA7ED /* radicals.json */,
-				434FECBA1E83ED98006EA7ED /* level-progression.json */,
-			);
-			path = responses;
-			sourceTree = "<group>";
-		};
-		434FECD01E841A52006EA7ED /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				434FECD11E841A52006EA7ED /* KanjiProviderPromise.swift */,
-				434FECD21E841A52006EA7ED /* PromiseBuilder.swift */,
-				434FECD31E841A52006EA7ED /* ProviderPromise.swift */,
-				434FECD41E841A52006EA7ED /* WaniEndpoint+Promises.swift */,
-				434FECD51E841A52006EA7ED /* WaniEndpoint.swift */,
-				434FECD61E841A52006EA7ED /* WaniEndpoints+DataTransform.swift */,
-				434FECD71E841A52006EA7ED /* WaniParsedData.swift */,
-			);
-			path = internal;
-			sourceTree = "<group>";
-		};
-		434FECD81E841A52006EA7ED /* public */ = {
-			isa = PBXGroup;
-			children = (
-				434FECD91E841A52006EA7ED /* WaniKitManager.swift */,
-				434FECE21E841A7C006EA7ED /* WaniKitManager+Fetch.swift */,
-				434FECE41E841ADA006EA7ED /* WaniKitError.swift */,
-			);
-			path = public;
 			sourceTree = "<group>";
 		};
 		43620A311D8C28FA00C1BA72 = {
@@ -632,9 +362,6 @@
 			children = (
 				433D3D5E1E3B9020001C631D /* Cartfile */,
 				43620A3C1D8C28FA00C1BA72 /* WaniKani */,
-				430876E71D902FE800FE71FE /* WaniModel */,
-				430876F81D902FF500FE71FE /* WaniKit */,
-				430877051D902FF500FE71FE /* WaniKitTests */,
 				43620A3B1D8C28FA00C1BA72 /* Products */,
 				430876DA1D902F1D00FE71FE /* Frameworks */,
 			);
@@ -644,9 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				43620A3A1D8C28FA00C1BA72 /* WaniKani.app */,
-				430876E61D902FE800FE71FE /* WaniModel.framework */,
-				430876F71D902FF500FE71FE /* WaniKit.framework */,
-				430876FF1D902FF500FE71FE /* WaniKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -781,84 +505,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		430876E31D902FE800FE71FE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				430876EA1D902FE800FE71FE /* WaniModel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876F41D902FF500FE71FE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				430877091D902FF500FE71FE /* WaniKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		430876E51D902FE800FE71FE /* WaniModel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 430876EF1D902FE800FE71FE /* Build configuration list for PBXNativeTarget "WaniModel" */;
-			buildPhases = (
-				430876E11D902FE800FE71FE /* Sources */,
-				430876E21D902FE800FE71FE /* Frameworks */,
-				430876E31D902FE800FE71FE /* Headers */,
-				430876E41D902FE800FE71FE /* Resources */,
-				43B02A451E7AA4C900F6874A /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WaniModel;
-			productName = WaniModel;
-			productReference = 430876E61D902FE800FE71FE /* WaniModel.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		430876F61D902FF500FE71FE /* WaniKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4308770E1D902FF500FE71FE /* Build configuration list for PBXNativeTarget "WaniKit" */;
-			buildPhases = (
-				430876F21D902FF500FE71FE /* Sources */,
-				430876F31D902FF500FE71FE /* Frameworks */,
-				430876F41D902FF500FE71FE /* Headers */,
-				430876F51D902FF500FE71FE /* Resources */,
-				43F4F3771D90323E00A9BB08 /* CopyFiles */,
-				436D5B4B1E2F96AF0015DEFE /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WaniKit;
-			productName = WaniKit;
-			productReference = 430876F71D902FF500FE71FE /* WaniKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		430876FE1D902FF500FE71FE /* WaniKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 430877111D902FF500FE71FE /* Build configuration list for PBXNativeTarget "WaniKitTests" */;
-			buildPhases = (
-				430876FB1D902FF500FE71FE /* Sources */,
-				430876FC1D902FF500FE71FE /* Frameworks */,
-				430876FD1D902FF500FE71FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				434FECB41E83DAE2006EA7ED /* PBXTargetDependency */,
-				430877021D902FF500FE71FE /* PBXTargetDependency */,
-			);
-			name = WaniKitTests;
-			productName = WaniKitTests;
-			productReference = 430876FF1D902FF500FE71FE /* WaniKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		43620A391D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43620A4C1D8C28FB00C1BA72 /* Build configuration list for PBXNativeTarget "WaniKani" */;
@@ -867,13 +514,12 @@
 				43620A371D8C28FA00C1BA72 /* Frameworks */,
 				43620A381D8C28FA00C1BA72 /* Resources */,
 				43620AD71D8DD2F300C1BA72 /* Embed Frameworks */,
+				43BA2B7D1E8A9E280021BB20 /* ShellScript */,
 				43B02A461E7AA4D800F6874A /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				43BE75FA1E3E5E730032950B /* PBXTargetDependency */,
-				43BE75FE1E3E5E790032950B /* PBXTargetDependency */,
 			);
 			name = WaniKani;
 			productName = WaniKani;
@@ -890,21 +536,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = haawa;
 				TargetAttributes = {
-					430876E51D902FE800FE71FE = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
-					430876F61D902FF500FE71FE = {
-						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
-					430876FE1D902FF500FE71FE = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S55BP53VB8;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 43620A391D8C28FA00C1BA72;
-					};
 					43620A391D8C28FA00C1BA72 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = S55BP53VB8;
@@ -932,43 +563,11 @@
 			projectRoot = "";
 			targets = (
 				43620A391D8C28FA00C1BA72 /* WaniKani */,
-				430876E51D902FE800FE71FE /* WaniModel */,
-				430876F61D902FF500FE71FE /* WaniKit */,
-				430876FE1D902FF500FE71FE /* WaniKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		430876E41D902FE800FE71FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876F51D902FF500FE71FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876FD1D902FF500FE71FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				434FECC91E840A1B006EA7ED /* recent-unlocks.json in Resources */,
-				434FECCB1E840B4B006EA7ED /* srs-distribution.json in Resources */,
-				434FECC51E8404C5006EA7ED /* radicals.json in Resources */,
-				434FECCD1E840C3F006EA7ED /* study-queue.json in Resources */,
-				434FECC41E8404C5006EA7ED /* kanji.json in Resources */,
-				434FECC71E840590006EA7ED /* vocabulary.json in Resources */,
-				434FECBB1E83ED98006EA7ED /* level-progression.json in Resources */,
-				434FECC31E8404C5006EA7ED /* critical-items.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43620A381D8C28FA00C1BA72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -998,32 +597,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		436D5B4B1E2F96AF0015DEFE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		43B02A451E7AA4C900F6874A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
 		43B02A461E7AA4D800F6874A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1037,55 +610,32 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		43BA2B7D1E8A9E280021BB20 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Cely.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DGElasticPullToRefreshKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EMPageViewController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NJKScrollFullscreenKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Promise.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RESideMenuKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WaniKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WaniLoginKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WaniModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		430876E11D902FE800FE71FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				430877291D90300F00FE71FE /* UserSpecific.swift in Sources */,
-				4308772A1D90300F00FE71FE /* WordlInfo.swift in Sources */,
-				430877241D90300F00FE71FE /* ReviewItemInfo.swift in Sources */,
-				430877271D90300F00FE71FE /* StudyQueueInfo.swift in Sources */,
-				430877231D90300F00FE71FE /* RadicalInfo.swift in Sources */,
-				434FECE71E841D06006EA7ED /* InitialisationError.swift in Sources */,
-				430877261D90300F00FE71FE /* SRSLevelInfo.swift in Sources */,
-				430877251D90300F00FE71FE /* SRSDistributionInfo.swift in Sources */,
-				430877201D90300F00FE71FE /* DashboardInfo.swift in Sources */,
-				430877211D90300F00FE71FE /* KanjiInfo.swift in Sources */,
-				430877281D90300F00FE71FE /* UserInfo.swift in Sources */,
-				430877221D90300F00FE71FE /* LevelProgressionInfo.swift in Sources */,
-				434CB6B91E7FD83600C6A69C /* WaniKaniDataStructure.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876F21D902FF500FE71FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				434FECDE1E841A52006EA7ED /* WaniEndpoint.swift in Sources */,
-				434FECE11E841A52006EA7ED /* WaniKitManager.swift in Sources */,
-				434FECDA1E841A52006EA7ED /* KanjiProviderPromise.swift in Sources */,
-				434FECDF1E841A52006EA7ED /* WaniEndpoints+DataTransform.swift in Sources */,
-				434FECE31E841A7C006EA7ED /* WaniKitManager+Fetch.swift in Sources */,
-				434FECDB1E841A52006EA7ED /* PromiseBuilder.swift in Sources */,
-				434FECE51E841ADA006EA7ED /* WaniKitError.swift in Sources */,
-				434FECDC1E841A52006EA7ED /* ProviderPromise.swift in Sources */,
-				434FECE01E841A52006EA7ED /* WaniParsedData.swift in Sources */,
-				434FECDD1E841A52006EA7ED /* WaniEndpoint+Promises.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430876FB1D902FF500FE71FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				434FECB81E83DC9B006EA7ED /* XCTests+Stub.swift in Sources */,
-				430877071D902FF500FE71FE /* WaniKitManagerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43620A361D8C28FA00C1BA72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1155,29 +705,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		430877021D902FF500FE71FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 430876F61D902FF500FE71FE /* WaniKit */;
-			targetProxy = 430877011D902FF500FE71FE /* PBXContainerItemProxy */;
-		};
-		434FECB41E83DAE2006EA7ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43620A391D8C28FA00C1BA72 /* WaniKani */;
-			targetProxy = 434FECB31E83DAE2006EA7ED /* PBXContainerItemProxy */;
-		};
-		43BE75FA1E3E5E730032950B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 430876E51D902FE800FE71FE /* WaniModel */;
-			targetProxy = 43BE75F91E3E5E730032950B /* PBXContainerItemProxy */;
-		};
-		43BE75FE1E3E5E790032950B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 430876F61D902FF500FE71FE /* WaniKit */;
-			targetProxy = 43BE75FD1E3E5E790032950B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1198,145 +725,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		430876F01D902FE800FE71FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WaniModel/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniModel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		430876F11D902FE800FE71FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WaniModel/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniModel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4308770F1D902FF500FE71FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = WaniKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		430877101D902FF500FE71FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = WaniKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		430877121D902FF500FE71FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = WaniKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaniKani.app/WaniKani";
-			};
-			name = Debug;
-		};
-		430877131D902FF500FE71FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = S55BP53VB8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = WaniKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaniKani.app/WaniKani";
-			};
-			name = Release;
-		};
 		43620A4A1D8C28FB00C1BA72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1433,7 +821,6 @@
 		43620A4D1D8C28FB00C1BA72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = S55BP53VB8;
@@ -1458,7 +845,6 @@
 		43620A4E1D8C28FB00C1BA72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = S55BP53VB8;
@@ -1482,33 +868,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		430876EF1D902FE800FE71FE /* Build configuration list for PBXNativeTarget "WaniModel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				430876F01D902FE800FE71FE /* Debug */,
-				430876F11D902FE800FE71FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4308770E1D902FF500FE71FE /* Build configuration list for PBXNativeTarget "WaniKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4308770F1D902FF500FE71FE /* Debug */,
-				430877101D902FF500FE71FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		430877111D902FF500FE71FE /* Build configuration list for PBXNativeTarget "WaniKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				430877121D902FF500FE71FE /* Debug */,
-				430877131D902FF500FE71FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		43620A351D8C28FA00C1BA72 /* Build configuration list for PBXProject "WaniKani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
