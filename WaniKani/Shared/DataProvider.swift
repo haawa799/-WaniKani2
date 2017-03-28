@@ -9,8 +9,9 @@
 import Foundation
 import WaniKit
 import WaniModel
+import Promise
 
-struct DataProvider {
+class DataProvider {
 
   private let apiManager: WaniKitManager
 
@@ -19,7 +20,9 @@ struct DataProvider {
   }
 
   func fetchDashboard(handler: @escaping (DashboardInfo?) -> Void) {
-//    apiManager.fetchDashboard(handler: handler)
+    apiManager.fetchDashboard().then { (dashboard) in
+      handler(dashboard)
+    }
   }
 
 }
