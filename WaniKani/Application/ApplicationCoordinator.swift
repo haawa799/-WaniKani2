@@ -10,16 +10,17 @@ import UIKit
 import WaniLoginKit
 import Cely
 import WaniKit
-import Promise
+import PersistanceLayer
 
 class ApplicationCoordinator: Coordinator {
 
   fileprivate var tabsCoordinator: TabsCoordinator?
   fileprivate let waniLoginCoordinator: WaniLoginCoordinator
+  fileprivate let persistance = Persistance()
+  var fetcher: WaniKitManager?
 
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
-  var promise: Promise<(Data, HTTPURLResponse)>!
 
   init(window: UIWindow) {
     self.window = window
@@ -51,6 +52,12 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func presentingCallback(window: UIWindow, status: CelyStatus) {
     guard status == .loggedIn else { return }
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
+    fetcher = WaniKitManager(apiKey: apiKey)
+
+    fetcher?.fetchUserInfo().then { self.persistance.persist(userInfo: $0) }
+    fetcher?.fetchStudyQueue().then { self.persistance.persist(studyQueue: $0) }
+    fetcher?.fetchSRS().then { self.persistance.persist(srs: $0) }
+
     presentTabs(apiKey: apiKey)
     CookiesStorage.saveCookies()
   }

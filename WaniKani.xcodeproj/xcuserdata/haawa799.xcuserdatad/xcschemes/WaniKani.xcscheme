@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -35,6 +35,16 @@
                BlueprintIdentifier = "430876FE1D902FF500FE71FE"
                BuildableName = "WaniKitTests.xctest"
                BlueprintName = "WaniKitTests"
+               ReferencedContainer = "container:WaniKani.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "430A75511E8E4DF80025039A"
+               BuildableName = "PersistanceLayerTests.xctest"
+               BlueprintName = "PersistanceLayerTests"
                ReferencedContainer = "container:WaniKani.xcodeproj">
             </BuildableReference>
          </TestableReference>

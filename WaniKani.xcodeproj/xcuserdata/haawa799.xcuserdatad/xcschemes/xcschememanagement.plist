@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PersistanceLayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PersistanceLayerTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>WaniKani.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>430876FE1D902FF500FE71FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>430A75491E8E4DF80025039A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>430A75511E8E4DF80025039A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
