@@ -10,27 +10,48 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class KanjiInfo: Object, WaniModelConvertable {
+class KanjiInfo: Object, WaniModelConvertable {
 
-  public typealias PersistantType = PersistanceLayer.KanjiInfo
-  public typealias WaniType = WaniModel.KanjiInfo
+  typealias PersistantType = PersistanceLayer.KanjiInfo
+  typealias WaniType = WaniModel.KanjiInfo
 
-  public dynamic var character: String = ""
-  public dynamic var meaning: String?
-  public dynamic var onyomi: String?
-  public dynamic var kunyomi: String?
-  public dynamic var nanori: String?
-  public dynamic var importantReading: String?
-  public dynamic var level: Int = 0
-  public dynamic var percentage: String?
-  public dynamic var unlockedDate: Date?
-  public dynamic var userSpecific: UserSpecific?
+  dynamic var character: String = ""
+  dynamic var meaning: String?
+  dynamic var onyomi: String?
+  dynamic var kunyomi: String?
+  dynamic var nanori: String?
+  dynamic var importantReading: String?
+  dynamic var level: Int = 0
+  dynamic var percentage: String?
+  dynamic var unlockedDate: Date?
 
-  override public static func primaryKey() -> String? {
+  dynamic var userSpecific: UserSpecific? {
+    didSet {
+      if userSpecific == nil {
+        userSpecific = oldValue
+      }
+    }
+  }
+
+  var dict: [String: Any?] {
+    return [
+      "character": character,
+      "meaning": meaning,
+      "onyomi": onyomi,
+      "kunyomi": kunyomi,
+      "nanori": nanori,
+      "importantReading": importantReading,
+      "level": level,
+      "percentage": percentage,
+      "unlockedDate": unlockedDate
+    ]
+  }
+
+  override static func primaryKey() -> String? {
     return "character"
   }
 
-  public convenience required init(model: WaniType) {
+  convenience required init(model: WaniType) {
     self.init()
     self.character = model.character
     self.meaning = model.meaning
@@ -46,16 +67,17 @@ public class KanjiInfo: Object, WaniModelConvertable {
     }
   }
 
-  public var waniModelStruct: WaniType {
+  var waniModelStruct: WaniType {
     return WaniModel.KanjiInfo(realmObject: self)
   }
+
 }
 
 extension KanjiInfo.WaniType: PersistanceModelInstantiatible {
 
-  public typealias PersistantType = PersistanceLayer.KanjiInfo
+  typealias PersistantType = PersistanceLayer.KanjiInfo
 
-  public init(realmObject: PersistantType) {
+  init(realmObject: PersistantType) {
     self.character = realmObject.character
     self.meaning = realmObject.meaning
     self.onyomi = realmObject.onyomi

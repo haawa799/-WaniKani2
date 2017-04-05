@@ -11,9 +11,17 @@ import RealmSwift
 
 class User: Object {
 
-  dynamic var userInfo: UserInfo?
+  dynamic var levelProgression: LevelProgressionInfo?
   dynamic var studyQueue: StudyQueueInfo?
   dynamic var srs: SRSDistributionInfo?
-  dynamic var kanjiList: ReviewItemsList?
+
+  dynamic var criticalItems: ReviewItemsList?
+  dynamic var recentsItems: ReviewItemsList?
+  dynamic var apiKey: String = ""
+
+  convenience init(apiKey: String) {
+    self.init()
+    self.apiKey = apiKey
+  }
 
 }

@@ -9,61 +9,40 @@
 import Foundation
 import Realm
 import RealmSwift
-import WaniModel
 
 //
 public class Persistance {
 
+  static let schemaVersion: UInt64 = 15
   let queue = DispatchQueue(label: "Realm Queue")
+  let realm: Realm!
+  var user: User!
 
-  let realm: Realm = {
+  public init(setupInMemory: Bool = false, apiKey: String) {
+
+    // Setup Realm
+    let inMemoryIdentifier = setupInMemory ? "inMemoryIdentifier" : nil
     let config = Realm.Configuration(
-      schemaVersion: 3,
+      inMemoryIdentifier: inMemoryIdentifier,
+      schemaVersion: Persistance.schemaVersion,
       migrationBlock: { _, _ in
     })
     Realm.Configuration.defaultConfiguration = config
-    return try! Realm() // swiftlint:disable:this force_try
-  }()
+    self.realm = try! Realm() // swiftlint:disable:this force_try
 
-  var user: User!
+//    try? realm.write {
+//      realm.deleteAll()
+//    }
 
-  public init() {
+    // Setup user
     guard let fetchedUser = realm.objects(User.self).first else {
       // User not created, create new user
       try? realm.write {
-        user = User()
+        user = User(apiKey: apiKey)
         realm.add(user)
       }
       return
     }
     user = fetchedUser
-  }
-
-  public func persist(userInfo: WaniModel.UserInfo) {
-    let updated = UserInfo(userInfo: userInfo)
-    try? realm.write {
-      if let old = user.userInfo { realm.delete(old) }
-      user.userInfo = updated
-    }
-  }
-
-  public func persist(studyQueue: WaniModel.StudyQueueInfo) {
-    let updated = StudyQueueInfo(userInfo: studyQueue)
-    try? realm.write {
-      if let old = user.studyQueue { realm.delete(old) }
-      user.studyQueue = updated
-    }
-  }
-
-  public func persist(srs: WaniModel.SRSDistributionInfo) {
-    let updated = SRSDistributionInfo(srsDistribution: srs)
-    try? realm.write {
-      if let old = user.srs {
-        // Delete old
-        old.willBeDeleted(realm: realm)
-        realm.delete(old)
-      }
-      user.srs = updated
-    }
   }
 }

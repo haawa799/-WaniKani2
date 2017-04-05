@@ -10,26 +10,26 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class UserSpecific: Object {
-  public dynamic var srs: String?
-  public let srsNumeric = RealmOptional<Int>()
-  public dynamic var unlockedDate: Date?
-  public dynamic var availableDate: Date?
-  public dynamic var burned: Bool = false
-  public dynamic var burnedDate: Date?
-  public let meaningCorrect = RealmOptional<Int>()
-  public let meaningIncorrect = RealmOptional<Int>()
-  public let meaningMaxStreak = RealmOptional<Int>()
-  public let meaningCurrentStreak = RealmOptional<Int>()
-  public let readingCorrect = RealmOptional<Int>()
-  public let readingIncorrect = RealmOptional<Int>()
-  public let readingMaxStreak = RealmOptional<Int>()
-  public let readingCurrentStreak = RealmOptional<Int>()
-  public dynamic var meaningNote: String?
-  public dynamic var userSynonyms: String?
-  public dynamic var readingNote: String?
+class UserSpecific: Object {
+  dynamic var srs: String?
+  let srsNumeric = RealmOptional<Int>()
+  dynamic var unlockedDate: Date?
+  dynamic var availableDate: Date?
+  dynamic var burned: Bool = false
+  dynamic var burnedDate: Date?
+  let meaningCorrect = RealmOptional<Int>()
+  let meaningIncorrect = RealmOptional<Int>()
+  let meaningMaxStreak = RealmOptional<Int>()
+  let meaningCurrentStreak = RealmOptional<Int>()
+  let readingCorrect = RealmOptional<Int>()
+  let readingIncorrect = RealmOptional<Int>()
+  let readingMaxStreak = RealmOptional<Int>()
+  let readingCurrentStreak = RealmOptional<Int>()
+  dynamic var meaningNote: String?
+  dynamic var userSynonyms: String?
+  dynamic var readingNote: String?
 
-  public convenience init(userSpecific: WaniModel.UserSpecific) {
+  convenience init(userSpecific: WaniModel.UserSpecific) {
     self.init()
     self.srs = userSpecific.srs
     self.srsNumeric.value = userSpecific.srsNumeric
@@ -50,7 +50,7 @@ public class UserSpecific: Object {
     self.readingNote = userSpecific.readingNote
   }
 
-  public var waniModelStruct: WaniModel.UserSpecific {
+  var waniModelStruct: WaniModel.UserSpecific {
     return WaniModel.UserSpecific(realmObject: self)
   }
 }

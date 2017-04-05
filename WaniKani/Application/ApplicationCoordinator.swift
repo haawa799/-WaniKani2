@@ -16,7 +16,7 @@ class ApplicationCoordinator: Coordinator {
 
   fileprivate var tabsCoordinator: TabsCoordinator?
   fileprivate let waniLoginCoordinator: WaniLoginCoordinator
-  fileprivate let persistance = Persistance()
+  fileprivate var persistance: Persistance!
   var fetcher: WaniKitManager?
 
   let window: UIWindow
@@ -52,11 +52,17 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func presentingCallback(window: UIWindow, status: CelyStatus) {
     guard status == .loggedIn else { return }
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
+    persistance = Persistance(apiKey: apiKey)
     fetcher = WaniKitManager(apiKey: apiKey)
 
-    fetcher?.fetchUserInfo().then { self.persistance.persist(userInfo: $0) }
+    fetcher?.fetchLevelProgression().then { self.persistance.persist(levelProgression: $0) }
     fetcher?.fetchStudyQueue().then { self.persistance.persist(studyQueue: $0) }
     fetcher?.fetchSRS().then { self.persistance.persist(srs: $0) }
+    fetcher?.fetchRadicalPromise(level: 21).then { self.persistance.persist(radicals: $0) }
+    fetcher?.fetchKanjiPromise(level: 21).then { self.persistance.persist(kanji: $0) }
+    fetcher?.fetchVocabPromise(level: 21).then { self.persistance.persist(words: $0) }
+    fetcher?.fetchCriticalItems(percentage: 85).then { self.persistance.persist(criticalItems: $0) }
+    fetcher?.fetchRecentUnlocks(limit: 30).then { self.persistance.persist(recents: $0) }
 
     presentTabs(apiKey: apiKey)
     CookiesStorage.saveCookies()

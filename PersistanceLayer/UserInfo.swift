@@ -10,24 +10,26 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class UserInfo: Object {
-  public dynamic var username: String = ""
-  public dynamic var level: Int = 0
-  public dynamic var gravatar: String?
-  public dynamic var title: String?
-  public dynamic var about: String?
-  public dynamic var website: String?
-  public dynamic var twitter: String?
-  public let topicsCount = RealmOptional<Int>()
-  public let postsCount = RealmOptional<Int>()
-  public dynamic var creationDate: Date?
+class UserInfo: Object {
+  dynamic var username: String = ""
+  dynamic var level: Int = 0
+  dynamic var gravatar: String?
+  dynamic var title: String?
+  dynamic var about: String?
+  dynamic var website: String?
+  dynamic var twitter: String?
+  let topicsCount = RealmOptional<Int>()
+  let postsCount = RealmOptional<Int>()
+  dynamic var creationDate: Date?
+  dynamic var userId: String = ""
 
-  override public static func primaryKey() -> String? {
-    return "username"
+  override static func primaryKey() -> String? {
+    return "userId"
   }
 
-  public convenience init(userInfo: WaniModel.UserInfo) {
+  convenience init(userInfo: WaniModel.UserInfo, userId: String) {
     self.init()
+    self.userId = userId
     self.username = userInfo.username
     self.level = userInfo.level
     self.gravatar = userInfo.gravatar
@@ -40,7 +42,7 @@ public class UserInfo: Object {
     self.creationDate = userInfo.creationDate
   }
 
-  public var waniModelStruct: WaniModel.UserInfo {
+  var waniModelStruct: WaniModel.UserInfo {
     return WaniModel.UserInfo(realmObject: self)
   }
 

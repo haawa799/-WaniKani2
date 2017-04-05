@@ -10,24 +10,30 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class StudyQueueInfo: Object {
-  public var lessonsAvaliable = RealmOptional<Int>()
-  public var reviewsAvaliable = RealmOptional<Int>()
-  public dynamic var nextReviewDate: Date?
-  public var reviewsNextHour = RealmOptional<Int>()
-  public var reviewsNextDay = RealmOptional<Int>()
+class StudyQueueInfo: Object {
+  var lessonsAvaliable = RealmOptional<Int>()
+  var reviewsAvaliable = RealmOptional<Int>()
+  dynamic var nextReviewDate: Date?
+  var reviewsNextHour = RealmOptional<Int>()
+  var reviewsNextDay = RealmOptional<Int>()
+  dynamic var userId: String = ""
 
-  public convenience init(userInfo: WaniModel.StudyQueueInfo) {
+  convenience init(studyQueue: WaniModel.StudyQueueInfo, userId: String) {
     self.init()
-    self.lessonsAvaliable.value = userInfo.lessonsAvaliable
-    self.reviewsAvaliable.value = userInfo.reviewsAvaliable
-    self.nextReviewDate = userInfo.nextReviewDate
-    self.reviewsNextHour.value = userInfo.reviewsNextHour
-    self.reviewsNextDay.value = userInfo.reviewsNextDay
+    self.userId = userId
+    self.lessonsAvaliable.value = studyQueue.lessonsAvaliable
+    self.reviewsAvaliable.value = studyQueue.reviewsAvaliable
+    self.nextReviewDate = studyQueue.nextReviewDate
+    self.reviewsNextHour.value = studyQueue.reviewsNextHour
+    self.reviewsNextDay.value = studyQueue.reviewsNextDay
   }
 
-  public var waniModelStruct: WaniModel.StudyQueueInfo {
+  var waniModelStruct: WaniModel.StudyQueueInfo {
     return WaniModel.StudyQueueInfo(realmObject: self)
+  }
+
+  override static func primaryKey() -> String? {
+    return "userId"
   }
 }
 

@@ -10,24 +10,24 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class WordInfo: Object, WaniModelConvertable {
+class WordInfo: Object, WaniModelConvertable {
 
-  public typealias PersistantType = PersistanceLayer.WordInfo
-  public typealias WaniType = WaniModel.WordInfo
+  typealias PersistantType = PersistanceLayer.WordInfo
+  typealias WaniType = WaniModel.WordInfo
 
-  public dynamic var character: String = ""
-  public dynamic var meaning: String?
-  public dynamic var kana: String?
-  public dynamic var level: Int = 0
-  public dynamic var percentage: String?
-  public dynamic var unlockedDate: Date?
-  public dynamic var userSpecific: UserSpecific?
+  dynamic var character: String = ""
+  dynamic var meaning: String?
+  dynamic var kana: String?
+  dynamic var level: Int = 0
+  dynamic var percentage: String?
+  dynamic var unlockedDate: Date?
+  dynamic var userSpecific: UserSpecific?
 
-  override public static func primaryKey() -> String? {
+  override static func primaryKey() -> String? {
     return "character"
   }
 
-  public convenience required init(model: WaniType) {
+  convenience required init(model: WaniType) {
     self.init()
     self.character = model.character
     self.meaning = model.meaning
@@ -40,16 +40,20 @@ public class WordInfo: Object, WaniModelConvertable {
     }
   }
 
-  public var waniModelStruct: WaniType {
+  var waniModelStruct: WaniType {
     return WaniModel.WordInfo(realmObject: self)
+  }
+
+  func willBeDeleted(realm: Realm) {
+    if let userSpecific = userSpecific { realm.delete(userSpecific) }
   }
 }
 
 extension WordInfo.WaniType: PersistanceModelInstantiatible {
 
-  public typealias PersistantType = PersistanceLayer.WordInfo
+  typealias PersistantType = PersistanceLayer.WordInfo
 
-  public init(realmObject: PersistantType) {
+  init(realmObject: PersistantType) {
     self.character = realmObject.character
     self.meaning = realmObject.meaning
     self.kana = realmObject.kana

@@ -10,21 +10,27 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class SRSLevelInfo: Object {
-  public dynamic var radicals: Int = 0
-  public dynamic var kanji: Int = 0
-  public dynamic var vocabulary: Int = 0
-  public dynamic var total: Int = 0
+class SRSLevelInfo: Object {
+  dynamic var radicals: Int = 0
+  dynamic var kanji: Int = 0
+  dynamic var vocabulary: Int = 0
+  dynamic var total: Int = 0
+  dynamic var label: String = ""
 
-  public convenience init(srs: WaniModel.SRSLevelInfo) {
+  override static func primaryKey() -> String? {
+    return "label"
+  }
+
+  convenience init(srs: WaniModel.SRSLevelInfo, label: String) {
     self.init()
+    self.label = label
     self.radicals = srs.radicals
     self.kanji = srs.kanji
     self.vocabulary = srs.vocabulary
     self.total = srs.total
   }
 
-  public var waniModelStruct: WaniModel.SRSLevelInfo {
+  var waniModelStruct: WaniModel.SRSLevelInfo {
     return WaniModel.SRSLevelInfo(realmObject: self)
   }
 }

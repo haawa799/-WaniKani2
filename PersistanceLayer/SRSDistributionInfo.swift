@@ -16,14 +16,20 @@ class SRSDistributionInfo: Object {
   dynamic var master: PersistanceLayer.SRSLevelInfo!
   dynamic var enlighten: PersistanceLayer.SRSLevelInfo!
   dynamic var burned: PersistanceLayer.SRSLevelInfo!
+  dynamic var userId: String = ""
 
-  convenience init(srsDistribution: WaniModel.SRSDistributionInfo) {
+  override static func primaryKey() -> String? {
+    return "userId"
+  }
+
+  convenience init(srsDistribution: WaniModel.SRSDistributionInfo, userId: String) {
     self.init()
-    self.apprentice = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.apprentice)
-    self.guru = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.guru)
-    self.master = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.master)
-    self.enlighten = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.enlighten)
-    self.burned = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.burned)
+    self.userId = userId
+    self.apprentice = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.apprentice, label: "apprentice")
+    self.guru = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.guru, label: "guru")
+    self.master = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.master, label: "master")
+    self.enlighten = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.enlighten, label: "enlighten")
+    self.burned = PersistanceLayer.SRSLevelInfo(srs: srsDistribution.burned, label: "burned")
   }
 
   var waniModelStruct: WaniModel.SRSDistributionInfo {

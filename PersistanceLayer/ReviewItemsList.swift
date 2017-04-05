@@ -10,20 +10,28 @@ import Foundation
 import RealmSwift
 import WaniModel
 
-public class ReviewItemsList: Object, WaniModelConvertable {
+class ReviewItemsList: Object {
 
-  public typealias PersistantType = PersistanceLayer.ReviewItemsList
-  public typealias WaniType = [WaniModel.ReviewItemInfo]
+  typealias PersistantType = PersistanceLayer.ReviewItemsList
+  typealias WaniType = [WaniModel.ReviewItemInfo]
 
-  public var items = List<ReviewItemInfo>()
-
-  public convenience required init(model: WaniType) {
-    self.init()
-    self.items = List<ReviewItemInfo>()
-    items.append(contentsOf: model.map { ReviewItemInfo(model: $0) })
+  var items = List<ReviewItemInfo>()
+  dynamic var label = ""
+  override static func primaryKey() -> String? {
+    return "label"
   }
 
-  public var waniModelStruct: WaniType {
+  convenience required init(model: WaniType, label: String, realm: Realm) {
+    self.init()
+    self.label = label
+    let updatedItems = model.map { ReviewItemInfo(model: $0, realm: realm) }
+    realm.add(updatedItems)
+    self.items = List<ReviewItemInfo>()
+    items.append(contentsOf: updatedItems)
+  }
+
+  var waniModelStruct: WaniType {
     return self.items.map { $0.waniModelStruct }
   }
+
 }

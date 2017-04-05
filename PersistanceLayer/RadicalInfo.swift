@@ -10,25 +10,25 @@ import Foundation
 import WaniModel
 import RealmSwift
 
-public class RadicalInfo: Object, WaniModelConvertable {
+class RadicalInfo: Object, WaniModelConvertable {
 
-  public typealias PersistantType = PersistanceLayer.RadicalInfo
-  public typealias WaniType = WaniModel.RadicalInfo
+  typealias PersistantType = PersistanceLayer.RadicalInfo
+  typealias WaniType = WaniModel.RadicalInfo
 
-  public dynamic var character: String?
-  public dynamic var meaning: String?
-  public dynamic var key: String = ""
-  public dynamic var image: String?
-  public dynamic var level: Int = 0
-  public dynamic var percentage: String?
-  public dynamic var unlockedDate: Date?
-  public dynamic var userSpecific: PersistanceLayer.UserSpecific?
+  dynamic var character: String?
+  dynamic var meaning: String?
+  dynamic var key: String = ""
+  dynamic var image: String?
+  dynamic var level: Int = 0
+  dynamic var percentage: String?
+  dynamic var unlockedDate: Date?
+  dynamic var userSpecific: PersistanceLayer.UserSpecific?
 
-  override public static func primaryKey() -> String? {
+  override static func primaryKey() -> String? {
     return "key"
   }
 
-  public convenience required init(model radical: WaniType) {
+  convenience required init(model radical: WaniType) {
     self.init()
     self.character = radical.character
     self.meaning = radical.meaning
@@ -42,9 +42,10 @@ public class RadicalInfo: Object, WaniModelConvertable {
     }
   }
 
-  public var waniModelStruct: WaniType {
+  var waniModelStruct: WaniType {
     return WaniModel.RadicalInfo(realmObject: self)
   }
+
 }
 
 extension RadicalInfo.WaniType {

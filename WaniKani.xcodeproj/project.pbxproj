@@ -63,6 +63,8 @@
 		4328C7661E8E8C5F00610077 /* ReviewItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7651E8E8C5F00610077 /* ReviewItemsList.swift */; };
 		4328C7681E8E912200610077 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7671E8E912200610077 /* User.swift */; };
 		4328C76A1E8E932D00610077 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7691E8E932D00610077 /* Level.swift */; };
+		4328C76E1E9291B500610077 /* Persistance+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C76D1E9291B500610077 /* Persistance+Save.swift */; };
+		4328C7701E94E72000610077 /* LevelProgressionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C76F1E94E72000610077 /* LevelProgressionInfo.swift */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
@@ -209,6 +211,8 @@
 		4328C7651E8E8C5F00610077 /* ReviewItemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewItemsList.swift; sourceTree = "<group>"; };
 		4328C7671E8E912200610077 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4328C7691E8E932D00610077 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		4328C76D1E9291B500610077 /* Persistance+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persistance+Save.swift"; sourceTree = "<group>"; };
+		4328C76F1E94E72000610077 /* LevelProgressionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelProgressionInfo.swift; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,12 +450,14 @@
 				430A754C1E8E4DF80025039A /* PersistanceLayer.h */,
 				430A754D1E8E4DF80025039A /* Info.plist */,
 				430A756C1E8E518C0025039A /* Persistance.swift */,
+				4328C76D1E9291B500610077 /* Persistance+Save.swift */,
 				4328C7671E8E912200610077 /* User.swift */,
 				4328C7691E8E932D00610077 /* Level.swift */,
 				4328C75F1E8E7BB400610077 /* WaniModelConvertable.swift */,
 				4328C7501E8E5D0B00610077 /* UserInfo.swift */,
 				4328C7531E8E6C1500610077 /* UserSpecific.swift */,
 				4328C7551E8E6EDB00610077 /* StudyQueueInfo.swift */,
+				4328C76F1E94E72000610077 /* LevelProgressionInfo.swift */,
 				4328C7571E8E706100610077 /* SRSLevelInfo.swift */,
 				4328C7591E8E715600610077 /* SRSDistributionInfo.swift */,
 				4328C75B1E8E7A0D00610077 /* RadicalInfo.swift */,
@@ -854,6 +860,7 @@
 				4328C7511E8E5D0B00610077 /* UserInfo.swift in Sources */,
 				4328C7581E8E706100610077 /* SRSLevelInfo.swift in Sources */,
 				4328C75A1E8E715600610077 /* SRSDistributionInfo.swift in Sources */,
+				4328C7701E94E72000610077 /* LevelProgressionInfo.swift in Sources */,
 				4328C7621E8E802100610077 /* WordInfo.swift in Sources */,
 				4328C75E1E8E7B3400610077 /* KanjiInfo.swift in Sources */,
 				4328C7641E8E848100610077 /* ReviewItemInfo.swift in Sources */,
@@ -861,6 +868,7 @@
 				4328C76A1E8E932D00610077 /* Level.swift in Sources */,
 				4328C75C1E8E7A0D00610077 /* RadicalInfo.swift in Sources */,
 				4328C7661E8E8C5F00610077 /* ReviewItemsList.swift in Sources */,
+				4328C76E1E9291B500610077 /* Persistance+Save.swift in Sources */,
 				4328C7561E8E6EDB00610077 /* StudyQueueInfo.swift in Sources */,
 				430A756D1E8E518C0025039A /* Persistance.swift in Sources */,
 				4328C7541E8E6C1500610077 /* UserSpecific.swift in Sources */,

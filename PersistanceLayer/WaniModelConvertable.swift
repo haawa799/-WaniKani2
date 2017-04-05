@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol WaniModelConvertable {
+protocol WaniModelConvertable {
   associatedtype WaniType
   associatedtype PersistantType
 
@@ -16,7 +16,7 @@ public protocol WaniModelConvertable {
   var waniModelStruct: WaniType { get }
 }
 
-public protocol PersistanceModelInstantiatible {
+protocol PersistanceModelInstantiatible {
   associatedtype PersistantType
   init(realmObject: PersistantType)
 }
