@@ -10,7 +10,6 @@ import Foundation
 import Realm
 import RealmSwift
 
-//
 public class Persistance {
 
   static let schemaVersion: UInt64 = 15
@@ -30,10 +29,6 @@ public class Persistance {
     Realm.Configuration.defaultConfiguration = config
     self.realm = try! Realm() // swiftlint:disable:this force_try
 
-//    try? realm.write {
-//      realm.deleteAll()
-//    }
-
     // Setup user
     guard let fetchedUser = realm.objects(User.self).first else {
       // User not created, create new user
@@ -44,5 +39,11 @@ public class Persistance {
       return
     }
     user = fetchedUser
+  }
+  
+  internal func nuke() {
+    try? realm.write {
+      realm.deleteAll()
+    }
   }
 }

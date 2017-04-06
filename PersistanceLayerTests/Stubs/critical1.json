@@ -1,0 +1,27 @@
+ [
+  {
+  "type": "vocabulary",
+  "character": "解ける",
+  "kana": "とける",
+  "meaning": "to become untied, to get untied, to come undone, to become undone",
+  "level": 21,
+  "percentage": "65"
+  },
+  {
+  "type": "kanji",
+  "character": "査",
+  "onyomi": "さ",
+  "kunyomi": "None",
+  "importantReading": "onyomi",
+  "meaning": "inspect, investigate, inspection, investigation",
+  "level": 21,
+  "percentage": "77"
+  },
+  {
+    "type": "radical",
+    "character": "安",
+    "meaning": "cheap",
+    "level": 22,
+    "percentage": "80"
+  }
+  ]

@@ -43,10 +43,6 @@ class WordInfo: Object, WaniModelConvertable {
   var waniModelStruct: WaniType {
     return WaniModel.WordInfo(realmObject: self)
   }
-
-  func willBeDeleted(realm: Realm) {
-    if let userSpecific = userSpecific { realm.delete(userSpecific) }
-  }
 }
 
 extension WordInfo.WaniType: PersistanceModelInstantiatible {

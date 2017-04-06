@@ -33,20 +33,6 @@ class KanjiInfo: Object, WaniModelConvertable {
     }
   }
 
-  var dict: [String: Any?] {
-    return [
-      "character": character,
-      "meaning": meaning,
-      "onyomi": onyomi,
-      "kunyomi": kunyomi,
-      "nanori": nanori,
-      "importantReading": importantReading,
-      "level": level,
-      "percentage": percentage,
-      "unlockedDate": unlockedDate
-    ]
-  }
-
   override static func primaryKey() -> String? {
     return "character"
   }

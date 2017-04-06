@@ -50,7 +50,7 @@
 		430A756A1E8E511B0025039A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430A75681E8E511B0025039A /* RealmSwift.framework */; };
 		430A756D1E8E518C0025039A /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A756C1E8E518C0025039A /* Persistance.swift */; };
 		4328C7511E8E5D0B00610077 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7501E8E5D0B00610077 /* UserInfo.swift */; };
-		4328C7521E8E5D1E00610077 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; };
+		4328C7521E8E5D1E00610077 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4328C7541E8E6C1500610077 /* UserSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7531E8E6C1500610077 /* UserSpecific.swift */; };
 		4328C7561E8E6EDB00610077 /* StudyQueueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7551E8E6EDB00610077 /* StudyQueueInfo.swift */; };
 		4328C7581E8E706100610077 /* SRSLevelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7571E8E706100610077 /* SRSLevelInfo.swift */; };
@@ -62,9 +62,22 @@
 		4328C7641E8E848100610077 /* ReviewItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7631E8E848100610077 /* ReviewItemInfo.swift */; };
 		4328C7661E8E8C5F00610077 /* ReviewItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7651E8E8C5F00610077 /* ReviewItemsList.swift */; };
 		4328C7681E8E912200610077 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7671E8E912200610077 /* User.swift */; };
-		4328C76A1E8E932D00610077 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C7691E8E932D00610077 /* Level.swift */; };
 		4328C76E1E9291B500610077 /* Persistance+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C76D1E9291B500610077 /* Persistance+Save.swift */; };
 		4328C7701E94E72000610077 /* LevelProgressionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C76F1E94E72000610077 /* LevelProgressionInfo.swift */; };
+		4328C7741E952A9C00610077 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4328C77A1E9634BB00610077 /* studyQueue0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7791E9634BB00610077 /* studyQueue0.json */; };
+		4328C77C1E9634D800610077 /* WaniModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C77B1E9634D800610077 /* WaniModelStub.swift */; };
+		4328C77E1E96395D00610077 /* levelProgression0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C77D1E96395D00610077 /* levelProgression0.json */; };
+		4328C7801E963B3800610077 /* srs0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C77F1E963B3800610077 /* srs0.json */; };
+		4328C7841E96407600610077 /* kanji0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7811E96407600610077 /* kanji0.json */; };
+		4328C7851E96407600610077 /* radicals0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7821E96407600610077 /* radicals0.json */; };
+		4328C7861E96407600610077 /* words0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7831E96407600610077 /* words0.json */; };
+		4328C7881E96431400610077 /* critical0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7871E96431400610077 /* critical0.json */; };
+		4328C78A1E96431D00610077 /* recents0.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7891E96431D00610077 /* recents0.json */; };
+		4328C78C1E964B8300610077 /* critical1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C78B1E964B8300610077 /* critical1.json */; };
+		4328C78E1E964CDD00610077 /* Persistance+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328C78D1E964CDD00610077 /* Persistance+Fetch.swift */; };
+		4328C7901E966EC400610077 /* recents1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C78F1E966EC400610077 /* recents1.json */; };
+		4328C7921E96778E00610077 /* levelProgression1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4328C7911E96778E00610077 /* levelProgression1.json */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
@@ -210,9 +223,21 @@
 		4328C7631E8E848100610077 /* ReviewItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewItemInfo.swift; sourceTree = "<group>"; };
 		4328C7651E8E8C5F00610077 /* ReviewItemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewItemsList.swift; sourceTree = "<group>"; };
 		4328C7671E8E912200610077 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4328C7691E8E932D00610077 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		4328C76D1E9291B500610077 /* Persistance+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persistance+Save.swift"; sourceTree = "<group>"; };
 		4328C76F1E94E72000610077 /* LevelProgressionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelProgressionInfo.swift; sourceTree = "<group>"; };
+		4328C7791E9634BB00610077 /* studyQueue0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = studyQueue0.json; sourceTree = "<group>"; };
+		4328C77B1E9634D800610077 /* WaniModelStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniModelStub.swift; sourceTree = "<group>"; };
+		4328C77D1E96395D00610077 /* levelProgression0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = levelProgression0.json; sourceTree = "<group>"; };
+		4328C77F1E963B3800610077 /* srs0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = srs0.json; sourceTree = "<group>"; };
+		4328C7811E96407600610077 /* kanji0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kanji0.json; sourceTree = "<group>"; };
+		4328C7821E96407600610077 /* radicals0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radicals0.json; sourceTree = "<group>"; };
+		4328C7831E96407600610077 /* words0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words0.json; sourceTree = "<group>"; };
+		4328C7871E96431400610077 /* critical0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = critical0.json; sourceTree = "<group>"; };
+		4328C7891E96431D00610077 /* recents0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recents0.json; sourceTree = "<group>"; };
+		4328C78B1E964B8300610077 /* critical1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = critical1.json; sourceTree = "<group>"; };
+		4328C78D1E964CDD00610077 /* Persistance+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persistance+Fetch.swift"; sourceTree = "<group>"; };
+		4328C78F1E966EC400610077 /* recents1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recents1.json; sourceTree = "<group>"; };
+		4328C7911E96778E00610077 /* levelProgression1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = levelProgression1.json; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				430A75531E8E4DF80025039A /* PersistanceLayer.framework in Frameworks */,
+				4328C7741E952A9C00610077 /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,9 +476,9 @@
 				430A754C1E8E4DF80025039A /* PersistanceLayer.h */,
 				430A754D1E8E4DF80025039A /* Info.plist */,
 				430A756C1E8E518C0025039A /* Persistance.swift */,
+				4328C78D1E964CDD00610077 /* Persistance+Fetch.swift */,
 				4328C76D1E9291B500610077 /* Persistance+Save.swift */,
 				4328C7671E8E912200610077 /* User.swift */,
-				4328C7691E8E932D00610077 /* Level.swift */,
 				4328C75F1E8E7BB400610077 /* WaniModelConvertable.swift */,
 				4328C7501E8E5D0B00610077 /* UserInfo.swift */,
 				4328C7531E8E6C1500610077 /* UserSpecific.swift */,
@@ -472,10 +498,30 @@
 		430A75581E8E4DF80025039A /* PersistanceLayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				4328C7781E9634BB00610077 /* Stubs */,
 				430A75591E8E4DF80025039A /* PersistanceLayerTests.swift */,
 				430A755B1E8E4DF80025039A /* Info.plist */,
 			);
 			path = PersistanceLayerTests;
+			sourceTree = "<group>";
+		};
+		4328C7781E9634BB00610077 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				4328C7891E96431D00610077 /* recents0.json */,
+				4328C78F1E966EC400610077 /* recents1.json */,
+				4328C7871E96431400610077 /* critical0.json */,
+				4328C78B1E964B8300610077 /* critical1.json */,
+				4328C7811E96407600610077 /* kanji0.json */,
+				4328C7821E96407600610077 /* radicals0.json */,
+				4328C7831E96407600610077 /* words0.json */,
+				4328C77F1E963B3800610077 /* srs0.json */,
+				4328C77D1E96395D00610077 /* levelProgression0.json */,
+				4328C7911E96778E00610077 /* levelProgression1.json */,
+				4328C7791E9634BB00610077 /* studyQueue0.json */,
+				4328C77B1E9634D800610077 /* WaniModelStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		43620A311D8C28FA00C1BA72 = {
@@ -668,6 +714,7 @@
 				430A754E1E8E4DF80025039A /* Sources */,
 				430A754F1E8E4DF80025039A /* Frameworks */,
 				430A75501E8E4DF80025039A /* Resources */,
+				4328C7751E952B5800610077 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -765,6 +812,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4328C7841E96407600610077 /* kanji0.json in Resources */,
+				4328C78C1E964B8300610077 /* critical1.json in Resources */,
+				4328C7901E966EC400610077 /* recents1.json in Resources */,
+				4328C78A1E96431D00610077 /* recents0.json in Resources */,
+				4328C77A1E9634BB00610077 /* studyQueue0.json in Resources */,
+				4328C7851E96407600610077 /* radicals0.json in Resources */,
+				4328C77E1E96395D00610077 /* levelProgression0.json in Resources */,
+				4328C7861E96407600610077 /* words0.json in Resources */,
+				4328C7801E963B3800610077 /* srs0.json in Resources */,
+				4328C7921E96778E00610077 /* levelProgression1.json in Resources */,
+				4328C7881E96431400610077 /* critical0.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +863,20 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WaniModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		4328C7751E952B5800610077 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/WaniModel.framework",
 			);
 			outputPaths = (
@@ -864,8 +936,8 @@
 				4328C7621E8E802100610077 /* WordInfo.swift in Sources */,
 				4328C75E1E8E7B3400610077 /* KanjiInfo.swift in Sources */,
 				4328C7641E8E848100610077 /* ReviewItemInfo.swift in Sources */,
+				4328C78E1E964CDD00610077 /* Persistance+Fetch.swift in Sources */,
 				4328C7601E8E7BB400610077 /* WaniModelConvertable.swift in Sources */,
-				4328C76A1E8E932D00610077 /* Level.swift in Sources */,
 				4328C75C1E8E7A0D00610077 /* RadicalInfo.swift in Sources */,
 				4328C7661E8E8C5F00610077 /* ReviewItemsList.swift in Sources */,
 				4328C76E1E9291B500610077 /* Persistance+Save.swift in Sources */,
@@ -879,6 +951,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4328C77C1E9634D800610077 /* WaniModelStub.swift in Sources */,
 				430A755A1E8E4DF80025039A /* PersistanceLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

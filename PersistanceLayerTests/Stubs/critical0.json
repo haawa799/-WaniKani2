@@ -1,0 +1,27 @@
+ [
+  {
+  "type": "vocabulary",
+  "character": "解けるる",
+  "kana": "とけるる",
+  "meaning": "hello, to become untied, to get untied, to come undone, to become undone",
+  "level": 18,
+  "percentage": "60"
+  },
+  {
+  "type": "kanji",
+  "character": "条",
+  "onyomi": "じょう",
+  "kunyomi": "None",
+  "importantReading": "onyomi",
+  "meaning": "clause",
+  "level": 21,
+  "percentage": "73"
+  },
+  {
+    "type": "radical",
+    "character": "坴",
+    "meaning": "womb",
+    "level": 13,
+    "percentage": "78"
+  }
+  ]

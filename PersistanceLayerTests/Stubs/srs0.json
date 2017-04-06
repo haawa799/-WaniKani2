@@ -1,0 +1,32 @@
+{
+  "apprentice": {
+    "radicals": 0,
+    "kanji": 8,
+    "vocabulary": 37,
+    "total": 45
+  },
+  "guru": {
+    "radicals": 0,
+    "kanji": 7,
+    "vocabulary": 90,
+    "total": 97
+  },
+  "master": {
+    "radicals": 8,
+    "kanji": 35,
+    "vocabulary": 113,
+    "total": 156
+  },
+  "enlighten": {
+    "radicals": 16,
+    "kanji": 95,
+    "vocabulary": 706,
+    "total": 817
+  },
+  "burned": {
+    "radicals": 303,
+    "kanji": 577,
+    "vocabulary": 1375,
+    "total": 2255
+  }
+}

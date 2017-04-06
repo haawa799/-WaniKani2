@@ -35,14 +35,6 @@ class SRSDistributionInfo: Object {
   var waniModelStruct: WaniModel.SRSDistributionInfo {
     return WaniModel.SRSDistributionInfo(realmObject: self)
   }
-
-  func willBeDeleted(realm: Realm) {
-    realm.delete(apprentice)
-    realm.delete(guru)
-    realm.delete(master)
-    realm.delete(enlighten)
-    realm.delete(burned)
-  }
 }
 
 extension WaniModel.SRSDistributionInfo {

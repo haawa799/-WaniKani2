@@ -61,7 +61,11 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     fetcher?.fetchRadicalPromise(level: 21).then { self.persistance.persist(radicals: $0) }
     fetcher?.fetchKanjiPromise(level: 21).then { self.persistance.persist(kanji: $0) }
     fetcher?.fetchVocabPromise(level: 21).then { self.persistance.persist(words: $0) }
-    fetcher?.fetchCriticalItems(percentage: 85).then { self.persistance.persist(criticalItems: $0) }
+    fetcher?.fetchCriticalItems(percentage: 90).then {
+      let filtered = $0.filter { if case .kanji = $0 { return true }; return false }
+      debugPrint(filtered)
+      self.persistance.persist(criticalItems: $0)
+    }
     fetcher?.fetchRecentUnlocks(limit: 30).then { self.persistance.persist(recents: $0) }
 
     presentTabs(apiKey: apiKey)

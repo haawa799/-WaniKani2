@@ -2,7 +2,7 @@ github "haawa799/NJKScrollFullScreen" "e43255f235c1684df7b16e6dd1a03c099324e258"
 github "haawa799/RESideMenu" "521588087c6c35ad45f1294a55f26b5d4e7cc14b"
 github "haawa799/DGElasticPullToRefresh" "d02f7bb5c3d9a3b8059fcb3fc9d9877bdc062a49"
 github "haawa799/WaniLogin" "4c93d8faec6751949ab26c88bb4a2ecf76f9a150"
-github "haawa799/WaniKit" "5a970e458fb1e7276c4614a7c343bfd8d84453d1"
+github "haawa799/WaniKit" "f9dbed278fa4d6f822f9bec8309fc020ccd9b5c9"
 github "haawa799/EMPageViewController" "bd0db741740ecced2bb5d17003c7bccae1688c63"
 
 github "realm/realm-cocoa"
