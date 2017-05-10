@@ -9,7 +9,7 @@
 import UIKit
 
 class StrokeOrderCoordinator: Coordinator {
-    
+
     fileprivate let strokesViewController: StrokeOrderViewController
     fileprivate let presenter: UIViewController
     fileprivate let kanji: [String]
