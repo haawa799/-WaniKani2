@@ -21,6 +21,7 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
   @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var doubleProgressBar: DoubleProgressBar!
   @IBOutlet weak var topView: UIView!
+  @IBOutlet weak var pageControl: UIPageControl!
 
   fileprivate let srsVC: SRSViewController = DashboardViewController.instantiateViewController("srs", nil)
   fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("progress", nil)
@@ -91,6 +92,15 @@ extension DashboardViewController {
     }
     setStatusBarAlpha(alpha: alpha)
   }
+
+    func em_pageViewController(_ pageViewController: EMPageViewController, didFinishScrollingFrom startingViewController: UIViewController?, destinationViewController: UIViewController, transitionSuccessful: Bool) {
+        guard transitionSuccessful == true else { return }
+        switch destinationViewController {
+        case progressVC: pageControl.currentPage = 0
+        case srsVC: pageControl.currentPage = 1
+        default: break
+        }
+    }
 }
 
 // MARK: - SingleTabViewController

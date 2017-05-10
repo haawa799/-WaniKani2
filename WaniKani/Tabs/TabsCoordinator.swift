@@ -15,8 +15,9 @@ open class TabsCoordinator: Coordinator {
   fileprivate let dashboardCoordinator: DashboardCoordinator
   fileprivate let settingsNavigationController = UINavigationController()
   fileprivate let settingsCoordinator: SettingsCoordinator
+  fileprivate let strokesContainer = UIViewController()
+  fileprivate let strokesOrderCoordinator: StrokeOrderCoordinator
 
-  let childrenCoordinators: [Coordinator]
   let presenter: UITabBarController
   let dataProvider: DataProvider
 
@@ -25,11 +26,11 @@ open class TabsCoordinator: Coordinator {
     self.presenter = presenter
     dashboardNavigationController.isNavigationBarHidden = true
     settingsNavigationController.isNavigationBarHidden = true
-    let viewControllers = [dashboardNavigationController, settingsNavigationController]
+    let viewControllers = [dashboardNavigationController, settingsNavigationController, strokesContainer]
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
-    childrenCoordinators = [dashboardCoordinator, settingsCoordinator]
+    strokesOrderCoordinator = StrokeOrderCoordinator(presenter: strokesContainer, kanji: ["等"])
   }
 
 }
@@ -39,6 +40,7 @@ extension TabsCoordinator {
   func start() {
     dashboardCoordinator.start()
     settingsCoordinator.start()
+    strokesOrderCoordinator.start()
   }
 
 }

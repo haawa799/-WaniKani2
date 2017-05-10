@@ -24,9 +24,6 @@ class SideMenuHolderViewController: RESideMenu {
     let q = UIViewController()
     q.view.backgroundColor = UIColor.cyan
 
-    let b = UIViewController()
-    b.view.backgroundColor = UIColor.yellow
-
     let middleViewController = ReviewWebViewController(nibName: ReviewWebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
     let rightViewController = RightMenuViewController(contentViewController: q)
     _ = rightViewController.view

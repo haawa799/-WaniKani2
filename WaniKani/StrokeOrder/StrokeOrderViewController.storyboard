@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cMK-ka-JDe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stroke Order View Controller-->
+        <scene sceneID="v7j-qz-YCE">
+            <objects>
+                <viewController id="cMK-ka-JDe" customClass="StrokeOrderViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S5d-U9-U5N"/>
+                        <viewControllerLayoutGuide type="bottom" id="UmI-Fe-qJP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gjq-91-a9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22O-zM-ne9">
+                                <rect key="frame" x="5" y="67.5" width="365" height="365"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="22O-zM-ne9" secondAttribute="height" multiplier="1:1" id="j8z-8F-OdY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UmI-Fe-qJP" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="bottom" priority="250" constant="5" id="4Bw-rz-UMc"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gjq-91-a9Q" secondAttribute="top" constant="5" id="BhT-wc-1VP"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gjq-91-a9Q" secondAttribute="leading" constant="5" id="Fnk-3C-Pvp"/>
+                            <constraint firstItem="UmI-Fe-qJP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="22O-zM-ne9" secondAttribute="bottom" constant="5" id="YNk-z8-oHy"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="22O-zM-ne9" secondAttribute="trailing" constant="5" id="brM-Qi-EKj"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="centerX" secondItem="gjq-91-a9Q" secondAttribute="centerX" id="hBA-bh-Jxe"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="centerY" secondItem="gjq-91-a9Q" secondAttribute="centerY" id="nWz-Za-sZc"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="leading" secondItem="gjq-91-a9Q" secondAttribute="leading" priority="250" constant="5" id="oRi-qA-mHj"/>
+                            <constraint firstAttribute="trailing" secondItem="22O-zM-ne9" secondAttribute="trailing" priority="250" constant="5" id="p85-ce-GY4"/>
+                            <constraint firstItem="22O-zM-ne9" firstAttribute="top" secondItem="gjq-91-a9Q" secondAttribute="top" priority="250" constant="5" id="wmD-Cp-4xD"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJK-PG-ejj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391.19999999999999" y="79.610194902548727"/>
+        </scene>
+    </scenes>
+</document>

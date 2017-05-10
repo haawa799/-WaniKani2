@@ -48,6 +48,16 @@
 		43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A431E7A98C600F6874A /* CookiesStorage.swift */; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
+		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
+		43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */; };
+		43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */; };
+		43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B831E8AAEC60021BB20 /* Locksmith.framework */; };
+		43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */; };
+		43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B851E8AAEC60021BB20 /* Promise.framework */; };
+		43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */; };
+		43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B871E8AAEC60021BB20 /* WaniKit.framework */; };
+		43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */; };
+		43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; };
 		43BE76031E3F39F30032950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BE76051E3F39F30032950B /* Localizable.strings */; };
 		43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76061E3F3A870032950B /* Strings+Localization.swift */; };
 		43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76081E3F3C240032950B /* WebSessionType.swift */; };
@@ -73,45 +83,25 @@
 		43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C451D9919560071C26D /* SettingsCoordinator.swift */; };
 		43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C4F1D9919560071C26D /* SettingsLayout.swift */; };
 		43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */; };
-		43D99C871D994D1B0071C26D /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */; };
-		43D99C881D994D1B0071C26D /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */; };
 		43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */; };
 		43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */; };
 		43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */; };
 		43D99C981D99563C0071C26D /* SideMenuHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */; };
-		43D99C9B1D9A623C0071C26D /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */; };
-		43D99C9F1D9A640A0071C26D /* RightMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */; };
 		43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37B1D91527900A9BB08 /* SRSViewController.swift */; };
 		43F4F37E1D9152A200A9BB08 /* SRSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37D1D9152A200A9BB08 /* SRSView.swift */; };
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
-		5DABA0F31EC3120700C25F85 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E61EC3120700C25F85 /* Cely.framework */; };
-		5DABA0F41EC3120700C25F85 /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E61EC3120700C25F85 /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0F51EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */; };
-		5DABA0F61EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0F71EC3120700C25F85 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */; };
-		5DABA0F81EC3120700C25F85 /* EMPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0F91EC3120700C25F85 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E91EC3120700C25F85 /* Locksmith.framework */; };
-		5DABA0FA1EC3120700C25F85 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E91EC3120700C25F85 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0FB1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */; };
-		5DABA0FC1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0FD1EC3120700C25F85 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EB1EC3120700C25F85 /* Promise.framework */; };
-		5DABA0FE1EC3120700C25F85 /* Promise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EB1EC3120700C25F85 /* Promise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA0FF1EC3120700C25F85 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EC1EC3120700C25F85 /* Realm.framework */; };
-		5DABA1001EC3120700C25F85 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EC1EC3120700C25F85 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA1011EC3120700C25F85 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */; };
-		5DABA1021EC3120700C25F85 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA1031EC3120700C25F85 /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */; };
-		5DABA1041EC3120700C25F85 /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA1051EC3120700C25F85 /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EF1EC3120700C25F85 /* WaniKit.framework */; };
-		5DABA1061EC3120700C25F85 /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EF1EC3120700C25F85 /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA1071EC3120700C25F85 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */; };
-		5DABA1081EC3120700C25F85 /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA1091EC3120700C25F85 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F11EC3120700C25F85 /* WaniModel.framework */; };
-		5DABA10A1EC3120700C25F85 /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F11EC3120700C25F85 /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DABA10B1EC3120700C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */; };
-		5DABA10C1EC3120700C25F85 /* WaniPersistance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
+		5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */; };
+		5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */; };
+		5DABA1151EC326C100C25F85 /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1111EC326C100C25F85 /* RightMenuViewController.swift */; };
+		5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA1121EC326C100C25F85 /* RightMenuViewController.xib */; };
+		5DABA1191EC3288100C25F85 /* StrokeOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1181EC3288100C25F85 /* StrokeOrderCoordinator.swift */; };
+		5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA11A1EC3292300C25F85 /* StrokeOrderViewController.storyboard */; };
+		5DABA11D1EC3292A00C25F85 /* StrokeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */; };
+		5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */; };
+		5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,19 +111,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5DABA0F61EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
-				5DABA0FA1EC3120700C25F85 /* Locksmith.framework in Embed Frameworks */,
-				5DABA1061EC3120700C25F85 /* WaniKit.framework in Embed Frameworks */,
-				5DABA0FE1EC3120700C25F85 /* Promise.framework in Embed Frameworks */,
-				5DABA0F81EC3120700C25F85 /* EMPageViewController.framework in Embed Frameworks */,
-				5DABA1001EC3120700C25F85 /* Realm.framework in Embed Frameworks */,
-				5DABA0F41EC3120700C25F85 /* Cely.framework in Embed Frameworks */,
-				5DABA10A1EC3120700C25F85 /* WaniModel.framework in Embed Frameworks */,
-				5DABA1081EC3120700C25F85 /* WaniLoginKit.framework in Embed Frameworks */,
-				5DABA1041EC3120700C25F85 /* RESideMenuKit.framework in Embed Frameworks */,
-				5DABA1021EC3120700C25F85 /* RealmSwift.framework in Embed Frameworks */,
-				5DABA0FC1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
-				5DABA10C1EC3120700C25F85 /* WaniPersistance.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +153,8 @@
 		430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
 		430876CC1D9021B300FE71FE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		430876CD1D9021B300FE71FE /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		430A75671E8E511B0025039A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		430A75681E8E511B0025039A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +165,16 @@
 		43B02A431E7A98C600F6874A /* CookiesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesStorage.swift; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
+		43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
+		43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
+		43BA2B831E8AAEC60021BB20 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
+		43BA2B851E8AAEC60021BB20 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
+		43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
+		43BA2B871E8AAEC60021BB20 /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = Carthage/Build/iOS/WaniKit.framework; sourceTree = "<group>"; };
+		43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
+		43BA2B891E8AAEC60021BB20 /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = Carthage/Build/iOS/WaniModel.framework; sourceTree = "<group>"; };
 		43BE76041E3F39F30032950B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43BE76061E3F3A870032950B /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		43BE76081E3F3C240032950B /* WebSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionType.swift; sourceTree = "<group>"; };
@@ -214,29 +203,22 @@
 		43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarContainerViewController.swift; sourceTree = "<group>"; };
 		43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReviewCoordinator+SideMenu.swift"; sourceTree = "<group>"; };
 		43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCoordinator.swift; sourceTree = "<group>"; };
-		43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
-		43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
 		43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHolderViewController.swift; sourceTree = "<group>"; };
-		43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
-		43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
 		43F4F37B1D91527900A9BB08 /* SRSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewController.swift; sourceTree = "<group>"; };
 		43F4F37D1D9152A200A9BB08 /* SRSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSView.swift; sourceTree = "<group>"; usesTabs = 1; };
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		5DABA0E61EC3120700C25F85 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
-		5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
-		5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
-		5DABA0E91EC3120700C25F85 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
-		5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
-		5DABA0EB1EC3120700C25F85 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
-		5DABA0EC1EC3120700C25F85 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
-		5DABA0EF1EC3120700C25F85 /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = Carthage/Build/iOS/WaniKit.framework; sourceTree = "<group>"; };
-		5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
-		5DABA0F11EC3120700C25F85 /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = Carthage/Build/iOS/WaniModel.framework; sourceTree = "<group>"; };
-		5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
+		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
+		5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
+		5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
+		5DABA1111EC326C100C25F85 /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
+		5DABA1121EC326C100C25F85 /* RightMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuViewController.xib; sourceTree = "<group>"; };
+		5DABA1181EC3288100C25F85 /* StrokeOrderCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeOrderCoordinator.swift; sourceTree = "<group>"; };
+		5DABA11A1EC3292300C25F85 /* StrokeOrderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StrokeOrderViewController.storyboard; sourceTree = "<group>"; };
+		5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeOrderViewController.swift; sourceTree = "<group>"; };
+		5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StrokeDrawingView.framework; path = Carthage/Build/iOS/StrokeDrawingView.framework; sourceTree = "<group>"; };
+		5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KanjiBezierPaths.framework; path = Carthage/Build/iOS/KanjiBezierPaths.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,19 +226,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DABA0F51EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Frameworks */,
-				5DABA0F91EC3120700C25F85 /* Locksmith.framework in Frameworks */,
-				5DABA1051EC3120700C25F85 /* WaniKit.framework in Frameworks */,
-				5DABA0FD1EC3120700C25F85 /* Promise.framework in Frameworks */,
-				5DABA0F71EC3120700C25F85 /* EMPageViewController.framework in Frameworks */,
-				5DABA0FF1EC3120700C25F85 /* Realm.framework in Frameworks */,
-				5DABA0F31EC3120700C25F85 /* Cely.framework in Frameworks */,
-				5DABA1091EC3120700C25F85 /* WaniModel.framework in Frameworks */,
-				5DABA1071EC3120700C25F85 /* WaniLoginKit.framework in Frameworks */,
-				5DABA1031EC3120700C25F85 /* RESideMenuKit.framework in Frameworks */,
-				5DABA1011EC3120700C25F85 /* RealmSwift.framework in Frameworks */,
-				5DABA0FB1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Frameworks */,
-				5DABA10B1EC3120700C25F85 /* WaniPersistance.framework in Frameworks */,
+				5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */,
+				5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */,
+				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
+				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
+				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */,
+				43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */,
+				43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */,
+				43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */,
+				43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */,
+				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
+				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
+				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,19 +360,21 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5DABA0E61EC3120700C25F85 /* Cely.framework */,
-				5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */,
-				5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */,
-				5DABA0E91EC3120700C25F85 /* Locksmith.framework */,
-				5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */,
-				5DABA0EB1EC3120700C25F85 /* Promise.framework */,
-				5DABA0EC1EC3120700C25F85 /* Realm.framework */,
-				5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */,
-				5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */,
-				5DABA0EF1EC3120700C25F85 /* WaniKit.framework */,
-				5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */,
-				5DABA0F11EC3120700C25F85 /* WaniModel.framework */,
-				5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */,
+				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
+				5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */,
+				5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */,
+				430A75671E8E511B0025039A /* Realm.framework */,
+				430A75681E8E511B0025039A /* RealmSwift.framework */,
+				43BA2B801E8AAEC60021BB20 /* Cely.framework */,
+				43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */,
+				43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */,
+				43BA2B831E8AAEC60021BB20 /* Locksmith.framework */,
+				43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */,
+				43BA2B851E8AAEC60021BB20 /* Promise.framework */,
+				43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */,
+				43BA2B871E8AAEC60021BB20 /* WaniKit.framework */,
+				43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */,
+				43BA2B891E8AAEC60021BB20 /* WaniModel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -416,6 +400,7 @@
 		43620A3C1D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXGroup;
 			children = (
+				5DABA1171EC3285000C25F85 /* StrokeOrder */,
 				43D99C7C1D994D1B0071C26D /* Review */,
 				43D99C361D9919560071C26D /* Settings */,
 				430876C01D9021B300FE71FE /* Shared */,
@@ -528,17 +513,43 @@
 		43D99C7C1D994D1B0071C26D /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				5DABA10D1EC326C100C25F85 /* Review */,
+				5DABA1101EC326C100C25F85 /* Right menu */,
 				43D99C7D1D994D1B0071C26D /* BottomBarContainerViewController.storyboard */,
 				43D99C7E1D994D1B0071C26D /* BottomBarContainerViewController.swift */,
 				43D99C7F1D994D1B0071C26D /* ReviewCoordinator+SideMenu.swift */,
 				43D99C801D994D1B0071C26D /* ReviewCoordinator.swift */,
 				43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */,
-				43D99C811D994D1B0071C26D /* ReviewWebViewController.swift */,
-				43D99C821D994D1B0071C26D /* ReviewWebViewController.xib */,
-				43D99C9A1D9A623C0071C26D /* RightMenuViewController.swift */,
-				43D99C9E1D9A640A0071C26D /* RightMenuViewController.xib */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		5DABA10D1EC326C100C25F85 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */,
+				5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		5DABA1101EC326C100C25F85 /* Right menu */ = {
+			isa = PBXGroup;
+			children = (
+				5DABA1111EC326C100C25F85 /* RightMenuViewController.swift */,
+				5DABA1121EC326C100C25F85 /* RightMenuViewController.xib */,
+			);
+			path = "Right menu";
+			sourceTree = "<group>";
+		};
+		5DABA1171EC3285000C25F85 /* StrokeOrder */ = {
+			isa = PBXGroup;
+			children = (
+				5DABA1181EC3288100C25F85 /* StrokeOrderCoordinator.swift */,
+				5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */,
+				5DABA11A1EC3292300C25F85 /* StrokeOrderViewController.storyboard */,
+			);
+			path = StrokeOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,16 +622,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				433D3D5F1E3B9020001C631D /* Cartfile in Resources */,
+				5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
-				43D99C881D994D1B0071C26D /* ReviewWebViewController.xib in Resources */,
+				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
 				43D99C5F1D9919560071C26D /* SettingsViewController.storyboard in Resources */,
 				43D99C571D9919560071C26D /* resize.js in Resources */,
+				5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */,
 				43D99C541D9919560071C26D /* fast_forward.js in Resources */,
-				43D99C9F1D9A640A0071C26D /* RightMenuViewController.xib in Resources */,
 				430876B61D9021A200FE71FE /* DashboardHeader.xib in Resources */,
 				43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */,
 				430876B11D9021A200FE71FE /* AvaliableItemCell.xib in Resources */,
@@ -646,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nautocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		43BA2B7D1E8A9E280021BB20 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -667,6 +679,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/WaniPersistance.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KanjiBezierPaths.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StrokeDrawingView.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -692,6 +706,7 @@
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
 				433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */,
+				5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */,
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
@@ -701,10 +716,10 @@
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,
 				430876CF1D9021B300FE71FE /* DataProvider.swift in Sources */,
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
+				5DABA1191EC3288100C25F85 /* StrokeOrderCoordinator.swift in Sources */,
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
 				430876D31D9021B300FE71FE /* DrawingUtils.swift in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
-				43D99C871D994D1B0071C26D /* ReviewWebViewController.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,
 				430876AD1D9021A200FE71FE /* DashboardCoordinator.swift in Sources */,
 				430876D11D9021B300FE71FE /* Array.swift in Sources */,
@@ -716,7 +731,7 @@
 				430876BD1D9021A200FE71FE /* DashboardViewModel.swift in Sources */,
 				43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */,
 				430876B71D9021A200FE71FE /* DoubleProgressBar.swift in Sources */,
-				43D99C9B1D9A623C0071C26D /* RightMenuViewController.swift in Sources */,
+				5DABA1151EC326C100C25F85 /* RightMenuViewController.swift in Sources */,
 				43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */,
 				43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */,
 				430876901D90216F00FE71FE /* ApplicationCoordinator.swift in Sources */,
@@ -732,6 +747,7 @@
 				430876D91D9021B300FE71FE /* ViewModel.swift in Sources */,
 				43D99C6E1D9923E70071C26D /* AIFlatSwitch.swift in Sources */,
 				430876BF1D9021A200FE71FE /* LeftRightTitleViewModel.swift in Sources */,
+				5DABA11D1EC3292A00C25F85 /* StrokeOrderViewController.swift in Sources */,
 				43D99C601D9919560071C26D /* SettingsViewController.swift in Sources */,
 				43D99C6A1D99229A0071C26D /* UserScript.swift in Sources */,
 				430876CE1D9021B300FE71FE /* ColorfullTabBarController.swift in Sources */,
