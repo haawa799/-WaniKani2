@@ -10,7 +10,7 @@ import UIKit
 import WaniLoginKit
 import Cely
 import WaniKit
-import PersistanceLayer
+import WaniPersistance
 
 class ApplicationCoordinator: Coordinator {
 
@@ -52,7 +52,9 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func presentingCallback(window: UIWindow, status: CelyStatus) {
     guard status == .loggedIn else { return }
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
-    persistance = Persistance(apiKey: apiKey)
+    let fm = FileManager.default
+    let docsurl = try? fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    persistance = Persistance(setupInMemory: false, apiKey: apiKey, documentsURL: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
 
     fetcher?.fetchLevelProgression().then { self.persistance.persist(levelProgression: $0) }
@@ -62,8 +64,6 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     fetcher?.fetchKanjiPromise(level: 21).then { self.persistance.persist(kanji: $0) }
     fetcher?.fetchVocabPromise(level: 21).then { self.persistance.persist(words: $0) }
     fetcher?.fetchCriticalItems(percentage: 90).then {
-      let filtered = $0.filter { if case .kanji = $0 { return true }; return false }
-      debugPrint(filtered)
       self.persistance.persist(criticalItems: $0)
     }
     fetcher?.fetchRecentUnlocks(limit: 30).then { self.persistance.persist(recents: $0) }

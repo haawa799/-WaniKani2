@@ -24,8 +24,8 @@ extension SingleTabViewController {
     let sizeClass = self.view.traitCollection.verticalSizeClass
 
     switch (isLandscape: orientation, sizeClass) {
-    case (isLandscape: true, UIUserInterfaceSizeClass.compact): let _ = shrink()
-    default: let _ = unshrink()
+    case (isLandscape: true, UIUserInterfaceSizeClass.compact): _ = shrink()
+    default: _ = unshrink()
     }
   }
 

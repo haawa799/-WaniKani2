@@ -29,7 +29,7 @@ class SideMenuHolderViewController: RESideMenu {
 
     let middleViewController = ReviewWebViewController(nibName: ReviewWebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
     let rightViewController = RightMenuViewController(contentViewController: q)
-    let _ = rightViewController.view
+    _ = rightViewController.view
 
     self.init()
 

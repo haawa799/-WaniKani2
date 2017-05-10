@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingsDelegate {
+protocol SettingsDelegate: class {
   func settingDidChange(_ setting: Setting)
 }
 

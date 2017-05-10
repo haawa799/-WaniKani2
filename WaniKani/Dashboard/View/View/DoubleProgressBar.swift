@@ -157,7 +157,7 @@ extension DoubleProgressBar {
     let maxDelta: CGFloat = 15.0
     let height = usualHeight
     let radius = height * 0.5
-    let angle: CGFloat = CGFloat(M_PI) * kof
+    let angle: CGFloat = CGFloat.pi * kof
     let k = radius * cos(angle)
     let q = radius * sin(angle)
     let delta: CGFloat = min(maxDelta, (bounds.height - usualHeight) * 0.5)
@@ -172,7 +172,7 @@ extension DoubleProgressBar {
       bottomPath.addLine(to: farLeftPoint)
     }
     do {
-      let a = CGFloat(M_PI) * (2 - kof)
+      let a = CGFloat.pi * (2 - kof)
       let endpoint = CGPoint(x: rightSquare.center.x - k, y: rightSquare.center.y - q)
       let farLeftPoint = CGPoint(x: delta, y: endpoint.y)
       topPath = UIBezierPath(arcCenter: rightSquare.center, radius: radius, startAngle: 0.0, endAngle: a, clockwise: false)

@@ -21,10 +21,8 @@ public struct ListViewModel {
     if sections.count == 0 {
       return false
     }
-    for section in sections {
-      if section.items.count == 0 {
+    for section in sections where section.items.isEmpty {
         return false
-      }
     }
     return true
   }

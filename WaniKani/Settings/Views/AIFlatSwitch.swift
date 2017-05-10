@@ -83,12 +83,12 @@ import UIKit
       circle.transform = CATransform3DIdentity
       circle.frame = self.bounds
       circle.path = UIBezierPath(ovalIn: ovalRect).cgPath
-      circle.transform = CATransform3DMakeRotation(CGFloat(212 * M_PI / 180), 0, 0, 1)
+      circle.transform = CATransform3DMakeRotation(CGFloat.pi * 212 / 180, 0, 0, 1)
 
       let origin = CGPoint(x: offset.x + radius, y: offset.y + radius)
       var checkStartPoint = CGPoint.zero
-      checkStartPoint.x = origin.x + radius * CGFloat(cos(212 * M_PI / 180))
-      checkStartPoint.y = origin.y + radius * CGFloat(sin(212 * M_PI / 180))
+      checkStartPoint.x = origin.x + radius * cos(212 * CGFloat.pi / 180)
+      checkStartPoint.y = origin.y + radius * sin(212 * CGFloat.pi / 180)
 
       let checkmarkPath = UIBezierPath()
       checkmarkPath.move(to: checkStartPoint)
@@ -97,8 +97,8 @@ import UIKit
       checkmarkPath.addLine(to: self.checkmarkMidPoint)
 
       var checkEndPoint = CGPoint.zero
-      checkEndPoint.x = origin.x + radius * CGFloat(cos(320 * M_PI / 180))
-      checkEndPoint.y = origin.y + radius * CGFloat(sin(320 * M_PI / 180))
+      checkEndPoint.x = origin.x + radius * cos(320 * CGFloat.pi / 180)
+      checkEndPoint.y = origin.y + radius * sin(320 * CGFloat.pi / 180)
 
       checkmarkPath.addLine(to: checkEndPoint)
 

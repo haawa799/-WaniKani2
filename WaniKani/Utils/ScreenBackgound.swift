@@ -9,9 +9,9 @@
 import UIKit
 
 enum BackgroundOptions: String {
-  case Data = "data_bg_blured"
-  case Dashboard = "dashboard_bg_blured"
-  case Setup = "setup_bg_blured"
+  case data = "data_bg_blured"
+  case dashboard = "dashboard_bg_blured"
+  case setup = "setup_bg_blured"
 }
 
 protocol BluredBackground {

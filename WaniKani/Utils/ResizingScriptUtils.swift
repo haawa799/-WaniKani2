@@ -10,23 +10,22 @@ import UIKit
 
 // All names relates to screen size only
 // swiftlint:disable cyclomatic_complexity
-
 fileprivate enum ScreenLayout {
-  case iPhone7Plus_Portrait
-  case iPhone7Plus_Landscape
-  case iPhone7_Portrait
-  case iPhone7_Landscape
-  case iPhoneSE_Portrait
-  case iPhoneSE_Landscape
-  case iPhone4s_Portrait
-  case iPhone4s_Landscape
-  case iPad_Portrait
-  case iPad_Landscape
-  case iPadSlideOverSmall_Portrait
-  case iPadSlideOverSmall_Landscape
-  case iPadSlideOverMedium_Portrait
-  case iPadSlideOverMedium_Landscape
-  case iPadSlideOverLarge_Landscape
+  case iPhone7PlusPortrait
+  case iPhone7PlusLandscape
+  case iPhone7Portrait
+  case iPhone7Landscape
+  case iPhoneSEPortrait
+  case iPhoneSELandscape
+  case iPhone4sPortrait
+  case iPhone4sLandscape
+  case iPadPortrait
+  case iPadLandscape
+  case iPadSlideOverSmallPortrait
+  case iPadSlideOverSmallLandscape
+  case iPadSlideOverMediumPortrait
+  case iPadSlideOverMediumLandscape
+  case iPadSlideOverLargeLandscape
 }
 
 struct ScreenLayoutConfiguration {
@@ -38,26 +37,26 @@ struct ScreenLayoutConfiguration {
     self.size = size
     switch (size.width, size.height) {
       // 7+
-      case (414.0, 736.0): layout = .iPhone7Plus_Portrait
-      case (736.0, 414.0): layout = .iPhone7Plus_Landscape
+      case (414.0, 736.0): layout = .iPhone7PlusPortrait
+      case (736.0, 414.0): layout = .iPhone7PlusLandscape
       // 7
-      case (375.0, 667.0): layout = .iPhone7_Portrait
-      case (667.0, 375.0): layout = .iPhone7_Landscape
+      case (375.0, 667.0): layout = .iPhone7Portrait
+      case (667.0, 375.0): layout = .iPhone7Landscape
       // SE
-      case (320.0, 568.0): layout = .iPhoneSE_Portrait
-      case (568.0, 320.0): layout = .iPhoneSE_Landscape
+      case (320.0, 568.0): layout = .iPhoneSEPortrait
+      case (568.0, 320.0): layout = .iPhoneSELandscape
       // 4s
-      case (320.0, 480.0): layout = .iPhone4s_Portrait
-      case (480.0, 320.0): layout = .iPhone4s_Portrait
+      case (320.0, 480.0): layout = .iPhone4sPortrait
+      case (480.0, 320.0): layout = .iPhone4sPortrait
       // iPad
-      case (768.0, 1024.0): layout = .iPad_Portrait
-      case (1024.0, 768.0): layout = .iPad_Landscape
+      case (768.0, 1024.0): layout = .iPadPortrait
+      case (1024.0, 768.0): layout = .iPadLandscape
       // side-by-side
-      case (320.0, 768.0): layout = .iPadSlideOverSmall_Landscape
-      case (507.0, 768.0): layout = .iPadSlideOverMedium_Landscape
-      case (694.0, 768.0): layout = .iPadSlideOverLarge_Landscape
-      case (438.0, 1024.0): layout = .iPadSlideOverMedium_Portrait
-      case (320.0, 1024.0): layout = .iPadSlideOverSmall_Portrait
+      case (320.0, 768.0): layout = .iPadSlideOverSmallLandscape
+      case (507.0, 768.0): layout = .iPadSlideOverMediumLandscape
+      case (694.0, 768.0): layout = .iPadSlideOverLargeLandscape
+      case (438.0, 1024.0): layout = .iPadSlideOverMediumPortrait
+      case (320.0, 1024.0): layout = .iPadSlideOverSmallPortrait
       default: return nil
     }
   }
@@ -69,42 +68,42 @@ struct ScreenLayoutConfiguration {
   var height: Int {
     var height: Int
     switch layout {
-      case .iPhone7Plus_Portrait: height = 300
-      case .iPhone7Plus_Landscape: height = 75
-      case .iPhone7_Portrait: height = 250
-      case .iPhone7_Landscape: height = 40
-      case .iPhoneSE_Portrait: height = 180
-      case .iPhoneSE_Landscape: height = 40
-      case .iPhone4s_Portrait: height = 90
-      case .iPhone4s_Landscape: height = 90
-      case .iPad_Portrait: height = 460
-      case .iPad_Landscape: height = 130
-      case .iPadSlideOverSmall_Portrait: height = 460
-      case .iPadSlideOverSmall_Landscape: height = 240
-      case .iPadSlideOverMedium_Portrait: height = 560
-      case .iPadSlideOverMedium_Landscape: height = 240
-      case .iPadSlideOverLarge_Landscape: height = 240
+      case .iPhone7PlusPortrait: height = 300
+      case .iPhone7PlusLandscape: height = 75
+      case .iPhone7Portrait: height = 250
+      case .iPhone7Landscape: height = 40
+      case .iPhoneSEPortrait: height = 180
+      case .iPhoneSELandscape: height = 40
+      case .iPhone4sPortrait: height = 90
+      case .iPhone4sLandscape: height = 90
+      case .iPadPortrait: height = 460
+      case .iPadLandscape: height = 130
+      case .iPadSlideOverSmallPortrait: height = 460
+      case .iPadSlideOverSmallLandscape: height = 240
+      case .iPadSlideOverMediumPortrait: height = 560
+      case .iPadSlideOverMediumLandscape: height = 240
+      case .iPadSlideOverLargeLandscape: height = 240
     }
     return height
   }
 
   var font: Int {
     switch layout {
-      case .iPhone7Plus_Portrait: return 250
-      case .iPhone7Plus_Landscape: return 110
-      case .iPhone7_Portrait: return 230
-      case .iPhone7_Landscape: return 60
-      case .iPhoneSE_Portrait: return 100
-      case .iPhoneSE_Landscape: return 50
-      case .iPhone4s_Portrait: return 60
-      case .iPhone4s_Landscape: return 60
-      case .iPad_Portrait: return 100
-      case .iPad_Landscape: return 30
-      case .iPadSlideOverSmall_Portrait: return 500
-      case .iPadSlideOverSmall_Landscape: return 150
-      case .iPadSlideOverMedium_Portrait: return 200
-      case .iPadSlideOverMedium_Landscape: return 190
-      case .iPadSlideOverLarge_Landscape: return 250
+      case .iPhone7PlusPortrait: return 250
+      case .iPhone7PlusLandscape: return 110
+      case .iPhone7Portrait: return 230
+      case .iPhone7Landscape: return 60
+      case .iPhoneSEPortrait: return 100
+      case .iPhoneSELandscape: return 50
+      case .iPhone4sPortrait: return 60
+      case .iPhone4sLandscape: return 60
+      case .iPadPortrait: return 100
+      case .iPadLandscape: return 30
+      case .iPadSlideOverSmallPortrait: return 500
+      case .iPadSlideOverSmallLandscape: return 150
+      case .iPadSlideOverMediumPortrait: return 200
+      case .iPadSlideOverMediumLandscape: return 190
+      case .iPadSlideOverLargeLandscape: return 250
     }
   }
 }

@@ -46,7 +46,7 @@ class SettingsViewController: SingleTabViewController, StoryboardInstantiable, B
 extension SettingsViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    let _ = addBackground(BackgroundOptions.Dashboard.rawValue)
+    _ = addBackground(BackgroundOptions.dashboard.rawValue)
   }
 
   override func viewDidLayoutSubviews() {
@@ -94,7 +94,7 @@ extension SettingsViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    guard let _ = collectionViewModel?.headerItem(section: section) else { return CGSize.zero }
+    guard collectionViewModel?.headerItem(section: section) != nil else { return CGSize.zero }
     guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize.zero }
     return flowLayout.headerReferenceSize
   }
