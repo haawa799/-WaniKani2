@@ -86,6 +86,32 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5DABA0F31EC3120700C25F85 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E61EC3120700C25F85 /* Cely.framework */; };
+		5DABA0F41EC3120700C25F85 /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E61EC3120700C25F85 /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0F51EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */; };
+		5DABA0F61EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0F71EC3120700C25F85 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */; };
+		5DABA0F81EC3120700C25F85 /* EMPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0F91EC3120700C25F85 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E91EC3120700C25F85 /* Locksmith.framework */; };
+		5DABA0FA1EC3120700C25F85 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E91EC3120700C25F85 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0FB1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */; };
+		5DABA0FC1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0FD1EC3120700C25F85 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EB1EC3120700C25F85 /* Promise.framework */; };
+		5DABA0FE1EC3120700C25F85 /* Promise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EB1EC3120700C25F85 /* Promise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA0FF1EC3120700C25F85 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EC1EC3120700C25F85 /* Realm.framework */; };
+		5DABA1001EC3120700C25F85 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EC1EC3120700C25F85 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA1011EC3120700C25F85 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */; };
+		5DABA1021EC3120700C25F85 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA1031EC3120700C25F85 /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */; };
+		5DABA1041EC3120700C25F85 /* RESideMenuKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA1051EC3120700C25F85 /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EF1EC3120700C25F85 /* WaniKit.framework */; };
+		5DABA1061EC3120700C25F85 /* WaniKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0EF1EC3120700C25F85 /* WaniKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA1071EC3120700C25F85 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */; };
+		5DABA1081EC3120700C25F85 /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA1091EC3120700C25F85 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F11EC3120700C25F85 /* WaniModel.framework */; };
+		5DABA10A1EC3120700C25F85 /* WaniModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F11EC3120700C25F85 /* WaniModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DABA10B1EC3120700C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */; };
+		5DABA10C1EC3120700C25F85 /* WaniPersistance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +121,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5DABA0F61EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Embed Frameworks */,
+				5DABA0FA1EC3120700C25F85 /* Locksmith.framework in Embed Frameworks */,
+				5DABA1061EC3120700C25F85 /* WaniKit.framework in Embed Frameworks */,
+				5DABA0FE1EC3120700C25F85 /* Promise.framework in Embed Frameworks */,
+				5DABA0F81EC3120700C25F85 /* EMPageViewController.framework in Embed Frameworks */,
+				5DABA1001EC3120700C25F85 /* Realm.framework in Embed Frameworks */,
+				5DABA0F41EC3120700C25F85 /* Cely.framework in Embed Frameworks */,
+				5DABA10A1EC3120700C25F85 /* WaniModel.framework in Embed Frameworks */,
+				5DABA1081EC3120700C25F85 /* WaniLoginKit.framework in Embed Frameworks */,
+				5DABA1041EC3120700C25F85 /* RESideMenuKit.framework in Embed Frameworks */,
+				5DABA1021EC3120700C25F85 /* RealmSwift.framework in Embed Frameworks */,
+				5DABA0FC1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Embed Frameworks */,
+				5DABA10C1EC3120700C25F85 /* WaniPersistance.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +224,19 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5DABA0E61EC3120700C25F85 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
+		5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
+		5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
+		5DABA0E91EC3120700C25F85 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
+		5DABA0EB1EC3120700C25F85 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
+		5DABA0EC1EC3120700C25F85 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
+		5DABA0EF1EC3120700C25F85 /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = Carthage/Build/iOS/WaniKit.framework; sourceTree = "<group>"; };
+		5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
+		5DABA0F11EC3120700C25F85 /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = Carthage/Build/iOS/WaniModel.framework; sourceTree = "<group>"; };
+		5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +244,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DABA0F51EC3120700C25F85 /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				5DABA0F91EC3120700C25F85 /* Locksmith.framework in Frameworks */,
+				5DABA1051EC3120700C25F85 /* WaniKit.framework in Frameworks */,
+				5DABA0FD1EC3120700C25F85 /* Promise.framework in Frameworks */,
+				5DABA0F71EC3120700C25F85 /* EMPageViewController.framework in Frameworks */,
+				5DABA0FF1EC3120700C25F85 /* Realm.framework in Frameworks */,
+				5DABA0F31EC3120700C25F85 /* Cely.framework in Frameworks */,
+				5DABA1091EC3120700C25F85 /* WaniModel.framework in Frameworks */,
+				5DABA1071EC3120700C25F85 /* WaniLoginKit.framework in Frameworks */,
+				5DABA1031EC3120700C25F85 /* RESideMenuKit.framework in Frameworks */,
+				5DABA1011EC3120700C25F85 /* RealmSwift.framework in Frameworks */,
+				5DABA0FB1EC3120700C25F85 /* NJKScrollFullscreenKit.framework in Frameworks */,
+				5DABA10B1EC3120700C25F85 /* WaniPersistance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +378,19 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DABA0E61EC3120700C25F85 /* Cely.framework */,
+				5DABA0E71EC3120700C25F85 /* DGElasticPullToRefreshKit.framework */,
+				5DABA0E81EC3120700C25F85 /* EMPageViewController.framework */,
+				5DABA0E91EC3120700C25F85 /* Locksmith.framework */,
+				5DABA0EA1EC3120700C25F85 /* NJKScrollFullscreenKit.framework */,
+				5DABA0EB1EC3120700C25F85 /* Promise.framework */,
+				5DABA0EC1EC3120700C25F85 /* Realm.framework */,
+				5DABA0ED1EC3120700C25F85 /* RealmSwift.framework */,
+				5DABA0EE1EC3120700C25F85 /* RESideMenuKit.framework */,
+				5DABA0EF1EC3120700C25F85 /* WaniKit.framework */,
+				5DABA0F01EC3120700C25F85 /* WaniLoginKit.framework */,
+				5DABA0F11EC3120700C25F85 /* WaniModel.framework */,
+				5DABA0F21EC3120700C25F85 /* WaniPersistance.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

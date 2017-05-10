@@ -54,7 +54,7 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
     let fm = FileManager.default
     let docsurl = try? fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-    persistance = Persistance(setupInMemory: false, apiKey: apiKey, documentsURL: docsurl)
+    persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
 
     fetcher?.fetchLevelProgression().then { self.persistance.persist(levelProgression: $0) }

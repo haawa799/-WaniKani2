@@ -4,6 +4,6 @@ github "haawa799/DGElasticPullToRefresh" "d02f7bb5c3d9a3b8059fcb3fc9d9877bdc062a
 github "haawa799/WaniLogin" "bad71186727eb0d1fbed859a5da401b0e0e2f660"
 github "haawa799/WaniKit" "f9dbed278fa4d6f822f9bec8309fc020ccd9b5c9"
 github "haawa799/EMPageViewController" "bd0db741740ecced2bb5d17003c7bccae1688c63"
-github "haawa799/WaniPersistance" "0485a6f3ec767c75f2b5804ca75a1316391a8ed4"
+github "haawa799/WaniPersistance" "8501371449c4a887950f94e63e3de71c1b045c0d"
 
 github "realm/realm-cocoa"
