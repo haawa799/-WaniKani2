@@ -48,16 +48,6 @@
 		43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A431E7A98C600F6874A /* CookiesStorage.swift */; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
-		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
-		43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */; };
-		43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */; };
-		43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B831E8AAEC60021BB20 /* Locksmith.framework */; };
-		43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */; };
-		43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B851E8AAEC60021BB20 /* Promise.framework */; };
-		43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */; };
-		43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B871E8AAEC60021BB20 /* WaniKit.framework */; };
-		43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */; };
-		43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; };
 		43BE76031E3F39F30032950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BE76051E3F39F30032950B /* Localizable.strings */; };
 		43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76061E3F3A870032950B /* Strings+Localization.swift */; };
 		43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76081E3F3C240032950B /* WebSessionType.swift */; };
@@ -96,7 +86,6 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
-		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,8 +137,6 @@
 		430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
 		430876CC1D9021B300FE71FE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		430876CD1D9021B300FE71FE /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		430A75671E8E511B0025039A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		430A75681E8E511B0025039A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,16 +147,6 @@
 		43B02A431E7A98C600F6874A /* CookiesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesStorage.swift; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
-		43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
-		43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
-		43BA2B831E8AAEC60021BB20 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
-		43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
-		43BA2B851E8AAEC60021BB20 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
-		43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESideMenuKit.framework; path = Carthage/Build/iOS/RESideMenuKit.framework; sourceTree = "<group>"; };
-		43BA2B871E8AAEC60021BB20 /* WaniKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniKit.framework; path = Carthage/Build/iOS/WaniKit.framework; sourceTree = "<group>"; };
-		43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniLoginKit.framework; path = Carthage/Build/iOS/WaniLoginKit.framework; sourceTree = "<group>"; };
-		43BA2B891E8AAEC60021BB20 /* WaniModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniModel.framework; path = Carthage/Build/iOS/WaniModel.framework; sourceTree = "<group>"; };
 		43BE76041E3F39F30032950B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43BE76061E3F3A870032950B /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		43BE76081E3F3C240032950B /* WebSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionType.swift; sourceTree = "<group>"; };
@@ -208,7 +185,6 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,17 +192,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
-				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
-				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
-				43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */,
-				43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */,
-				43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */,
-				43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */,
-				43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */,
-				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
-				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
-				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,19 +313,6 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */,
-				430A75671E8E511B0025039A /* Realm.framework */,
-				430A75681E8E511B0025039A /* RealmSwift.framework */,
-				43BA2B801E8AAEC60021BB20 /* Cely.framework */,
-				43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */,
-				43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */,
-				43BA2B831E8AAEC60021BB20 /* Locksmith.framework */,
-				43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */,
-				43BA2B851E8AAEC60021BB20 /* Promise.framework */,
-				43BA2B861E8AAEC60021BB20 /* RESideMenuKit.framework */,
-				43BA2B871E8AAEC60021BB20 /* WaniKit.framework */,
-				43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */,
-				43BA2B891E8AAEC60021BB20 /* WaniModel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
