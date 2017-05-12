@@ -24,6 +24,7 @@ extension UIBackgroundFetchResult: CustomStringConvertible {
 protocol SingleReuseIdentifier {
   static var identifier: String {get}
   static var nibName: String {get}
+  static var nib: UINib {get}
 }
 
 extension SingleReuseIdentifier where Self: UICollectionReusableView {
@@ -33,6 +34,9 @@ extension SingleReuseIdentifier where Self: UICollectionReusableView {
   static var nibName: String {
     return identifier
   }
+    static var nib: UINib {
+        return UINib(nibName: nibName, bundle: nil)
+    }
 }
 
 public protocol FlippableView {

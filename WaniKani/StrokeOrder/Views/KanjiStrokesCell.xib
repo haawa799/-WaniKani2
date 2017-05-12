@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KanjiStrokesCell" customModule="WaniKani" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="276"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="285" height="276"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GO-Cc-hrh" customClass="StrokeDrawingView" customModule="StrokeDrawingView">
+                        <rect key="frame" x="4.5" y="0.0" width="276" height="276"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2GO-Cc-hrh" secondAttribute="height" multiplier="1:1" id="hzo-0e-z8L"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FZE-mi-DzI"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2GO-Cc-hrh" secondAttribute="bottom" id="FmE-aU-CqW"/>
+                <constraint firstAttribute="bottom" secondItem="2GO-Cc-hrh" secondAttribute="bottom" priority="250" id="Jv2-wf-CNr"/>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="PGH-Dd-JAq"/>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" priority="250" id="Wt4-zO-062"/>
+                <constraint firstAttribute="trailing" secondItem="2GO-Cc-hrh" secondAttribute="trailing" priority="250" id="WyW-Zf-eF0"/>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xov-d3-uO4"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2GO-Cc-hrh" secondAttribute="trailing" id="Zvp-tr-HUH"/>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" id="ixD-eI-kHR"/>
+                <constraint firstItem="2GO-Cc-hrh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" priority="250" id="vuM-fB-Dep"/>
+            </constraints>
+            <size key="customSize" width="285" height="276"/>
+            <connections>
+                <outlet property="strokesView" destination="2GO-Cc-hrh" id="Qtm-Eq-CXK"/>
+            </connections>
+            <point key="canvasLocation" x="-51.5" y="42"/>
+        </collectionViewCell>
+    </objects>
+</document>

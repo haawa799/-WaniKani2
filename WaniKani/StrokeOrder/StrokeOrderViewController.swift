@@ -7,21 +7,48 @@
 //
 
 import UIKit
-import KanjiBezierPaths
 
 class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
-
-    fileprivate let kanjiProvider = KanjiProvider()
-
-    var kanji = [String]() {
+    var kanji = [KanjiGraphicInfo]() {
         didSet {
-            self.kanjiBezierPathes = kanji.flatMap { kanjiProvider.pathesForKanji($0) }
+            pageControl?.numberOfPages = kanji.count
         }
     }
 
-    fileprivate var kanjiBezierPathes = [[UIBezierPath]]() {
+    @IBOutlet weak var pageControl: UIPageControl! {
         didSet {
-            debugPrint(kanjiBezierPathes)
+            pageControl?.numberOfPages = kanji.count
         }
+    }
+
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            guard let collectionView = collectionView else { return }
+            collectionView.register(KanjiStrokesCell.nib, forCellWithReuseIdentifier: KanjiStrokesCell.identifier)
+            collectionView.dataSource = self
+            collectionView.flashScrollIndicators()
+            (collectionView as UIScrollView).delegate = self
+        }
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension StrokeOrderViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return kanji.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KanjiStrokesCell.identifier, for: indexPath)
+        (cell as? KanjiStrokesCell)?.kanji = kanji[indexPath.item]
+        return cell
+    }
+}
+
+// MARK: - 
+extension StrokeOrderViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = Int(round(scrollView.contentOffset.x / scrollView.frame.size.width))
+        pageControl?.currentPage = page
     }
 }

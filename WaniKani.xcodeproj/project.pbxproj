@@ -102,6 +102,10 @@
 		5DABA11D1EC3292A00C25F85 /* StrokeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */; };
 		5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */; };
 		5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */; };
+		5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1241EC33A4900C25F85 /* KanjiStrokesCell.swift */; };
+		5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */; };
+		5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */; };
+		5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -219,6 +223,10 @@
 		5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeOrderViewController.swift; sourceTree = "<group>"; };
 		5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StrokeDrawingView.framework; path = Carthage/Build/iOS/StrokeDrawingView.framework; sourceTree = "<group>"; };
 		5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KanjiBezierPaths.framework; path = Carthage/Build/iOS/KanjiBezierPaths.framework; sourceTree = "<group>"; };
+		5DABA1241EC33A4900C25F85 /* KanjiStrokesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCell.swift; sourceTree = "<group>"; };
+		5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KanjiStrokesCell.xib; sourceTree = "<group>"; };
+		5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiGraphicInfo.swift; sourceTree = "<group>"; };
+		5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCellLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,11 +553,31 @@
 		5DABA1171EC3285000C25F85 /* StrokeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */,
+				5DABA1221EC33A2D00C25F85 /* Layouts */,
+				5DABA1231EC33A2D00C25F85 /* Views */,
 				5DABA1181EC3288100C25F85 /* StrokeOrderCoordinator.swift */,
 				5DABA11C1EC3292A00C25F85 /* StrokeOrderViewController.swift */,
 				5DABA11A1EC3292300C25F85 /* StrokeOrderViewController.storyboard */,
 			);
 			path = StrokeOrder;
+			sourceTree = "<group>";
+		};
+		5DABA1221EC33A2D00C25F85 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		5DABA1231EC33A2D00C25F85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DABA1241EC33A4900C25F85 /* KanjiStrokesCell.swift */,
+				5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,6 +657,7 @@
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
+				5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */,
 				43D99C5F1D9919560071C26D /* SettingsViewController.storyboard in Resources */,
 				43D99C571D9919560071C26D /* resize.js in Resources */,
 				5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */,
@@ -658,7 +687,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nautocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		43BA2B7D1E8A9E280021BB20 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -710,6 +739,7 @@
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
+				5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */,
 				43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */,
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
@@ -735,6 +765,7 @@
 				43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */,
 				43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */,
 				430876901D90216F00FE71FE /* ApplicationCoordinator.swift in Sources */,
+				5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */,
 				43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */,
 				430876B21D9021A200FE71FE /* ReviewCell.swift in Sources */,
 				43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */,
@@ -751,6 +782,7 @@
 				43D99C601D9919560071C26D /* SettingsViewController.swift in Sources */,
 				43D99C6A1D99229A0071C26D /* UserScript.swift in Sources */,
 				430876CE1D9021B300FE71FE /* ColorfullTabBarController.swift in Sources */,
+				5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */,
 				430876D61D9021B300FE71FE /* ScreenBackgound.swift in Sources */,
 				430876D01D9021B300FE71FE /* SingleTabViewController.swift in Sources */,
 				43F4F37E1D9152A200A9BB08 /* SRSView.swift in Sources */,
@@ -891,6 +923,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -915,6 +948,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";

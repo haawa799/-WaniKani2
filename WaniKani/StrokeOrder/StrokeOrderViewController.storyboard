@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,8 +24,32 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22O-zM-ne9">
                                 <rect key="frame" x="5" y="67.5" width="365" height="365"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZFp-J8-NuZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="365"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DI5-uu-xb1" customClass="KanjiStrokesCellLayout" customModule="WaniKani" customModuleProvider="target">
+                                            <size key="itemSize" width="185" height="275"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-RY-5Ax">
+                                        <rect key="frame" x="318" y="8" width="39" height="37"/>
+                                        <color key="pageIndicatorTintColor" red="0.16078431369999999" green="0.62352941179999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.64313725489999995" green="0.30196078430000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Bfb-RY-5Ax" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="top" constant="8" id="1Ga-fu-ZpG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bfb-RY-5Ax" secondAttribute="trailing" constant="8" id="DdZ-Xx-Oyt"/>
+                                    <constraint firstItem="ZFp-J8-NuZ" firstAttribute="leading" secondItem="22O-zM-ne9" secondAttribute="leading" id="IjE-ZO-zJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZFp-J8-NuZ" secondAttribute="trailing" id="Jnh-Ct-KwE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZFp-J8-NuZ" secondAttribute="bottom" id="KXb-sK-kNO"/>
+                                    <constraint firstItem="ZFp-J8-NuZ" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="top" id="Vht-YE-ufu"/>
                                     <constraint firstAttribute="width" secondItem="22O-zM-ne9" secondAttribute="height" multiplier="1:1" id="j8z-8F-OdY"/>
                                 </constraints>
                             </view>
@@ -46,10 +71,14 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="500"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZFp-J8-NuZ" id="get-vF-RNm"/>
+                        <outlet property="pageControl" destination="Bfb-RY-5Ax" id="jdB-bS-ZpN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJK-PG-ejj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391.19999999999999" y="79.610194902548727"/>
+            <point key="canvasLocation" x="-391.19999999999999" y="79.160419790104953"/>
         </scene>
     </scenes>
 </document>

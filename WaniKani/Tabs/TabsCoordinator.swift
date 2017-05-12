@@ -30,7 +30,7 @@ open class TabsCoordinator: Coordinator {
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
-    strokesOrderCoordinator = StrokeOrderCoordinator(presenter: strokesContainer, kanji: ["等"])
+    strokesOrderCoordinator = StrokeOrderCoordinator(presenter: strokesContainer, kanji: ["等", "京", "都", "人", "犬", "猫", "金", "本", "風", "水"])
   }
 
 }

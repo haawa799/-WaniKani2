@@ -25,7 +25,7 @@ class StrokeOrderCoordinator: Coordinator {
 // MARK: - Coordinator
 extension StrokeOrderCoordinator {
     func start() {
-        strokesViewController.kanji = kanji
+        strokesViewController.kanji = kanji.flatMap { KanjiGraphicInfo(kanji: $0) }
         presenter.view.addSubview(strokesViewController.view)
         presenter.addChildViewController(strokesViewController)
     }
