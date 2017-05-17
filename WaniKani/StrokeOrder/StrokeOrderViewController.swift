@@ -19,6 +19,7 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
     fileprivate var kanji = [KanjiGraphicInfo]() {
         didSet {
             pageControl?.numberOfPages = kanji.count
+            pageControl?.isHidden = kanji.count < 2
             layout.numberOfTabs = kanji.count
             collectionView?.reloadData()
         }
@@ -27,6 +28,7 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var pageControl: UIPageControl! {
         didSet {
             pageControl?.numberOfPages = kanji.count
+            pageControl?.isHidden = kanji.count < 2
         }
     }
 

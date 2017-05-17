@@ -64,6 +64,10 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
     return collectionView.collectionViewLayout as? DashboardLayout
   }
 
+  deinit {
+    self.collectionView.dg_removePullToRefresh()
+  }
+
 }
 
 extension DashboardViewController {

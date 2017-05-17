@@ -30,6 +30,7 @@ class ApplicationCoordinator: Coordinator {
   func presentTabs(apiKey: String) {
     window.rootViewController = rootViewController
     let dataProvider = DataProvider(apiKey: apiKey)
+    dataProvider.delegate = self
     let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, presenter: rootViewController)
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
@@ -56,20 +57,16 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     let docsurl = try? fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
-
-    fetcher?.fetchLevelProgression().then { self.persistance.persist(levelProgression: $0) }
-    fetcher?.fetchStudyQueue().then { self.persistance.persist(studyQueue: $0) }
-    fetcher?.fetchSRS().then { self.persistance.persist(srs: $0) }
-    fetcher?.fetchRadicalPromise(level: 21).then { self.persistance.persist(radicals: $0) }
-    fetcher?.fetchKanjiPromise(level: 21).then { self.persistance.persist(kanji: $0) }
-    fetcher?.fetchVocabPromise(level: 21).then { self.persistance.persist(words: $0) }
-    fetcher?.fetchCriticalItems(percentage: 90).then {
-      self.persistance.persist(criticalItems: $0)
-    }
-    fetcher?.fetchRecentUnlocks(limit: 30).then { self.persistance.persist(recents: $0) }
-
     presentTabs(apiKey: apiKey)
     CookiesStorage.saveCookies()
   }
 
+}
+
+// MARK: - DataProviderDelegate
+extension ApplicationCoordinator: DataProviderDelegate {
+    func apiKeyIncorect() {
+        guard waniLoginCoordinator.isLoggedIn == true else { return }
+        waniLoginCoordinator.logOut()
+    }
 }

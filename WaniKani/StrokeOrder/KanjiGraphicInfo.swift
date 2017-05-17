@@ -12,7 +12,13 @@ import StrokeDrawingView
 
 class KanjiGraphicInfo {
 
-    fileprivate let kanjiProvider = KanjiProvider()
+  fileprivate static let kanjiProvider: KanjiProvider! = {
+      guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+          return nil
+      }
+      let url = URL(fileURLWithPath: path)
+      return KanjiProvider(appDocumentsURL: url, fileManager: FileManager.default)
+  }()
 
   let color0 = UIColor(red:0.95, green:0, blue:0.63, alpha:1)
 
@@ -20,7 +26,7 @@ class KanjiGraphicInfo {
   let kanji: String
 
   init?(kanji: String) {
-    guard let bezierPaths = kanjiProvider.pathesForKanji(kanji) else { return nil }
+    guard let bezierPaths = KanjiGraphicInfo.kanjiProvider.pathesForKanji(kanji) else { return nil }
     self.kanji = kanji
     self.bezierPathes = bezierPaths
   }
