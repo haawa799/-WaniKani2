@@ -11,7 +11,6 @@ import UIKit
 class RightMenuViewController: UIViewController, StoryboardInstantiable {
 
   @IBOutlet weak var containerView: UIView?
-//  @IBOutlet weak var leadingConstraint: NSLayoutConstraint?
   private var embadedViewControllerIsSet = false
 
   private var containerViewController: UIViewController? {

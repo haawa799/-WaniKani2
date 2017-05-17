@@ -21,11 +21,11 @@ class SideMenuHolderViewController: RESideMenu {
 
   convenience init(type: WebSessionType, settingsSuit: SettingsSuit?) {
 
-    let q = UIViewController()
-    q.view.backgroundColor = UIColor.cyan
+    let kanjiPracticeViewController: KanjiPracticeViewController = KanjiPracticeViewController.instantiateViewController()
+    kanjiPracticeViewController.view.backgroundColor = UIColor.cyan
 
     let middleViewController = ReviewWebViewController(nibName: ReviewWebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
-    let rightViewController = RightMenuViewController(contentViewController: q)
+    let rightViewController = RightMenuViewController(contentViewController: kanjiPracticeViewController)
     _ = rightViewController.view
 
     self.init()

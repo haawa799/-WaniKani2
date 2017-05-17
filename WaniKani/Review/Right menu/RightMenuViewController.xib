@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1H-0Y-mvg">
-                    <rect key="frame" x="112.5" y="0.0" width="262.5" height="667"/>
+                    <rect key="frame" x="124" y="0.0" width="251" height="667"/>
                     <color key="backgroundColor" red="0.53855812550000004" green="0.90692335369999999" blue="0.70534938570000005" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
@@ -30,7 +30,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="b1H-0Y-mvg" secondAttribute="bottom" id="7zG-ry-szG"/>
                 <constraint firstItem="b1H-0Y-mvg" firstAttribute="top" secondItem="iRn-KV-MBr" secondAttribute="top" id="ero-Ch-Vze"/>
-                <constraint firstItem="b1H-0Y-mvg" firstAttribute="width" secondItem="iRn-KV-MBr" secondAttribute="width" multiplier="0.7" id="fzj-AV-WrX"/>
+                <constraint firstItem="b1H-0Y-mvg" firstAttribute="width" secondItem="iRn-KV-MBr" secondAttribute="width" multiplier="0.67" id="fzj-AV-WrX"/>
                 <constraint firstAttribute="trailing" secondItem="b1H-0Y-mvg" secondAttribute="trailing" id="qlc-bq-CNc"/>
             </constraints>
         </view>
