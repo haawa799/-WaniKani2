@@ -15,8 +15,8 @@ open class TabsCoordinator: Coordinator {
   fileprivate let dashboardCoordinator: DashboardCoordinator
   fileprivate let settingsNavigationController = UINavigationController()
   fileprivate let settingsCoordinator: SettingsCoordinator
-  fileprivate let strokesContainer = UIViewController()
-  fileprivate let strokesOrderCoordinator: StrokeOrderCoordinator
+  fileprivate let strokesContainer: UINavigationController = UINavigationController()
+  fileprivate let kanjiPracticeCoordinator: KanjiPracticeCoordinator
 
   let presenter: UITabBarController
   let dataProvider: DataProvider
@@ -30,7 +30,7 @@ open class TabsCoordinator: Coordinator {
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
-    strokesOrderCoordinator = StrokeOrderCoordinator(presenter: strokesContainer, kanji: ["等", "京", "都", "人", "犬", "猫", "金", "本", "風", "水"])
+    kanjiPracticeCoordinator = KanjiPracticeCoordinator(presenter: strokesContainer, kanji: ["等", "京", "都", "人", "犬", "猫", "金", "本", "風", "水"])
   }
 
 }
@@ -40,7 +40,7 @@ extension TabsCoordinator {
   func start() {
     dashboardCoordinator.start()
     settingsCoordinator.start()
-    strokesOrderCoordinator.start()
+    kanjiPracticeCoordinator.start()
   }
 
 }

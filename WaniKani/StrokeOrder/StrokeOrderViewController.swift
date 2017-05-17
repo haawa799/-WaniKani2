@@ -9,9 +9,17 @@
 import UIKit
 
 class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
-    var kanji = [KanjiGraphicInfo]() {
+
+    var kanjiStrings = [String]() {
+        didSet {
+            kanji = kanjiStrings.map { KanjiGraphicInfo(kanji: $0) }
+        }
+    }
+
+    fileprivate var kanji = [KanjiGraphicInfo]() {
         didSet {
             pageControl?.numberOfPages = kanji.count
+            layout.numberOfTabs = kanji.count
         }
     }
 
@@ -21,13 +29,27 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
         }
     }
 
+    let layout: KanjiStrokesCellLayout = {
+        let layout = KanjiStrokesCellLayout()
+        layout.scrollDirection = .horizontal
+        return layout
+    }()
+
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             guard let collectionView = collectionView else { return }
+            collectionView.setCollectionViewLayout(layout, animated: false)
             collectionView.register(KanjiStrokesCell.nib, forCellWithReuseIdentifier: KanjiStrokesCell.identifier)
             collectionView.dataSource = self
             collectionView.flashScrollIndicators()
             (collectionView as UIScrollView).delegate = self
+        }
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil) { [weak self] (_) in
+            self?.layout.centerToItem()
         }
     }
 }
@@ -45,10 +67,11 @@ extension StrokeOrderViewController: UICollectionViewDataSource {
     }
 }
 
-// MARK: - 
+// MARK: - UIScrollViewDelegate
 extension StrokeOrderViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = Int(round(scrollView.contentOffset.x / scrollView.frame.size.width))
         pageControl?.currentPage = page
+        layout.currentTab = page
     }
 }

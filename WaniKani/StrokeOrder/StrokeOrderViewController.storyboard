@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cMK-ka-JDe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cMK-ka-JDe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Stroke Order View Controller-->
         <scene sceneID="v7j-qz-YCE">
             <objects>
-                <viewController id="cMK-ka-JDe" customClass="StrokeOrderViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cMK-ka-JDe" customClass="StrokeOrderViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S5d-U9-U5N"/>
                         <viewControllerLayoutGuide type="bottom" id="UmI-Fe-qJP"/>
@@ -37,14 +37,14 @@
                                         <cells/>
                                     </collectionView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-RY-5Ax">
-                                        <rect key="frame" x="318" y="8" width="39" height="37"/>
+                                        <rect key="frame" x="318" y="0.0" width="39" height="37"/>
                                         <color key="pageIndicatorTintColor" red="0.16078431369999999" green="0.62352941179999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="currentPageIndicatorTintColor" red="0.64313725489999995" green="0.30196078430000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Bfb-RY-5Ax" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="top" constant="8" id="1Ga-fu-ZpG"/>
+                                    <constraint firstItem="Bfb-RY-5Ax" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="top" id="1Ga-fu-ZpG"/>
                                     <constraint firstAttribute="trailing" secondItem="Bfb-RY-5Ax" secondAttribute="trailing" constant="8" id="DdZ-Xx-Oyt"/>
                                     <constraint firstItem="ZFp-J8-NuZ" firstAttribute="leading" secondItem="22O-zM-ne9" secondAttribute="leading" id="IjE-ZO-zJE"/>
                                     <constraint firstAttribute="trailing" secondItem="ZFp-J8-NuZ" secondAttribute="trailing" id="Jnh-Ct-KwE"/>
@@ -54,7 +54,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UmI-Fe-qJP" firstAttribute="top" secondItem="22O-zM-ne9" secondAttribute="bottom" priority="250" constant="5" id="4Bw-rz-UMc"/>
                             <constraint firstItem="22O-zM-ne9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gjq-91-a9Q" secondAttribute="top" constant="5" id="BhT-wc-1VP"/>

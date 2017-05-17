@@ -7,5 +7,6 @@ github "haawa799/EMPageViewController" "bd0db741740ecced2bb5d17003c7bccae1688c63
 github "haawa799/WaniPersistance" "0485a6f3ec767c75f2b5804ca75a1316391a8ed4"
 github "haawa799/StrokeDrawingView" "a0c3c747603e0da16be6587c2f23476c6d201a6b"
 github "haawa799/KanjiBezierPaths" "722d76d37d328c7187bd85068b0a52e1a4d521fc"
+github "haawa799/SwiftyDraw" "cad884cb93f61e10e7ed131f000b0ca049793f37"
 
 github "realm/realm-cocoa"

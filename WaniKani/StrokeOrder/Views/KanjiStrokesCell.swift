@@ -31,6 +31,13 @@ class KanjiStrokesCell: UICollectionViewCell, SingleReuseIdentifier {
         strokesView?.dataSource = kanji
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        strokesView?.stopForeverAnimation()
+        strokesView?.clean()
+        strokesView?.dataSource = nil
+    }
+
 }
 
 // MARK: - StrokeDrawingViewDataDelegate

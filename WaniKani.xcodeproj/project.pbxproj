@@ -106,6 +106,12 @@
 		5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */; };
 		5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */; };
 		5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */; };
+		5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */; };
+		5DF2D85D1ECC422300D209A1 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */; };
+		5DF2D85E1ECC422300D209A1 /* KanjiPracticeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D8591ECC422300D209A1 /* KanjiPracticeCoordinator.swift */; };
+		5DF2D85F1ECC422300D209A1 /* KanjiPracticeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2D85A1ECC422300D209A1 /* KanjiPracticeViewController.storyboard */; };
+		5DF2D8601ECC422300D209A1 /* KanjiPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D85B1ECC422300D209A1 /* KanjiPracticeViewController.swift */; };
+		5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -227,6 +233,12 @@
 		5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KanjiStrokesCell.xib; sourceTree = "<group>"; };
 		5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiGraphicInfo.swift; sourceTree = "<group>"; };
 		5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCellLayout.swift; sourceTree = "<group>"; };
+		5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmptyViewController.storyboard; sourceTree = "<group>"; };
+		5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		5DF2D8591ECC422300D209A1 /* KanjiPracticeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiPracticeCoordinator.swift; sourceTree = "<group>"; };
+		5DF2D85A1ECC422300D209A1 /* KanjiPracticeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KanjiPracticeViewController.storyboard; sourceTree = "<group>"; };
+		5DF2D85B1ECC422300D209A1 /* KanjiPracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiPracticeViewController.swift; sourceTree = "<group>"; };
+		5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDraw.framework; path = Carthage/Build/iOS/SwiftyDraw.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */,
 				5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */,
 				5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */,
 				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
@@ -368,6 +381,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
 				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
 				5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */,
 				5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */,
@@ -408,6 +422,7 @@
 		43620A3C1D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXGroup;
 			children = (
+				5DF2D8561ECC422300D209A1 /* KanjiPractice */,
 				5DABA1171EC3285000C25F85 /* StrokeOrder */,
 				43D99C7C1D994D1B0071C26D /* Review */,
 				43D99C361D9919560071C26D /* Settings */,
@@ -580,6 +595,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5DF2D8561ECC422300D209A1 /* KanjiPractice */ = {
+			isa = PBXGroup;
+			children = (
+				5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */,
+				5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */,
+				5DF2D8591ECC422300D209A1 /* KanjiPracticeCoordinator.swift */,
+				5DF2D85A1ECC422300D209A1 /* KanjiPracticeViewController.storyboard */,
+				5DF2D85B1ECC422300D209A1 /* KanjiPracticeViewController.swift */,
+			);
+			path = KanjiPractice;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -657,6 +684,7 @@
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
+				5DF2D85F1ECC422300D209A1 /* KanjiPracticeViewController.storyboard in Resources */,
 				5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */,
 				43D99C5F1D9919560071C26D /* SettingsViewController.storyboard in Resources */,
 				43D99C571D9919560071C26D /* resize.js in Resources */,
@@ -670,6 +698,7 @@
 				43BE76031E3F39F30032950B /* Localizable.strings in Resources */,
 				43D99C581D9919560071C26D /* score.js in Resources */,
 				43D99C621D9919560071C26D /* GameCenterCollectionViewCell.xib in Resources */,
+				5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +739,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/WaniPersistance.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KanjiBezierPaths.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/StrokeDrawingView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDraw.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -768,11 +798,13 @@
 				5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */,
 				43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */,
 				430876B21D9021A200FE71FE /* ReviewCell.swift in Sources */,
+				5DF2D85E1ECC422300D209A1 /* KanjiPracticeCoordinator.swift in Sources */,
 				43D99C941D994ECE0071C26D /* ReviewCoordinator+SideMenu.swift in Sources */,
 				430876B81D9021A200FE71FE /* LabelWithAdaptiveTextHeight.swift in Sources */,
 				43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */,
 				43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */,
 				43D99C931D994EC40071C26D /* ReviewCoordinator.swift in Sources */,
+				5DF2D85D1ECC422300D209A1 /* EmptyViewController.swift in Sources */,
 				430876B41D9021A200FE71FE /* DashboardLayout.swift in Sources */,
 				430876BE1D9021A200FE71FE /* DoubleProgressViewModel.swift in Sources */,
 				430876D91D9021B300FE71FE /* ViewModel.swift in Sources */,
@@ -780,6 +812,7 @@
 				430876BF1D9021A200FE71FE /* LeftRightTitleViewModel.swift in Sources */,
 				5DABA11D1EC3292A00C25F85 /* StrokeOrderViewController.swift in Sources */,
 				43D99C601D9919560071C26D /* SettingsViewController.swift in Sources */,
+				5DF2D8601ECC422300D209A1 /* KanjiPracticeViewController.swift in Sources */,
 				43D99C6A1D99229A0071C26D /* UserScript.swift in Sources */,
 				430876CE1D9021B300FE71FE /* ColorfullTabBarController.swift in Sources */,
 				5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */,
