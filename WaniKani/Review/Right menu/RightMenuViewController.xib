@@ -23,10 +23,10 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1H-0Y-mvg">
                     <rect key="frame" x="124" y="0.0" width="251" height="667"/>
-                    <color key="backgroundColor" red="0.53855812550000004" green="0.90692335369999999" blue="0.70534938570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="b1H-0Y-mvg" secondAttribute="bottom" id="7zG-ry-szG"/>
                 <constraint firstItem="b1H-0Y-mvg" firstAttribute="top" secondItem="iRn-KV-MBr" secondAttribute="top" id="ero-Ch-Vze"/>

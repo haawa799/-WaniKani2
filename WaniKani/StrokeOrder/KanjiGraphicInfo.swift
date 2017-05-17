@@ -19,14 +19,14 @@ class KanjiGraphicInfo {
   let bezierPathes: [UIBezierPath]
   let kanji: String
 
-  init(kanji: String) {
+  init?(kanji: String) {
+    guard let bezierPaths = kanjiProvider.pathesForKanji(kanji) else { return nil }
     self.kanji = kanji
-    self.bezierPathes = kanjiProvider.pathesForKanji(kanji) ?? [UIBezierPath]()
+    self.bezierPathes = bezierPaths
   }
 
   class func kanjiFromString(kanjiChar: String) -> KanjiGraphicInfo? {
-    let kanji = KanjiGraphicInfo(kanji: kanjiChar)
-    return (kanji.bezierPathes.count > 0) ? kanji : nil
+    return KanjiGraphicInfo(kanji: kanjiChar)
   }
 
 }

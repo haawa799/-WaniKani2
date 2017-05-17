@@ -8,6 +8,7 @@
 
 import UIKit
 import RESideMenuKit
+import SwiftyDraw
 
 protocol SideMenuHolderViewControllerDelegate: class {
   func didShowMenu()
@@ -18,11 +19,12 @@ class SideMenuHolderViewController: RESideMenu {
 
   var type: WebSessionType?
   weak var menuDelegate: SideMenuHolderViewControllerDelegate?
+    fileprivate weak  var kanjiPracticeViewController: KanjiPracticeViewController?
+    fileprivate weak var middleViewController: ReviewWebViewController?
 
   convenience init(type: WebSessionType, settingsSuit: SettingsSuit?) {
 
     let kanjiPracticeViewController: KanjiPracticeViewController = KanjiPracticeViewController.instantiateViewController()
-    kanjiPracticeViewController.view.backgroundColor = UIColor.cyan
 
     let middleViewController = ReviewWebViewController(nibName: ReviewWebViewController.defaultFileName, bundle: nil, settingsSuit: settingsSuit)
     let rightViewController = RightMenuViewController(contentViewController: kanjiPracticeViewController)
@@ -30,6 +32,8 @@ class SideMenuHolderViewController: RESideMenu {
 
     self.init()
 
+    self.middleViewController = middleViewController
+    self.kanjiPracticeViewController = kanjiPracticeViewController
     self.type = type
     self.rightMenuViewController = rightViewController
     self.contentViewController = middleViewController
@@ -73,7 +77,9 @@ extension SideMenuHolderViewController: RESideMenuDelegate {
 
   }
   func sideMenu(_ sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
-
+    guard let characters = middleViewController?.character() else { return }
+    kanjiPracticeViewController?.kanjiStrings = characters.characters.map { "\($0)" }
+    kanjiPracticeViewController?.trashAction(sender: self)
   }
   func sideMenu(_ sideMenu: RESideMenu!, didShowMenuViewController menuViewController: UIViewController!) {
 
@@ -90,6 +96,12 @@ extension SideMenuHolderViewController: RESideMenuDelegate {
 extension SideMenuHolderViewController {
 
   override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    let locationPoint = touch.location(in: view)
+
+    let hitView = view.hitTest(locationPoint, with: nil)
+    if (hitView as? SwiftyDrawView) != nil || (hitView as? UICollectionView) != nil {
+        return false
+    }
     return true
   }
 }

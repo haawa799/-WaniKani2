@@ -12,7 +12,7 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
 
     var kanjiStrings = [String]() {
         didSet {
-            kanji = kanjiStrings.map { KanjiGraphicInfo(kanji: $0) }
+            kanji = kanjiStrings.flatMap { KanjiGraphicInfo(kanji: $0) }
         }
     }
 
@@ -20,6 +20,7 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
         didSet {
             pageControl?.numberOfPages = kanji.count
             layout.numberOfTabs = kanji.count
+            collectionView?.reloadData()
         }
     }
 
