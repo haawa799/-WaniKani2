@@ -8,24 +8,18 @@
 
 import UIKit
 import DGElasticPullToRefreshKit
-import EMPageViewController
 
 protocol DashboardViewControllerDelegate: class {
   func dashboardPullToRefreshAction()
   func didSelectCell(_ indexPath: IndexPath)
 }
 
-class DashboardViewController: SingleTabViewController, StoryboardInstantiable, UICollectionViewDelegate, EMPageViewControllerDataSource, EMPageViewControllerDelegate {
+class DashboardViewController: SingleTabViewController, StoryboardInstantiable, UICollectionViewDelegate {
 
   // MARK: Outlets
-  @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-  @IBOutlet weak var doubleProgressBar: DoubleProgressBar!
   @IBOutlet weak var topView: UIView!
-  @IBOutlet weak var pageControl: UIPageControl!
 
-  fileprivate let srsVC: SRSViewController = DashboardViewController.instantiateViewController("srs", nil)
-  fileprivate let progressVC: ProgressViewController = DashboardViewController.instantiateViewController("progress", nil)
-  fileprivate var pageViewController: EMPageViewController?
+  fileprivate weak var dashboardHeaderViewController: DashboardHeaderViewController?
 
   @IBOutlet fileprivate weak var collectionView: UICollectionView! {
     didSet {
@@ -43,8 +37,8 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
   weak var delegate: DashboardViewControllerDelegate?
 
   func updateDashboardWithViewModels(progressViewModel: DoubleProgressViewModel, collectionViewModel: ListViewModel, srsViewModel: SRSDistributionViewModel, isOld: Bool = false) {
-    srsVC.setupWith(srs: srsViewModel)
-    progressVC.setupWith(progressViewModel: progressViewModel)
+    dashboardHeaderViewController?.srsViewController?.setupWith(srs: srsViewModel)
+    dashboardHeaderViewController?.progressViewController?.setupWith(progressViewModel: progressViewModel)
     self.collectionViewModel = collectionViewModel
     reloadCollectionView((isOld==false))
   }
@@ -58,7 +52,6 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
 
   // MARK: Private
   fileprivate var collectionViewModel: ListViewModel?
-  fileprivate var isHeaderShrinked = false
   fileprivate var isPulledDown = false
   fileprivate var stratchyLayout: DashboardLayout? {
     return collectionView.collectionViewLayout as? DashboardLayout
@@ -70,56 +63,18 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
 
 }
 
-extension DashboardViewController {
-
-  func em_pageViewController(_ pageViewController: EMPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-    guard viewController !=  srsVC else { return nil }
-    return srsVC
-  }
-
-  func em_pageViewController(_ pageViewController: EMPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-    guard viewController !=  progressVC else { return nil }
-    return progressVC
-  }
-}
-
-// MARK: - EMPageViewControllerDelegate
-extension DashboardViewController {
-
-  func em_pageViewController(_ pageViewController: EMPageViewController, isScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController, progress: CGFloat) {
-    let prg: CGFloat = abs(progress)
-    let alpha: CGFloat
-    if startingViewController == progressVC {
-      alpha = 1 - prg
-    } else {
-      alpha = prg
-    }
-    setStatusBarAlpha(alpha: alpha)
-  }
-
-    func em_pageViewController(_ pageViewController: EMPageViewController, didFinishScrollingFrom startingViewController: UIViewController?, destinationViewController: UIViewController, transitionSuccessful: Bool) {
-        guard transitionSuccessful == true else { return }
-        switch destinationViewController {
-        case progressVC: pageControl.currentPage = 0
-        case srsVC: pageControl.currentPage = 1
-        default: break
-        }
-    }
-}
-
 // MARK: - SingleTabViewController
 extension DashboardViewController {
 
   override func didShrink() {
+    dashboardHeaderViewController?.isVisible = false
     super.didShrink()
-    headerHeightConstraint.constant = 0
   }
 
   override func didUnshrink() {
+    dashboardHeaderViewController?.isVisible = true
     super.didUnshrink()
-    refreshProgressConstraint()
   }
-
 }
 
 // MARK: - UICollectionViewDataSource
@@ -177,18 +132,14 @@ extension DashboardViewController {
     super.viewDidLoad()
     _ = addBackground(BackgroundOptions.dashboard.rawValue)
     addPullToRefresh()
-    refreshProgressConstraint()
 
-    let pageViewController = EMPageViewController(navigationOrientation: .horizontal)
-    pageViewController.dataSource = self
-    pageViewController.delegate = self
-
-    pageViewController.selectViewController(progressVC, direction: .forward, animated: false, completion: nil)
-    self.addChildViewController(pageViewController)
-    pageViewController.view.frame = topView.bounds
-    self.topView.addSubview(pageViewController.view)
-    pageViewController.didMove(toParentViewController: self)
-    self.pageViewController = pageViewController
+    let dashboardHeaderViewController: DashboardHeaderViewController = DashboardHeaderViewController.instantiateViewController()
+    self.addChildViewController(dashboardHeaderViewController)
+    dashboardHeaderViewController.view.frame = topView.bounds
+    dashboardHeaderViewController.view.translatesAutoresizingMaskIntoConstraints = true
+    self.topView.addSubview(dashboardHeaderViewController.view)
+    dashboardHeaderViewController.didMove(toParentViewController: self)
+    self.dashboardHeaderViewController = dashboardHeaderViewController
   }
 
   override func viewDidLayoutSubviews() {
@@ -199,7 +150,6 @@ extension DashboardViewController {
     self.collectionView.contentInset = newInsets
     collectionView.reloadData()
   }
-
 }
 
 // MARK: - Private functions
@@ -226,11 +176,6 @@ extension DashboardViewController {
     collectionView?.reloadData()
   }
 
-  fileprivate func reloadProgressBarProgression(_ viewModel: DoubleProgressViewModel?) {
-    guard let viewModel = viewModel else { return }
-    doubleProgressBar?.setup(viewModel)
-  }
-
   fileprivate func flipVisibleCells() {
     var delayFromFirst: Float = 0.0
     let deltaTime: Float = 0.1
@@ -243,7 +188,6 @@ extension DashboardViewController {
   }
 
   func refreshProgressConstraint() {
-    headerHeightConstraint.constant = view.bounds.height * 0.15
   }
 
 }

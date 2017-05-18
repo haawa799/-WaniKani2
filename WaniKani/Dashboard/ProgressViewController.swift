@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgressViewController: UIViewController {
+class ProgressViewController: UIViewController, StoryboardInstantiable {
 
   @IBOutlet weak var doubleProgressView: DoubleProgressBar!
 

@@ -92,6 +92,11 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */; };
+		5D9C1DB41ECDA50F00D42ABA /* DashboardHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB31ECDA50F00D42ABA /* DashboardHeaderViewController.swift */; };
+		5D9C1DB61ECDA52500D42ABA /* DashboardHeaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */; };
+		5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */; };
+		5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */; };
 		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
 		5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */; };
 		5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */; };
@@ -219,6 +224,11 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataBrowserViewController.storyboard; sourceTree = "<group>"; };
+		5D9C1DB31ECDA50F00D42ABA /* DashboardHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardHeaderViewController.swift; sourceTree = "<group>"; };
+		5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardHeaderViewController.storyboard; sourceTree = "<group>"; };
+		5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SRSViewController.storyboard; sourceTree = "<group>"; };
+		5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
 		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
 		5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
 		5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
@@ -280,13 +290,17 @@
 			isa = PBXGroup;
 			children = (
 				43F4F37B1D91527900A9BB08 /* SRSViewController.swift */,
+				5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */,
 				43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */,
+				5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */,
 				430876931D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift */,
 				430876941D9021A200FE71FE /* DashboardCoordinator.swift */,
 				430876951D9021A200FE71FE /* DashboardViewController.storyboard */,
 				430876961D9021A200FE71FE /* DashboardViewController.swift */,
 				430876971D9021A200FE71FE /* View */,
 				430876A51D9021A200FE71FE /* ViewModel */,
+				5D9C1DB31ECDA50F00D42ABA /* DashboardHeaderViewController.swift */,
+				5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -422,6 +436,7 @@
 		43620A3C1D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXGroup;
 			children = (
+				5D9C1DAA1ECD830B00D42ABA /* Data browser */,
 				5DF2D8561ECC422300D209A1 /* KanjiPractice */,
 				5DABA1171EC3285000C25F85 /* StrokeOrder */,
 				43D99C7C1D994D1B0071C26D /* Review */,
@@ -545,6 +560,14 @@
 				43D99C971D99563C0071C26D /* SideMenuHolderViewController.swift */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		5D9C1DAA1ECD830B00D42ABA /* Data browser */ = {
+			isa = PBXGroup;
+			children = (
+				5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */,
+			);
+			path = "Data browser";
 			sourceTree = "<group>";
 		};
 		5DABA10D1EC326C100C25F85 /* Review */ = {
@@ -682,6 +705,7 @@
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
+				5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
 				5DF2D85F1ECC422300D209A1 /* KanjiPracticeViewController.storyboard in Resources */,
@@ -691,11 +715,14 @@
 				5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */,
 				43D99C541D9919560071C26D /* fast_forward.js in Resources */,
 				430876B61D9021A200FE71FE /* DashboardHeader.xib in Resources */,
+				5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */,
 				43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */,
+				5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */,
 				430876B11D9021A200FE71FE /* AvaliableItemCell.xib in Resources */,
 				43D99C561D9919560071C26D /* reorder.js in Resources */,
 				43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */,
 				43BE76031E3F39F30032950B /* Localizable.strings in Resources */,
+				5D9C1DB61ECDA52500D42ABA /* DashboardHeaderViewController.storyboard in Resources */,
 				43D99C581D9919560071C26D /* score.js in Resources */,
 				43D99C621D9919560071C26D /* GameCenterCollectionViewCell.xib in Resources */,
 				5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */,
@@ -771,6 +798,7 @@
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
 				5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */,
 				43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */,
+				5D9C1DB41ECDA50F00D42ABA /* DashboardHeaderViewController.swift in Sources */,
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hFw-1c-Xhn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard Header View Controller-->
+        <scene sceneID="Gp8-eI-Jzn">
+            <objects>
+                <viewController id="hFw-1c-Xhn" customClass="DashboardHeaderViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wgz-BE-HHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="WzJ-Cz-00F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b3g-6w-6hd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-ra-lv9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-p9-CW0">
+                                        <rect key="frame" x="0.0" y="0.0" width="750" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zd-mh-X1V">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNh-bU-0yl">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aCA-p9-CW0" firstAttribute="leading" secondItem="TeR-ra-lv9" secondAttribute="leading" id="Szh-S2-kA7"/>
+                                    <constraint firstItem="aCA-p9-CW0" firstAttribute="width" secondItem="TeR-ra-lv9" secondAttribute="width" multiplier="2" id="cDy-US-10z"/>
+                                    <constraint firstItem="aCA-p9-CW0" firstAttribute="top" secondItem="TeR-ra-lv9" secondAttribute="top" id="jl4-N3-SSU"/>
+                                    <constraint firstAttribute="bottom" secondItem="aCA-p9-CW0" secondAttribute="bottom" id="lG2-We-Dkv"/>
+                                    <constraint firstItem="aCA-p9-CW0" firstAttribute="height" secondItem="TeR-ra-lv9" secondAttribute="height" id="upl-Wk-MHZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aCA-p9-CW0" secondAttribute="trailing" id="v0u-ur-3IY"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="G8y-2x-Cze">
+                                <rect key="frame" x="176" y="95" width="23" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.89298502607777763" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TeR-ra-lv9" firstAttribute="leading" secondItem="b3g-6w-6hd" secondAttribute="leading" id="0yf-0R-eWi"/>
+                            <constraint firstItem="G8y-2x-Cze" firstAttribute="top" secondItem="TeR-ra-lv9" secondAttribute="bottom" constant="-5" id="2TH-eT-1dk"/>
+                            <constraint firstItem="TeR-ra-lv9" firstAttribute="top" secondItem="b3g-6w-6hd" secondAttribute="top" id="47k-5g-aXi"/>
+                            <constraint firstAttribute="trailing" secondItem="TeR-ra-lv9" secondAttribute="trailing" id="5il-Jw-Cop"/>
+                            <constraint firstItem="WzJ-Cz-00F" firstAttribute="top" secondItem="TeR-ra-lv9" secondAttribute="bottom" id="RMt-eb-eX2"/>
+                            <constraint firstItem="G8y-2x-Cze" firstAttribute="centerX" secondItem="b3g-6w-6hd" secondAttribute="centerX" id="hwY-sZ-nYh"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="100"/>
+                    <connections>
+                        <outlet property="pageControl" destination="G8y-2x-Cze" id="cha-go-UAx"/>
+                        <outlet property="progressContainer" destination="7Zd-mh-X1V" id="SJp-Df-lQr"/>
+                        <outlet property="scrollView" destination="TeR-ra-lv9" id="0F2-52-YUW"/>
+                        <outlet property="srsContainer" destination="oNh-bU-0yl" id="oTC-Sd-Blc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSw-tZ-kx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="37.781109445277366"/>
+        </scene>
+    </scenes>
+</document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SRSViewController: UIViewController {
+class SRSViewController: UIViewController, StoryboardInstantiable {
 
   private var lastSrsViewModel: SRSDistributionViewModel?
 
@@ -40,6 +40,7 @@ extension SRSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     update()
+
   }
 
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6l4-Ed-9pY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Progress View Controller-->
+        <scene sceneID="zc6-Xr-2oc">
+            <objects>
+                <viewController storyboardIdentifier="progress" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6l4-Ed-9pY" customClass="ProgressViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ivF-94-3YS"/>
+                        <viewControllerLayoutGuide type="bottom" id="h8M-NR-fkJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oL3-iq-CHL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MZV-M7-cwP" customClass="DoubleProgressBar" customModule="WaniKani" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="15" width="375" height="82"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.4445800781" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MZV-M7-cwP" firstAttribute="top" secondItem="oL3-iq-CHL" secondAttribute="top" constant="15" id="O3t-Ds-1l1"/>
+                            <constraint firstItem="MZV-M7-cwP" firstAttribute="leading" secondItem="oL3-iq-CHL" secondAttribute="leading" id="UE5-7n-kFH"/>
+                            <constraint firstItem="h8M-NR-fkJ" firstAttribute="top" secondItem="MZV-M7-cwP" secondAttribute="bottom" constant="5" id="k0g-R2-2Bi"/>
+                            <constraint firstAttribute="trailing" secondItem="MZV-M7-cwP" secondAttribute="trailing" id="mQa-IL-Zgs"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="102"/>
+                    <connections>
+                        <outlet property="doubleProgressView" destination="MZV-M7-cwP" id="fwY-Hk-KsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Eq-gK-Sjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="39"/>
+        </scene>
+    </scenes>
+</document>
