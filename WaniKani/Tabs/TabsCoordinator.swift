@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WaniPersistance
 
 open class TabsCoordinator: Coordinator {
 
@@ -15,19 +16,22 @@ open class TabsCoordinator: Coordinator {
   fileprivate let dashboardCoordinator: DashboardCoordinator
   fileprivate let settingsNavigationController = UINavigationController()
   fileprivate let settingsCoordinator: SettingsCoordinator
+  fileprivate let dataBrowserNavigationController = UINavigationController()
+  fileprivate let dataBrowserCoordinator: DataBrowserCoordinator
 
   let presenter: UITabBarController
   let dataProvider: DataProvider
 
-  init(dataProvider: DataProvider, presenter: UITabBarController) {
+  init(dataProvider: DataProvider, presenter: UITabBarController, persistance: Persistance) {
     self.dataProvider = dataProvider
     self.presenter = presenter
     dashboardNavigationController.isNavigationBarHidden = true
     settingsNavigationController.isNavigationBarHidden = true
-    let viewControllers = [dashboardNavigationController, settingsNavigationController]
+    let viewControllers = [dashboardNavigationController, settingsNavigationController, dataBrowserNavigationController]
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
+    dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance)
   }
 
 }
@@ -37,6 +41,7 @@ extension TabsCoordinator {
   func start() {
     dashboardCoordinator.start()
     settingsCoordinator.start()
+    dataBrowserCoordinator.start()
   }
 
 }

@@ -27,11 +27,11 @@ class ApplicationCoordinator: Coordinator {
     waniLoginCoordinator = WaniLoginCoordinator()
   }
 
-  func presentTabs(apiKey: String) {
+  func presentTabs(apiKey: String, persistance: Persistance) {
     window.rootViewController = rootViewController
-    let dataProvider = DataProvider(apiKey: apiKey)
+    let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
-    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, presenter: rootViewController)
+    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, presenter: rootViewController, persistance: persistance)
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
   }
@@ -55,9 +55,9 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     guard let apiKey = waniLoginCoordinator.apiKey else { return }
     let fm = FileManager.default
     let docsurl = try? fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-    persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
+    let persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
-    presentTabs(apiKey: apiKey)
+    presentTabs(apiKey: apiKey, persistance: persistance)
     CookiesStorage.saveCookies()
   }
 

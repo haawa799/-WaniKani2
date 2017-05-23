@@ -9,6 +9,7 @@
 import Foundation
 import WaniKit
 import WaniModel
+import WaniPersistance
 import Promise
 
 protocol DataProviderDelegate: class {
@@ -18,10 +19,12 @@ protocol DataProviderDelegate: class {
 class DataProvider {
 
   private let apiManager: WaniKitManager
+  let persistance: Persistance
   weak var delegate: DataProviderDelegate?
 
-  init(apiKey: String) {
+  init(apiKey: String, persistance: Persistance) {
     apiManager = WaniKitManager(apiKey: apiKey)
+    self.persistance = persistance
     apiManager.delegate = self
   }
 
@@ -33,6 +36,13 @@ class DataProvider {
         handler(nil)
     }
   }
+
+    func fetchKanji() {
+        let q = apiManager.fetchKanjiPromise(level: 21)
+        q.then({ [weak self] (kanji) in
+            self?.persistance.persist(kanji: kanji)
+        })
+    }
 
 }
 

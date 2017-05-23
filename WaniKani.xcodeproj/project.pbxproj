@@ -92,6 +92,13 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5D93F02A1ECEF8B200687D03 /* DataBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */; };
+		5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */; };
+		5D93F0321ED3065600687D03 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D93F0311ED3065600687D03 /* SHSearchBar.framework */; };
+		5D93F0361ED3114300687D03 /* SearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0341ED3114300687D03 /* SearchItemCell.swift */; };
+		5D93F0371ED3114300687D03 /* SearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D93F0351ED3114300687D03 /* SearchItemCell.xib */; };
+		5D93F03A1ED3122800687D03 /* SearchItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */; };
+		5D93F03C1ED3149700687D03 /* SearchItemsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F03B1ED3149700687D03 /* SearchItemsDataProvider.swift */; };
 		5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */; };
 		5D9C1DB41ECDA50F00D42ABA /* DashboardHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB31ECDA50F00D42ABA /* DashboardHeaderViewController.swift */; };
 		5D9C1DB61ECDA52500D42ABA /* DashboardHeaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */; };
@@ -224,6 +231,13 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserViewController.swift; sourceTree = "<group>"; };
+		5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserCoordinator.swift; sourceTree = "<group>"; };
+		5D93F0311ED3065600687D03 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHSearchBar.framework; sourceTree = "<group>"; };
+		5D93F0341ED3114300687D03 /* SearchItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemCell.swift; sourceTree = "<group>"; };
+		5D93F0351ED3114300687D03 /* SearchItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemCell.xib; sourceTree = "<group>"; };
+		5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemCellViewModel.swift; sourceTree = "<group>"; };
+		5D93F03B1ED3149700687D03 /* SearchItemsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsDataProvider.swift; sourceTree = "<group>"; };
 		5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataBrowserViewController.storyboard; sourceTree = "<group>"; };
 		5D9C1DB31ECDA50F00D42ABA /* DashboardHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardHeaderViewController.swift; sourceTree = "<group>"; };
 		5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardHeaderViewController.storyboard; sourceTree = "<group>"; };
@@ -262,6 +276,7 @@
 				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
 				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
 				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
+				5D93F0321ED3065600687D03 /* SHSearchBar.framework in Frameworks */,
 				43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */,
 				43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */,
 				43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */,
@@ -395,6 +410,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D93F0311ED3065600687D03 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
 				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
 				5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */,
@@ -562,10 +578,32 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		5D93F0331ED3110C00687D03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D93F0341ED3114300687D03 /* SearchItemCell.swift */,
+				5D93F0351ED3114300687D03 /* SearchItemCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D93F0381ED3121C00687D03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */,
+				5D93F03B1ED3149700687D03 /* SearchItemsDataProvider.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5D9C1DAA1ECD830B00D42ABA /* Data browser */ = {
 			isa = PBXGroup;
 			children = (
+				5D93F0381ED3121C00687D03 /* ViewModel */,
+				5D93F0331ED3110C00687D03 /* View */,
+				5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */,
 				5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */,
+				5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";
@@ -707,6 +745,7 @@
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
+				5D93F0371ED3114300687D03 /* SearchItemCell.xib in Resources */,
 				43D99C531D9919560071C26D /* api_key_script.js in Resources */,
 				5DF2D85F1ECC422300D209A1 /* KanjiPracticeViewController.storyboard in Resources */,
 				5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */,
@@ -767,6 +806,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/KanjiBezierPaths.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/StrokeDrawingView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDraw.framework",
+				"$(SRCROOT)/SHSearchBar.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -787,16 +827,20 @@
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
+				5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */,
 				43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */,
 				43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */,
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
 				433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */,
 				5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */,
+				5D93F0361ED3114300687D03 /* SearchItemCell.swift in Sources */,
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
 				5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */,
+				5D93F03C1ED3149700687D03 /* SearchItemsDataProvider.swift in Sources */,
+				5D93F03A1ED3122800687D03 /* SearchItemCellViewModel.swift in Sources */,
 				43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */,
 				5D9C1DB41ECDA50F00D42ABA /* DashboardHeaderViewController.swift in Sources */,
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
@@ -837,6 +881,7 @@
 				430876BE1D9021A200FE71FE /* DoubleProgressViewModel.swift in Sources */,
 				430876D91D9021B300FE71FE /* ViewModel.swift in Sources */,
 				43D99C6E1D9923E70071C26D /* AIFlatSwitch.swift in Sources */,
+				5D93F02A1ECEF8B200687D03 /* DataBrowserViewController.swift in Sources */,
 				430876BF1D9021A200FE71FE /* LeftRightTitleViewModel.swift in Sources */,
 				5DABA11D1EC3292A00C25F85 /* StrokeOrderViewController.swift in Sources */,
 				43D99C601D9919560071C26D /* SettingsViewController.swift in Sources */,

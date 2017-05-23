@@ -40,6 +40,7 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
     dashboardViewController.delegate = self
     presenter.pushViewController(dashboardViewController, animated: false)
     _ = dashboardViewController.view
+    dataProvider.fetchKanji()
     fetchAllDashboardData()
   }
 

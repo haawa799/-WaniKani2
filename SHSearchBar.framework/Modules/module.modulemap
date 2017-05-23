@@ -1,0 +1,10 @@
+framework module SHSearchBar {
+  umbrella header "SHSearchBar.h"
+
+  export *
+  module * { export * }
+}
+
+module SHSearchBar.Swift {
+    header "SHSearchBar-Swift.h"
+}
