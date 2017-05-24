@@ -42,7 +42,6 @@ class SearchLayout: UICollectionViewFlowLayout {
         let wordsItemSpace = (wordsInOneRow - 1) * minimumInteritemSpacing
         let width = collectionView?.bounds.width ?? totalWidth
         let wordCellWidth = (width - sectionInsetHorizontal - wordsItemSpace) / wordsInOneRow
-        debugPrint(wordCellWidth)
         wordCellSize = CGSize(width: wordCellWidth, height: height)
 
         headerReferenceSize = CGSize(width: (totalWidth - sectionInsetHorizontal), height: height * 0.5)
