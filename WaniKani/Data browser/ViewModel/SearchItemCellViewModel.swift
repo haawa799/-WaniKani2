@@ -9,14 +9,72 @@
 import UIKit
 import WaniModel
 
+enum ItemType {
+    case radical
+    case kanji
+    case word
+}
+
 struct SearchItemCellViewModel: ViewModel {
-    fileprivate var _color: UIColor
-    fileprivate var _text: String
-    fileprivate var _identifier: String
+    fileprivate let _color: UIColor
+    fileprivate let _text: String
+    fileprivate let _subTitle: String
+    fileprivate let _identifier: String
+    fileprivate var _itemType: ItemType
 
     init(kanji: KanjiInfo) {
-        _color = .blue
+        _color = UIColor(red:0.89, green:0.09, blue:0.60, alpha:1.00)
         _text = kanji.character
         _identifier = kanji.character
+        if let meaning = kanji.meaning {
+            _subTitle = meaning.components(separatedBy: ", ").first ?? ""
+        } else {
+            _subTitle = ""
+        }
+        _itemType = .kanji
+    }
+
+    init(radical: RadicalInfo) {
+        _color = UIColor(red:0.23, green:0.68, blue:0.94, alpha:1.00)
+        _text = radical.character ?? ""
+        _identifier = radical.character ?? ""
+        if let meaning = radical.meaning {
+            _subTitle = meaning.components(separatedBy: ", ").first ?? ""
+        } else {
+            _subTitle = ""
+        }
+        _itemType = .radical
+    }
+
+    init(word: WordInfo) {
+        _color = UIColor(red:0.63, green:0.14, blue:0.93, alpha:1.00)
+        _text = word.character
+        _identifier = word.character
+        if let meaning = word.meaning {
+            _subTitle = meaning.components(separatedBy: ", ").first ?? ""
+        } else {
+            _subTitle = ""
+        }
+        _itemType = .word
+    }
+}
+
+// MARK: - SearchItemCellDataSource
+extension SearchItemCellViewModel: SearchItemCellDataSource {
+    var subTitle: String {
+        return _subTitle
+    }
+
+    var identifier: String {
+        return _identifier
+    }
+    var color: UIColor {
+        return _color
+    }
+    var mainText: String {
+        return _text
+    }
+    var itemType: ItemType {
+        return _itemType
     }
 }

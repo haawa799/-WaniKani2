@@ -10,13 +10,15 @@ import UIKit
 import WaniModel
 
 protocol SearchItemCellDataSource: ViewModel {
-    var id: String { get }
+    var identifier: String { get }
     var color: UIColor { get }
     var mainText: String { get }
+    var subTitle: String { get }
 }
 
 class SearchItemCell: UICollectionViewCell, SingleReuseIdentifier {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var containerView: UIView!
 }
 
@@ -25,5 +27,6 @@ extension SearchItemCell: ViewModelSetupable {
         guard let viewModel = viewModel as? SearchItemCellDataSource else { return }
         containerView.backgroundColor = viewModel.color
         label.text = viewModel.mainText
+        subtitle.text = viewModel.subTitle
     }
 }

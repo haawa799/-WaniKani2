@@ -92,6 +92,10 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
+		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
+		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
+		5D5ECC891ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC881ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift */; };
 		5D93F02A1ECEF8B200687D03 /* DataBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */; };
 		5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */; };
 		5D93F0321ED3065600687D03 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D93F0311ED3065600687D03 /* SHSearchBar.framework */; };
@@ -231,6 +235,10 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
+		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
+		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
+		5D5ECC881ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeaderViewModel.swift; sourceTree = "<group>"; };
 		5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserViewController.swift; sourceTree = "<group>"; };
 		5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserCoordinator.swift; sourceTree = "<group>"; };
 		5D93F0311ED3065600687D03 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHSearchBar.framework; sourceTree = "<group>"; };
@@ -583,6 +591,8 @@
 			children = (
 				5D93F0341ED3114300687D03 /* SearchItemCell.swift */,
 				5D93F0351ED3114300687D03 /* SearchItemCell.xib */,
+				5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */,
+				5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -590,6 +600,7 @@
 		5D93F0381ED3121C00687D03 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5D5ECC881ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift */,
 				5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */,
 				5D93F03B1ED3149700687D03 /* SearchItemsDataProvider.swift */,
 			);
@@ -604,6 +615,7 @@
 				5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */,
 				5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */,
 				5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */,
+				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";
@@ -742,6 +754,7 @@
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
+				5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */,
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
@@ -833,6 +846,7 @@
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
 				433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */,
+				5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */,
 				5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */,
 				5D93F0361ED3114300687D03 /* SearchItemCell.swift in Sources */,
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
@@ -849,6 +863,7 @@
 				430876CF1D9021B300FE71FE /* DataProvider.swift in Sources */,
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
 				5DABA1191EC3288100C25F85 /* StrokeOrderCoordinator.swift in Sources */,
+				5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */,
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
 				430876D31D9021B300FE71FE /* DrawingUtils.swift in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
@@ -889,6 +904,7 @@
 				43D99C6A1D99229A0071C26D /* UserScript.swift in Sources */,
 				430876CE1D9021B300FE71FE /* ColorfullTabBarController.swift in Sources */,
 				5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */,
+				5D5ECC891ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift in Sources */,
 				430876D61D9021B300FE71FE /* ScreenBackgound.swift in Sources */,
 				430876D01D9021B300FE71FE /* SingleTabViewController.swift in Sources */,
 				43F4F37E1D9152A200A9BB08 /* SRSView.swift in Sources */,

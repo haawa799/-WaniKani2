@@ -15,6 +15,8 @@ protocol DataBrowserViewControllerDelegate: class {
 
 class DataBrowserViewController: UIViewController, BluredBackground, StoryboardInstantiable {
 
+    fileprivate let layout: SearchLayout = SearchLayout()
+
     fileprivate var listViewModel = ListViewModel(sections: []) {
         didSet {
             collectionView.reloadData()
@@ -47,7 +49,11 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
+            collectionView?.setCollectionViewLayout(layout, animated: false)
             collectionView?.dataSource = self
+            collectionView?.delegate = self
+
+            collectionView?.register(SearchItemsHeader.nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SearchItemsHeader.identifier)
             collectionView?.register(SearchItemCell.nib, forCellWithReuseIdentifier: SearchItemCell.identifier)
         }
     }
@@ -64,10 +70,16 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
         super.viewDidLoad()
         _ = addBackground(BackgroundOptions.data.rawValue)
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layout.totalWidth = min(view.bounds.width, view.bounds.height)
+        layout.invalidateLayout()
+    }
 }
 
 // MARK: - UICollectionViewDataSource
-extension DataBrowserViewController: UICollectionViewDataSource {
+extension DataBrowserViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return listViewModel.numberOfSections()
@@ -81,8 +93,26 @@ extension DataBrowserViewController: UICollectionViewDataSource {
         var cell: UICollectionViewCell!
         guard let item = listViewModel.cellDataItemForIndexPath(indexPath: indexPath) else { return cell }
         cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.reuseIdentifier, for: indexPath)
+        (cell as? ViewModelSetupable)?.setupWithViewModel(item.viewModel)
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let item = listViewModel.cellDataItemForIndexPath(indexPath: indexPath)?.viewModel as? SearchItemCellViewModel else { return .zero }
+        switch item.itemType {
+            case .kanji, .radical: return layout.kanjiCellSize
+            case .word: return layout.wordCellSize
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var header: UICollectionReusableView!
+        guard let item = listViewModel.headerItem(section: indexPath.section) else { return header }
+        header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: item.reuseIdentifier, for: indexPath)
+        (header as? ViewModelSetupable)?.setupWithViewModel(item.viewModel)
+        return header
+    }
+
 }
 
 // MARK: - SHSearchBarDelegate
