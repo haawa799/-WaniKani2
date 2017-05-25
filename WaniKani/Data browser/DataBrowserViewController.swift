@@ -11,6 +11,7 @@ import SHSearchBar
 
 protocol DataBrowserViewControllerDelegate: class {
     func searchTextDidChange(newText: String)
+    func searchCancelPressed()
 }
 
 class DataBrowserViewController: UIViewController, BluredBackground, StoryboardInstantiable {
@@ -36,7 +37,7 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
             let searchGlassIconTemplate = #imageLiteral(resourceName: "icon-search")
             searchBar.textField.leftView = imageViewWithIcon(searchGlassIconTemplate, rasterSize: 11)
             searchBar.textField.leftViewMode = .always
-            searchBar.textField.placeholder = "Example"
+            searchBar.textField.placeholder = "Search text or level number"
             let backgroundColor = UIColor(white: 1.0, alpha: 0.7)
             searchBar.updateBackgroundWith(6, corners: [.allCorners], color: backgroundColor)
             searchBar.layer.shadowColor = UIColor.black.cgColor
@@ -119,5 +120,11 @@ extension DataBrowserViewController: UICollectionViewDataSource, UICollectionVie
 extension DataBrowserViewController: SHSearchBarDelegate {
     func searchBar(_ searchBar: SHSearchBar, textDidChange text: String) {
         delegate?.searchTextDidChange(newText: text)
+    }
+
+    func searchBarShouldCancel(_ searchBar: SHSearchBar) -> Bool {
+        searchBar.textField.text = nil
+        delegate?.searchCancelPressed()
+        return true
     }
 }

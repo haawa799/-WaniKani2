@@ -50,7 +50,6 @@
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
 		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
 		43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */; };
-		43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */; };
 		43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B831E8AAEC60021BB20 /* Locksmith.framework */; };
 		43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */; };
 		43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B851E8AAEC60021BB20 /* Promise.framework */; };
@@ -92,13 +91,13 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5D26A1FC1ED6D26100104C70 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A1FB1ED6D26100104C70 /* SHSearchBar.framework */; };
 		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
 		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
 		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
 		5D5ECC891ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC881ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift */; };
 		5D93F02A1ECEF8B200687D03 /* DataBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */; };
 		5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */; };
-		5D93F0321ED3065600687D03 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D93F0311ED3065600687D03 /* SHSearchBar.framework */; };
 		5D93F0361ED3114300687D03 /* SearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0341ED3114300687D03 /* SearchItemCell.swift */; };
 		5D93F0371ED3114300687D03 /* SearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D93F0351ED3114300687D03 /* SearchItemCell.xib */; };
 		5D93F03A1ED3122800687D03 /* SearchItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */; };
@@ -193,7 +192,6 @@
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
 		43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DGElasticPullToRefreshKit.framework; path = Carthage/Build/iOS/DGElasticPullToRefreshKit.framework; sourceTree = "<group>"; };
-		43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMPageViewController.framework; path = Carthage/Build/iOS/EMPageViewController.framework; sourceTree = "<group>"; };
 		43BA2B831E8AAEC60021BB20 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NJKScrollFullscreenKit.framework; path = Carthage/Build/iOS/NJKScrollFullscreenKit.framework; sourceTree = "<group>"; };
 		43BA2B851E8AAEC60021BB20 /* Promise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promise.framework; path = Carthage/Build/iOS/Promise.framework; sourceTree = "<group>"; };
@@ -235,13 +233,13 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5D26A1FB1ED6D26100104C70 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHSearchBar.framework; sourceTree = "<group>"; };
 		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
 		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
 		5D5ECC881ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeaderViewModel.swift; sourceTree = "<group>"; };
 		5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserViewController.swift; sourceTree = "<group>"; };
 		5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBrowserCoordinator.swift; sourceTree = "<group>"; };
-		5D93F0311ED3065600687D03 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHSearchBar.framework; sourceTree = "<group>"; };
 		5D93F0341ED3114300687D03 /* SearchItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemCell.swift; sourceTree = "<group>"; };
 		5D93F0351ED3114300687D03 /* SearchItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemCell.xib; sourceTree = "<group>"; };
 		5D93F0391ED3122800687D03 /* SearchItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemCellViewModel.swift; sourceTree = "<group>"; };
@@ -281,11 +279,10 @@
 				5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */,
 				5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */,
 				5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */,
+				5D26A1FC1ED6D26100104C70 /* SHSearchBar.framework in Frameworks */,
 				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
 				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
 				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
-				5D93F0321ED3065600687D03 /* SHSearchBar.framework in Frameworks */,
-				43BA2B8C1E8AAEC60021BB20 /* EMPageViewController.framework in Frameworks */,
 				43BA2B8D1E8AAEC60021BB20 /* Locksmith.framework in Frameworks */,
 				43BA2B8E1E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework in Frameworks */,
 				43BA2B8F1E8AAEC60021BB20 /* Promise.framework in Frameworks */,
@@ -418,7 +415,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D93F0311ED3065600687D03 /* SHSearchBar.framework */,
+				5D26A1FB1ED6D26100104C70 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
 				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
 				5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */,
@@ -427,7 +424,6 @@
 				430A75681E8E511B0025039A /* RealmSwift.framework */,
 				43BA2B801E8AAEC60021BB20 /* Cely.framework */,
 				43BA2B811E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework */,
-				43BA2B821E8AAEC60021BB20 /* EMPageViewController.framework */,
 				43BA2B831E8AAEC60021BB20 /* Locksmith.framework */,
 				43BA2B841E8AAEC60021BB20 /* NJKScrollFullscreenKit.framework */,
 				43BA2B851E8AAEC60021BB20 /* Promise.framework */,
@@ -805,7 +801,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Cely.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DGElasticPullToRefreshKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EMPageViewController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NJKScrollFullscreenKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Promise.framework",

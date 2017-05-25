@@ -45,4 +45,8 @@ extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
     func searchTextDidChange(newText: String) {
         searchDataProvider.searchText = newText
     }
+
+    func searchCancelPressed() {
+        searchDataProvider.searchText = nil
+    }
 }

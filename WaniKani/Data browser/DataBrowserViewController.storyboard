@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-KO-NvN">
-                                        <rect key="frame" x="0.0" y="5" width="768" height="133"/>
+                                        <rect key="frame" x="0.0" y="5" width="768" height="90"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNd-Wx-aSA" customClass="SHSearchBar" customModule="SHSearchBar">
                                                 <rect key="frame" x="8" y="5" width="752" height="80"/>
@@ -36,27 +36,11 @@
                                                     </constraint>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-4z-jSt">
-                                                <rect key="frame" x="8" y="90" width="752" height="38"/>
-                                                <subviews>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hKS-5g-fjY">
-                                                        <rect key="frame" x="5" y="5" width="742" height="29"/>
-                                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
-                                                        <segments>
-                                                            <segment title="All"/>
-                                                            <segment title="Radicals"/>
-                                                            <segment title="Kanji"/>
-                                                            <segment title="Words"/>
-                                                        </segments>
-                                                    </segmentedControl>
-                                                </subviews>
-                                                <edgeInsets key="layoutMargins" top="5" left="5" bottom="5" right="5"/>
-                                            </stackView>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="5" left="8" bottom="5" right="8"/>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ufr-3F-cpH">
-                                        <rect key="frame" x="0.0" y="138" width="768" height="866"/>
+                                        <rect key="frame" x="0.0" y="95" width="768" height="909"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="t0N-ya-oFZ" customClass="SearchLayout" customModule="WaniKani" customModuleProvider="target">
                                             <size key="itemSize" width="50" height="50"/>

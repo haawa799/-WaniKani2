@@ -26,7 +26,10 @@ class SearchItemsDataProvider {
 
     var searchText: String? {
         didSet {
-            guard let searchText = searchText else { return }
+            guard let searchText = searchText else {
+                updateList(results: ([], [], []))
+                return
+            }
             let results = persistance.searchResults(text: searchText)
             updateList(results: results)
         }
