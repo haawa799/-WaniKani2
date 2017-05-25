@@ -12,7 +12,6 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
 
   struct Constants {
     static let dashboardTitle = "Dashboard"
-    static let dashboardTabIconName = "dashboard"
 
     struct Path {
       static let lesson = IndexPath(item: 0, section: 1)
@@ -32,7 +31,7 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
     self.presenter = presenter
     self.settingsSuit = settingsSuit
     dashboardViewController = DashboardViewController.instantiateViewController()
-    let tabItem: UITabBarItem = UITabBarItem(title: Constants.dashboardTitle, image: UIImage(named: Constants.dashboardTabIconName), selectedImage: nil)
+    let tabItem: UITabBarItem = UITabBarItem(title: Constants.dashboardTitle, image: #imageLiteral(resourceName: "dashboard"), selectedImage: nil)
     presenter.tabBarItem = tabItem
   }
 

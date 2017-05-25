@@ -7,5 +7,6 @@ github "haawa799/WaniPersistance" "e2a24ff192ba1018ef1f83bc417073e56d294c25"
 github "haawa799/StrokeDrawingView" "a0c3c747603e0da16be6587c2f23476c6d201a6b"
 github "haawa799/KanjiBezierPaths" "9bff6e86e3b0fb91f0086680800871294e2f6d47"
 github "haawa799/SwiftyDraw" "cad884cb93f61e10e7ed131f000b0ca049793f37"
+github "haawa799/SHSearchBar" "34c599075f9e888801971709fc4a1c1807ef5fd7"
 
 github "realm/realm-cocoa"

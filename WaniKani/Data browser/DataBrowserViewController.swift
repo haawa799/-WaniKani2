@@ -53,7 +53,6 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
             collectionView?.setCollectionViewLayout(layout, animated: false)
             collectionView?.dataSource = self
             collectionView?.delegate = self
-
             collectionView?.register(SearchItemsHeader.nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SearchItemsHeader.identifier)
             collectionView?.register(SearchItemCell.nib, forCellWithReuseIdentifier: SearchItemCell.identifier)
         }
@@ -70,6 +69,12 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
     override func viewDidLoad() {
         super.viewDidLoad()
         _ = addBackground(BackgroundOptions.data.rawValue)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc fileprivate func tap() {
+        searchBar.textField.resignFirstResponder()
     }
 
     override func viewDidLayoutSubviews() {
@@ -125,6 +130,11 @@ extension DataBrowserViewController: SHSearchBarDelegate {
     func searchBarShouldCancel(_ searchBar: SHSearchBar) -> Bool {
         searchBar.textField.text = nil
         delegate?.searchCancelPressed()
+        return true
+    }
+
+    func searchBarShouldReturn(_ searchBar: SHSearchBar) -> Bool {
+        tap()
         return true
     }
 }

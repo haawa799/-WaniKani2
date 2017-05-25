@@ -19,6 +19,8 @@ class DataBrowserCoordinator: Coordinator {
         self.presenter = presenter
         self.searchDataProvider = SearchItemsDataProvider(persistance: persistance)
         searchDataProvider.delegate = self
+        let tabItem: UITabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "icon-search"), selectedImage: nil)
+        presenter.tabBarItem = tabItem
     }
 }
 
