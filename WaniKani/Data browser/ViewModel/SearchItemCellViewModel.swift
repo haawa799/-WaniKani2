@@ -21,6 +21,7 @@ struct SearchItemCellViewModel: ViewModel {
     fileprivate let _subTitle: String
     fileprivate let _identifier: String
     fileprivate var _itemType: ItemType
+    fileprivate let _imageURL: URL?
 
     init(kanji: KanjiInfo) {
         _color = UIColor(red:0.89, green:0.09, blue:0.60, alpha:1.00)
@@ -32,6 +33,7 @@ struct SearchItemCellViewModel: ViewModel {
             _subTitle = ""
         }
         _itemType = .kanji
+        _imageURL = nil
     }
 
     init(radical: RadicalInfo) {
@@ -44,6 +46,11 @@ struct SearchItemCellViewModel: ViewModel {
             _subTitle = ""
         }
         _itemType = .radical
+        if let urlString = radical.image, let url = URL(string: urlString) {
+            _imageURL = url
+        } else {
+            _imageURL = nil
+        }
     }
 
     init(word: WordInfo) {
@@ -56,11 +63,16 @@ struct SearchItemCellViewModel: ViewModel {
             _subTitle = ""
         }
         _itemType = .word
+        _imageURL = nil
     }
 }
 
 // MARK: - SearchItemCellDataSource
 extension SearchItemCellViewModel: SearchItemCellDataSource {
+    var imageURL: URL? {
+        return _imageURL
+    }
+
     var subTitle: String {
         return _subTitle
     }

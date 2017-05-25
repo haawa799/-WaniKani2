@@ -92,6 +92,7 @@
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
 		5D26A2211ED6E6D800104C70 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */; };
+		5D26A2231ED702E800104C70 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A2221ED702E800104C70 /* Kingfisher.framework */; };
 		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
 		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
 		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
@@ -234,6 +235,7 @@
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SHSearchBar.framework; path = Carthage/Build/iOS/SHSearchBar.framework; sourceTree = "<group>"; };
+		5D26A2221ED702E800104C70 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
 		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D26A2231ED702E800104C70 /* Kingfisher.framework in Frameworks */,
 				5D26A2211ED6E6D800104C70 /* SHSearchBar.framework in Frameworks */,
 				5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */,
 				5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */,
@@ -415,6 +418,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D26A2221ED702E800104C70 /* Kingfisher.framework */,
 				5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
 				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
@@ -815,6 +819,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/StrokeDrawingView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDraw.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SHSearchBar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Run Script";
 			outputPaths = (

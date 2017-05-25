@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,12 +26,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9nb-pZ-EXv">
                                 <rect key="frame" x="0.0" y="0.0" width="78" height="117"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="等等等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-rc-Zym">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-yy-YfG">
                                         <rect key="frame" x="8" y="8" width="62" height="91.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="等等等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-rc-Zym">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="91.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-2t-5PG">
+                                                <rect key="frame" x="15.5" y="30.5" width="31" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xVL-2t-5PG" secondAttribute="height" multiplier="1:1" id="cuf-ih-Ryd"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="3Ed-rc-Zym" secondAttribute="bottom" id="Bay-pE-Z6e"/>
+                                            <constraint firstItem="xVL-2t-5PG" firstAttribute="width" secondItem="Sn8-yy-YfG" secondAttribute="width" multiplier="0.5" id="GjN-pt-9gj"/>
+                                            <constraint firstItem="xVL-2t-5PG" firstAttribute="centerX" secondItem="Sn8-yy-YfG" secondAttribute="centerX" id="JQC-ZH-EYq"/>
+                                            <constraint firstItem="3Ed-rc-Zym" firstAttribute="leading" secondItem="Sn8-yy-YfG" secondAttribute="leading" id="TGJ-Ch-6hD"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Ed-rc-Zym" secondAttribute="trailing" id="cE9-2X-eUO"/>
+                                            <constraint firstItem="xVL-2t-5PG" firstAttribute="centerY" secondItem="Sn8-yy-YfG" secondAttribute="centerY" id="cKN-tk-kwD"/>
+                                            <constraint firstItem="3Ed-rc-Zym" firstAttribute="top" secondItem="Sn8-yy-YfG" secondAttribute="top" id="nIk-L7-N4c"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="n7t-hx-5cN">
                                         <rect key="frame" x="8" y="99.5" width="62" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -39,13 +62,21 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="3" right="8"/>
                             </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-JB-23k">
+                                <rect key="frame" x="0.0" y="0.0" width="78" height="117"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.43016715459999999" blue="0.47579892610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cEq-JB-23k" secondAttribute="bottom" id="0g4-1e-hCC"/>
                             <constraint firstAttribute="trailing" secondItem="9nb-pZ-EXv" secondAttribute="trailing" id="7q3-5g-OhZ"/>
                             <constraint firstItem="9nb-pZ-EXv" firstAttribute="leading" secondItem="8h2-Md-1dr" secondAttribute="leading" id="AyT-Qy-1Zz"/>
+                            <constraint firstAttribute="trailing" secondItem="cEq-JB-23k" secondAttribute="trailing" id="CfN-3M-Li9"/>
                             <constraint firstItem="9nb-pZ-EXv" firstAttribute="top" secondItem="8h2-Md-1dr" secondAttribute="top" id="alk-zz-cqo"/>
                             <constraint firstAttribute="bottom" secondItem="9nb-pZ-EXv" secondAttribute="bottom" id="b55-EW-Lfq"/>
+                            <constraint firstItem="cEq-JB-23k" firstAttribute="top" secondItem="8h2-Md-1dr" secondAttribute="top" id="brO-dK-98q"/>
+                            <constraint firstItem="cEq-JB-23k" firstAttribute="leading" secondItem="8h2-Md-1dr" secondAttribute="leading" id="uio-jJ-b97"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,6 +91,8 @@
             <size key="customSize" width="77" height="106"/>
             <connections>
                 <outlet property="containerView" destination="8h2-Md-1dr" id="YRW-4G-EDj"/>
+                <outlet property="deemView" destination="cEq-JB-23k" id="orL-oC-Lb6"/>
+                <outlet property="imageView" destination="xVL-2t-5PG" id="cs3-IS-dD4"/>
                 <outlet property="label" destination="3Ed-rc-Zym" id="4up-kx-zey"/>
                 <outlet property="subtitle" destination="n7t-hx-5cN" id="Y5K-qn-Ael"/>
             </connections>

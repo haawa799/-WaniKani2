@@ -9,4 +9,6 @@ github "haawa799/KanjiBezierPaths" "9bff6e86e3b0fb91f0086680800871294e2f6d47"
 github "haawa799/SwiftyDraw" "cad884cb93f61e10e7ed131f000b0ca049793f37"
 github "haawa799/SHSearchBar" "34c599075f9e888801971709fc4a1c1807ef5fd7"
 
+github "onevcat/Kingfisher"
+
 github "realm/realm-cocoa"
