@@ -12,6 +12,7 @@ import SHSearchBar
 protocol DataBrowserViewControllerDelegate: class {
     func searchTextDidChange(newText: String)
     func searchCancelPressed()
+    func itemSelected(reviewItem: ReviewItem)
 }
 
 class DataBrowserViewController: UIViewController, BluredBackground, StoryboardInstantiable {
@@ -51,10 +52,10 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView?.setCollectionViewLayout(layout, animated: false)
-            collectionView?.dataSource = self
-            collectionView?.delegate = self
             collectionView?.register(SearchItemsHeader.nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SearchItemsHeader.identifier)
             collectionView?.register(SearchItemCell.nib, forCellWithReuseIdentifier: SearchItemCell.identifier)
+            collectionView?.dataSource = self
+            collectionView?.delegate = self
         }
     }
 
@@ -70,6 +71,7 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
         super.viewDidLoad()
         _ = addBackground(BackgroundOptions.data.rawValue)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
+        tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
 
@@ -82,10 +84,20 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
         layout.totalWidth = min(view.bounds.width, view.bounds.height)
         layout.invalidateLayout()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
-extension DataBrowserViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension DataBrowserViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return listViewModel.numberOfSections()
@@ -105,10 +117,19 @@ extension DataBrowserViewController: UICollectionViewDataSource, UICollectionVie
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let item = listViewModel.cellDataItemForIndexPath(indexPath: indexPath)?.viewModel as? SearchItemCellViewModel else { return .zero }
-        switch item.itemType {
+        switch item.reviewItem {
             case .kanji, .radical: return layout.kanjiCellSize
             case .word: return layout.wordCellSize
         }
+    }
+
+}
+
+// MARK: - UICollectionViewDelegate
+extension DataBrowserViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewModel = listViewModel.cellDataItemForIndexPath(indexPath: indexPath)?.viewModel as? SearchItemCellViewModel else { return }
+        delegate?.itemSelected(reviewItem: viewModel.reviewItem)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -118,7 +139,6 @@ extension DataBrowserViewController: UICollectionViewDataSource, UICollectionVie
         (header as? ViewModelSetupable)?.setupWithViewModel(item.viewModel)
         return header
     }
-
 }
 
 // MARK: - SHSearchBarDelegate

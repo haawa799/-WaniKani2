@@ -9,10 +9,10 @@
 import UIKit
 import WaniModel
 
-enum ItemType {
-    case radical
-    case kanji
-    case word
+enum ReviewItem {
+    case radical(radical: RadicalInfo)
+    case kanji(kanji: KanjiInfo)
+    case word(words: WordInfo)
 }
 
 struct SearchItemCellViewModel: ViewModel {
@@ -20,7 +20,7 @@ struct SearchItemCellViewModel: ViewModel {
     fileprivate let _text: String
     fileprivate let _subTitle: String
     fileprivate let _identifier: String
-    fileprivate var _itemType: ItemType
+    fileprivate var _item: ReviewItem
     fileprivate let _imageURL: URL?
 
     init(kanji: KanjiInfo) {
@@ -32,7 +32,7 @@ struct SearchItemCellViewModel: ViewModel {
         } else {
             _subTitle = ""
         }
-        _itemType = .kanji
+        _item = ReviewItem.kanji(kanji: kanji)
         _imageURL = nil
     }
 
@@ -45,7 +45,7 @@ struct SearchItemCellViewModel: ViewModel {
         } else {
             _subTitle = ""
         }
-        _itemType = .radical
+        _item = ReviewItem.radical(radical: radical)
         if let urlString = radical.image, let url = URL(string: urlString) {
             _imageURL = url
         } else {
@@ -62,7 +62,7 @@ struct SearchItemCellViewModel: ViewModel {
         } else {
             _subTitle = ""
         }
-        _itemType = .word
+        _item = ReviewItem.word(words: word)
         _imageURL = nil
     }
 }
@@ -72,11 +72,9 @@ extension SearchItemCellViewModel: SearchItemCellDataSource {
     var imageURL: URL? {
         return _imageURL
     }
-
     var subTitle: String {
         return _subTitle
     }
-
     var identifier: String {
         return _identifier
     }
@@ -86,7 +84,7 @@ extension SearchItemCellViewModel: SearchItemCellDataSource {
     var mainText: String {
         return _text
     }
-    var itemType: ItemType {
-        return _itemType
+    var reviewItem: ReviewItem {
+        return _item
     }
 }

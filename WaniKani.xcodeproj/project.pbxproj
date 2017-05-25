@@ -93,6 +93,8 @@
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
 		5D26A2211ED6E6D800104C70 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */; };
 		5D26A2231ED702E800104C70 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A2221ED702E800104C70 /* Kingfisher.framework */; };
+		5D26A2251ED70F1500104C70 /* KanjiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */; };
+		5D26A2271ED70F3800104C70 /* KanjiDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */; };
 		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
 		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
 		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
@@ -236,6 +238,8 @@
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SHSearchBar.framework; path = Carthage/Build/iOS/SHSearchBar.framework; sourceTree = "<group>"; };
 		5D26A2221ED702E800104C70 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiDetailViewController.swift; sourceTree = "<group>"; };
+		5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KanjiDetailViewController.storyboard; sourceTree = "<group>"; };
 		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
 		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
@@ -616,6 +620,8 @@
 				5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */,
 				5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */,
 				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
+				5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */,
+				5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";
@@ -767,6 +773,7 @@
 				5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */,
 				43D99C541D9919560071C26D /* fast_forward.js in Resources */,
 				430876B61D9021A200FE71FE /* DashboardHeader.xib in Resources */,
+				5D26A2271ED70F3800104C70 /* KanjiDetailViewController.storyboard in Resources */,
 				5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */,
 				43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */,
 				5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */,
@@ -860,6 +867,7 @@
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,
+				5D26A2251ED70F1500104C70 /* KanjiDetailViewController.swift in Sources */,
 				430876CF1D9021B300FE71FE /* DataProvider.swift in Sources */,
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
 				5DABA1191EC3288100C25F85 /* StrokeOrderCoordinator.swift in Sources */,

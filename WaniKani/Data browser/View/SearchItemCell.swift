@@ -22,9 +22,7 @@ class SearchItemCell: UICollectionViewCell, SingleReuseIdentifier {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
     @IBOutlet weak var containerView: UIView!
-
     @IBOutlet weak var deemView: UIView!
 
     override var isHighlighted: Bool {

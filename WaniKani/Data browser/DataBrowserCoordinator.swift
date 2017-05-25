@@ -8,6 +8,7 @@
 
 import UIKit
 import WaniPersistance
+import WaniModel
 
 class DataBrowserCoordinator: Coordinator {
 
@@ -21,6 +22,13 @@ class DataBrowserCoordinator: Coordinator {
         searchDataProvider.delegate = self
         let tabItem: UITabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "icon-search"), selectedImage: nil)
         presenter.tabBarItem = tabItem
+    }
+
+    fileprivate func showKanji(kanji: KanjiInfo) {
+        let kanjiViewController: KanjiDetailViewController = KanjiDetailViewController.instantiateViewController()
+        kanjiViewController.kanji = kanji
+        kanjiViewController.navigationItem.title = kanji.character
+        presenter.pushViewController(kanjiViewController, animated: true)
     }
 }
 
@@ -44,6 +52,13 @@ extension DataBrowserCoordinator: SearchItemsDataProviderDelegate {
 
 // MARK: - DataBrowserViewControllerDelegate
 extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
+    func itemSelected(reviewItem: ReviewItem) {
+        switch reviewItem {
+        case .kanji(let kanji): showKanji(kanji: kanji)
+        default: break
+        }
+    }
+
     func searchTextDidChange(newText: String) {
         searchDataProvider.searchText = newText
     }
