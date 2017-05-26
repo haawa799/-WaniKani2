@@ -94,6 +94,7 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+
 }
 
 // MARK: - UICollectionViewDataSource
@@ -129,7 +130,7 @@ extension DataBrowserViewController: UICollectionViewDataSource {
 extension DataBrowserViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let viewModel = listViewModel.cellDataItemForIndexPath(indexPath: indexPath)?.viewModel as? SearchItemCellViewModel else { return }
-        delegate?.itemSelected(reviewItem: viewModel.reviewItem)
+//        delegate?.itemSelected(reviewItem: viewModel.reviewItem)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

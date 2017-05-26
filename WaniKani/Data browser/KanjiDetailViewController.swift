@@ -29,6 +29,38 @@ class KanjiDetailViewController: UIViewController, BluredBackground, StoryboardI
         }
     }
 
+    @IBOutlet weak var onYomi: UILabel? {
+        didSet {
+            onYomi?.text = kanji?.onyomi ?? "None"
+        }
+    }
+    @IBOutlet weak var kunYomi: UILabel? {
+        didSet {
+            kunYomi?.text = kanji?.kunyomi ?? "None"
+        }
+    }
+    @IBOutlet weak var nanori: UILabel? {
+        didSet {
+            nanori?.text = kanji?.nanori ?? "None"
+        }
+    }
+
+    @IBOutlet weak var srsBackgroundView: UIView? {
+        didSet {
+            guard let srsString = kanji?.userSpecific?.srs?.lowercased(), let srsStatus = SRSStatus(rawValue: srsString) else { return }
+            srsBackgroundView?.backgroundColor = srsStatus.color
+        }
+    }
+
+    @IBOutlet weak var srsIconImageView: UIImageView? {
+        didSet {
+            guard let srsString = kanji?.userSpecific?.srs?.lowercased(), let srsStatus = SRSStatus(rawValue: srsString) else { return }
+            srsIconImageView?.image = srsStatus.icon
+        }
+    }
+
+    @IBOutlet weak var nanoriContainer: UIView?
+
     var kanji: KanjiInfo? {
         didSet {
             guard let kanji = kanji else { return }

@@ -91,10 +91,6 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
-		5D26A2211ED6E6D800104C70 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */; };
-		5D26A2231ED702E800104C70 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D26A2221ED702E800104C70 /* Kingfisher.framework */; };
-		5D26A2251ED70F1500104C70 /* KanjiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */; };
-		5D26A2271ED70F3800104C70 /* KanjiDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */; };
 		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
 		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
 		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
@@ -123,6 +119,14 @@
 		5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1241EC33A4900C25F85 /* KanjiStrokesCell.swift */; };
 		5DABA1271EC33A4900C25F85 /* KanjiStrokesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */; };
 		5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */; };
+		5DBA817F1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA817D1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard */; };
+		5DBA81801ED80AA80083B1C6 /* KanjiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA817E1ED80AA80083B1C6 /* KanjiDetailViewController.swift */; };
+		5DBA81821ED80CAC0083B1C6 /* SHSearchBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBA81811ED80CAC0083B1C6 /* SHSearchBar.framework */; };
+		5DBA81841ED80ED50083B1C6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBA81831ED80ED50083B1C6 /* Kingfisher.framework */; };
+		5DBA81871ED814DF0083B1C6 /* RadicalDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA81851ED814DF0083B1C6 /* RadicalDetailViewController.storyboard */; };
+		5DBA81881ED814DF0083B1C6 /* RadicalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */; };
+		5DBA818A1ED815080083B1C6 /* SRSStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA81891ED815080083B1C6 /* SRSStatus.swift */; };
+		5DBA818C1ED8257B0083B1C6 /* PreviewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */; };
 		5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */; };
 		5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */; };
 		5DF2D85D1ECC422300D209A1 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */; };
@@ -236,10 +240,6 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SHSearchBar.framework; path = Carthage/Build/iOS/SHSearchBar.framework; sourceTree = "<group>"; };
-		5D26A2221ED702E800104C70 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiDetailViewController.swift; sourceTree = "<group>"; };
-		5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KanjiDetailViewController.storyboard; sourceTree = "<group>"; };
 		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
 		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
@@ -268,6 +268,14 @@
 		5DABA1241EC33A4900C25F85 /* KanjiStrokesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCell.swift; sourceTree = "<group>"; };
 		5DABA1251EC33A4900C25F85 /* KanjiStrokesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KanjiStrokesCell.xib; sourceTree = "<group>"; };
 		5DABA1291EC33BDF00C25F85 /* KanjiGraphicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiGraphicInfo.swift; sourceTree = "<group>"; };
+		5DBA817D1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KanjiDetailViewController.storyboard; sourceTree = "<group>"; };
+		5DBA817E1ED80AA80083B1C6 /* KanjiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiDetailViewController.swift; sourceTree = "<group>"; };
+		5DBA81811ED80CAC0083B1C6 /* SHSearchBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SHSearchBar.framework; path = Carthage/Build/iOS/SHSearchBar.framework; sourceTree = "<group>"; };
+		5DBA81831ED80ED50083B1C6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		5DBA81851ED814DF0083B1C6 /* RadicalDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RadicalDetailViewController.storyboard; sourceTree = "<group>"; };
+		5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalDetailViewController.swift; sourceTree = "<group>"; };
+		5DBA81891ED815080083B1C6 /* SRSStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSStatus.swift; sourceTree = "<group>"; };
+		5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSize.swift; sourceTree = "<group>"; };
 		5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCellLayout.swift; sourceTree = "<group>"; };
 		5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmptyViewController.storyboard; sourceTree = "<group>"; };
 		5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
@@ -282,11 +290,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D26A2231ED702E800104C70 /* Kingfisher.framework in Frameworks */,
-				5D26A2211ED6E6D800104C70 /* SHSearchBar.framework in Frameworks */,
+				5DBA81841ED80ED50083B1C6 /* Kingfisher.framework in Frameworks */,
 				5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */,
 				5DABA1211EC3301100C25F85 /* KanjiBezierPaths.framework in Frameworks */,
 				5DABA11F1EC3300800C25F85 /* StrokeDrawingView.framework in Frameworks */,
+				5DBA81821ED80CAC0083B1C6 /* SHSearchBar.framework in Frameworks */,
 				5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */,
 				43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */,
 				43BA2B8B1E8AAEC60021BB20 /* DGElasticPullToRefreshKit.framework in Frameworks */,
@@ -422,8 +430,8 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D26A2221ED702E800104C70 /* Kingfisher.framework */,
-				5D26A21F1ED6E63800104C70 /* SHSearchBar.framework */,
+				5DBA81831ED80ED50083B1C6 /* Kingfisher.framework */,
+				5DBA81811ED80CAC0083B1C6 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
 				5DABA1201EC3301100C25F85 /* KanjiBezierPaths.framework */,
 				5DABA11E1EC3300800C25F85 /* StrokeDrawingView.framework */,
@@ -619,9 +627,13 @@
 				5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */,
 				5D9C1DAD1ECD846E00D42ABA /* DataBrowserViewController.storyboard */,
 				5D93F02B1ECEF8FA00687D03 /* DataBrowserCoordinator.swift */,
+				5DBA81891ED815080083B1C6 /* SRSStatus.swift */,
+				5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */,
+				5DBA817E1ED80AA80083B1C6 /* KanjiDetailViewController.swift */,
+				5DBA817D1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard */,
+				5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */,
+				5DBA81851ED814DF0083B1C6 /* RadicalDetailViewController.storyboard */,
 				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
-				5D26A2241ED70F1500104C70 /* KanjiDetailViewController.swift */,
-				5D26A2261ED70F3800104C70 /* KanjiDetailViewController.storyboard */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";
@@ -759,6 +771,7 @@
 				5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
+				5DBA81871ED814DF0083B1C6 /* RadicalDetailViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
 				5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */,
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
@@ -773,7 +786,7 @@
 				5DABA11B1EC3292300C25F85 /* StrokeOrderViewController.storyboard in Resources */,
 				43D99C541D9919560071C26D /* fast_forward.js in Resources */,
 				430876B61D9021A200FE71FE /* DashboardHeader.xib in Resources */,
-				5D26A2271ED70F3800104C70 /* KanjiDetailViewController.storyboard in Resources */,
+				5DBA817F1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard in Resources */,
 				5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */,
 				43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */,
 				5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */,
@@ -848,6 +861,7 @@
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
 				5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */,
+				5DBA818A1ED815080083B1C6 /* SRSStatus.swift in Sources */,
 				43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */,
 				43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */,
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
@@ -859,6 +873,7 @@
 				430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */,
 				43D99C6F1D99325F0071C26D /* GameCenterCellViewModel.swift in Sources */,
 				43B89E431D94140F0047380B /* DateExtensions.swift in Sources */,
+				5DBA81881ED814DF0083B1C6 /* RadicalDetailViewController.swift in Sources */,
 				5DABA1261EC33A4900C25F85 /* KanjiStrokesCell.swift in Sources */,
 				5D93F03C1ED3149700687D03 /* SearchItemsDataProvider.swift in Sources */,
 				5D93F03A1ED3122800687D03 /* SearchItemCellViewModel.swift in Sources */,
@@ -867,7 +882,7 @@
 				43D99C691D99228C0071C26D /* SettingsSuit.swift in Sources */,
 				43D99C701D99326D0071C26D /* GameCenterCollectionViewCell.swift in Sources */,
 				430876D81D9021B300FE71FE /* Utils.swift in Sources */,
-				5D26A2251ED70F1500104C70 /* KanjiDetailViewController.swift in Sources */,
+				5DBA81801ED80AA80083B1C6 /* KanjiDetailViewController.swift in Sources */,
 				430876CF1D9021B300FE71FE /* DataProvider.swift in Sources */,
 				43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */,
 				5DABA1191EC3288100C25F85 /* StrokeOrderCoordinator.swift in Sources */,
@@ -883,6 +898,7 @@
 				430876BC1D9021A200FE71FE /* DashboardHeaderViewModel.swift in Sources */,
 				4308768F1D90216F00FE71FE /* AppDelegate.swift in Sources */,
 				43D99C681D99227F0071C26D /* SettingsScriptCell.swift in Sources */,
+				5DBA818C1ED8257B0083B1C6 /* PreviewSize.swift in Sources */,
 				430876BD1D9021A200FE71FE /* DashboardViewModel.swift in Sources */,
 				43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */,
 				430876B71D9021A200FE71FE /* DoubleProgressBar.swift in Sources */,
