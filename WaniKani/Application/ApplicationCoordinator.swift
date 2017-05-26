@@ -11,8 +11,9 @@ import WaniLoginKit
 import Cely
 import WaniKit
 import WaniPersistance
+import UserNotifications
 
-class ApplicationCoordinator: Coordinator {
+class ApplicationCoordinator: NSObject, Coordinator {
 
   fileprivate var tabsCoordinator: TabsCoordinator?
   fileprivate let waniLoginCoordinator: WaniLoginCoordinator
@@ -41,6 +42,11 @@ class ApplicationCoordinator: Coordinator {
 // MARK: - Coordinator
 extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
+    UNUserNotificationCenter.current().delegate = self
+    UNUserNotificationCenter.current().requestAuthorization(
+        options: [.alert, .sound, .badge],
+        completionHandler: { (_, _) in
+    })
     window.rootViewController = rootViewController
     waniLoginCoordinator.start(delegate: self, window: window)
     window.makeKeyAndVisible()
@@ -68,5 +74,15 @@ extension ApplicationCoordinator: DataProviderDelegate {
     func apiKeyIncorect() {
         guard waniLoginCoordinator.isLoggedIn == true else { return }
         waniLoginCoordinator.logOut()
+    }
+}
+
+// MARK: - UNUserNotificationCenterDelegate
+extension ApplicationCoordinator: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        debugPrint(response.actionIdentifier)
+        if response.actionIdentifier == "CancelIdentifier" {
+            window.rootViewController = nil
+        }
     }
 }

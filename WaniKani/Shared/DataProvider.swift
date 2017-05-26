@@ -30,6 +30,10 @@ class DataProvider {
 
   func fetchDashboard(handler: @escaping (DashboardInfo?) -> Void) {
     apiManager.fetchDashboard().then { (dashboard) in
+        if let nextReview = dashboard.studyQueueInfo.nextReviewDate {
+            NotificationManager.sharedInstance.scheduleNextReviewNotification(date: nextReview)
+        }
+        NotificationManager.sharedInstance.updateIconCounter(number: dashboard.studyQueueInfo.reviewsAvaliable ?? 0)
       handler(dashboard)
     }.catch { (error) in
         debugPrint(error)

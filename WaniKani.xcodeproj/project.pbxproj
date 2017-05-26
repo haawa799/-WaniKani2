@@ -129,6 +129,8 @@
 		5DBA818C1ED8257B0083B1C6 /* PreviewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */; };
 		5DBA818F1ED847D20083B1C6 /* WordDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */; };
 		5DBA81901ED847D20083B1C6 /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */; };
+		5DBA81951ED85E1A0083B1C6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA81941ED85E1A0083B1C6 /* NotificationManager.swift */; };
+		5DBA81971ED8650B0083B1C6 /* notification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA81961ED8650B0083B1C6 /* notification.m4a */; };
 		5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */; };
 		5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */; };
 		5DF2D85D1ECC422300D209A1 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */; };
@@ -280,6 +282,8 @@
 		5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSize.swift; sourceTree = "<group>"; };
 		5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WordDetailViewController.storyboard; sourceTree = "<group>"; };
 		5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		5DBA81941ED85E1A0083B1C6 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5DBA81961ED8650B0083B1C6 /* notification.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.m4a; sourceTree = "<group>"; };
 		5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCellLayout.swift; sourceTree = "<group>"; };
 		5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmptyViewController.storyboard; sourceTree = "<group>"; };
 		5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 		4308768B1D90216F00FE71FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5DBA81941ED85E1A0083B1C6 /* NotificationManager.swift */,
 				4308768C1D90216F00FE71FE /* AppDelegate.swift */,
 				4308768D1D90216F00FE71FE /* ApplicationCoordinator.swift */,
 				4308768E1D90216F00FE71FE /* Coordinator.swift */,
@@ -487,6 +492,7 @@
 				4308768B1D90216F00FE71FE /* Application */,
 				43B354AB1E30FBC100DABAAB /* Tabs */,
 				43620A441D8C28FA00C1BA72 /* Assets.xcassets */,
+				5DBA81961ED8650B0083B1C6 /* notification.m4a */,
 				43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */,
 				43620A491D8C28FB00C1BA72 /* Info.plist */,
 				43BE76051E3F39F30032950B /* Localizable.strings */,
@@ -744,7 +750,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -774,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				433D3D5F1E3B9020001C631D /* Cartfile in Resources */,
+				5DBA81971ED8650B0083B1C6 /* notification.m4a in Resources */,
 				5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
@@ -862,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBA81951ED85E1A0083B1C6 /* NotificationManager.swift in Sources */,
 				43D99C6C1D9923290071C26D /* SettingsScriptCellViewModel.swift in Sources */,
 				43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */,
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
