@@ -127,6 +127,8 @@
 		5DBA81881ED814DF0083B1C6 /* RadicalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */; };
 		5DBA818A1ED815080083B1C6 /* SRSStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA81891ED815080083B1C6 /* SRSStatus.swift */; };
 		5DBA818C1ED8257B0083B1C6 /* PreviewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */; };
+		5DBA818F1ED847D20083B1C6 /* WordDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */; };
+		5DBA81901ED847D20083B1C6 /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */; };
 		5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */; };
 		5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */; };
 		5DF2D85D1ECC422300D209A1 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */; };
@@ -276,6 +278,8 @@
 		5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalDetailViewController.swift; sourceTree = "<group>"; };
 		5DBA81891ED815080083B1C6 /* SRSStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSStatus.swift; sourceTree = "<group>"; };
 		5DBA818B1ED8257B0083B1C6 /* PreviewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSize.swift; sourceTree = "<group>"; };
+		5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WordDetailViewController.storyboard; sourceTree = "<group>"; };
+		5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
 		5DDA9B1E1EC344E20019189A /* KanjiStrokesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiStrokesCellLayout.swift; sourceTree = "<group>"; };
 		5DF2D8571ECC422300D209A1 /* EmptyViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmptyViewController.storyboard; sourceTree = "<group>"; };
 		5DF2D8581ECC422300D209A1 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
@@ -633,6 +637,8 @@
 				5DBA817D1ED80AA80083B1C6 /* KanjiDetailViewController.storyboard */,
 				5DBA81861ED814DF0083B1C6 /* RadicalDetailViewController.swift */,
 				5DBA81851ED814DF0083B1C6 /* RadicalDetailViewController.storyboard */,
+				5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */,
+				5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */,
 				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
 			);
 			path = "Data browser";
@@ -775,6 +781,7 @@
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
 				5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */,
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
+				5DBA818F1ED847D20083B1C6 /* WordDetailViewController.storyboard in Resources */,
 				5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */,
 				43D99C641D9919560071C26D /* SettingsScriptCell.xib in Resources */,
 				5D93F0371ED3114300687D03 /* SearchItemCell.xib in Resources */,
@@ -906,6 +913,7 @@
 				43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */,
 				43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */,
 				430876901D90216F00FE71FE /* ApplicationCoordinator.swift in Sources */,
+				5DBA81901ED847D20083B1C6 /* WordDetailViewController.swift in Sources */,
 				5DABA12A1EC33BDF00C25F85 /* KanjiGraphicInfo.swift in Sources */,
 				43D99C951D994ED10071C26D /* BottomBarContainerViewController.swift in Sources */,
 				430876B21D9021A200FE71FE /* ReviewCell.swift in Sources */,

@@ -69,6 +69,8 @@ class KanjiDetailViewController: UIViewController, BluredBackground, StoryboardI
         }
     }
 
+    @IBOutlet weak var mainStackView: UIStackView!
+
     fileprivate var kanjiStrings = [String]() {
         didSet {
             updateStrokeOrderViewController()
@@ -101,4 +103,11 @@ class KanjiDetailViewController: UIViewController, BluredBackground, StoryboardI
         _ = addBackground(BackgroundOptions.data.rawValue)
     }
 
+}
+
+// MARK: - PreviewSize
+extension KanjiDetailViewController: PreviewSize {
+    var previewSize: CGSize {
+        return mainStackView.bounds.size
+    }
 }

@@ -82,7 +82,7 @@
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enlighten" translatesAutoresizingMaskIntoConstraints="NO" id="Yjr-mx-2dI">
+                                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yjr-mx-2dI">
                                                                                                 <rect key="frame" x="0.0" y="5" width="90.5" height="61.5"/>
                                                                                             </imageView>
                                                                                         </subviews>
@@ -99,7 +99,7 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" red="0.094117647060000004" green="0.58823529409999997" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" white="1" alpha="0.66933326199999998" colorSpace="calibratedWhite"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="SdG-OR-mQe" firstAttribute="top" secondItem="hl9-1d-X2f" secondAttribute="top" id="M9V-jk-KMw"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="SdG-OR-mQe" secondAttribute="bottom" id="ay2-mG-cyy"/>
@@ -295,7 +295,4 @@
             <point key="canvasLocation" x="-314.39999999999998" y="146.17691154422789"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="enlighten" width="150" height="150"/>
-    </resources>
 </document>

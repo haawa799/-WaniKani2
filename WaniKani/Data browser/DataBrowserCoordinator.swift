@@ -38,6 +38,13 @@ class DataBrowserCoordinator: NSObject, Coordinator {
         radicalViewController.navigationItem.title = radical.character
         presenter.pushViewController(radicalViewController, animated: true)
     }
+
+    fileprivate func showWord(word: WordInfo) {
+        let wordDetailViewController: WordDetailViewController = WordDetailViewController.instantiateViewController()
+        wordDetailViewController.word = word
+        wordDetailViewController.navigationItem.title = word.character
+        presenter.pushViewController(wordDetailViewController, animated: true)
+    }
 }
 
 // MARK: - Coordinator
@@ -45,9 +52,9 @@ extension DataBrowserCoordinator {
     func start() {
         let dataBrowserViewController: DataBrowserViewController = DataBrowserViewController.instantiateViewController()
         _ = dataBrowserViewController.view
-//        if dataBrowserViewController.traitCollection.forceTouchCapability == .available {
+        if presenter.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
             dataBrowserViewController.registerForPreviewing(with: self, sourceView: dataBrowserViewController.view)
-//        }
+        }
         dataBrowserViewController.delegate = self
         presenter.isNavigationBarHidden = true
         presenter.pushViewController(dataBrowserViewController, animated: false)
@@ -77,8 +84,8 @@ extension DataBrowserCoordinator: UIViewControllerPreviewingDelegate {
         case .kanji(let kanji):
             let kanjiViewController: KanjiDetailViewController = KanjiDetailViewController.instantiateViewController()
             kanjiViewController.kanji = kanji
-            let previewHeight = kanjiViewController.view.bounds.width * 0.5 + 15
-            kanjiViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight * 2)
+            let previewHeight = kanjiViewController.view.bounds.width + 15
+            kanjiViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight)
             viewController = kanjiViewController
         case .radical(let radical):
             let radicalViewController: RadicalDetailViewController = RadicalDetailViewController.instantiateViewController()
@@ -87,10 +94,15 @@ extension DataBrowserCoordinator: UIViewControllerPreviewingDelegate {
             let previewHeight = radicalViewController.view.bounds.width * 0.5 + 15
             radicalViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight)
             viewController = radicalViewController
-        default: break
+        case .word(let word):
+            let wordDetailViewController: WordDetailViewController = WordDetailViewController.instantiateViewController()
+            wordDetailViewController.word = word
+            wordDetailViewController.navigationItem.title = word.character
+            let previewHeight = wordDetailViewController.view.bounds.width * 0.5 + 15
+            wordDetailViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight)
+            previewingContext.sourceRect = cell.frame
+            viewController = wordDetailViewController
         }
-        previewingContext.sourceRect = cell.frame
-
         return viewController
     }
 
@@ -103,9 +115,9 @@ extension DataBrowserCoordinator: UIViewControllerPreviewingDelegate {
 extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
     func itemSelected(reviewItem: ReviewItem) {
         switch reviewItem {
-        case .kanji(let kanji): showKanji(kanji: kanji)
-        case .radical(let radical): showRadical(radical: radical)
-        default: break
+            case .kanji(let kanji): showKanji(kanji: kanji)
+            case .radical(let radical): showRadical(radical: radical)
+            case .word(let word): showWord(word: word)
         }
     }
 
