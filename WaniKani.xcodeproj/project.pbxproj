@@ -41,6 +41,7 @@
 		430876D71D9021B300FE71FE /* UIViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CB1D9021B300FE71FE /* UIViewControllerUtils.swift */; };
 		430876D81D9021B300FE71FE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CC1D9021B300FE71FE /* Utils.swift */; };
 		430876D91D9021B300FE71FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CD1D9021B300FE71FE /* ViewModel.swift */; };
+		433A42411EDB64D20077D965 /* UserActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A42401EDB64D20077D965 /* UserActivityManager.swift */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
@@ -191,6 +192,7 @@
 		430876CD1D9021B300FE71FE /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		430A75671E8E511B0025039A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		430A75681E8E511B0025039A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		433A42401EDB64D20077D965 /* UserActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActivityManager.swift; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBA81941ED85E1A0083B1C6 /* NotificationManager.swift */,
+				433A42401EDB64D20077D965 /* UserActivityManager.swift */,
 				4308768C1D90216F00FE71FE /* AppDelegate.swift */,
 				4308768D1D90216F00FE71FE /* ApplicationCoordinator.swift */,
 				4308768E1D90216F00FE71FE /* Coordinator.swift */,
@@ -904,6 +907,7 @@
 				5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */,
 				43D99C711D9933340071C26D /* IntUserDefault.swift in Sources */,
 				430876D31D9021B300FE71FE /* DrawingUtils.swift in Sources */,
+				433A42411EDB64D20077D965 /* UserActivityManager.swift in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,
 				430876AD1D9021A200FE71FE /* DashboardCoordinator.swift in Sources */,

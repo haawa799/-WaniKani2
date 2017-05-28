@@ -28,10 +28,10 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67s-dE-F0O">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="212.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="8" width="414" height="315"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-6x-ucY">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="212.33333333333331"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-6x-ucY">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pYr-nJ-sZo">
                                                         <rect key="frame" x="5" y="5" width="404" height="202.33333333333331"/>
@@ -173,7 +173,37 @@
                                                             <constraint firstItem="Ivg-7G-XPm" firstAttribute="width" secondItem="Eaz-CN-M4Z" secondAttribute="width" multiplier="0.33" id="sCY-DH-dS1"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-Ht-spR">
+                                                        <rect key="frame" x="5" y="210.33333333333329" width="404" height="99.666666666666714"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-wd-8X4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="404" height="99.666666666666686"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.66933326199999998" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-gP-SOQ" userLabel="kana">
+                                                                <rect key="frame" x="8" y="8" width="20.666666666666664" height="11"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="9"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Vei-wd-8X4" firstAttribute="top" secondItem="SBx-Ht-spR" secondAttribute="top" id="17R-Xj-dON"/>
+                                                            <constraint firstItem="jAe-gP-SOQ" firstAttribute="leading" secondItem="SBx-Ht-spR" secondAttribute="leading" constant="8" id="3iN-pW-TVe"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Vei-wd-8X4" secondAttribute="trailing" id="6WY-37-TQj"/>
+                                                            <constraint firstItem="jAe-gP-SOQ" firstAttribute="top" secondItem="SBx-Ht-spR" secondAttribute="top" constant="8" id="b0u-V3-Gb8"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Vei-wd-8X4" secondAttribute="bottom" id="jGg-sb-cUC"/>
+                                                            <constraint firstItem="Vei-wd-8X4" firstAttribute="leading" secondItem="SBx-Ht-spR" secondAttribute="leading" id="z3h-x6-Tvb"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="SBx-Ht-spR" firstAttribute="height" secondItem="c2x-Vb-BuN" secondAttribute="height" id="7D8-dk-2D0"/>
+                                                </constraints>
                                                 <edgeInsets key="layoutMargins" top="5" left="5" bottom="5" right="5"/>
                                             </stackView>
                                         </subviews>
@@ -208,6 +238,7 @@
                     <connections>
                         <outlet property="levelKanji" destination="mV6-yJ-FYe" id="DcX-yH-YYi"/>
                         <outlet property="meaningLabel" destination="0J9-dD-gE0" id="bQG-mW-BVy"/>
+                        <outlet property="readingLabel" destination="Vei-wd-8X4" id="Trz-50-mBJ"/>
                         <outlet property="srsBackgroundView" destination="SdG-OR-mQe" id="ouX-ij-PN4"/>
                         <outlet property="srsIconImageView" destination="Yjr-mx-2dI" id="dbe-z0-6gb"/>
                         <outlet property="srsLabel" destination="nvG-Sm-09q" id="LL3-Cn-7ov"/>

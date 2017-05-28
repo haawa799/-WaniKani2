@@ -98,7 +98,7 @@ extension DataBrowserCoordinator: UIViewControllerPreviewingDelegate {
             let wordDetailViewController: WordDetailViewController = WordDetailViewController.instantiateViewController()
             wordDetailViewController.word = word
             wordDetailViewController.navigationItem.title = word.character
-            let previewHeight = wordDetailViewController.view.bounds.width * 0.5 + 15
+            let previewHeight = wordDetailViewController.view.bounds.width * 0.75 + 15
             wordDetailViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight)
             previewingContext.sourceRect = cell.frame
             viewController = wordDetailViewController
