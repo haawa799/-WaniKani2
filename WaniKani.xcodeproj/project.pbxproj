@@ -42,6 +42,9 @@
 		430876D81D9021B300FE71FE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CC1D9021B300FE71FE /* Utils.swift */; };
 		430876D91D9021B300FE71FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430876CD1D9021B300FE71FE /* ViewModel.swift */; };
 		433A42411EDB64D20077D965 /* UserActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A42401EDB64D20077D965 /* UserActivityManager.swift */; };
+		433A42431EDCB0E60077D965 /* DownloadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A42421EDCB0E60077D965 /* DownloadingViewController.swift */; };
+		433A42451EDCB1010077D965 /* DownloadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433A42441EDCB1010077D965 /* DownloadingViewController.storyboard */; };
+		433A42471EDCBC520077D965 /* DownloadingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A42461EDCBC520077D965 /* DownloadingCoordinator.swift */; };
 		433D3D5F1E3B9020001C631D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 433D3D5E1E3B9020001C631D /* Cartfile */; };
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
@@ -196,6 +199,9 @@
 		430A75671E8E511B0025039A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		430A75681E8E511B0025039A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		433A42401EDB64D20077D965 /* UserActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActivityManager.swift; sourceTree = "<group>"; };
+		433A42421EDCB0E60077D965 /* DownloadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingViewController.swift; sourceTree = "<group>"; };
+		433A42441EDCB1010077D965 /* DownloadingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DownloadingViewController.storyboard; sourceTree = "<group>"; };
+		433A42461EDCBC520077D965 /* DownloadingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingCoordinator.swift; sourceTree = "<group>"; };
 		433D3D5E1E3B9020001C631D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarTweeks.swift; sourceTree = "<group>"; };
 		43620A3A1D8C28FA00C1BA72 /* WaniKani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniKani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -645,6 +651,8 @@
 		5D9C1DAA1ECD830B00D42ABA /* Data browser */ = {
 			isa = PBXGroup;
 			children = (
+				433A42421EDCB0E60077D965 /* DownloadingViewController.swift */,
+				433A42441EDCB1010077D965 /* DownloadingViewController.storyboard */,
 				5D93F0381ED3121C00687D03 /* ViewModel */,
 				5D93F0331ED3110C00687D03 /* View */,
 				5D93F0291ECEF8B200687D03 /* DataBrowserViewController.swift */,
@@ -659,6 +667,7 @@
 				5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */,
 				5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */,
 				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
+				433A42461EDCBC520077D965 /* DownloadingCoordinator.swift */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";
@@ -797,6 +806,7 @@
 			files = (
 				433D3D5F1E3B9020001C631D /* Cartfile in Resources */,
 				5DBA81971ED8650B0083B1C6 /* notification.m4a in Resources */,
+				433A42451EDCB1010077D965 /* DownloadingViewController.storyboard in Resources */,
 				5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
@@ -894,6 +904,7 @@
 				5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */,
 				5DBA818A1ED815080083B1C6 /* SRSStatus.swift in Sources */,
 				43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */,
+				433A42471EDCBC520077D965 /* DownloadingCoordinator.swift in Sources */,
 				43D99C741D9934FA0071C26D /* SettingsLayout.swift in Sources */,
 				43D99C6B1D9922AC0071C26D /* Setting.swift in Sources */,
 				430876D21D9021B300FE71FE /* ColorUtils.swift in Sources */,
@@ -962,6 +973,7 @@
 				43D99C6A1D99229A0071C26D /* UserScript.swift in Sources */,
 				430876CE1D9021B300FE71FE /* ColorfullTabBarController.swift in Sources */,
 				5DDA9B1F1EC344E20019189A /* KanjiStrokesCellLayout.swift in Sources */,
+				433A42431EDCB0E60077D965 /* DownloadingViewController.swift in Sources */,
 				5D5ECC891ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift in Sources */,
 				430876D61D9021B300FE71FE /* ScreenBackgound.swift in Sources */,
 				430876D01D9021B300FE71FE /* SingleTabViewController.swift in Sources */,
