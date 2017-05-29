@@ -31,7 +31,7 @@ open class TabsCoordinator: Coordinator {
     settingsNavigationController.isNavigationBarHidden = true
     let viewControllers = [dashboardNavigationController, dataBrowserNavigationController, settingsNavigationController]
     presenter.setViewControllers(viewControllers, animated: false)
-    dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
+    dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
     dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance)
   }

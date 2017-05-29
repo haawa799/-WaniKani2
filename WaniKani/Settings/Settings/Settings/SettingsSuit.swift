@@ -37,7 +37,6 @@ private struct SettingsSuitSettings {
   static let fastForwardSetting: Setting = Setting(key: SettingSuitKey.fastForwardEnabledKey, script: ScriptSetting.fastForwardScript, description: ScriptSetting.fastForwardScript.name)
   static let ignoreButtonSetting: Setting = Setting(key: SettingSuitKey.ignoreButtonEnabledKey, script: ScriptSetting.ignoreButtonScript, description: ScriptSetting.ignoreButtonScript.name)
   static let reorderSetting: Setting = Setting(key: SettingSuitKey.reorderEnabledKey, script: ScriptSetting.reorderScript, description: ScriptSetting.reorderScript.name)
-  static let smartResizingSetting: Setting = Setting(key: SettingSuitKey.smartResizingEnabledKey, script: ScriptSetting.smartResizingScript, description: ScriptSetting.smartResizingScript.name)
   // === Second section ===================
   static let hideStatusBarSetting: Setting = Setting(key: SettingSuitKey.hideStatusBarKey, script: nil, description: "Status bar hidden on Reviews")
   static let shouldUseGCSetting: Setting = Setting(key: SettingSuitKey.shouldUseGameCenterKey, script: nil, description: "Use GameCenter")
@@ -58,7 +57,6 @@ private struct SettingsSuitSettings {
       SettingsSuitSettings.fastForwardSetting,
       SettingsSuitSettings.ignoreButtonSetting,
       SettingsSuitSettings.reorderSetting,
-      SettingsSuitSettings.smartResizingSetting,
       SettingsSuitSettings.hideStatusBarSetting,
       SettingsSuitSettings.shouldUseGCSetting,
       SettingsSuitSettings.ignoreLessonsInIconCounter
@@ -94,13 +92,11 @@ extension SettingsSuit {
       ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Scripts for Reviews", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
         ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.fastForwardSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
         ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.ignoreButtonSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
-        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.reorderSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
-        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.smartResizingSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier)
+        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.reorderSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier)
         ]),
       // Section 2
       ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Other options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
         ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.hideStatusBarSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
-        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.shouldUseGCSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
         ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.gameCenterDummySetting) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier)
         ]),
       // Section 3

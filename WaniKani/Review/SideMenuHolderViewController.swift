@@ -20,7 +20,7 @@ class SideMenuHolderViewController: RESideMenu {
   var type: WebSessionType?
   weak var menuDelegate: SideMenuHolderViewControllerDelegate?
     fileprivate weak  var kanjiPracticeViewController: KanjiPracticeViewController?
-    fileprivate weak var middleViewController: ReviewWebViewController?
+    fileprivate(set) weak var middleViewController: ReviewWebViewController?
 
   convenience init(type: WebSessionType, settingsSuit: SettingsSuit?) {
 
@@ -107,7 +107,6 @@ extension SideMenuHolderViewController {
 }
 
 extension SideMenuHolderViewController: ReviewWebViewControllerDelegate {
-
   func webViewControllerBecomeReadyForLoad(viewController: ReviewWebViewController) {
     guard let type = type else { return }
     viewController.loadReviews(type)

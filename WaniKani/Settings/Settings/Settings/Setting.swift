@@ -15,7 +15,6 @@ protocol SettingsDelegate: class {
 enum SettingSuitKey: String {
   case fastForwardEnabledKey = "fastForwardEnabledKey"
   case ignoreButtonEnabledKey = "ignoreButtonEnabledKey"
-  case smartResizingEnabledKey = "smartResizingEnabledKey"
   case reorderEnabledKey = "reorderEnabledKey"
   case hideStatusBarKey = "hideStatusBarKey"
   case gameCenterKey = "gameCenterKey"

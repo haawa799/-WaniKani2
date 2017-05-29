@@ -36,7 +36,11 @@ class ReviewWebViewController: UIViewController, StoryboardInstantiable {
 
   fileprivate var type = WebSessionType.lesson
 
-  fileprivate var newScoreEarned = 0
+    fileprivate(set) var newScoreEarned = 0 {
+        didSet {
+            debugPrint("::: SCORE: \(newScoreEarned)")
+        }
+    }
   fileprivate var oldOffset: CGFloat?
   fileprivate var ignoreResizing = false
 
@@ -73,15 +77,11 @@ class ReviewWebViewController: UIViewController, StoryboardInstantiable {
 
 extension ReviewWebViewController: UIWebViewDelegate {
 
-  fileprivate func checkForNewScore() {
+  func checkForNewScore() {
     if let response = webView.stringByEvaluatingJavaScript(from: "getScore();"),
       let score = Int(response), score != 0 {
         newScoreEarned += score
     }
-  }
-
-  fileprivate func submitScore() {
-    //AwardsManager.sharedInstance.saveHighscore(newScoreEarned)
   }
 
   func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

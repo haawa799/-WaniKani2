@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ReviewCoordinatorDelegate: class {
-  func reviewCompleted(_ coordinator: ReviewCoordinator)
+  func reviewCompleted(_ coordinator: ReviewCoordinator, score: Int?)
 }
 
 class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
@@ -44,6 +44,7 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
     presenter.present(containerViewController, animated: true, completion: nil)
     containerViewController.childViewController = sideMenuController
     sideMenuController.didMove(toParentViewController: containerViewController)
+    sideMenuController.menuDelegate = self
     updateStatusBar(hide: settingsSuit.hideStatusBarEnabled)
   }
 
@@ -67,8 +68,11 @@ extension ReviewCoordinator {
   }
 
   private func leftButtonPressed() {
-    presenter.dismiss(animated: true) {
-      self.delegate?.reviewCompleted(self)
+    sideMenuController.middleViewController?.checkForNewScore()
+    let score = sideMenuController.middleViewController?.newScoreEarned
+    presenter.dismiss(animated: true) { [weak self] in
+        guard let strongSelf = self else { return }
+      strongSelf.delegate?.reviewCompleted(strongSelf, score: score)
     }
     updateStatusBar(hide: false)
   }
@@ -98,4 +102,14 @@ extension ReviewCoordinator {
     containerViewController.showBar()
   }
 
+}
+
+// MARK: - SideMenuHolderViewControllerDelegate
+extension ReviewCoordinator: SideMenuHolderViewControllerDelegate {
+    func didShowMenu() {
+
+    }
+    func didColapseMenu() {
+
+    }
 }

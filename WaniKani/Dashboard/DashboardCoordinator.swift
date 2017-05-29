@@ -23,10 +23,12 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
   let dashboardViewController: DashboardViewController
   let dataProvider: DataProvider
   let settingsSuit: SettingsSuit
+  fileprivate let awardManager: AwardsManager
 
   fileprivate var reviewCoordinator: ReviewCoordinator?
 
-  init(dataProvider: DataProvider, presenter: UINavigationController, settingsSuit: SettingsSuit) {
+  init(dataProvider: DataProvider, presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
+    self.awardManager = awardManager
     self.dataProvider = dataProvider
     self.presenter = presenter
     self.settingsSuit = settingsSuit
@@ -62,6 +64,7 @@ extension DashboardCoordinator {
 
   func showReviews() {
     reviewCoordinator = ReviewCoordinator(presenter: presenter, type: .review, settingsSuit: settingsSuit)
+    reviewCoordinator?.delegate = self
     reviewCoordinator?.start()
   }
 
@@ -70,4 +73,12 @@ extension DashboardCoordinator {
     reviewCoordinator?.start()
   }
 
+}
+
+// MARK: - ReviewCoordinatorDelegate
+extension DashboardCoordinator: ReviewCoordinatorDelegate {
+    func reviewCompleted(_ coordinator: ReviewCoordinator, score: Int?) {
+        guard let score = score else { return }
+        awardManager.saveHighscore(scoreUpdate: score)
+    }
 }
