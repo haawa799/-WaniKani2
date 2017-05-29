@@ -107,6 +107,9 @@
 		5D9C1DB61ECDA52500D42ABA /* DashboardHeaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */; };
 		5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */; };
 		5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */; };
+		5D9E855C1EDBEE5300C33D8A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9E855B1EDBEE5300C33D8A /* GameKit.framework */; };
+		5D9E855F1EDBEE9F00C33D8A /* AwardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */; };
+		5D9E85611EDBEF5D00C33D8A /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */; };
 		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
 		5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */; };
 		5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */; };
@@ -261,6 +264,9 @@
 		5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardHeaderViewController.storyboard; sourceTree = "<group>"; };
 		5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SRSViewController.storyboard; sourceTree = "<group>"; };
 		5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
+		5D9E855B1EDBEE5300C33D8A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsManager.swift; sourceTree = "<group>"; };
+		5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
 		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
 		5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
 		5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
 				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
 				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
+				5D9E855C1EDBEE5300C33D8A /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +331,8 @@
 		4308768B1D90216F00FE71FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */,
+				5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */,
 				5DBA81941ED85E1A0083B1C6 /* NotificationManager.swift */,
 				433A42401EDB64D20077D965 /* UserActivityManager.swift */,
 				4308768C1D90216F00FE71FE /* AppDelegate.swift */,
@@ -442,6 +451,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D9E855B1EDBEE5300C33D8A /* GameKit.framework */,
 				5DBA81831ED80ED50083B1C6 /* Kingfisher.framework */,
 				5DBA81811ED80CAC0083B1C6 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
@@ -755,6 +765,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -910,6 +923,7 @@
 				433A42411EDB64D20077D965 /* UserActivityManager.swift in Sources */,
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,
+				5D9E855F1EDBEE9F00C33D8A /* AwardsManager.swift in Sources */,
 				430876AD1D9021A200FE71FE /* DashboardCoordinator.swift in Sources */,
 				430876D11D9021B300FE71FE /* Array.swift in Sources */,
 				43D99C981D99563C0071C26D /* SideMenuHolderViewController.swift in Sources */,
@@ -956,6 +970,7 @@
 				430876BB1D9021A200FE71FE /* CollectionViewViewModel.swift in Sources */,
 				430876911D90216F00FE71FE /* Coordinator.swift in Sources */,
 				430876D51D9021B300FE71FE /* LabelExtensions.swift in Sources */,
+				5D9E85611EDBEF5D00C33D8A /* GCHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

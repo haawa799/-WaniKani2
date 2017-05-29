@@ -14,6 +14,7 @@ import Promise
 
 protocol DataProviderDelegate: class {
   func apiKeyIncorect()
+  func userDidLevelUp(oldLevel: Int, newLevel: Int)
 }
 
 class DataProvider {
@@ -36,6 +37,13 @@ class DataProvider {
       }
       NotificationManager.sharedInstance.updateIconCounter(number: dashboard.studyQueueInfo.reviewsAvaliable ?? 0)
       self?.activityManager.newStudyQueueData(studyQueue: dashboard.studyQueueInfo)
+      self?.persistance.persist(levelProgression: dashboard.levelProgressionInfo)
+      if let oldLevel = self?.persistance.levelProgression?.userInfo.level {
+        let newLevel = dashboard.levelProgressionInfo.userInfo.level
+        if (newLevel - oldLevel) > 0 {
+            self?.delegate?.userDidLevelUp(oldLevel: oldLevel, newLevel: newLevel)
+        }
+      }
       handler(dashboard)
       }.catch { (error) in
         debugPrint(error)

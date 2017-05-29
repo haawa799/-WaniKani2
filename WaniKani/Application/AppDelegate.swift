@@ -21,5 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     applicationCoordinator.start()
     return true
   }
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleShortcut(shortcutItem: shortcutItem))
+    }
+
+    @available(iOS 9.0, *)
+    private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        guard let shortcut = ShortcutIdentifier(string: shortcutItem.type) else { return false }
+        applicationCoordinator.handelShortCut(shortcut: shortcut)
+        return true
+    }
 
 }

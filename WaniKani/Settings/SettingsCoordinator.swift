@@ -8,17 +8,19 @@
 
 import UIKit
 
-open class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
+class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
 
   let presenter: UINavigationController
   let settingsViewController: SettingsViewController
   let childrenCoordinators: [Coordinator]
   let suit: SettingsSuit
+  fileprivate let awardManager: AwardsManager
 
 //  let dataProvider = DataProvider()
 
-  public init(presenter: UINavigationController, settingsSuit: SettingsSuit) {
+  init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
     self.presenter = presenter
+    self.awardManager = awardManager
     suit = settingsSuit
     settingsViewController = SettingsViewController.instantiateViewController()
     let tabItem: UITabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "settings"), selectedImage: nil)
@@ -39,6 +41,7 @@ extension SettingsCoordinator {
 
   func cellPressed(_ indexPath: IndexPath) {
     print("indexPath: \(indexPath)")
+    awardManager.showGameCenterViewController()
   }
 
   func cellCheckboxStateChange(identifier: String, state: Bool) {

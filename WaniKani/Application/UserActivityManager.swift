@@ -9,6 +9,19 @@
 import UIKit
 import WaniModel
 
+enum ShortcutIdentifier {
+    case lessons
+    case reviews
+
+    init?(string: String) {
+        switch string {
+        case "Lessons": self = .lessons
+        case "Review": self = .reviews
+        default: return nil
+        }
+    }
+}
+
 class UserActivityManager {
 
   func newStudyQueueData(studyQueue: StudyQueueInfo) {

@@ -22,24 +22,27 @@ class ApplicationCoordinator: NSObject, Coordinator {
 
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
+    let awardManager: AwardsManager
 
   init(window: UIWindow) {
     self.window = window
     waniLoginCoordinator = WaniLoginCoordinator()
+    self.awardManager = AwardsManager(presenter: rootViewController)
   }
 
   func presentTabs(apiKey: String, persistance: Persistance) {
     window.rootViewController = rootViewController
     let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
-    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, presenter: rootViewController, persistance: persistance)
+    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance)
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
+    awardManager.authenticateLocalPlayer()
   }
 
 }
 
-// MARK: - Coordinator
+// MARK: - CelyWindowManagerDelegate
 extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
     UNUserNotificationCenter.current().delegate = self
@@ -67,6 +70,13 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     CookiesStorage.saveCookies()
   }
 
+    func handelShortCut(shortcut: ShortcutIdentifier) {
+        switch shortcut {
+        case .reviews: tabsCoordinator?.showReviews()
+        case .lessons: tabsCoordinator?.showLessons()
+        }
+    }
+
 }
 
 // MARK: - DataProviderDelegate
@@ -74,6 +84,9 @@ extension ApplicationCoordinator: DataProviderDelegate {
     func apiKeyIncorect() {
         guard waniLoginCoordinator.isLoggedIn == true else { return }
         waniLoginCoordinator.logOut()
+    }
+    func userDidLevelUp(oldLevel: Int, newLevel: Int) {
+        awardManager.userLevelUp(oldLevel: oldLevel, newLevel: newLevel)
     }
 }
 

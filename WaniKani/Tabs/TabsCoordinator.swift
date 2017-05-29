@@ -18,21 +18,33 @@ open class TabsCoordinator: Coordinator {
   fileprivate let settingsCoordinator: SettingsCoordinator
   fileprivate let dataBrowserNavigationController = UINavigationController()
   fileprivate let dataBrowserCoordinator: DataBrowserCoordinator
+  fileprivate let awardManager: AwardsManager
 
   let presenter: UITabBarController
   let dataProvider: DataProvider
 
-  init(dataProvider: DataProvider, presenter: UITabBarController, persistance: Persistance) {
+  init(dataProvider: DataProvider, awardManager: AwardsManager, presenter: UITabBarController, persistance: Persistance) {
     self.dataProvider = dataProvider
+    self.awardManager = awardManager
     self.presenter = presenter
     dashboardNavigationController.isNavigationBarHidden = true
     settingsNavigationController.isNavigationBarHidden = true
     let viewControllers = [dashboardNavigationController, dataBrowserNavigationController, settingsNavigationController]
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, settingsSuit: applicationSettingsSuit)
-    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, settingsSuit: applicationSettingsSuit)
+    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
     dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance)
   }
+
+    func showLessons() {
+        presenter.selectedIndex = 0
+        dashboardCoordinator.showLessons()
+    }
+
+    func showReviews() {
+        presenter.selectedIndex = 0
+        dashboardCoordinator.showReviews()
+    }
 
 }
 
