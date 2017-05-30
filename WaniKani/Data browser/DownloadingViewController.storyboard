@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wJD-BL-SOF">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Downloading View Controller-->
+        <scene sceneID="vJI-TL-uSf">
+            <objects>
+                <viewController id="wJD-BL-SOF" customClass="DownloadingViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5NR-qc-YQb"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4k-4a-Kcq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WJN-iq-j8V">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-O8-3R2">
+                                <rect key="frame" x="35" y="270" width="954" height="228.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmA-p9-ppj">
+                                        <rect key="frame" x="0.0" y="0.0" width="954" height="45.5"/>
+                                        <string key="text">Before searching WaniKani items, you need to download them on your device. This will take around 3 MB of data traffic and around 1 minute of your time.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8n1-c0-KbU">
+                                        <rect key="frame" x="0.0" y="83.5" width="954" height="2"/>
+                                    </progressView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kqC-2N-ehL">
+                                        <rect key="frame" x="0.0" y="123.5" width="954" height="37"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-oc-KYa">
+                                        <rect key="frame" x="0.0" y="198.5" width="954" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gdu-O8-3R2" firstAttribute="leading" secondItem="WJN-iq-j8V" secondAttribute="leadingMargin" constant="15" id="KdK-Ja-nje"/>
+                            <constraint firstItem="gdu-O8-3R2" firstAttribute="centerY" secondItem="WJN-iq-j8V" secondAttribute="centerY" id="L7Q-er-Bf7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gdu-O8-3R2" secondAttribute="trailing" constant="15" id="TtX-zW-33k"/>
+                            <constraint firstItem="gdu-O8-3R2" firstAttribute="centerX" secondItem="WJN-iq-j8V" secondAttribute="centerX" id="d4y-js-0hz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kqC-2N-ehL" id="u0L-fA-anR"/>
+                        <outlet property="progressView" destination="8n1-c0-KbU" id="LEF-eV-VsG"/>
+                        <outlet property="startDownloading" destination="JsF-oc-KYa" id="XM6-10-uIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJ6-F5-l48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111.32812499999999" y="161.71875"/>
+        </scene>
+    </scenes>
+</document>
