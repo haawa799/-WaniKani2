@@ -53,9 +53,8 @@ class DataProvider {
     }
   }
 
-  func fetchKanji(kanjiFetchedBlock: @escaping (_ success: Bool) -> Void) {
-    let dispatchQueue = DispatchQueue(label: "Fetch all kanji queue")
-    dispatchQueue.async {
+  func fetchKanji(queue: DispatchQueue = DispatchQueue(label: "Fetch all kanji queue"), kanjiFetchedBlock: @escaping (_ success: Bool) -> Void) {
+    queue.async {
       var kanjiArray = [KanjiInfo]()
       for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()
@@ -77,9 +76,8 @@ class DataProvider {
     }
   }
 
-  func fetchWords(wordsFetchedBlock: @escaping (_ success: Bool) -> Void) {
-    let dispatchQueue = DispatchQueue(label: "Fetch all words queue")
-    dispatchQueue.async {
+  func fetchWords(queue: DispatchQueue = DispatchQueue(label: "Fetch all words queue"), wordsFetchedBlock: @escaping (_ success: Bool) -> Void) {
+    queue.async {
       var words = [WordInfo]()
       for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()
@@ -101,9 +99,8 @@ class DataProvider {
     }
   }
 
-    func fetchRadicals(radicalsFetchedBlock: @escaping (_ success: Bool) -> Void) {
-    let dispatchQueue = DispatchQueue(label: "Fetch all radicals queue")
-    dispatchQueue.async {
+    func fetchRadicals(queue: DispatchQueue = DispatchQueue(label: "Fetch all radicals queue"), radicalsFetchedBlock: @escaping (_ success: Bool) -> Void) {
+    queue.async {
       var radicals = [RadicalInfo]()
       for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()

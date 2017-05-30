@@ -12,6 +12,10 @@ import WaniModel
 
 class DataBrowserCoordinator: NSObject, Coordinator {
 
+  struct Constant {
+    static let defaultsDownloadKey = "defaultsDownloadKey"
+  }
+
   fileprivate let presenter: UINavigationController
   fileprivate let dataProvider: DataProvider
   fileprivate let searchDataProvider: SearchItemsDataProvider
@@ -54,6 +58,19 @@ class DataBrowserCoordinator: NSObject, Coordinator {
 extension DataBrowserCoordinator {
   func start() {
 
+    let noData = UserDefaults.standard.bool(forKey: Constant.defaultsDownloadKey)
+
+    if noData == true {
+      presentDataBrowser(push: false)
+    } else {
+      let downloadingCoordinator = DownloadingCoordinator(presenter: presenter, dataProvider: dataProvider)
+      downloadingCoordinator.delegate = self
+      downloadingCoordinator.start()
+      self.downloadingCoordinator = downloadingCoordinator
+    }
+  }
+
+  func presentDataBrowser(push: Bool) {
     let dataBrowserViewController: DataBrowserViewController = DataBrowserViewController.instantiateViewController()
     _ = dataBrowserViewController.view
     if presenter.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
@@ -61,16 +78,13 @@ extension DataBrowserCoordinator {
     }
     dataBrowserViewController.delegate = self
     presenter.isNavigationBarHidden = true
-    presenter.pushViewController(dataBrowserViewController, animated: false)
-    self.dataBrowserViewController = dataBrowserViewController
 
-    let needsDownloading = true
-    if needsDownloading == true {
-        let downloadingCoordinator = DownloadingCoordinator(presenter: presenter, dataProvider: dataProvider)
-        downloadingCoordinator.delegate = self
-      downloadingCoordinator.start()
-      self.downloadingCoordinator = downloadingCoordinator
+    if push == true {
+      presenter.pushViewController(dataBrowserViewController, animated: false)
+    } else {
+      presenter.setViewControllers([dataBrowserViewController], animated: true)
     }
+    self.dataBrowserViewController = dataBrowserViewController
   }
 
 }
@@ -145,10 +159,9 @@ extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
 
 // MARK: - DownloadingCoordinatorDelegate
 extension DataBrowserCoordinator: DownloadingCoordinatorDelegate {
-    func downloadComplete() {
-        let dataBrowserViewController: DataBrowserViewController = DataBrowserViewController.instantiateViewController()
-        presenter.setViewControllers([dataBrowserViewController], animated: true)
-        self.dataBrowserViewController = dataBrowserViewController
-    }
+  func downloadComplete() {
+    UserDefaults.standard.set(true, forKey: Constant.defaultsDownloadKey)
+    presentDataBrowser(push: false)
+  }
 
 }

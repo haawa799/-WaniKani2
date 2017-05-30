@@ -9,29 +9,31 @@
 import UIKit
 
 protocol DownloadingViewControllerDelegate: class {
-    func startDownloadPressed()
-    func progress100Percent()
+  func startDownloadPressed()
+  func progress100Percent()
 }
 
 class DownloadingViewController: UIViewController, StoryboardInstantiable, BluredBackground {
 
-    weak var delegate: DownloadingViewControllerDelegate?
+  weak var delegate: DownloadingViewControllerDelegate?
 
-    var maxProgress = 0
-    var currentProgress = 0 {
-        didSet {
-            if currentProgress == maxProgress {
-                isDownloading = false
-                delegate?.progress100Percent()
-            }
-            let progress = Float(currentProgress) / Float(maxProgress)
-            progressView?.progress = progress
-        }
+  var maxProgress = 0
+  var currentProgress = 0 {
+    didSet {
+      if currentProgress == maxProgress {
+        isDownloading = false
+        delegate?.progress100Percent()
+      }
+      let progress = Float(currentProgress) / Float(maxProgress)
+      DispatchQueue.main.async { [weak self] in
+        self?.progressView?.progress = progress
+      }
     }
-    @IBAction func downloadAction(_ sender: Any) {
-        isDownloading = true
-        delegate?.startDownloadPressed()
-    }
+  }
+  @IBAction func downloadAction(_ sender: Any) {
+    isDownloading = true
+    delegate?.startDownloadPressed()
+  }
 
   @IBOutlet weak var progressView: UIProgressView?
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
@@ -41,10 +43,10 @@ class DownloadingViewController: UIViewController, StoryboardInstantiable, Blure
     didSet {
       switch isDownloading {
       case true:
-        activityIndicator?.isHidden = false
+        activityIndicator?.startAnimating()
         startDownloading?.isHidden = true
       case false:
-        activityIndicator?.isHidden = true
+        activityIndicator?.stopAnimating()
         startDownloading?.isHidden = false
       }
     }
