@@ -13,12 +13,14 @@ import WaniModel
 class DataBrowserCoordinator: NSObject, Coordinator {
 
   fileprivate let presenter: UINavigationController
+  fileprivate let dataProvider: DataProvider
   fileprivate let searchDataProvider: SearchItemsDataProvider
   fileprivate weak var dataBrowserViewController: DataBrowserViewController?
   fileprivate var downloadingCoordinator: DownloadingCoordinator?
 
-  init(presenter: UINavigationController, persistance: Persistance) {
+  init(presenter: UINavigationController, persistance: Persistance, dataProvider: DataProvider) {
     self.presenter = presenter
+    self.dataProvider = dataProvider
     self.searchDataProvider = SearchItemsDataProvider(persistance: persistance)
     super.init()
     searchDataProvider.delegate = self
@@ -64,11 +66,13 @@ extension DataBrowserCoordinator {
 
     let needsDownloading = true
     if needsDownloading == true {
-      let downloadingCoordinator = DownloadingCoordinator(presenter: presenter)
+        let downloadingCoordinator = DownloadingCoordinator(presenter: presenter, dataProvider: dataProvider)
+        downloadingCoordinator.delegate = self
       downloadingCoordinator.start()
       self.downloadingCoordinator = downloadingCoordinator
     }
   }
+
 }
 
 // MARK: - SearchItemsDataProviderDelegate
@@ -137,4 +141,14 @@ extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
   func searchCancelPressed() {
     searchDataProvider.searchText = nil
   }
+}
+
+// MARK: - DownloadingCoordinatorDelegate
+extension DataBrowserCoordinator: DownloadingCoordinatorDelegate {
+    func downloadComplete() {
+        let dataBrowserViewController: DataBrowserViewController = DataBrowserViewController.instantiateViewController()
+        presenter.setViewControllers([dataBrowserViewController], animated: true)
+        self.dataBrowserViewController = dataBrowserViewController
+    }
+
 }

@@ -19,6 +19,8 @@ protocol DataProviderDelegate: class {
 
 class DataProvider {
 
+  fileprivate static let maxLevel = 60
+
   private let apiManager: WaniKitManager
   private let activityManager = UserActivityManager()
   let persistance: Persistance
@@ -51,72 +53,72 @@ class DataProvider {
     }
   }
 
-  func fetchKanji() {
+  func fetchKanji(kanjiFetchedBlock: @escaping (_ success: Bool) -> Void) {
     let dispatchQueue = DispatchQueue(label: "Fetch all kanji queue")
     dispatchQueue.async {
       var kanjiArray = [KanjiInfo]()
-      for level in 1...60 {
+      for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchKanjiPromise(level: level)
         q.then({ (kanji) in
-          debugPrint("FFF:: level:\(level) count: \(kanji.count)")
           kanjiArray.append(contentsOf: kanji)
+          kanjiFetchedBlock(true)
           group.leave()
         }).catch({ (_) in
+          kanjiFetchedBlock(false)
           group.leave()
         })
         group.wait()
       }
-      debugPrint("FFF:: all \(kanjiArray.count)")
       DispatchQueue.main.async {
         self.persistance.persist(kanji: kanjiArray)
       }
     }
   }
 
-  func fetchWords() {
+  func fetchWords(wordsFetchedBlock: @escaping (_ success: Bool) -> Void) {
     let dispatchQueue = DispatchQueue(label: "Fetch all words queue")
     dispatchQueue.async {
       var words = [WordInfo]()
-      for level in 1...60 {
+      for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchVocabPromise(level: level)
         q.then({ (vocab) in
-          debugPrint("FFF:: level:\(level) count: \(vocab.count)")
           words.append(contentsOf: vocab)
+          wordsFetchedBlock(true)
           group.leave()
         }).catch({ (_) in
+          wordsFetchedBlock(false)
           group.leave()
         })
         group.wait()
       }
-      debugPrint("FFF:: all \(words.count)")
       DispatchQueue.main.async {
         self.persistance.persist(words: words)
       }
     }
   }
 
-  func fetchRadicals() {
+    func fetchRadicals(radicalsFetchedBlock: @escaping (_ success: Bool) -> Void) {
     let dispatchQueue = DispatchQueue(label: "Fetch all radicals queue")
     dispatchQueue.async {
       var radicals = [RadicalInfo]()
-      for level in 1...60 {
+      for level in 1...DataProvider.maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchRadicalPromise(level: level)
         q.then({ (rads) in
-          debugPrint("FFF:: level:\(level) count: \(rads.count)")
           radicals.append(contentsOf: rads)
+          radicalsFetchedBlock(true)
           group.leave()
         }).catch({ (_) in
+          radicalsFetchedBlock(false)
           group.leave()
         })
         group.wait()
       }
-      debugPrint("FFF:: all \(radicals.count)")
       DispatchQueue.main.async {
         self.persistance.persist(radicals: radicals)
       }

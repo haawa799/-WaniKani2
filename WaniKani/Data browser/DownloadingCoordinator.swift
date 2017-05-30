@@ -8,15 +8,68 @@
 
 import UIKit
 
-class DownloadingCoordinator: Coordinator {
-  let presenter: UINavigationController
-  let downloadViewController: DownloadingViewController = DownloadingViewController.instantiateViewController()
+protocol DownloadingCoordinatorDelegate: class {
+    func downloadComplete()
+}
 
-  init(presenter: UINavigationController) {
+class DownloadingCoordinator: Coordinator {
+
+    weak var delegate: DownloadingCoordinatorDelegate?
+
+  fileprivate let presenter: UINavigationController
+  fileprivate let dataProvider: DataProvider
+  fileprivate let downloadViewController: DownloadingViewController = DownloadingViewController.instantiateViewController()
+
+  init(presenter: UINavigationController, dataProvider: DataProvider) {
     self.presenter = presenter
+    self.dataProvider = dataProvider
   }
 
   func start() {
+    downloadViewController.delegate = self
     presenter.setViewControllers([downloadViewController], animated: false)
   }
+}
+
+// MARK: - DownloadingViewControllerDelegate
+extension DownloadingCoordinator: DownloadingViewControllerDelegate {
+    func startDownloadPressed() {
+        downloadViewController.maxProgress = 60 * 3
+        downloadViewController.currentProgress = 0
+
+        dataProvider.fetchRadicals { [weak self] (success) in
+            switch success {
+                case true: self?.incrementProgress()
+                case false: self?.cancelDownload()
+            }
+        }
+
+        dataProvider.fetchKanji { [weak self] (success) in
+            switch success {
+            case true: self?.incrementProgress()
+            case false: self?.cancelDownload()
+            }
+        }
+
+        dataProvider.fetchWords { [weak self] (success) in
+            switch success {
+            case true: self?.incrementProgress()
+            case false: self?.cancelDownload()
+            }
+        }
+    }
+
+    func progress100Percent() {
+        delegate?.downloadComplete()
+    }
+
+    func cancelDownload() {
+
+    }
+
+    func incrementProgress() {
+        DispatchQueue.main.async { [weak self] in
+            self?.downloadViewController.currentProgress += 1
+        }
+    }
 }

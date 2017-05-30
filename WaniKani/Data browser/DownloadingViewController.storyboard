@@ -41,6 +41,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-oc-KYa">
                                         <rect key="frame" x="0.0" y="198.5" width="954" height="30"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="downloadAction:" destination="wJD-BL-SOF" eventType="touchUpInside" id="JWo-gm-PQP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

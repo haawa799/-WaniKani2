@@ -8,7 +8,30 @@
 
 import UIKit
 
+protocol DownloadingViewControllerDelegate: class {
+    func startDownloadPressed()
+    func progress100Percent()
+}
+
 class DownloadingViewController: UIViewController, StoryboardInstantiable, BluredBackground {
+
+    weak var delegate: DownloadingViewControllerDelegate?
+
+    var maxProgress = 0
+    var currentProgress = 0 {
+        didSet {
+            if currentProgress == maxProgress {
+                isDownloading = false
+                delegate?.progress100Percent()
+            }
+            let progress = Float(currentProgress) / Float(maxProgress)
+            progressView?.progress = progress
+        }
+    }
+    @IBAction func downloadAction(_ sender: Any) {
+        isDownloading = true
+        delegate?.startDownloadPressed()
+    }
 
   @IBOutlet weak var progressView: UIProgressView?
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView?

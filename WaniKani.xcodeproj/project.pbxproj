@@ -651,6 +651,7 @@
 		5D9C1DAA1ECD830B00D42ABA /* Data browser */ = {
 			isa = PBXGroup;
 			children = (
+				433A42461EDCBC520077D965 /* DownloadingCoordinator.swift */,
 				433A42421EDCB0E60077D965 /* DownloadingViewController.swift */,
 				433A42441EDCB1010077D965 /* DownloadingViewController.storyboard */,
 				5D93F0381ED3121C00687D03 /* ViewModel */,
@@ -667,7 +668,6 @@
 				5DBA818D1ED847D20083B1C6 /* WordDetailViewController.storyboard */,
 				5DBA818E1ED847D20083B1C6 /* WordDetailViewController.swift */,
 				5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */,
-				433A42461EDCBC520077D965 /* DownloadingCoordinator.swift */,
 			);
 			path = "Data browser";
 			sourceTree = "<group>";

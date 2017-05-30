@@ -33,7 +33,7 @@ open class TabsCoordinator: Coordinator {
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
     settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
-    dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance)
+    dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance, dataProvider: dataProvider)
   }
 
     func showLessons() {
