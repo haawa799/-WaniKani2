@@ -22,7 +22,7 @@ class ApplicationCoordinator: NSObject, Coordinator {
 
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
-    let awardManager: AwardsManager
+  let awardManager: AwardsManager
 
   init(window: UIWindow) {
     self.window = window
@@ -39,6 +39,20 @@ class ApplicationCoordinator: NSObject, Coordinator {
     self.tabsCoordinator = tabsCoordinator
     awardManager.authenticateLocalPlayer()
   }
+  
+  func displayLogoutPrompt() {
+    let alertController = UIAlertController(title: "Do you want to log out?", message:
+      nil, preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+    alertController.addAction(UIAlertAction(title: "Log out", style: .destructive, handler: { [weak self] (_) in
+      self?.logout()
+    }))
+    self.rootViewController.present(alertController, animated: true, completion: nil)
+  }
+  
+  fileprivate func logout() {
+    waniLoginCoordinator.logOut()
+  }
 
 }
 
@@ -47,8 +61,8 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
     UNUserNotificationCenter.current().delegate = self
     UNUserNotificationCenter.current().requestAuthorization(
-        options: [.alert, .sound, .badge],
-        completionHandler: { (_, _) in
+      options: [.alert, .sound, .badge],
+      completionHandler: { (_, _) in
     })
     window.rootViewController = rootViewController
     waniLoginCoordinator.start(delegate: self, window: window)
@@ -70,32 +84,39 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     CookiesStorage.saveCookies()
   }
 
-    func handelShortCut(shortcut: ShortcutIdentifier) {
-        switch shortcut {
-        case .reviews: tabsCoordinator?.showReviews()
-        case .lessons: tabsCoordinator?.showLessons()
-        }
+  func handelShortCut(shortcut: ShortcutIdentifier) {
+    switch shortcut {
+    case .reviews: tabsCoordinator?.showReviews()
+    case .lessons: tabsCoordinator?.showLessons()
     }
+  }
 
 }
 
 // MARK: - DataProviderDelegate
 extension ApplicationCoordinator: DataProviderDelegate {
-    func apiKeyIncorect() {
-        guard waniLoginCoordinator.isLoggedIn == true else { return }
-        waniLoginCoordinator.logOut()
-    }
-    func userDidLevelUp(oldLevel: Int, newLevel: Int) {
-        awardManager.userLevelUp(oldLevel: oldLevel, newLevel: newLevel)
-    }
+  func apiKeyIncorect() {
+    guard waniLoginCoordinator.isLoggedIn == true else { return }
+    let alertController = UIAlertController(title: "Network request failed", message:
+      "This might mean that API key has changed. If this error repeats you might need to login again.", preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+    alertController.addAction(UIAlertAction(title: "Log out", style: .destructive, handler: { [weak self] (_) in
+      self?.logout()
+    }))
+
+    self.rootViewController.present(alertController, animated: true, completion: nil)
+  }
+  func userDidLevelUp(oldLevel: Int, newLevel: Int) {
+    awardManager.userLevelUp(oldLevel: oldLevel, newLevel: newLevel)
+  }
 }
 
 // MARK: - UNUserNotificationCenterDelegate
 extension ApplicationCoordinator: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        debugPrint(response.actionIdentifier)
-        if response.actionIdentifier == "CancelIdentifier" {
-            window.rootViewController = nil
-        }
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    debugPrint(response.actionIdentifier)
+    if response.actionIdentifier == "CancelIdentifier" {
+      window.rootViewController = nil
     }
+  }
 }
