@@ -35,11 +35,12 @@ class ApplicationCoordinator: NSObject, Coordinator {
     let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
     let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance)
+    tabsCoordinator.delegate = self
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
     awardManager.authenticateLocalPlayer()
   }
-  
+
   func displayLogoutPrompt() {
     let alertController = UIAlertController(title: "Do you want to log out?", message:
       nil, preferredStyle: UIAlertControllerStyle.alert)
@@ -49,8 +50,17 @@ class ApplicationCoordinator: NSObject, Coordinator {
     }))
     self.rootViewController.present(alertController, animated: true, completion: nil)
   }
-  
+    
   fileprivate func logout() {
+    // Remove all cache
+    URLCache.shared.removeAllCachedResponses()
+
+    // Delete any associated cookies
+    if let cookies = HTTPCookieStorage.shared.cookies {
+        for cookie in cookies {
+            HTTPCookieStorage.shared.deleteCookie(cookie)
+        }
+    }
     waniLoginCoordinator.logOut()
   }
 
@@ -119,4 +129,11 @@ extension ApplicationCoordinator: UNUserNotificationCenterDelegate {
       window.rootViewController = nil
     }
   }
+}
+
+// MARK: - TabsCoordinatorDelegate
+extension ApplicationCoordinator: TabsCoordinatorDelegate {
+    func logOutPressed() {
+        displayLogoutPrompt()
+    }
 }

@@ -41,6 +41,7 @@ private struct SettingsSuitSettings {
   static let hideStatusBarSetting: Setting = Setting(key: SettingSuitKey.hideStatusBarKey, script: nil, description: "Status bar hidden on Reviews")
   static let shouldUseGCSetting: Setting = Setting(key: SettingSuitKey.shouldUseGameCenterKey, script: nil, description: "Use GameCenter")
   static let gameCenterDummySetting: Setting = Setting(key: SettingSuitKey.gameCenterKey, script: nil, description: "Game center")
+  static let logOutDummySetting: Setting = Setting(key: SettingSuitKey.logOutKey, script: nil, description: "Log out")
   static let ignoreLessonsInIconCounter: Setting = Setting(key: SettingSuitKey.ignoreLessonsInIconBadgeKey, script: nil, description: "Ignore lessons in icon badge")
 
   static var userScriptsForReview: [UserScript] {
@@ -67,12 +68,6 @@ private struct SettingsSuitSettings {
 public struct SettingsSuit {
 
   public let userDefaults: UserDefaults
-//  fileprivate let keychainManager: KeychainManager
-//  
-//  init(userDefaults: UserDefaults, keychainManager: KeychainManager) {
-//    self.userDefaults = userDefaults
-//    self.keychainManager = keychainManager
-//  }
 
   fileprivate func settingWithID(identifier: String) -> Setting? {
     let setting = SettingsSuitSettings.allSettings.filter ({ $0.key.rawValue == identifier }).first
@@ -95,14 +90,16 @@ extension SettingsSuit {
         ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.reorderSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier)
         ]),
       // Section 2
-      ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Other options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
-        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.hideStatusBarSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
-        ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.gameCenterDummySetting) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier)
-        ]),
+        ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Notifications options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
+            ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.ignoreLessonsInIconCounter) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier)
+            ]),
       // Section 3
-      ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Notifications options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
-        ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.ignoreLessonsInIconCounter) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier)
-        ])
+        ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Other options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
+            ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.hideStatusBarSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
+            ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.gameCenterDummySetting, icon: #imageLiteral(resourceName: "game center")) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier),
+            ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.logOutDummySetting) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier)
+            ])
+
     ]
     return ListViewModel(sections: sections)
   }

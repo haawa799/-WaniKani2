@@ -9,7 +9,13 @@
 import UIKit
 import WaniPersistance
 
+protocol TabsCoordinatorDelegate: class {
+    func logOutPressed()
+}
+
 open class TabsCoordinator: Coordinator {
+
+    weak var delegate: TabsCoordinatorDelegate?
 
   fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: UserDefaults.standard)
   fileprivate let dashboardNavigationController = UINavigationController()
@@ -51,9 +57,17 @@ open class TabsCoordinator: Coordinator {
 // MARK: - Coordinator
 extension TabsCoordinator {
   func start() {
+    settingsCoordinator.delegate = self
     dashboardCoordinator.start()
     settingsCoordinator.start()
     dataBrowserCoordinator.start()
   }
 
+}
+
+// MARK: - SettingsCoordinatorDelegate
+extension TabsCoordinator: SettingsCoordinatorDelegate {
+    func logOutPressed() {
+        delegate?.logOutPressed()
+    }
 }

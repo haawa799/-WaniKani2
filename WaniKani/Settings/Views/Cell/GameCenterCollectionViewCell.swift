@@ -8,13 +8,20 @@
 
 import UIKit
 
+protocol GameCenterCollectionViewCellDatasource: SingleTitleViewModel {
+    var icon: UIImage? { get }
+}
+
 class GameCenterCollectionViewCell: UICollectionViewCell, FlippableView, SingleReuseIdentifier, ViewModelSetupable {
-  @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var label: UILabel?
+    @IBOutlet weak var button: UIButton?
+
 }
 
 extension GameCenterCollectionViewCell {
   func setupWithViewModel(_ viewModel: ViewModel?) {
-    guard let viewModel = viewModel as? SingleTitleViewModel else { return }
+    guard let viewModel = viewModel as? GameCenterCollectionViewCellDatasource else { return }
     label?.text = viewModel.title
+    button?.setImage(viewModel.icon, for: .normal)
   }
 }

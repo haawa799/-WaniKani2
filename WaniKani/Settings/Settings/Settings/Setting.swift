@@ -18,6 +18,7 @@ enum SettingSuitKey: String {
   case reorderEnabledKey = "reorderEnabledKey"
   case hideStatusBarKey = "hideStatusBarKey"
   case gameCenterKey = "gameCenterKey"
+  case logOutKey = "logOutKey"
   case shouldUseGameCenterKey = "shouldUSeGameCenter"
   case ignoreLessonsInIconBadgeKey = "ignoreLessonsInIconBadgeKey"
 }

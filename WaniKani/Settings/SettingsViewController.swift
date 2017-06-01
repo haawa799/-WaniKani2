@@ -89,6 +89,8 @@ extension SettingsViewController: UICollectionViewDataSource {
           cell.setupWith(dataSource, state: state)
         }
       }
+    } else {
+        (cell as? ViewModelSetupable)?.setupWithViewModel(item.viewModel)
     }
     return cell
   }

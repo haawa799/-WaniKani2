@@ -6,22 +6,28 @@
 //  Copyright © 2016 Andriy K. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct GameCenterCellViewModel: SingleTitleViewModel {
+struct GameCenterCellViewModel: GameCenterCollectionViewCellDatasource {
 
-  fileprivate let titleString: String
+    fileprivate let _icon: UIImage?
+    fileprivate let titleString: String
 
-  init(setting: Setting) {
-    titleString = setting.description ?? ""
-  }
+    init(setting: Setting, icon: UIImage? = nil) {
+        titleString = setting.description ?? ""
+        _icon = icon
+    }
 
 }
 
 extension GameCenterCellViewModel {
 
-  var title: String {
-    return titleString
-  }
+    var icon: UIImage? {
+        return _icon
+    }
+
+    var title: String {
+        return titleString
+    }
 
 }

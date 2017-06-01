@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SettingsCoordinatorDelegate: class {
+    func logOutPressed()
+}
+
 class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
+
+    weak var delegate: SettingsCoordinatorDelegate?
 
   let presenter: UINavigationController
   let settingsViewController: SettingsViewController
@@ -40,8 +46,11 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
 extension SettingsCoordinator {
 
   func cellPressed(_ indexPath: IndexPath) {
-    print("indexPath: \(indexPath)")
-    awardManager.showGameCenterViewController()
+    switch (indexPath.section, indexPath.row) {
+        case (3, 2): delegate?.logOutPressed()
+        case (3, 1): awardManager.showGameCenterViewController()
+        default: break
+    }
   }
 
   func cellCheckboxStateChange(identifier: String, state: Bool) {
