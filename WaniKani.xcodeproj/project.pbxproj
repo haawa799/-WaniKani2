@@ -49,7 +49,6 @@
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */; };
-		43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A431E7A98C600F6874A /* CookiesStorage.swift */; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
 		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
@@ -95,6 +94,25 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		5D32BDD71EE6F0CA00ABE009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32BDD61EE6F0CA00ABE009 /* Assets.xcassets */; };
+		5D32BDDE1EE6F0CA00ABE009 /* WaniTokei Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D32BDDD1EE6F0CA00ABE009 /* WaniTokei Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D32BDE91EE6F0CA00ABE009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32BDE81EE6F0CA00ABE009 /* Assets.xcassets */; };
+		5D32BDED1EE6F0CA00ABE009 /* WaniTokei.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5D32BDD11EE6F0CA00ABE009 /* WaniTokei.app */; };
+		5D32BDF71EE6F10800ABE009 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D32BDF61EE6F10800ABE009 /* GameKit.framework */; };
+		5D56A5521EE6FBA100A96BBF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5441EE6FBA100A96BBF /* ComplicationController.swift */; };
+		5D56A5531EE6FBA100A96BBF /* CriticalItemsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5451EE6FBA100A96BBF /* CriticalItemsInterfaceController.swift */; };
+		5D56A5541EE6FBA100A96BBF /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5461EE6FBA100A96BBF /* DateHelper.swift */; };
+		5D56A5551EE6FBA100A96BBF /* ErrorInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5471EE6FBA100A96BBF /* ErrorInterfaceController.swift */; };
+		5D56A5561EE6FBA100A96BBF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5481EE6FBA100A96BBF /* ExtensionDelegate.swift */; };
+		5D56A5571EE6FBA100A96BBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5491EE6FBA100A96BBF /* Item.swift */; };
+		5D56A5581EE6FBA100A96BBF /* ItemDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54A1EE6FBA100A96BBF /* ItemDetailsInterfaceController.swift */; };
+		5D56A5591EE6FBA100A96BBF /* ItemRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54B1EE6FBA100A96BBF /* ItemRowController.swift */; };
+		5D56A55A1EE6FBA100A96BBF /* KanjiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54C1EE6FBA100A96BBF /* KanjiInfo.swift */; };
+		5D56A55B1EE6FBA100A96BBF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54D1EE6FBA100A96BBF /* NetworkingManager.swift */; };
+		5D56A55C1EE6FBA100A96BBF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54E1EE6FBA100A96BBF /* NotificationController.swift */; };
+		5D56A55D1EE6FBA100A96BBF /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A54F1EE6FBA100A96BBF /* PersistanceManager.swift */; };
+		5D56A55E1EE6FBA100A96BBF /* RadicalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5501EE6FBA100A96BBF /* RadicalInfo.swift */; };
+		5D56A55F1EE6FBA100A96BBF /* WordlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5511EE6FBA100A96BBF /* WordlInfo.swift */; };
 		5D5ECC831ED5AFC700BF6D58 /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */; };
 		5D5ECC861ED5C2EC00BF6D58 /* SearchItemsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */; };
 		5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */; };
@@ -110,7 +128,6 @@
 		5D9C1DB61ECDA52500D42ABA /* DashboardHeaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */; };
 		5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */; };
 		5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */; };
-		5D9E855C1EDBEE5300C33D8A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9E855B1EDBEE5300C33D8A /* GameKit.framework */; };
 		5D9E855F1EDBEE9F00C33D8A /* AwardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */; };
 		5D9E85611EDBEF5D00C33D8A /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */; };
 		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
@@ -147,6 +164,23 @@
 		5DF2D8621ECC445900D209A1 /* SwiftyDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5D32BDDF1EE6F0CA00ABE009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D32BDDC1EE6F0CA00ABE009;
+			remoteInfo = "WaniTokei Extension";
+		};
+		5D32BDEB1EE6F0CA00ABE009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43620A321D8C28FA00C1BA72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D32BDD01EE6F0CA00ABE009;
+			remoteInfo = WaniTokei;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		43620AD71D8DD2F300C1BA72 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -156,6 +190,28 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D32BDF31EE6F0CA00ABE009 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5D32BDDE1EE6F0CA00ABE009 /* WaniTokei Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D32BDF51EE6F0CA00ABE009 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5D32BDED1EE6F0CA00ABE009 /* WaniTokei.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -209,7 +265,6 @@
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingScriptUtils.swift; sourceTree = "<group>"; };
-		43B02A431E7A98C600F6874A /* CookiesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookiesStorage.swift; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
@@ -255,6 +310,33 @@
 		43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSViewModel.swift; sourceTree = "<group>"; };
 		43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSDistributionViewModel.swift; sourceTree = "<group>"; };
 		43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		5D32BDD11EE6F0CA00ABE009 /* WaniTokei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniTokei.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D32BDD41EE6F0CA00ABE009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5D32BDD61EE6F0CA00ABE009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D32BDD81EE6F0CA00ABE009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D32BDDD1EE6F0CA00ABE009 /* WaniTokei Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WaniTokei Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D32BDE41EE6F0CA00ABE009 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5D32BDE61EE6F0CA00ABE009 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5D32BDE81EE6F0CA00ABE009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D32BDEA1EE6F0CA00ABE009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D32BDF61EE6F10800ABE009 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5D32BDF81EE6F11200ABE009 /* WaniKani.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniKani.entitlements; sourceTree = "<group>"; };
+		5D32BDF91EE6F12900ABE009 /* WaniTokei.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniTokei.entitlements; sourceTree = "<group>"; };
+		5D32BDFA1EE6F13C00ABE009 /* WaniTokei Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WaniTokei Extension.entitlements"; sourceTree = "<group>"; };
+		5D56A5441EE6FBA100A96BBF /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5D56A5451EE6FBA100A96BBF /* CriticalItemsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriticalItemsInterfaceController.swift; sourceTree = "<group>"; };
+		5D56A5461EE6FBA100A96BBF /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		5D56A5471EE6FBA100A96BBF /* ErrorInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInterfaceController.swift; sourceTree = "<group>"; };
+		5D56A5481EE6FBA100A96BBF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5D56A5491EE6FBA100A96BBF /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5D56A54A1EE6FBA100A96BBF /* ItemDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsInterfaceController.swift; sourceTree = "<group>"; };
+		5D56A54B1EE6FBA100A96BBF /* ItemRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRowController.swift; sourceTree = "<group>"; };
+		5D56A54C1EE6FBA100A96BBF /* KanjiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiInfo.swift; sourceTree = "<group>"; };
+		5D56A54D1EE6FBA100A96BBF /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		5D56A54E1EE6FBA100A96BBF /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5D56A54F1EE6FBA100A96BBF /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		5D56A5501EE6FBA100A96BBF /* RadicalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadicalInfo.swift; sourceTree = "<group>"; };
+		5D56A5511EE6FBA100A96BBF /* WordlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordlInfo.swift; sourceTree = "<group>"; };
 		5D5ECC821ED5AFC700BF6D58 /* SearchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		5D5ECC841ED5C2EC00BF6D58 /* SearchItemsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemsHeader.swift; sourceTree = "<group>"; };
 		5D5ECC851ED5C2EC00BF6D58 /* SearchItemsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemsHeader.xib; sourceTree = "<group>"; };
@@ -270,7 +352,6 @@
 		5D9C1DB51ECDA52500D42ABA /* DashboardHeaderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardHeaderViewController.storyboard; sourceTree = "<group>"; };
 		5D9C1DB71ECDAF1100D42ABA /* SRSViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SRSViewController.storyboard; sourceTree = "<group>"; };
 		5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
-		5D9E855B1EDBEE5300C33D8A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsManager.swift; sourceTree = "<group>"; };
 		5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
 		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
@@ -327,7 +408,14 @@
 				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
 				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
 				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
-				5D9E855C1EDBEE5300C33D8A /* GameKit.framework in Frameworks */,
+				5D32BDF71EE6F10800ABE009 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D32BDDA1EE6F0CA00ABE009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +537,6 @@
 				430876CC1D9021B300FE71FE /* Utils.swift */,
 				430876CD1D9021B300FE71FE /* ViewModel.swift */,
 				43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */,
-				43B02A431E7A98C600F6874A /* CookiesStorage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -457,7 +544,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D9E855B1EDBEE5300C33D8A /* GameKit.framework */,
+				5D32BDF61EE6F10800ABE009 /* GameKit.framework */,
 				5DBA81831ED80ED50083B1C6 /* Kingfisher.framework */,
 				5DBA81811ED80CAC0083B1C6 /* SHSearchBar.framework */,
 				5DF2D8611ECC445900D209A1 /* SwiftyDraw.framework */,
@@ -484,6 +571,8 @@
 			children = (
 				433D3D5E1E3B9020001C631D /* Cartfile */,
 				43620A3C1D8C28FA00C1BA72 /* WaniKani */,
+				5D32BDD21EE6F0CA00ABE009 /* WaniTokei */,
+				5D32BDE11EE6F0CA00ABE009 /* WaniTokei Extension */,
 				43620A3B1D8C28FA00C1BA72 /* Products */,
 				430876DA1D902F1D00FE71FE /* Frameworks */,
 			);
@@ -493,6 +582,8 @@
 			isa = PBXGroup;
 			children = (
 				43620A3A1D8C28FA00C1BA72 /* WaniKani.app */,
+				5D32BDD11EE6F0CA00ABE009 /* WaniTokei.app */,
+				5D32BDDD1EE6F0CA00ABE009 /* WaniTokei Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,6 +591,7 @@
 		43620A3C1D8C28FA00C1BA72 /* WaniKani */ = {
 			isa = PBXGroup;
 			children = (
+				5D32BDF81EE6F11200ABE009 /* WaniKani.entitlements */,
 				5D9C1DAA1ECD830B00D42ABA /* Data browser */,
 				5DF2D8561ECC422300D209A1 /* KanjiPractice */,
 				5DABA1171EC3285000C25F85 /* StrokeOrder */,
@@ -627,6 +719,43 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		5D32BDD21EE6F0CA00ABE009 /* WaniTokei */ = {
+			isa = PBXGroup;
+			children = (
+				5D32BDF91EE6F12900ABE009 /* WaniTokei.entitlements */,
+				5D32BDD31EE6F0CA00ABE009 /* Interface.storyboard */,
+				5D32BDD61EE6F0CA00ABE009 /* Assets.xcassets */,
+				5D32BDD81EE6F0CA00ABE009 /* Info.plist */,
+			);
+			path = WaniTokei;
+			sourceTree = "<group>";
+		};
+		5D32BDE11EE6F0CA00ABE009 /* WaniTokei Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5D56A5441EE6FBA100A96BBF /* ComplicationController.swift */,
+				5D56A5451EE6FBA100A96BBF /* CriticalItemsInterfaceController.swift */,
+				5D56A5461EE6FBA100A96BBF /* DateHelper.swift */,
+				5D56A5471EE6FBA100A96BBF /* ErrorInterfaceController.swift */,
+				5D56A5481EE6FBA100A96BBF /* ExtensionDelegate.swift */,
+				5D56A5491EE6FBA100A96BBF /* Item.swift */,
+				5D56A54A1EE6FBA100A96BBF /* ItemDetailsInterfaceController.swift */,
+				5D56A54B1EE6FBA100A96BBF /* ItemRowController.swift */,
+				5D56A54C1EE6FBA100A96BBF /* KanjiInfo.swift */,
+				5D56A54D1EE6FBA100A96BBF /* NetworkingManager.swift */,
+				5D56A54E1EE6FBA100A96BBF /* NotificationController.swift */,
+				5D56A54F1EE6FBA100A96BBF /* PersistanceManager.swift */,
+				5D56A5501EE6FBA100A96BBF /* RadicalInfo.swift */,
+				5D56A5511EE6FBA100A96BBF /* WordlInfo.swift */,
+				5D32BDFA1EE6F13C00ABE009 /* WaniTokei Extension.entitlements */,
+				5D32BDE41EE6F0CA00ABE009 /* ExtensionDelegate.swift */,
+				5D32BDE61EE6F0CA00ABE009 /* ComplicationController.swift */,
+				5D32BDE81EE6F0CA00ABE009 /* Assets.xcassets */,
+				5D32BDEA1EE6F0CA00ABE009 /* Info.plist */,
+			);
+			path = "WaniTokei Extension";
+			sourceTree = "<group>";
+		};
 		5D93F0331ED3110C00687D03 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,15 +874,51 @@
 				43620AD71D8DD2F300C1BA72 /* Embed Frameworks */,
 				43BA2B7D1E8A9E280021BB20 /* Run Script */,
 				43B02A461E7AA4D800F6874A /* ShellScript */,
+				5D32BDF51EE6F0CA00ABE009 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5D32BDEC1EE6F0CA00ABE009 /* PBXTargetDependency */,
 			);
 			name = WaniKani;
 			productName = WaniKani;
 			productReference = 43620A3A1D8C28FA00C1BA72 /* WaniKani.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5D32BDD01EE6F0CA00ABE009 /* WaniTokei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D32BDF41EE6F0CA00ABE009 /* Build configuration list for PBXNativeTarget "WaniTokei" */;
+			buildPhases = (
+				5D32BDCF1EE6F0CA00ABE009 /* Resources */,
+				5D32BDF31EE6F0CA00ABE009 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D32BDE01EE6F0CA00ABE009 /* PBXTargetDependency */,
+			);
+			name = WaniTokei;
+			productName = WaniTokei;
+			productReference = 5D32BDD11EE6F0CA00ABE009 /* WaniTokei.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5D32BDDC1EE6F0CA00ABE009 /* WaniTokei Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D32BDF21EE6F0CA00ABE009 /* Build configuration list for PBXNativeTarget "WaniTokei Extension" */;
+			buildPhases = (
+				5D32BDD91EE6F0CA00ABE009 /* Sources */,
+				5D32BDDA1EE6F0CA00ABE009 /* Frameworks */,
+				5D32BDDB1EE6F0CA00ABE009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WaniTokei Extension";
+			productName = "WaniTokei Extension";
+			productReference = 5D32BDDD1EE6F0CA00ABE009 /* WaniTokei Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -771,10 +936,33 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
+					5D32BDD01EE6F0CA00ABE009 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S55BP53VB8;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5D32BDDC1EE6F0CA00ABE009 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S55BP53VB8;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
@@ -795,6 +983,8 @@
 			projectRoot = "";
 			targets = (
 				43620A391D8C28FA00C1BA72 /* WaniKani */,
+				5D32BDD01EE6F0CA00ABE009 /* WaniTokei */,
+				5D32BDDC1EE6F0CA00ABE009 /* WaniTokei Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -838,6 +1028,22 @@
 				43D99C581D9919560071C26D /* score.js in Resources */,
 				43D99C621D9919560071C26D /* GameCenterCollectionViewCell.xib in Resources */,
 				5DF2D85C1ECC422300D209A1 /* EmptyViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D32BDCF1EE6F0CA00ABE009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D32BDD71EE6F0CA00ABE009 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D32BDDB1EE6F0CA00ABE009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D32BDE91EE6F0CA00ABE009 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,7 +1103,6 @@
 			files = (
 				5DBA81951ED85E1A0083B1C6 /* NotificationManager.swift in Sources */,
 				43D99C6C1D9923290071C26D /* SettingsScriptCellViewModel.swift in Sources */,
-				43B02A441E7A98C600F6874A /* CookiesStorage.swift in Sources */,
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
@@ -986,7 +1191,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D32BDD91EE6F0CA00ABE009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D56A55D1EE6FBA100A96BBF /* PersistanceManager.swift in Sources */,
+				5D56A5571EE6FBA100A96BBF /* Item.swift in Sources */,
+				5D56A5521EE6FBA100A96BBF /* ComplicationController.swift in Sources */,
+				5D56A5591EE6FBA100A96BBF /* ItemRowController.swift in Sources */,
+				5D56A5561EE6FBA100A96BBF /* ExtensionDelegate.swift in Sources */,
+				5D56A5541EE6FBA100A96BBF /* DateHelper.swift in Sources */,
+				5D56A55E1EE6FBA100A96BBF /* RadicalInfo.swift in Sources */,
+				5D56A55F1EE6FBA100A96BBF /* WordlInfo.swift in Sources */,
+				5D56A55A1EE6FBA100A96BBF /* KanjiInfo.swift in Sources */,
+				5D56A55B1EE6FBA100A96BBF /* NetworkingManager.swift in Sources */,
+				5D56A5551EE6FBA100A96BBF /* ErrorInterfaceController.swift in Sources */,
+				5D56A55C1EE6FBA100A96BBF /* NotificationController.swift in Sources */,
+				5D56A5581EE6FBA100A96BBF /* ItemDetailsInterfaceController.swift in Sources */,
+				5D56A5531EE6FBA100A96BBF /* CriticalItemsInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D32BDE01EE6F0CA00ABE009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D32BDDC1EE6F0CA00ABE009 /* WaniTokei Extension */;
+			targetProxy = 5D32BDDF1EE6F0CA00ABE009 /* PBXContainerItemProxy */;
+		};
+		5D32BDEC1EE6F0CA00ABE009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D32BDD01EE6F0CA00ABE009 /* WaniTokei */;
+			targetProxy = 5D32BDEB1EE6F0CA00ABE009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */ = {
@@ -1003,6 +1242,14 @@
 				43BE76041E3F39F30032950B /* Base */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5D32BDD31EE6F0CA00ABE009 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D32BDD41EE6F0CA00ABE009 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1107,6 +1354,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WaniKani/WaniKani.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1134,6 +1382,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WaniKani/WaniKani.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1154,6 +1403,84 @@
 			};
 			name = Release;
 		};
+		5D32BDEE1EE6F0CA00ABE009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WaniTokei/WaniTokei.entitlements;
+				DEVELOPMENT_TEAM = S55BP53VB8;
+				IBSC_MODULE = WaniTokei_Extension;
+				INFOPLIST_FILE = WaniTokei/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		5D32BDEF1EE6F0CA00ABE009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WaniTokei/WaniTokei.entitlements;
+				DEVELOPMENT_TEAM = S55BP53VB8;
+				IBSC_MODULE = WaniTokei_Extension;
+				INFOPLIST_FILE = WaniTokei/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		5D32BDF01EE6F0CA00ABE009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "WaniTokei Extension/WaniTokei Extension.entitlements";
+				DEVELOPMENT_TEAM = S55BP53VB8;
+				INFOPLIST_FILE = "WaniTokei Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		5D32BDF11EE6F0CA00ABE009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "WaniTokei Extension/WaniTokei Extension.entitlements";
+				DEVELOPMENT_TEAM = S55BP53VB8;
+				INFOPLIST_FILE = "WaniTokei Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1171,6 +1498,24 @@
 			buildConfigurations = (
 				43620A4D1D8C28FB00C1BA72 /* Debug */,
 				43620A4E1D8C28FB00C1BA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D32BDF21EE6F0CA00ABE009 /* Build configuration list for PBXNativeTarget "WaniTokei Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D32BDF01EE6F0CA00ABE009 /* Debug */,
+				5D32BDF11EE6F0CA00ABE009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D32BDF41EE6F0CA00ABE009 /* Build configuration list for PBXNativeTarget "WaniTokei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D32BDEE1EE6F0CA00ABE009 /* Debug */,
+				5D32BDEF1EE6F0CA00ABE009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -50,15 +50,13 @@ class ApplicationCoordinator: NSObject, Coordinator {
     }))
     self.rootViewController.present(alertController, animated: true, completion: nil)
   }
-    
+
   fileprivate func logout() {
     // Remove all cache
-    URLCache.shared.removeAllCachedResponses()
-
-    // Delete any associated cookies
-    if let cookies = HTTPCookieStorage.shared.cookies {
-        for cookie in cookies {
-            HTTPCookieStorage.shared.deleteCookie(cookie)
+    if let oldCookies = HTTPCookieStorage.shared.cookies {
+        debugPrint(oldCookies)
+        for oldCookie in oldCookies {
+            HTTPCookieStorage.shared.deleteCookie(oldCookie)
         }
     }
     waniLoginCoordinator.logOut()
@@ -91,7 +89,6 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
     let persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
     presentTabs(apiKey: apiKey, persistance: persistance)
-    CookiesStorage.saveCookies()
   }
 
   func handelShortCut(shortcut: ShortcutIdentifier) {

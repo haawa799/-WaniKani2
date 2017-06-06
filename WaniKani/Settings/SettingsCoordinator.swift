@@ -16,45 +16,44 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
 
     weak var delegate: SettingsCoordinatorDelegate?
 
-  let presenter: UINavigationController
-  let settingsViewController: SettingsViewController
-  let childrenCoordinators: [Coordinator]
-  let suit: SettingsSuit
-  fileprivate let awardManager: AwardsManager
+    let presenter: UINavigationController
+    let settingsViewController: SettingsViewController
+    let childrenCoordinators: [Coordinator]
+    let suit: SettingsSuit
+    fileprivate let awardManager: AwardsManager
 
-//  let dataProvider = DataProvider()
+    init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
+        self.presenter = presenter
+        self.awardManager = awardManager
+        suit = settingsSuit
+        settingsViewController = SettingsViewController.instantiateViewController()
+        let tabItem: UITabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "settings"), selectedImage: nil)
+        presenter.tabBarItem = tabItem
+        childrenCoordinators = []
+    }
 
-  init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
-    self.presenter = presenter
-    self.awardManager = awardManager
-    suit = settingsSuit
-    settingsViewController = SettingsViewController.instantiateViewController()
-    let tabItem: UITabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "settings"), selectedImage: nil)
-    presenter.tabBarItem = tabItem
-    childrenCoordinators = []
-  }
-
-  func start() {
-    presenter.pushViewController(settingsViewController, animated: false)
-    settingsViewController.delegate = self
-    settingsViewController.settingSuit = suit
-  }
+    func start() {
+        presenter.pushViewController(settingsViewController, animated: false)
+        settingsViewController.delegate = self
+        settingsViewController.settingSuit = suit
+    }
 
 }
 
 // SettingsViewControllerDelegate
 extension SettingsCoordinator {
 
-  func cellPressed(_ indexPath: IndexPath) {
-    switch (indexPath.section, indexPath.row) {
-        case (3, 2): delegate?.logOutPressed()
+    func cellPressed(_ indexPath: IndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (3, 2):
+            self.delegate?.logOutPressed()
         case (3, 1): awardManager.showGameCenterViewController()
         default: break
+        }
     }
-  }
 
-  func cellCheckboxStateChange(identifier: String, state: Bool) {
-    suit.changeSetting(identifier: identifier, state: state)
-  }
+    func cellCheckboxStateChange(identifier: String, state: Bool) {
+        suit.changeSetting(identifier: identifier, state: state)
+    }
 
 }
