@@ -8,14 +8,15 @@
 
 import WatchKit
 import Foundation
-import TokeiModel
+import WaniModel
+import RealmSwift
 
 class CriticalItemsInterfaceController: WKInterfaceController {
-  
+
   @IBOutlet var tableView: WKInterfaceTable!
   let persistenceManager = PersistanceManager.sharedInstance
   let networkManager = NetworkingManager()
-  
+
   var items: [Item]? {
     didSet {
       guard let items = items else { return }
@@ -31,13 +32,13 @@ class CriticalItemsInterfaceController: WKInterfaceController {
       tableView.scrollToRow(at: 0)
     }
   }
-  
+
   func loadItemsFromPersistence() {
     persistenceManager.loadItemsFromPersistence { (items) in
       self.items = items
     }
   }
-  
+
   func fetchCriticalList() {
     let success = networkManager.sendRequest { (items) in
       guard let items = items else { return }
@@ -49,11 +50,11 @@ class CriticalItemsInterfaceController: WKInterfaceController {
       showError(message: "You need to log in on the iPhone first.")
     }
   }
-  
+
   private func showError(message: String) {
     presentController(withName: "ErrorInterfaceController", context: ["message": message])
   }
-  
+
   override func handleUserActivity(_ userInfo: [AnyHashable : Any]?) {
     super.handleUserActivity(userInfo)
     guard userInfo != nil else { return }
@@ -64,28 +65,28 @@ class CriticalItemsInterfaceController: WKInterfaceController {
       })
     }
   }
-  
+
 }
 
 // MARK: - WKInterfaceController
 extension CriticalItemsInterfaceController {
-  
+
   override func awake(withContext context: Any?) {
     super.awake(withContext: context)
     loadItemsFromPersistence()
   }
-  
+
   override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
     return items?[rowIndex]
   }
-  
+
 }
 
 // MARK: - Actions
 extension CriticalItemsInterfaceController {
-  
+
   @IBAction func refreshAction() {
     fetchCriticalList()
   }
-  
+
 }

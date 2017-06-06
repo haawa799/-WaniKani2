@@ -8,24 +8,24 @@
 
 import WatchKit
 import WatchConnectivity
-import TokeiModel
+import WaniModel
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
-  
+
   func applicationDidFinishLaunching() {
     WCSession.default().delegate = self
     WCSession.default().activate()
   }
-  
+
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    
+
   }
-  
+
   func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
     let key = "apiKey"
     guard let apiKey = message[key] else { return }
     UserDefaults.standard.setValue(apiKey, forKey: key)
     replyHandler([:])
   }
-  
+
 }

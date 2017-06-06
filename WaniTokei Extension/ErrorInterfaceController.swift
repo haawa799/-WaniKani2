@@ -10,9 +10,9 @@ import WatchKit
 import Foundation
 
 class ErrorInterfaceController: WKInterfaceController {
-  
+
   @IBOutlet weak var errorMessageLabel: WKInterfaceLabel?
-  
+
   override func awake(withContext context: Any?) {
     super.awake(withContext: context)
     if let dictionary = context as? [String: String] {
@@ -21,7 +21,7 @@ class ErrorInterfaceController: WKInterfaceController {
       }
     }
   }
-  
+
   @IBAction func closeModalView() {
     dismiss()
   }

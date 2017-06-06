@@ -7,18 +7,19 @@
 //
 
 import Foundation
-import 
-import TokeiModel
+import RealmSwift
+import WaniModel
+import ClockKit
 
 class PersistanceManager {
-  
+
   static let sharedInstance: PersistanceManager = {
     let instance = PersistanceManager()
     return instance
   }()
-  
+
   private let realmHelper = RealmHelper()
-  
+
   /// Returns [Item] array to main thread from persistant storage
   func loadItemsFromPersistence(handler: @escaping ([Item]) -> Void) {
     realmHelper.fetchRealmCriticalItems { (list) in
@@ -28,7 +29,7 @@ class PersistanceManager {
       }
     }
   }
-  
+
   /// Returns complication items array to main thread from persistant storage
   func loadComplicationItemsFromPersistence(handler: @escaping ([ComplicationItem]) -> Void) {
     realmHelper.fetchComplicationItems { (list) in
@@ -37,7 +38,7 @@ class PersistanceManager {
       }
     }
   }
-  
+
   func saveItemsToPersistence(items: [Item], completion: @escaping () -> Void) {
     realmHelper.saveCriticalItemsToRealm(list: items, completion: completion)
     saveItemsForComplications(items: items, completion: {
@@ -47,48 +48,48 @@ class PersistanceManager {
       }
     })
   }
-  
+
   private func saveItemsForComplications(items: [Item], completion: @escaping () -> Void) {
-    
+
     // All logic here. Plans for future: allow user to customize following numbers
     let topTen = items.prefix(20)
-    
+
     let numberOfDays = 20  // For how many days in the future you want to create events for
     let start = 8 // We assume user wakes up at this hour
     let end = 23 // We assume user falls asleep at this hour ( items will not change during his sleep time)
     let step = 0.5 // Step, for how often to change items (in hours)
-    
+
     var baginning = Date()
     baginning = baginning.setTimeOfDate(start, minute: 0, second: 0)
-    
+
     let itemsPerDay = Int( Float(end - start) / Float(step) )
-    
+
     var todayDatesArray = [Date]()
-    
+
     var current = baginning
     let minuteStep = Int(step * 60)
     for _ in 0...itemsPerDay {
       todayDatesArray.append(current)
       current = current.dateByAddingMinutes(minuteStep)
     }
-    
+
     var allDates = [Date]()
     for day in 0...numberOfDays {
       let items = todayDatesArray.map({ $0.dateByAddingDays(day) })
       allDates.append(contentsOf: items)
     }
-    
+
     let allItems = allDates.enumerated().map { (i, date) -> RealmComplicationItem in
       let count = topTen.count
       let index = i % count
       let q = topTen[index]
       return RealmComplicationItem.newItem(itemInfo: q, date: date)
     }
-    
+
     realmHelper.saveComplicationItems(list: allItems, completion: completion)
-    
+
   }
-  
+
   public func currentComplicationItem(handler: @escaping (ComplicationItem?) -> Void) {
     realmHelper.currentComplicationItem { (item) in
       DispatchQueue.main.async {
@@ -96,7 +97,7 @@ class PersistanceManager {
       }
     }
   }
-  
+
   public func pastItems(countDate: NSDate, handler: @escaping ([ComplicationItem]) -> Void) {
     realmHelper.pastItems(date: countDate) { (items) in
       DispatchQueue.main.async {
@@ -104,7 +105,7 @@ class PersistanceManager {
       }
     }
   }
-  
+
   public func futureItems(date: NSDate, limit: Int, handler: @escaping ([ComplicationItem]) -> Void) {
     realmHelper.futureItems(date: date, limit: limit) { (items) in
       DispatchQueue.main.async {
@@ -112,7 +113,7 @@ class PersistanceManager {
       }
     }
   }
-  
+
   public func fetchItemForComplication(complication: ComplicationItem, handler: @escaping (Item?) -> Void) {
     realmHelper.fetchItemForComplication(complication: complication) { (item) in
       DispatchQueue.main.async {
@@ -120,5 +121,5 @@ class PersistanceManager {
       }
     }
   }
-  
+
 }

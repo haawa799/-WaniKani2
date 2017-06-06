@@ -14,10 +14,25 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>TokeiRealmHelper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>WaniKani.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>WaniTokei (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WaniTokei.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,12 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>43177C361EE73976001716F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>43620A391D8C28FA00C1BA72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>43620ACA1D8DD2F300C1BA72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D32BDD01EE6F0CA00ABE009</key>
 		<dict>
 			<key>primary</key>
 			<true/>

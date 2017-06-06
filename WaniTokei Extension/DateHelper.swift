@@ -15,14 +15,14 @@ let RSSFormat = "EEE, d MMM yyyy HH:mm:ss ZZZ" // "Fri, 09 Sep 2011 15:26:08 +02
 let altRSSFormat = "d MMM yyyy HH:mm:ss ZZZ" // "09 Sep 2011 15:26:08 +0200"
 
 public enum ISO8601Format: String {
-  
+
   case Year = "yyyy" // 1997
   case YearMonth = "yyyy-MM" // 1997-07
   case Date = "yyyy-MM-dd" // 1997-07-16
   case DateTime = "yyyy-MM-dd'T'HH:mmZ" // 1997-07-16T19:20+01:00
   case DateTimeSec = "yyyy-MM-dd'T'HH:mm:ssZ" // 1997-07-16T19:20:30+01:00
   case DateTimeMilliSec = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" // 1997-07-16T19:20:30.45+01:00
-  
+
   init(dateString: String) {
     switch dateString.characters.count {
     case 4:
@@ -50,27 +50,27 @@ public enum TimeZone {
 }
 
 public extension Date {
-  
+
   // MARK: Intervals In Seconds
   private static func minuteInSeconds() -> Double { return 60 }
   private static func hourInSeconds() -> Double { return 3600 }
   private static func dayInSeconds() -> Double { return 86400 }
   private static func weekInSeconds() -> Double { return 604800 }
   private static func yearInSeconds() -> Double { return 31556926 }
-  
+
   // MARK: Components
   private static func componentFlags() -> Set<Calendar.Component> { return [Calendar.Component.year, Calendar.Component.month, Calendar.Component.day, Calendar.Component.weekOfYear, Calendar.Component.hour, Calendar.Component.minute, Calendar.Component.second, Calendar.Component.weekday, Calendar.Component.weekdayOrdinal, Calendar.Component.weekOfYear] }
-  
+
   private static func components(_ fromDate: Date) -> DateComponents! {
     return Calendar.current.dateComponents(Date.componentFlags(), from: fromDate)
   }
-  
+
   private func components() -> DateComponents {
     return Date.components(self)!
   }
-  
+
   // MARK: Date From String
-  
+
   /**
    Creates a date based on a string and a formatter type. You can ise .ISO8601(nil) to for deducting an ISO8601Format automatically.
    
@@ -80,38 +80,38 @@ public extension Date {
    
    - Returns A new date
    */
-  
+
   // swiftlint:disable:next cyclomatic_complexity function_body_length
   init(fromString string: String, format: DateFormat, timeZone: TimeZone = .local) {
     if string.isEmpty {
       self.init()
       return
     }
-    
+
     let string = string as NSString
-    
+
     let zone: Foundation.TimeZone
-    
+
     switch timeZone {
     case .local:
       zone = Foundation.NSTimeZone.local
     case .utc:
       zone = Foundation.TimeZone(secondsFromGMT: 0)!
     }
-    
+
     switch format {
-      
+
     case .dotNet:
-      
+
       let startIndex = string.range(of: "(").location + 1
       let endIndex = string.range(of: ")").location
       let range = NSRange(location: startIndex, length: endIndex-startIndex)
       let milliseconds = (string.substring(with: range) as NSString).longLongValue
       let interval = TimeInterval(milliseconds / 1000)
       self.init(timeIntervalSince1970: interval)
-      
+
     case .iso8601(let isoFormat):
-      
+
       let dateFormat = (isoFormat != nil) ? isoFormat! : ISO8601Format(dateString: string as String)
       let formatter = Date.formatter(dateFormat.rawValue)
       formatter.locale = Foundation.Locale(identifier: "en_US_POSIX")
@@ -122,9 +122,9 @@ public extension Date {
       } else {
         self.init()
       }
-      
+
     case .rss:
-      
+
 //      var s  = string
 //      if string.hasSuffix("Z") {
 //        s = s.substring(to: s.length-1)// + "GMT"
@@ -135,9 +135,9 @@ public extension Date {
       } else {
         self.init()
       }
-      
+
     case .altRSS:
-      
+
 //      var s  = string
 //      if string.hasSuffix("Z") {
 //        s = s.substring(to: s.length-1) + "GMT"
@@ -148,9 +148,9 @@ public extension Date {
       } else {
         self.init()
       }
-      
+
     case .custom(let dateFormat):
-      
+
       let formatter = Date.formatter(dateFormat, timeZone: zone)
       if let date = formatter.date(from: string as String) {
         self.init(timeInterval:0, since:date)
@@ -159,9 +159,9 @@ public extension Date {
       }
     }
   }
-  
+
   // MARK: Comparing Dates
-  
+
   /**
    Returns true if dates are equal while ignoring time.
    
@@ -172,28 +172,28 @@ public extension Date {
     let comp2 = Date.components(date)
     return ((comp1!.year == comp2!.year) && (comp1!.month == comp2!.month) && (comp1!.day == comp2!.day))
   }
-  
+
   /**
    Returns Returns true if date is today.
    */
   func isToday() -> Bool {
     return self.isEqualToDateIgnoringTime(Date())
   }
-  
+
   /**
    Returns true if date is tomorrow.
    */
   func isTomorrow() -> Bool {
     return self.isEqualToDateIgnoringTime(Date().dateByAddingDays(1))
   }
-  
+
   /**
    Returns true if date is yesterday.
    */
   func isYesterday() -> Bool {
     return self.isEqualToDateIgnoringTime(Date().dateBySubtractingDays(1))
   }
-  
+
   /**
    Returns true if date are in the same week.
    
@@ -209,14 +209,14 @@ public extension Date {
     // Must have a time interval under 1 week
     return abs(self.timeIntervalSince(date)) < Date.weekInSeconds()
   }
-  
+
   /**
    Returns true if date is this week.
    */
   func isThisWeek() -> Bool {
     return self.isSameWeekAsDate(Date())
   }
-  
+
   /**
    Returns true if date is next week.
    */
@@ -225,7 +225,7 @@ public extension Date {
     let date = Date(timeIntervalSinceReferenceDate: interval)
     return self.isSameWeekAsDate(date)
   }
-  
+
   /**
    Returns true if date is last week.
    */
@@ -234,7 +234,7 @@ public extension Date {
     let date = Date(timeIntervalSinceReferenceDate: interval)
     return self.isSameWeekAsDate(date)
   }
-  
+
   /**
    Returns true if dates are in the same year.
    
@@ -245,7 +245,7 @@ public extension Date {
     let comp2 = Date.components(date)
     return comp1!.year == comp2!.year
   }
-  
+
   /**
    Returns true if dates are in the same month
    
@@ -256,14 +256,14 @@ public extension Date {
     let comp2 = Date.components(date)
     return comp1!.year == comp2!.year && comp1!.month == comp2!.month
   }
-  
+
   /**
    Returns true if date is this year.
    */
   func isThisYear() -> Bool {
     return self.isSameYearAsDate(Date())
   }
-  
+
   /**
    Returns true if date is next year.
    */
@@ -272,7 +272,7 @@ public extension Date {
     let comp2 = Date.components(Date())
     return (comp1!.year! == comp2!.year! + 1)
   }
-  
+
   /**
    Returns true if date is last year.
    */
@@ -281,7 +281,7 @@ public extension Date {
     let comp2 = Date.components(Date())
     return (comp1!.year! == comp2!.year! - 1)
   }
-  
+
   /**
    Returns true if date is earlier than date.
    
@@ -290,7 +290,7 @@ public extension Date {
   func isEarlierThanDate(_ date: Date) -> Bool {
     return (self as NSDate).earlierDate(date) == self
   }
-  
+
   /**
    Returns true if date is later than date.
    
@@ -299,23 +299,23 @@ public extension Date {
   func isLaterThanDate(_ date: Date) -> Bool {
     return (self as NSDate).laterDate(date) == self
   }
-  
+
   /**
    Returns true if date is in future.
    */
   func isInFuture() -> Bool {
     return self.isLaterThanDate(Date())
   }
-  
+
   /**
    Returns true if date is in past.
    */
   func isInPast() -> Bool {
     return self.isEarlierThanDate(Date())
   }
-  
+
   // MARK: Adjusting Dates
-  
+
   /**
    Creates a new date by a adding months.
    
@@ -327,7 +327,7 @@ public extension Date {
     dateComp.month = months
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a substracting months.
    
@@ -339,7 +339,7 @@ public extension Date {
     dateComp.month = (months * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a adding weeks.
    
@@ -351,7 +351,7 @@ public extension Date {
     dateComp.day = 7 * weeks
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a substracting weeks.
    
@@ -363,7 +363,7 @@ public extension Date {
     dateComp.day = ((7 * weeks) * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a adding days.
    
@@ -375,7 +375,7 @@ public extension Date {
     dateComp.day = days
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a substracting days.
    
@@ -387,7 +387,7 @@ public extension Date {
     dateComp.day = (days * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by a adding hours.
    
@@ -399,7 +399,7 @@ public extension Date {
     dateComp.hour = hours
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by substracting hours.
    
@@ -411,7 +411,7 @@ public extension Date {
     dateComp.hour = (hours * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by adding minutes.
    
@@ -423,7 +423,7 @@ public extension Date {
     dateComp.minute = minutes
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by substracting minutes.
    
@@ -435,7 +435,7 @@ public extension Date {
     dateComp.minute = (minutes * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by adding seconds.
    
@@ -447,7 +447,7 @@ public extension Date {
     dateComp.second = seconds
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date by substracting seconds.
    
@@ -459,7 +459,7 @@ public extension Date {
     dateComp.second = (seconds * -1)
     return Calendar.current.date(byAdding: dateComp, to: self)!
   }
-  
+
   /**
    Creates a new date from the start of the day.
    
@@ -472,7 +472,7 @@ public extension Date {
     components.second = 0
     return Calendar.current.date(from: components)!
   }
-  
+
   /**
    Creates a new date from the end of the day.
    
@@ -485,7 +485,7 @@ public extension Date {
     components.second = 59
     return Calendar.current.date(from: components)!
   }
-  
+
   /**
    Creates a new date from the start of the week.
    
@@ -500,7 +500,7 @@ public extension Date {
     components.second = 0
     return Calendar.current.date(from: components)!
   }
-  
+
   /**
    Creates a new date from the end of the week.
    
@@ -515,7 +515,7 @@ public extension Date {
     components.second = 0
     return Calendar.current.date(from: components)!
   }
-  
+
   /**
    Creates a new date from the first day of the month
    
@@ -529,25 +529,25 @@ public extension Date {
     let firstDayOfMonthDate: Date = Calendar.current.date(from: components)!
     return firstDayOfMonthDate
   }
-  
+
   /**
    Creates a new date from the last day of the month
    
    - Returns A new date object.
    */
   func dateAtTheEndOfMonth() -> Date {
-    
+
     //Create the date components
     var components = self.components()
     //Set the last day of this month
     components.month = (components.month ?? 0) + 1
     components.day = 0
-    
+
     //Builds the first day of the month
     let lastDayOfMonth: Date = Calendar.current.date(from: components)!
     return lastDayOfMonth
   }
-  
+
   /**
    Creates a new date based on tomorrow.
    
@@ -556,7 +556,7 @@ public extension Date {
   static func tomorrow() -> Date {
     return Date().dateByAddingDays(1).dateAtStartOfDay()
   }
-  
+
   /**
    Creates a new date based on yesterdat.
    
@@ -565,7 +565,7 @@ public extension Date {
   static func yesterday() -> Date {
     return Date().dateBySubtractingDays(1).dateAtStartOfDay()
   }
-  
+
   /**
    Return a new NSDate object with the new hour, minute and seconds values
    
@@ -578,9 +578,9 @@ public extension Date {
     components.second = second
     return Calendar.current.date(from: components)!
   }
-  
+
   // MARK: Retrieving Intervals
-  
+
   /**
    Gets the number of seconds after a date.
    
@@ -590,7 +590,7 @@ public extension Date {
   func secondsAfterDate(_ date: Date) -> Int {
     return Int(self.timeIntervalSince(date))
   }
-  
+
   /**
    Gets the number of seconds before a date.
    
@@ -600,7 +600,7 @@ public extension Date {
   func secondsBeforeDate(_ date: Date) -> Int {
     return Int(date.timeIntervalSince(self))
   }
-  
+
   /**
    Gets the number of minutes after a date.
    
@@ -611,7 +611,7 @@ public extension Date {
     let interval = self.timeIntervalSince(date)
     return Int(interval / Date.minuteInSeconds())
   }
-  
+
   /**
    Gets the number of minutes before a date.
    
@@ -622,7 +622,7 @@ public extension Date {
     let interval = date.timeIntervalSince(self)
     return Int(interval / Date.minuteInSeconds())
   }
-  
+
   /**
    Gets the number of hours after a date.
    
@@ -633,7 +633,7 @@ public extension Date {
     let interval = self.timeIntervalSince(date)
     return Int(interval / Date.hourInSeconds())
   }
-  
+
   /**
    Gets the number of hours before a date.
    
@@ -644,7 +644,7 @@ public extension Date {
     let interval = date.timeIntervalSince(self)
     return Int(interval / Date.hourInSeconds())
   }
-  
+
   /**
    Gets the number of days after a date.
    
@@ -655,7 +655,7 @@ public extension Date {
     let interval = self.timeIntervalSince(date)
     return Int(interval / Date.dayInSeconds())
   }
-  
+
   /**
    Gets the number of days before a date.
    
@@ -666,9 +666,9 @@ public extension Date {
     let interval = date.timeIntervalSince(self)
     return Int(interval / Date.dayInSeconds())
   }
-  
+
   // MARK: Decomposing Dates
-  
+
   /**
    Returns the nearest hour.
    */
@@ -756,16 +756,16 @@ public extension Date {
     let range = Calendar.current.maximumRange(of: Calendar.Component.weekday)!
     return (self.weekday() == range.lowerBound || self.weekday() == range.upperBound - range.lowerBound)
   }
-  
+
   // MARK: To String
-  
+
   /**
    A string representation using short date and time style.
    */
   func toString() -> String {
     return self.toString(.short, timeStyle: .short, doesRelativeDateFormatting: false)
   }
-  
+
   /**
    A string representation based on a format.
    
@@ -799,11 +799,11 @@ public extension Date {
       }
       dateFormat = string
     }
-    
+
     let formatter = Date.formatter(dateFormat, timeZone: zone)
     return formatter.string(from: self)
   }
-  
+
   /**
    A string representation based on custom style.
    
@@ -818,21 +818,21 @@ public extension Date {
     let formatter = Date.formatter(dateStyle, timeStyle: timeStyle, doesRelativeDateFormatting: doesRelativeDateFormatting, timeZone: timeZone, locale: locale)
     return formatter.string(from: self)
   }
-  
+
   /**
    A string representation based on a relative time language. i.e. just now, 1 minute ago etc..
    */
   func relativeTimeToString() -> String {
     let time = self.timeIntervalSince1970
     let now = Date().timeIntervalSince1970
-    
+
     let timeIsInPast = now - time > 0
-    
+
     let seconds = abs(now - time)
     let minutes = round(seconds/60)
     let hours = round(minutes/60)
     let days = round(hours/24)
-    
+
     func describe(_ time: String) -> String {
       if timeIsInPast {
         return "\(time) ago"
@@ -840,14 +840,14 @@ public extension Date {
         return "in \(time)"
       }
     }
-    
+
     if seconds < 10 {
       return NSLocalizedString("just now", comment: "Show the relative time from a date")
     } else if seconds < 60 {
       let relativeTime = NSLocalizedString(describe("%.f seconds"), comment: "Show the relative time from a date")
       return String(format: relativeTime, seconds)
     }
-    
+
     if minutes < 60 {
       if minutes == 1 {
         return NSLocalizedString(describe("1 minute"), comment: "Show the relative time from a date")
@@ -856,7 +856,7 @@ public extension Date {
         return String(format: relativeTime, minutes)
       }
     }
-    
+
     if hours < 24 {
       if hours == 1 {
         return NSLocalizedString(describe("1 hour"), comment: "Show the relative time from a date")
@@ -865,7 +865,7 @@ public extension Date {
         return String(format: relativeTime, hours)
       }
     }
-    
+
     if days < 7 {
       if days == 1 {
         return NSLocalizedString(describe("1 day"), comment: "Show the relative time from a date")
@@ -874,10 +874,10 @@ public extension Date {
         return String(format: relativeTime, days)
       }
     }
-    
+
     return self.toString()
   }
-  
+
   /**
    A string representation of the weekday.
    */
@@ -885,7 +885,7 @@ public extension Date {
     let formatter = Date.formatter()
     return formatter.weekdaySymbols[self.weekday()-1] as String
   }
-  
+
   /**
    A short string representation of the weekday.
    */
@@ -893,7 +893,7 @@ public extension Date {
     let formatter = Date.formatter()
     return formatter.shortWeekdaySymbols[self.weekday()-1] as String
   }
-  
+
   /**
    A very short string representation of the weekday.
    
@@ -903,7 +903,7 @@ public extension Date {
     let formatter = Date.formatter()
     return formatter.veryShortWeekdaySymbols[self.weekday()-1] as String
   }
-  
+
   /**
    A string representation of the month.
    
@@ -913,7 +913,7 @@ public extension Date {
     let formatter = Date.formatter()
     return formatter.monthSymbols[self.month()-1] as String
   }
-  
+
   /**
    A short string representation of the month.
    
@@ -923,7 +923,7 @@ public extension Date {
     let formatter = Date.formatter()
     return formatter.shortMonthSymbols[self.month()-1] as String
   }
-  
+
   /**
    A very short string representation of the month.
    
@@ -934,7 +934,7 @@ public extension Date {
     return formatter.veryShortMonthSymbols[self.month()-1] as String
   }
   // MARK: Static Cached Formatters
-  
+
   /**
    Returns a cached static array of NSDateFormatters so that thy are only created once.
    */
@@ -945,7 +945,7 @@ public extension Date {
     }
     return Static.formatters!
   }
-  
+
   /**
    Returns a cached formatter based on the format, timeZone and locale. Formatters are cached in a singleton array using hashkeys generated by format, timeZone and locale.
    
@@ -968,7 +968,7 @@ public extension Date {
       return formatter
     }
   }
-  
+
   /**
    Returns a cached formatter based on date style, time style and relative date. Formatters are cached in a singleton array using hashkeys generated by date style, time style, relative date, timeZone and locale.
    
@@ -995,6 +995,6 @@ public extension Date {
       return formatter
     }
   }
-  
+
 // swiftlint:disable:next file_length
 }

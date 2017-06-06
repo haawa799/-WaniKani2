@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s60-oc-zEX">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Details-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Details" id="AgC-eL-Hgc" customClass="ItemDetailsInterfaceController" customModule="WaniTokei_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="k75-DD-pz7">
+                            <items>
+                                <group width="1" height="0.29999999999999999" alignment="left" layout="vertical" id="UEJ-Wh-FlK">
+                                    <items>
+                                        <label width="1" height="45" alignment="left" textAlignment="center" minimumScaleFactor="0.29999999999999999" id="7cN-gV-pax">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" weight="black" pointSize="41"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="0.94999999999999996" height="0.69999999999999996" alignment="center" layout="vertical" id="BOl-Ls-WaJ">
+                                    <items>
+                                        <label width="1" alignment="center" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.5" id="OU2-wK-NVc">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                        </label>
+                                        <label width="1" height="0.5" alignment="left" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.40000000000000002" id="ZcD-ow-VoK">
+                                            <color key="textColor" red="0.53855812549591064" green="0.90692335367202759" blue="0.7053493857383728" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="19"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="mainLabel" destination="7cN-gV-pax" id="iHO-tS-gos"/>
+                        <outlet property="percentageLabel" destination="OU2-wK-NVc" id="jGV-qr-lxd"/>
+                        <outlet property="readingLabel" destination="ZcD-ow-VoK" id="MWF-Qj-lZu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="97" y="198"/>
+        </scene>
+        <!--Critical-->
+        <scene sceneID="omG-ds-2q5">
+            <objects>
+                <controller title="Critical" id="s60-oc-zEX" customClass="CriticalItemsInterfaceController" customModule="WaniTokei_Extension">
+                    <items>
+                        <table alignment="left" pagingScroll="YES" id="RSg-d3-Puq">
+                            <items>
+                                <tableRow identifier="itemCell" id="wSK-rw-hur" customClass="ItemRowController" customModule="WaniTokei_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="q2B-rc-mKE">
+                                        <items>
+                                            <label width="82" alignment="left" verticalAlignment="center" textAlignment="justified" minimumScaleFactor="0.5" id="bB8-Zl-pTY">
+                                                <fontDescription key="font" type="system" weight="heavy" pointSize="25"/>
+                                            </label>
+                                            <label alignment="right" verticalAlignment="center" id="dev-78-aKE">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="backgroundGroup" destination="q2B-rc-mKE" id="3AF-8Q-0v5"/>
+                                        <outlet property="leftLabel" destination="dev-78-aKE" id="xQn-rg-PiQ"/>
+                                        <outlet property="mainLabel" destination="bB8-Zl-pTY" id="mYw-JG-lwb"/>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="2Xl-Cv-ZuU"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="kgg-7U-Wn6">
+                        <items>
+                            <menuItem title="Reload" icon="resume" id="rKw-wp-Yqf">
+                                <connections>
+                                    <action selector="refreshAction" destination="s60-oc-zEX" id="J5W-8Q-Paa"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="tableView" destination="RSg-d3-Puq" id="FyP-q6-mG3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-178" y="198"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-178" y="626"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WaniTokei_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="626"/>
+        </scene>
+        <!--ErrorInterfaceController-->
+        <scene sceneID="Wep-X7-Mt3">
+            <objects>
+                <controller identifier="ErrorInterfaceController" id="AYZ-Mr-NiD" customClass="ErrorInterfaceController" customModule="WaniTokei_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" id="4b0-XN-Y8P">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="2" id="v3W-qo-9cY"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="errorMessageLabel" destination="v3W-qo-9cY" id="6YT-7b-N9g"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="364" y="198"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,28 +7,29 @@
 //
 
 import Foundation
-import TokeiModel
+import WaniModel
+import RealmSwift
 
 struct NetworkingManager {
-  
+
   var apiKey: String? {
     return UserDefaults.standard.string(forKey: "apiKey")
   }
-  
+
   init() {
   }
-  
+
   /// Returns items from wanikani.com or nil if fail. Results return on the main thread.
   func sendRequest(handler: @escaping ([Item]?) -> Void) -> Bool {
-    
-    guard let apiKey = apiKey else { return false }
+
+    let apiKey = "61566f0f0858ba9f81f5043e7c183245"/*apiKey*/
     let sessionConfig = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-    
+
     guard let URL = URL(string: "https://www.wanikani.com/api/user/\(apiKey)/critical-items/80") else { return false }
     var request = URLRequest(url: URL)
     request.httpMethod = "GET"
-    
+
     /* Start a new Task */
     let task = session.dataTask(with: request) { (data, _, error) in
       if error == nil {
@@ -39,7 +40,7 @@ struct NetworkingManager {
           DispatchQueue.main.async {
             handler(array)
           }
-          
+
         }
       } else {
         // Failure
@@ -52,5 +53,5 @@ struct NetworkingManager {
     session.finishTasksAndInvalidate()
     return true
   }
-  
+
 }

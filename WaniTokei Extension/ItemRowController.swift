@@ -9,9 +9,9 @@
 import WatchKit
 
 class ItemRowController: NSObject {
-  
+
   @IBOutlet var mainLabel: WKInterfaceLabel!
   @IBOutlet var leftLabel: WKInterfaceLabel!
   @IBOutlet var backgroundGroup: WKInterfaceGroup!
-  
+
 }
