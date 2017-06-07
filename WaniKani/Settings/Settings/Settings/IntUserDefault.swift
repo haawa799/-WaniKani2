@@ -17,14 +17,14 @@ struct IntUserDefault {
   var value: Int {
     didSet {
       if value != oldValue {
-        UserDefaults.standard.set(value, forKey: key)
-        UserDefaults.standard.synchronize()
+        Defaults.userDefaults.set(value, forKey: key)
+        Defaults.userDefaults.synchronize()
       }
     }
   }
 
   init(key: String) {
     self.key = key
-    self.value = UserDefaults.standard.integer(forKey: key)
+    self.value = Defaults.userDefaults.integer(forKey: key)
   }
 }

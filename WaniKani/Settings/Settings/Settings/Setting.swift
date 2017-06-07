@@ -19,6 +19,7 @@ enum SettingSuitKey: String {
   case hideStatusBarKey = "hideStatusBarKey"
   case gameCenterKey = "gameCenterKey"
   case logOutKey = "logOutKey"
+  case appleWatchKey = "appleWatchKey"
   case shouldUseGameCenterKey = "shouldUSeGameCenter"
   case ignoreLessonsInIconBadgeKey = "ignoreLessonsInIconBadgeKey"
 }
@@ -31,12 +32,12 @@ struct Setting: Equatable {
   var delegate: SettingsDelegate?
 
   var isEnabled: Bool {
-    return UserDefaults.standard.bool(forKey: key.rawValue)
+    return Defaults.userDefaults.bool(forKey: key.rawValue)
   }
 
   func setEnabled(_ state: Bool) {
-    UserDefaults.standard.set(state, forKey: key.rawValue)
-    UserDefaults.standard.synchronize()
+    Defaults.userDefaults.set(state, forKey: key.rawValue)
+    Defaults.userDefaults.synchronize()
     delegate?.settingDidChange(self)
   }
 

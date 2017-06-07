@@ -13,7 +13,10 @@ import RealmSwift
 struct NetworkingManager {
 
   var apiKey: String? {
-    return UserDefaults.standard.string(forKey: "apiKey")
+    for (key, value) in Defaults.userDefaults.dictionaryRepresentation() {
+        print("\(key) = \(value) \n")
+    }
+    return Defaults.userDefaults.string(forKey: "apiKey")
   }
 
   init() {
@@ -22,7 +25,8 @@ struct NetworkingManager {
   /// Returns items from wanikani.com or nil if fail. Results return on the main thread.
   func sendRequest(handler: @escaping ([Item]?) -> Void) -> Bool {
 
-    let apiKey = "61566f0f0858ba9f81f5043e7c183245"/*apiKey*/
+    guard let apiKey = apiKey else { return false }
+
     let sessionConfig = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
 

@@ -58,7 +58,7 @@ class DataBrowserCoordinator: NSObject, Coordinator {
 extension DataBrowserCoordinator {
   func start() {
 
-    let noData = UserDefaults.standard.bool(forKey: Constant.defaultsDownloadKey)
+    let noData = Defaults.userDefaults.bool(forKey: Constant.defaultsDownloadKey)
 
     if noData == true {
       presentDataBrowser(push: false)
@@ -111,6 +111,7 @@ extension DataBrowserCoordinator: UIViewControllerPreviewingDelegate {
     case .kanji(let kanji):
       let kanjiViewController: KanjiDetailViewController = KanjiDetailViewController.instantiateViewController()
       kanjiViewController.kanji = kanji
+      kanjiViewController.navigationItem.title = kanji.character
       let previewHeight = kanjiViewController.view.bounds.width + 15
       kanjiViewController.preferredContentSize = CGSize(width: 0.0, height: previewHeight)
       viewController = kanjiViewController
@@ -160,7 +161,7 @@ extension DataBrowserCoordinator: DataBrowserViewControllerDelegate {
 // MARK: - DownloadingCoordinatorDelegate
 extension DataBrowserCoordinator: DownloadingCoordinatorDelegate {
   func downloadComplete() {
-    UserDefaults.standard.set(true, forKey: Constant.defaultsDownloadKey)
+    Defaults.userDefaults.set(true, forKey: Constant.defaultsDownloadKey)
     presentDataBrowser(push: false)
   }
 

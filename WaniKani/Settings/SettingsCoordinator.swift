@@ -20,9 +20,11 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
     let settingsViewController: SettingsViewController
     let childrenCoordinators: [Coordinator]
     let suit: SettingsSuit
+    let apiKey: String
     fileprivate let awardManager: AwardsManager
 
-    init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
+    init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit, apiKey: String) {
+        self.apiKey = apiKey
         self.presenter = presenter
         self.awardManager = awardManager
         suit = settingsSuit
@@ -38,6 +40,12 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
         settingsViewController.settingSuit = suit
     }
 
+    func showWatchSyncScreen() {
+        let syncViewController: WatchSyncViewController = WatchSyncViewController.instantiateViewController()
+        syncViewController.apiKey = apiKey
+        presenter.pushViewController(syncViewController, animated: true)
+    }
+
 }
 
 // SettingsViewControllerDelegate
@@ -45,8 +53,8 @@ extension SettingsCoordinator {
 
     func cellPressed(_ indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
-        case (3, 2):
-            self.delegate?.logOutPressed()
+        case (3, 3): self.delegate?.logOutPressed()
+        case (3, 2): self.showWatchSyncScreen()
         case (3, 1): awardManager.showGameCenterViewController()
         default: break
         }

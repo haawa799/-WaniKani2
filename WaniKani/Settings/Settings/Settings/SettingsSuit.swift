@@ -42,6 +42,7 @@ private struct SettingsSuitSettings {
   static let shouldUseGCSetting: Setting = Setting(key: SettingSuitKey.shouldUseGameCenterKey, script: nil, description: "Use GameCenter")
   static let gameCenterDummySetting: Setting = Setting(key: SettingSuitKey.gameCenterKey, script: nil, description: "Game center")
   static let logOutDummySetting: Setting = Setting(key: SettingSuitKey.logOutKey, script: nil, description: "Log out")
+  static let watchSetting: Setting = Setting(key: SettingSuitKey.appleWatchKey, script: nil, description: "⌚️")
   static let ignoreLessonsInIconCounter: Setting = Setting(key: SettingSuitKey.ignoreLessonsInIconBadgeKey, script: nil, description: "Ignore lessons in icon badge")
 
   static var userScriptsForReview: [UserScript] {
@@ -97,6 +98,7 @@ extension SettingsSuit {
         ListSection(header: ListCellDataItem(viewModel: (DashboardHeaderViewModel(title: "Other options", color: headerColor) as ViewModel), reuseIdentifier: DashboardHeader.identifier), items: [
             ListCellDataItem(viewModel: (SettingsScriptCellViewModel(setting: SettingsSuitSettings.hideStatusBarSetting) as ViewModel), reuseIdentifier: SettingsScriptCell.identifier),
             ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.gameCenterDummySetting, icon: #imageLiteral(resourceName: "game center")) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier),
+            ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.watchSetting) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier),
             ListCellDataItem(viewModel: (GameCenterCellViewModel(setting: SettingsSuitSettings.logOutDummySetting) as ViewModel), reuseIdentifier: GameCenterCollectionViewCell.identifier)
             ])
 

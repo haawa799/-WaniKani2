@@ -17,7 +17,7 @@ open class TabsCoordinator: Coordinator {
 
     weak var delegate: TabsCoordinatorDelegate?
 
-  fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: UserDefaults.standard)
+  fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: Defaults.userDefaults)
   fileprivate let dashboardNavigationController = UINavigationController()
   fileprivate let dashboardCoordinator: DashboardCoordinator
   fileprivate let settingsNavigationController = UINavigationController()
@@ -29,7 +29,7 @@ open class TabsCoordinator: Coordinator {
   let presenter: UITabBarController
   let dataProvider: DataProvider
 
-  init(dataProvider: DataProvider, awardManager: AwardsManager, presenter: UITabBarController, persistance: Persistance) {
+    init(dataProvider: DataProvider, awardManager: AwardsManager, presenter: UITabBarController, persistance: Persistance, apiKey: String) {
     self.dataProvider = dataProvider
     self.awardManager = awardManager
     self.presenter = presenter
@@ -38,7 +38,7 @@ open class TabsCoordinator: Coordinator {
     let viewControllers = [dashboardNavigationController, dataBrowserNavigationController, settingsNavigationController]
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
-    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
+    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit, apiKey: apiKey)
     dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance, dataProvider: dataProvider)
   }
 

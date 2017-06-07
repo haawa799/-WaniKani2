@@ -21,11 +21,11 @@ struct KeychainManager {
 
   func cleanKeychainIfNeeded() {
 
-    if UserDefaults.standard.object(forKey: firstRunDefaultsKey) == nil {
+    if Defaults.userDefaults.object(forKey: firstRunDefaultsKey) == nil {
       keychain[apiKeyStoreKey] = nil
 
-      UserDefaults.standard.setValue(firstRunValue, forKey: firstRunDefaultsKey)
-      UserDefaults.standard.synchronize()
+      Defaults.userDefaults.setValue(firstRunValue, forKey: firstRunDefaultsKey)
+      Defaults.userDefaults.synchronize()
     }
   }
 

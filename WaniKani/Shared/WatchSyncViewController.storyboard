@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nbD-IX-4AC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Watch Sync View Controller-->
+        <scene sceneID="GZE-uh-a2k">
+            <objects>
+                <viewController id="nbD-IX-4AC" customClass="WatchSyncViewController" customModule="WaniKani" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Lu-mo-0Va"/>
+                        <viewControllerLayoutGuide type="bottom" id="yN0-Fc-HPQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Zg-bU-3Ld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWC-Us-q9F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4R-Lp-EAJ">
+                                        <rect key="frame" x="15" y="333.5" width="345" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="F4R-Lp-EAJ" firstAttribute="centerY" secondItem="PWC-Us-q9F" secondAttribute="centerY" id="5Eb-sZ-v10"/>
+                                    <constraint firstItem="F4R-Lp-EAJ" firstAttribute="leading" secondItem="PWC-Us-q9F" secondAttribute="leading" constant="15" id="hax-x4-Wgv"/>
+                                    <constraint firstAttribute="trailing" secondItem="F4R-Lp-EAJ" secondAttribute="trailing" constant="15" id="mQq-g0-r71"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PWC-Us-q9F" secondAttribute="trailing" id="3Ln-3T-bF2"/>
+                            <constraint firstItem="PWC-Us-q9F" firstAttribute="leading" secondItem="8Zg-bU-3Ld" secondAttribute="leading" id="Opw-C4-Skb"/>
+                            <constraint firstItem="PWC-Us-q9F" firstAttribute="top" secondItem="8Zg-bU-3Ld" secondAttribute="top" id="ocr-5l-09d"/>
+                            <constraint firstItem="yN0-Fc-HPQ" firstAttribute="top" secondItem="PWC-Us-q9F" secondAttribute="bottom" id="yZ3-TY-aPr"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="F4R-Lp-EAJ" id="7Ul-QR-HLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tF0-p3-RM9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="136"/>
+        </scene>
+    </scenes>
+</document>

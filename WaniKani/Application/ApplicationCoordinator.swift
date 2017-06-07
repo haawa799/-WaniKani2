@@ -34,7 +34,7 @@ class ApplicationCoordinator: NSObject, Coordinator {
     window.rootViewController = rootViewController
     let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
-    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance)
+    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance, apiKey: apiKey)
     tabsCoordinator.delegate = self
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
@@ -59,6 +59,7 @@ class ApplicationCoordinator: NSObject, Coordinator {
             HTTPCookieStorage.shared.deleteCookie(oldCookie)
         }
     }
+    Defaults.nuke()
     waniLoginCoordinator.logOut()
   }
 
