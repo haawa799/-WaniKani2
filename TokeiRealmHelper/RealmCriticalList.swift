@@ -13,24 +13,24 @@ import WaniModel
 public class RealmReviewItem: Object {
 
   public enum ItemType: Int {
-    case Radical = 0
-    case Kanji = 1
-    case Word = 2
+    case radical = 0
+    case kanji = 1
+    case word = 2
 
     var color: UIColor {
       switch self {
-      case .Radical: return UIColor(red:0.09, green:0.59, blue:0.87, alpha:1.00)
-      case .Kanji: return UIColor(red:0.92, green:0.12, blue:0.39, alpha:1.00)
-      case .Word: return UIColor(red:0.60, green:0.22, blue:0.69, alpha:1.00)
+      case .radical: return UIColor(red:0.09, green:0.59, blue:0.87, alpha:1.00)
+      case .kanji: return UIColor(red:0.92, green:0.12, blue:0.39, alpha:1.00)
+      case .word: return UIColor(red:0.60, green:0.22, blue:0.69, alpha:1.00)
       }
     }
   }
 
   public var item: Item? {
     switch itemType {
-    case .Radical: return radical?.item
-    case .Kanji: return kanji?.item
-    case .Word: return word?.item
+    case .radical: return radical?.item
+    case .kanji: return kanji?.item
+    case .word: return word?.item
     }
   }
 
@@ -52,21 +52,21 @@ public class RealmReviewItem: Object {
       let radical = RealmRadical()
       radical.update(radicalInfo: radicalInfo)
       item.radical = radical
-      item.type = ItemType.Radical.rawValue
+      item.type = ItemType.radical.rawValue
       item.text = radicalInfo.character ?? ""
       return item
     case .kanji(let kanjiInfo):
       let kanji = RealmKanji()
       kanji.update(kanjiInfo: kanjiInfo)
       item.kanji = kanji
-      item.type = ItemType.Kanji.rawValue
+      item.type = ItemType.kanji.rawValue
       item.text = kanjiInfo.character
       return item
     case .word(let wordInfo):
       let word = RealmWord()
       word.update(wordInfo: wordInfo)
       item.word = word
-      item.type = ItemType.Word.rawValue
+      item.type = ItemType.word.rawValue
       item.text = wordInfo.character
       return item
     }

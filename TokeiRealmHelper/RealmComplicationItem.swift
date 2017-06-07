@@ -25,13 +25,13 @@ public class RealmComplicationItem: Object {
     switch itemInfo {
     case .radical(let radicalInfo):
       item.text = radicalInfo.character ?? ""
-      item.type = RealmReviewItem.ItemType.Radical.rawValue
+      item.type = RealmReviewItem.ItemType.radical.rawValue
     case .kanji(let kanjiInfo):
       item.text = kanjiInfo.character
-      item.type = RealmReviewItem.ItemType.Kanji.rawValue
+      item.type = RealmReviewItem.ItemType.kanji.rawValue
     case .word(let wordInfo):
       item.text = wordInfo.character
-      item.type = RealmReviewItem.ItemType.Word.rawValue
+      item.type = RealmReviewItem.ItemType.word.rawValue
     }
     item.subText = itemInfo.typeDescription
     item.date = date

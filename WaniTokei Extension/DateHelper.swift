@@ -16,27 +16,27 @@ let altRSSFormat = "d MMM yyyy HH:mm:ss ZZZ" // "09 Sep 2011 15:26:08 +0200"
 
 public enum ISO8601Format: String {
 
-  case Year = "yyyy" // 1997
-  case YearMonth = "yyyy-MM" // 1997-07
-  case Date = "yyyy-MM-dd" // 1997-07-16
-  case DateTime = "yyyy-MM-dd'T'HH:mmZ" // 1997-07-16T19:20+01:00
-  case DateTimeSec = "yyyy-MM-dd'T'HH:mm:ssZ" // 1997-07-16T19:20:30+01:00
-  case DateTimeMilliSec = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" // 1997-07-16T19:20:30.45+01:00
+  case year = "yyyy" // 1997
+  case yearMonth = "yyyy-MM" // 1997-07
+  case date = "yyyy-MM-dd" // 1997-07-16
+  case dateTime = "yyyy-MM-dd'T'HH:mmZ" // 1997-07-16T19:20+01:00
+  case dateTimeSec = "yyyy-MM-dd'T'HH:mm:ssZ" // 1997-07-16T19:20:30+01:00
+  case dateTimeMilliSec = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" // 1997-07-16T19:20:30.45+01:00
 
   init(dateString: String) {
     switch dateString.characters.count {
     case 4:
-      self = ISO8601Format(rawValue: ISO8601Format.Year.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.year.rawValue)!
     case 7:
-      self = ISO8601Format(rawValue: ISO8601Format.YearMonth.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.yearMonth.rawValue)!
     case 10:
-      self = ISO8601Format(rawValue: ISO8601Format.Date.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.date.rawValue)!
     case 22:
-      self = ISO8601Format(rawValue: ISO8601Format.DateTime.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.dateTime.rawValue)!
     case 25:
-      self = ISO8601Format(rawValue: ISO8601Format.DateTimeSec.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.dateTimeSec.rawValue)!
     default:// 28:
-      self = ISO8601Format(rawValue: ISO8601Format.DateTimeMilliSec.rawValue)!
+      self = ISO8601Format(rawValue: ISO8601Format.dateTimeMilliSec.rawValue)!
     }
   }
 }
@@ -782,7 +782,7 @@ public extension Date {
       let nowMillis = 1000 * self.timeIntervalSince1970
       return  "/Date(\(nowMillis)\(offset))/"
     case .iso8601(let isoFormat):
-      dateFormat = (isoFormat != nil) ? isoFormat!.rawValue : ISO8601Format.DateTimeMilliSec.rawValue
+      dateFormat = (isoFormat != nil) ? isoFormat!.rawValue : ISO8601Format.dateTimeMilliSec.rawValue
       zone = NSTimeZone.local
     case .rss:
       dateFormat = RSSFormat
