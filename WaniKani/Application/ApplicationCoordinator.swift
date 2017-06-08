@@ -30,11 +30,11 @@ class ApplicationCoordinator: NSObject, Coordinator {
     self.awardManager = AwardsManager(presenter: rootViewController)
   }
 
-  func presentTabs(apiKey: String, persistance: Persistance) {
+    func presentTabs(apiKey: String, userName: String, password: String, persistance: Persistance) {
     window.rootViewController = rootViewController
     let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
-    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance, apiKey: apiKey)
+    let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance, apiKey: apiKey, userName: userName, pasword: password)
     tabsCoordinator.delegate = self
     tabsCoordinator.start()
     self.tabsCoordinator = tabsCoordinator
@@ -84,12 +84,12 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
 
   func presentingCallback(window: UIWindow, status: CelyStatus) {
     guard status == .loggedIn else { return }
-    guard let apiKey = waniLoginCoordinator.apiKey else { return }
+    guard let apiKey = waniLoginCoordinator.apiKey, let userName = waniLoginCoordinator.userName, let password = waniLoginCoordinator.password else { return }
     let fm = FileManager.default
     let docsurl = try? fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     let persistance = Persistance(setupInMemory: false, apiKey: apiKey, folderUrl: docsurl)
     fetcher = WaniKitManager(apiKey: apiKey)
-    presentTabs(apiKey: apiKey, persistance: persistance)
+    presentTabs(apiKey: apiKey, userName: userName, password: password, persistance: persistance)
   }
 
   func handelShortCut(shortcut: ShortcutIdentifier) {

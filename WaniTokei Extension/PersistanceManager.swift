@@ -51,6 +51,7 @@ class PersistanceManager {
 
   private func saveItemsForComplications(items: [Item], completion: @escaping () -> Void) {
 
+    guard items.count > 0 else { return }
     // All logic here. Plans for future: allow user to customize following numbers
     let topTen = items.prefix(20)
 

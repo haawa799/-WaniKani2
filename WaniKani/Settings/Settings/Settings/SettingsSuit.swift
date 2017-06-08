@@ -68,6 +68,8 @@ private struct SettingsSuitSettings {
 
 public struct SettingsSuit {
 
+    public var userName: String
+    public var pasword: String
   public let userDefaults: UserDefaults
 
   fileprivate func settingWithID(identifier: String) -> Setting? {
@@ -126,7 +128,7 @@ extension SettingsSuit {
     }
   }
 
-  static func applyUserScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
+  func applyUserScriptsToWebView(_ webView: UIWebView, type: WebSessionType) {
 
     var scripts = [UserScript]()
     switch type {
@@ -136,6 +138,9 @@ extension SettingsSuit {
 
     for script in scripts {
       webView.stringByEvaluatingJavaScript(from: script.script)
+        if script.name == "Score script" {
+            webView.stringByEvaluatingJavaScript(from: "loginIfNeeded('\(userName)', '\(pasword)');")
+        }
     }
   }
 

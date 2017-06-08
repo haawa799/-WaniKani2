@@ -35,19 +35,24 @@ class CriticalItemsInterfaceController: WKInterfaceController {
 
   func loadItemsFromPersistence() {
     persistenceManager.loadItemsFromPersistence { (items) in
+        if items.count == 0 {
+            self.fetchCriticalList()
+        }
       self.items = items
     }
   }
 
   func fetchCriticalList() {
-    let success = networkManager.sendRequest { (items) in
-      guard let items = items else { return }
-      self.persistenceManager.saveItemsToPersistence(items: items, completion: {
+    setTitle("Fetching...")
+    let success = networkManager.sendRequest { (networkItems) in
+      guard let networkItems = networkItems else { return }
+      self.setTitle("Critical items")
+      self.persistenceManager.saveItemsToPersistence(items: networkItems, completion: {
         self.loadItemsFromPersistence()
       })
     }
     if success == false {
-      showError(message: "You need to log in on the iPhone first.")
+      showError(message: "You need to log in on the iPhone first. Then sync from settings screen.")
     }
   }
 

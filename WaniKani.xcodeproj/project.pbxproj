@@ -123,6 +123,7 @@
 		5D32BDE91EE6F0CA00ABE009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32BDE81EE6F0CA00ABE009 /* Assets.xcassets */; };
 		5D32BDED1EE6F0CA00ABE009 /* WaniTokei.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5D32BDD11EE6F0CA00ABE009 /* WaniTokei.app */; };
 		5D32BDF71EE6F10800ABE009 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D32BDF61EE6F10800ABE009 /* GameKit.framework */; };
+		5D4614651EE999E20090D7C1 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4614641EE999E20090D7C1 /* WatchConnectivityManager.swift */; };
 		5D56A5611EE8188600A96BBF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5601EE8188600A96BBF /* Defaults.swift */; };
 		5D56A5621EE81A0B00A96BBF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5601EE8188600A96BBF /* Defaults.swift */; };
 		5D56A5681EE8475C00A96BBF /* WatchSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56A5671EE8475C00A96BBF /* WatchSyncViewController.swift */; };
@@ -144,7 +145,6 @@
 		5D9C1DBA1ECDAF3900D42ABA /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */; };
 		5D9E855F1EDBEE9F00C33D8A /* AwardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */; };
 		5D9E85611EDBEF5D00C33D8A /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */; };
-		5D9E94201EE8675B00E1FE59 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9E941F1EE8675B00E1FE59 /* GameKit.framework */; };
 		5DABA0E51EC3007100C25F85 /* WaniPersistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */; };
 		5DABA1131EC326C100C25F85 /* ReviewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */; };
 		5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */; };
@@ -362,6 +362,7 @@
 		5D32BDF81EE6F11200ABE009 /* WaniKani.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniKani.entitlements; sourceTree = "<group>"; };
 		5D32BDF91EE6F12900ABE009 /* WaniTokei.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniTokei.entitlements; sourceTree = "<group>"; };
 		5D32BDFA1EE6F13C00ABE009 /* WaniTokei Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WaniTokei Extension.entitlements"; sourceTree = "<group>"; };
+		5D4614641EE999E20090D7C1 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		5D56A5601EE8188600A96BBF /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5D56A5671EE8475C00A96BBF /* WatchSyncViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSyncViewController.swift; sourceTree = "<group>"; };
 		5D56A5691EE8480A00A96BBF /* WatchSyncViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WatchSyncViewController.storyboard; sourceTree = "<group>"; };
@@ -382,7 +383,6 @@
 		5D9C1DB91ECDAF3900D42ABA /* ProgressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
 		5D9E855E1EDBEE9F00C33D8A /* AwardsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsManager.swift; sourceTree = "<group>"; };
 		5D9E85601EDBEF5D00C33D8A /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
-		5D9E941F1EE8675B00E1FE59 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		5DABA0E41EC3007100C25F85 /* WaniPersistance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WaniPersistance.framework; path = Carthage/Build/iOS/WaniPersistance.framework; sourceTree = "<group>"; };
 		5DABA10E1EC326C100C25F85 /* ReviewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewWebViewController.swift; sourceTree = "<group>"; };
 		5DABA10F1EC326C100C25F85 /* ReviewWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewWebViewController.xib; sourceTree = "<group>"; };
@@ -448,7 +448,6 @@
 				43177C5C1EE744E1001716F1 /* Realm.framework in Frameworks */,
 				43177C5D1EE744E1001716F1 /* RealmSwift.framework in Frameworks */,
 				43177C5E1EE744E1001716F1 /* WaniModel.framework in Frameworks */,
-				5D9E94201EE8675B00E1FE59 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +547,7 @@
 		430876C01D9021B300FE71FE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5D4614641EE999E20090D7C1 /* WatchConnectivityManager.swift */,
 				5D56A5671EE8475C00A96BBF /* WatchSyncViewController.swift */,
 				5D56A5691EE8480A00A96BBF /* WatchSyncViewController.storyboard */,
 				430876C11D9021B300FE71FE /* ColorfullTabBarController.swift */,
@@ -580,7 +580,6 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D9E941F1EE8675B00E1FE59 /* GameKit.framework */,
 				43177C141EE7322D001716F1 /* Realm.framework */,
 				43177C151EE7322D001716F1 /* RealmSwift.framework */,
 				43177C161EE7322D001716F1 /* WaniModel.framework */,
@@ -1023,7 +1022,7 @@
 								enabled = 1;
 							};
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1183,6 +1182,7 @@
 				43D99C6C1D9923290071C26D /* SettingsScriptCellViewModel.swift in Sources */,
 				430876AC1D9021A200FE71FE /* DashboardCoordinator+DashboardData.swift in Sources */,
 				430876AF1D9021A200FE71FE /* DashboardViewController.swift in Sources */,
+				5D4614651EE999E20090D7C1 /* WatchConnectivityManager.swift in Sources */,
 				430876BA1D9021A200FE71FE /* AvaliableItemCellViewModel.swift in Sources */,
 				5D93F02C1ECEF8FA00687D03 /* DataBrowserCoordinator.swift in Sources */,
 				5DBA818A1ED815080083B1C6 /* SRSStatus.swift in Sources */,
@@ -1486,7 +1486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = WaniTokei/WaniTokei.entitlements;
 				DEVELOPMENT_TEAM = S55BP53VB8;

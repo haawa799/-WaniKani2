@@ -20,11 +20,11 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
     let settingsViewController: SettingsViewController
     let childrenCoordinators: [Coordinator]
     let suit: SettingsSuit
-    let apiKey: String
+    let watchManager: WatchConnectivityManager
     fileprivate let awardManager: AwardsManager
 
-    init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit, apiKey: String) {
-        self.apiKey = apiKey
+    init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit, watchManager: WatchConnectivityManager) {
+        self.watchManager = watchManager
         self.presenter = presenter
         self.awardManager = awardManager
         suit = settingsSuit
@@ -42,7 +42,7 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
 
     func showWatchSyncScreen() {
         let syncViewController: WatchSyncViewController = WatchSyncViewController.instantiateViewController()
-        syncViewController.apiKey = apiKey
+        syncViewController.connectivityManager = watchManager
         presenter.pushViewController(syncViewController, animated: true)
     }
 

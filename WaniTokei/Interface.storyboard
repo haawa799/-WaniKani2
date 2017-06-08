@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s60-oc-zEX">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s60-oc-zEX">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="97" y="198"/>
         </scene>
-        <!--Critical-->
+        <!--Critical Items Interface Controller-->
         <scene sceneID="omG-ds-2q5">
             <objects>
-                <controller title="Critical" id="s60-oc-zEX" customClass="CriticalItemsInterfaceController" customModule="WaniTokei_Extension">
+                <controller id="s60-oc-zEX" customClass="CriticalItemsInterfaceController" customModule="WaniTokei_Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="RSg-d3-Puq">
                             <items>
@@ -76,6 +76,7 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label width="1" height="75" alignment="left" text="Force touch to reload" textAlignment="center" numberOfLines="2" id="1cw-3b-T9U"/>
                     </items>
                     <menu key="menu" id="kgg-7U-Wn6">
                         <items>
@@ -123,7 +124,7 @@
                     <items>
                         <group width="1" height="1" alignment="center" id="4b0-XN-Y8P">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="2" id="v3W-qo-9cY"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="5" id="v3W-qo-9cY"/>
                             </items>
                         </group>
                     </items>

@@ -8,7 +8,6 @@
 
 import UIKit
 import WaniLoginKit
-import WatchConnectivity
 
 class WatchSyncViewController: UIViewController, StoryboardInstantiable, BluredBackground {
 
@@ -25,10 +24,16 @@ class WatchSyncViewController: UIViewController, StoryboardInstantiable, BluredB
   }
 
   @IBAction func syncAction(_ sender: Any) {
-    sendApiKey(apiKey: apiKey)
+    sync()
   }
 
-    var apiKey: String?
+    func sync() {
+        connectivityManager?.sync(statusBlock: { [weak self] (status) in
+            self?.statusLabel?.text = status
+        })
+    }
+
+    var connectivityManager: WatchConnectivityManager?
 
   var apiKeyWasSentToWatch: Bool {
     return Defaults.userDefaults.bool(forKey: Key.apiKeyWasSentToWatch)
@@ -37,11 +42,7 @@ class WatchSyncViewController: UIViewController, StoryboardInstantiable, BluredB
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup session
-        if WCSession.isSupported() {
-            let wcsession = WCSession.default()
-            wcsession.delegate = self
-            wcsession.activate()
-        }
+        sync()
 
         let item = UIBarButtonItem(title: "Sync", style: .plain, target: self, action: #selector(syncAction(_:)))
         navigationItem.rightBarButtonItem = item
@@ -61,53 +62,8 @@ class WatchSyncViewController: UIViewController, StoryboardInstantiable, BluredB
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     if apiKeyWasSentToWatch == false {
-      sendApiKey(apiKey: apiKey)
+      sync()
     }
   }
-
-  func sendApiKey(apiKey: String?) {
-    guard let apiKey = apiKey else { return }
-    WCSession.default().sendMessage([Key.apiKey: apiKey], replyHandler: { (_) in
-      Defaults.userDefaults.set(true, forKey: Key.apiKeyWasSentToWatch)
-      DispatchQueue.main.async {
-        self.statusLabel?.text = "API key successfully sent to watch."
-      }
-    }) { (_) in
-      self.showSessionStatus(session: WCSession.default())
-    }
-  }
-
-  func showSessionStatus(session: WCSession) {
-    let status: String
-    if session.isReachable {
-      status = "Watch reachable"
-    } else {
-      if session.isWatchAppInstalled {
-        status = "Watch app installed"
-      } else {
-        status = "Watch app not installed"
-      }
-    }
-    DispatchQueue.main.async {
-      self.statusLabel?.text = status
-    }
-  }
-
-}
-
-extension WatchSyncViewController: WCSessionDelegate {
-
-    @available(iOS 9.3, *)
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-
-    }
-
-    func sessionDidBecomeInactive(_ session: WCSession) {
-
-    }
-
-    func sessionDidDeactivate(_ session: WCSession) {
-
-    }
 
 }

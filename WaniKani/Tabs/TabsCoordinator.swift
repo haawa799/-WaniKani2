@@ -17,7 +17,7 @@ open class TabsCoordinator: Coordinator {
 
     weak var delegate: TabsCoordinatorDelegate?
 
-  fileprivate let applicationSettingsSuit = SettingsSuit(userDefaults: Defaults.userDefaults)
+  fileprivate let applicationSettingsSuit: SettingsSuit
   fileprivate let dashboardNavigationController = UINavigationController()
   fileprivate let dashboardCoordinator: DashboardCoordinator
   fileprivate let settingsNavigationController = UINavigationController()
@@ -29,7 +29,8 @@ open class TabsCoordinator: Coordinator {
   let presenter: UITabBarController
   let dataProvider: DataProvider
 
-    init(dataProvider: DataProvider, awardManager: AwardsManager, presenter: UITabBarController, persistance: Persistance, apiKey: String) {
+    init(dataProvider: DataProvider, awardManager: AwardsManager, presenter: UITabBarController, persistance: Persistance, apiKey: String, userName: String, pasword: String) {
+    self.applicationSettingsSuit = SettingsSuit(userName: userName, pasword: pasword, userDefaults: Defaults.userDefaults)
     self.dataProvider = dataProvider
     self.awardManager = awardManager
     self.presenter = presenter
@@ -38,7 +39,10 @@ open class TabsCoordinator: Coordinator {
     let viewControllers = [dashboardNavigationController, dataBrowserNavigationController, settingsNavigationController]
     presenter.setViewControllers(viewControllers, animated: false)
     dashboardCoordinator = DashboardCoordinator(dataProvider: dataProvider, presenter: dashboardNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit)
-    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit, apiKey: apiKey)
+    let watchManager = WatchConnectivityManager(apiKey: apiKey)
+    watchManager.sync { (_) in
+    }
+    settingsCoordinator = SettingsCoordinator(presenter: settingsNavigationController, awardManager: awardManager, settingsSuit: applicationSettingsSuit, watchManager: watchManager)
     dataBrowserCoordinator = DataBrowserCoordinator(presenter: dataBrowserNavigationController, persistance: persistance, dataProvider: dataProvider)
   }
 
