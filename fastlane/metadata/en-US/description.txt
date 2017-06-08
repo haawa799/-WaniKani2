@@ -1,0 +1,17 @@
+WaniKani - is a client app for WaniKani.com site. 
+It's not official WaniKani app, but it is approved by WaniKani team.
+
+Features:
+ - Practice Kanji stroke order.
+ - Reorder script.
+ - Fast forward script.
+ - Ignore button.
+ - Smart resizing.
+ - Leaderboards and Achievements.
+ - Notifications.
+ - 3D touch support.
+
+You can request a feature: 
+ - On twitter @haawa799 or 
+ - On app forum page https://www.wanikani.com/chat/api-and-third-party-apps/9946
+ - Open issue on github https://github.com/haawa799/WaniKani-iOS
