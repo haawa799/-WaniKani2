@@ -118,6 +118,7 @@
 		43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F37F1D91547F00A9BB08 /* SRSViewModel.swift */; };
 		43F4F3821D91590500A9BB08 /* SRSDistributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3811D91590500A9BB08 /* SRSDistributionViewModel.swift */; };
 		43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4F3831D915AF200A9BB08 /* ProgressViewController.swift */; };
+		43FFAB881EEAE3C8007CEE89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43620A461D8C28FB00C1BA72 /* LaunchScreen.storyboard */; };
 		5D32BDD71EE6F0CA00ABE009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32BDD61EE6F0CA00ABE009 /* Assets.xcassets */; };
 		5D32BDDE1EE6F0CA00ABE009 /* WaniTokei Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D32BDDD1EE6F0CA00ABE009 /* WaniTokei Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5D32BDE91EE6F0CA00ABE009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32BDE81EE6F0CA00ABE009 /* Assets.xcassets */; };
@@ -964,7 +965,7 @@
 				5D32BDD91EE6F0CA00ABE009 /* Sources */,
 				5D32BDDA1EE6F0CA00ABE009 /* Frameworks */,
 				5D32BDDB1EE6F0CA00ABE009 /* Resources */,
-				43177C5F1EE74655001716F1 /* ShellScript */,
+				43B6BFD21EEABF240098A61B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -992,7 +993,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1008,7 +1009,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1019,7 +1020,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -1062,6 +1063,7 @@
 				5DBA81871ED814DF0083B1C6 /* RadicalDetailViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
 				5D5ECC871ED5C2EC00BF6D58 /* SearchItemsHeader.xib in Resources */,
+				43FFAB881EEAE3C8007CEE89 /* LaunchScreen.storyboard in Resources */,
 				5DABA1161EC326C100C25F85 /* RightMenuViewController.xib in Resources */,
 				5DBA818F1ED847D20083B1C6 /* WordDetailViewController.storyboard in Resources */,
 				5D9C1DB81ECDAF1100D42ABA /* SRSViewController.storyboard in Resources */,
@@ -1111,22 +1113,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43177C5F1EE74655001716F1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/watchOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/watchOS/WaniModel.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		43B02A461E7AA4D800F6874A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1140,15 +1126,29 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		43B6BFD21EEABF240098A61B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/WaniModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		43BA2B7D1E8A9E280021BB20 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Cely.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DGElasticPullToRefreshKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NJKScrollFullscreenKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Promise.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RESideMenuKit.framework",
@@ -1163,6 +1163,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDraw.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SHSearchBar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cely.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -1433,7 +1435,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = WaniKani/WaniKani.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1461,7 +1462,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = WaniKani/WaniKani.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1488,11 +1488,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.debug;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WaniTokei/WaniTokei.entitlements;
 				DEVELOPMENT_TEAM = S55BP53VB8;
 				IBSC_MODULE = WaniTokei_Extension;
 				INFOPLIST_FILE = WaniTokei/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1508,11 +1507,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WaniTokei/WaniTokei.entitlements;
 				DEVELOPMENT_TEAM = S55BP53VB8;
 				IBSC_MODULE = WaniTokei_Extension;
 				INFOPLIST_FILE = WaniTokei/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1525,10 +1523,10 @@
 		5D32BDF01EE6F0CA00ABE009 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WaniTokei Extension/WaniTokei Extension.entitlements";
 				DEVELOPMENT_TEAM = S55BP53VB8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1536,7 +1534,7 @@
 				);
 				INFOPLIST_FILE = "WaniTokei Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1550,10 +1548,10 @@
 		5D32BDF11EE6F0CA00ABE009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "WaniTokei Extension/WaniTokei Extension.entitlements";
 				DEVELOPMENT_TEAM = S55BP53VB8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1561,7 +1559,7 @@
 				);
 				INFOPLIST_FILE = "WaniTokei Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani.watchapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
