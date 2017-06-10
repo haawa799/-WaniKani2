@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 
+@available(iOS 10.0, *)
 class NotificationManager: NSObject {
 
   static let sharedInstance = NotificationManager()

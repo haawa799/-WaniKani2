@@ -4,9 +4,9 @@ github "haawa799/DGElasticPullToRefresh" "d02f7bb5c3d9a3b8059fcb3fc9d9877bdc062a
 github "haawa799/WaniLogin" "2e31d859f4a75d2c038ac7e7a53983f73d2d8310"
 github "haawa799/WaniKit" "87ae9b53f72e9719d5754c62ade620808b45c187"
 github "haawa799/WaniPersistance" "4900b42060d2b6274dbd757afbd96d1f61aae331"
-github "haawa799/StrokeDrawingView" "a0c3c747603e0da16be6587c2f23476c6d201a6b"
+github "haawa799/StrokeDrawingView" "af81515fc5ff8eadb2e59375f305826641879543"
 github "haawa799/KanjiBezierPaths" "d03f8c518ea964917c95302b2547c13735fe3401"
-github "haawa799/SwiftyDraw" "cad884cb93f61e10e7ed131f000b0ca049793f37"
+github "haawa799/SwiftyDraw" "fc196fa654e75f5876a4dc365046875220c91722"
 github "haawa799/SHSearchBar" "34c599075f9e888801971709fc4a1c1807ef5fd7"
 
 github "onevcat/Kingfisher"

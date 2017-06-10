@@ -68,11 +68,13 @@ class ApplicationCoordinator: NSObject, Coordinator {
 // MARK: - CelyWindowManagerDelegate
 extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
-    UNUserNotificationCenter.current().delegate = self
-    UNUserNotificationCenter.current().requestAuthorization(
-      options: [.alert, .sound, .badge],
-      completionHandler: { (_, _) in
-    })
+    if #available(iOS 10.0, *) {
+      UNUserNotificationCenter.current().delegate = self
+//      UNUserNotificationCenter.current().requestAuthorization(
+//        options: [.alert, .sound, .badge],
+//        completionHandler: { (_, _) in
+//      })
+    }
     window.rootViewController = rootViewController
     waniLoginCoordinator.start(delegate: self, window: window)
     window.makeKeyAndVisible()
@@ -120,6 +122,7 @@ extension ApplicationCoordinator: DataProviderDelegate {
 }
 
 // MARK: - UNUserNotificationCenterDelegate
+@available(iOS 10.0, *)
 extension ApplicationCoordinator: UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
     debugPrint(response.actionIdentifier)

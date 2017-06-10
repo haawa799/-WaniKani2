@@ -85,6 +85,7 @@
 		43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B881E8AAEC60021BB20 /* WaniLoginKit.framework */; };
 		43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B891E8AAEC60021BB20 /* WaniModel.framework */; };
 		43BE315C1EEC3BE600C050F5 /* WaniKaniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE315B1EEC3BE600C050F5 /* WaniKaniUITests.swift */; };
+		43BE31641EEC751100C050F5 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE31631EEC751100C050F5 /* SnapshotHelper.swift */; };
 		43BE76031E3F39F30032950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BE76051E3F39F30032950B /* Localizable.strings */; };
 		43BE76071E3F3A870032950B /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76061E3F3A870032950B /* Strings+Localization.swift */; };
 		43BE76091E3F3C240032950B /* WebSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE76081E3F3C240032950B /* WebSessionType.swift */; };
@@ -330,6 +331,7 @@
 		43BE31591EEC3BE600C050F5 /* WaniKaniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaniKaniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BE315B1EEC3BE600C050F5 /* WaniKaniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniKaniUITests.swift; sourceTree = "<group>"; };
 		43BE315D1EEC3BE600C050F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BE31631EEC751100C050F5 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		43BE76041E3F39F30032950B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43BE76061E3F3A870032950B /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		43BE76081E3F3C240032950B /* WebSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionType.swift; sourceTree = "<group>"; };
@@ -703,6 +705,7 @@
 		43BE315A1EEC3BE600C050F5 /* WaniKaniUITests */ = {
 			isa = PBXGroup;
 			children = (
+				43BE31631EEC751100C050F5 /* SnapshotHelper.swift */,
 				43BE315B1EEC3BE600C050F5 /* WaniKaniUITests.swift */,
 				43BE315D1EEC3BE600C050F5 /* Info.plist */,
 			);
@@ -1338,6 +1341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43BE315C1EEC3BE600C050F5 /* WaniKaniUITests.swift in Sources */,
+				43BE31641EEC751100C050F5 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1518,7 +1522,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1545,7 +1549,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = WaniKani/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haawa.WaniKani;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -39,10 +39,12 @@ class DataProvider {
 
   func fetchDashboard(handler: @escaping (DashboardInfo?) -> Void) {
     apiManager.fetchDashboard().then { [weak self] (dashboard) in
-      if let nextReview = dashboard.studyQueueInfo.nextReviewDate {
-        NotificationManager.sharedInstance.scheduleNextReviewNotification(date: nextReview)
+      if #available(iOS 10.0, *) {
+        if let nextReview = dashboard.studyQueueInfo.nextReviewDate {
+          NotificationManager.sharedInstance.scheduleNextReviewNotification(date: nextReview)
+        }
+        NotificationManager.sharedInstance.updateIconCounter(number: dashboard.studyQueueInfo.reviewsAvaliable ?? 0)
       }
-      NotificationManager.sharedInstance.updateIconCounter(number: dashboard.studyQueueInfo.reviewsAvaliable ?? 0)
       self?.activityManager.newStudyQueueData(studyQueue: dashboard.studyQueueInfo)
       self?.persistance.persist(levelProgression: dashboard.levelProgressionInfo)
       if let oldLevel = self?.persistance.levelProgression?.userInfo.level {
