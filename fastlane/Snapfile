@@ -12,6 +12,6 @@ languages([
   "en-US"
 ])
 
-workspace "/Users/haawa799/Google\ Drive/IOS\ Projects/WaniKani/WaniKani.xcworkspace"
+project "WaniKani.xcodeproj"
 scheme "WaniKani"
 app_identifier "com.haawa.WaniKani.debug"

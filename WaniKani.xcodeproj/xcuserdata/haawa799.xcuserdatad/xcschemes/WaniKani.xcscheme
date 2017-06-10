@@ -48,6 +48,26 @@
                ReferencedContainer = "container:WaniKani.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "43FFAB8D1EEC25AB007CEE89"
+               BuildableName = "WaniKaniUITests.xctest"
+               BlueprintName = "WaniKaniUITests"
+               ReferencedContainer = "container:WaniKani.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "43BE31381EEC396B00C050F5"
+               BuildableName = "UITests.xctest"
+               BlueprintName = "UITests"
+               ReferencedContainer = "container:WaniKani.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

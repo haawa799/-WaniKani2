@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WaniKaniUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>WaniTokei (Complication).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -68,6 +73,26 @@
 			<true/>
 		</dict>
 		<key>43620ACA1D8DD2F300C1BA72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43BE31381EEC396B00C050F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43BE314A1EEC3BC300C050F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43BE31581EEC3BE600C050F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43FFAB8D1EEC25AB007CEE89</key>
 		<dict>
 			<key>primary</key>
 			<true/>

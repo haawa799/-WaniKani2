@@ -35,7 +35,8 @@ class DownloadingCoordinator: Coordinator {
 // MARK: - DownloadingViewControllerDelegate
 extension DownloadingCoordinator: DownloadingViewControllerDelegate {
   func startDownloadPressed() {
-    downloadViewController.maxProgress = 60 * 3
+
+    downloadViewController.maxProgress = dataProvider.maxLevel * 3
     downloadViewController.currentProgress = 0
 
     dataProvider.fetchRadicals { [weak self] (success) in

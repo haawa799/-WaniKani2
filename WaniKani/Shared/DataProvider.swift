@@ -19,12 +19,17 @@ protocol DataProviderDelegate: class {
 
 class DataProvider {
 
-  fileprivate static let maxLevel = 60
-
   private let apiManager: WaniKitManager
   private let activityManager = UserActivityManager()
   let persistance: Persistance
   weak var delegate: DataProviderDelegate?
+  var currentLevel: Int {
+    return persistance.levelProgression?.userInfo.level ?? 0
+  }
+
+  var maxLevel: Int {
+    return currentLevel <= 3 ? currentLevel : 60
+  }
 
   init(apiKey: String, persistance: Persistance) {
     apiManager = WaniKitManager(apiKey: apiKey)
@@ -54,9 +59,10 @@ class DataProvider {
   }
 
   func fetchKanji(queue: DispatchQueue = DispatchQueue(label: "Fetch all kanji queue"), kanjiFetchedBlock: @escaping (_ success: Bool) -> Void) {
+    let maxLevel = self.maxLevel
     queue.async {
       var kanjiArray = [KanjiInfo]()
-      for level in 1...DataProvider.maxLevel {
+      for level in 1...maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchKanjiPromise(level: level)
@@ -77,9 +83,10 @@ class DataProvider {
   }
 
   func fetchWords(queue: DispatchQueue = DispatchQueue(label: "Fetch all words queue"), wordsFetchedBlock: @escaping (_ success: Bool) -> Void) {
+    let maxLevel = self.maxLevel
     queue.async {
       var words = [WordInfo]()
-      for level in 1...DataProvider.maxLevel {
+      for level in 1...maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchVocabPromise(level: level)
@@ -100,9 +107,10 @@ class DataProvider {
   }
 
     func fetchRadicals(queue: DispatchQueue = DispatchQueue(label: "Fetch all radicals queue"), radicalsFetchedBlock: @escaping (_ success: Bool) -> Void) {
+      let maxLevel = self.maxLevel
     queue.async {
       var radicals = [RadicalInfo]()
-      for level in 1...DataProvider.maxLevel {
+      for level in 1...maxLevel {
         let group = DispatchGroup()
         group.enter()
         let q = self.apiManager.fetchRadicalPromise(level: level)
