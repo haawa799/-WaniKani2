@@ -32,7 +32,7 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   lane :beta do
     increment_build_number({
-      build_number: '7'
+      build_number: '8'
     })
     increment_version_number(
       version_number: '2.0.0'
@@ -46,8 +46,8 @@ platform :ios do
   desc "Deploy a new version to the App Store"
   lane :deploy do
     # snapshot
-    frameit(silver: true)
-    deliver(force: true)
+    # frameit(silver: true)
+    deliver(app_version: "2.0.0", force: true)
   end
 
   after_all do |lane|

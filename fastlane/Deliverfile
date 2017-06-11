@@ -9,7 +9,7 @@
 app_identifier "com.haawa.WaniKani" # The bundle identifier of your app
 username "haawalabs@gmail.com" # your Apple ID user
 
-submit_for_review true
+submit_for_review false
 
 submission_information({
   export_compliance_uses_encryption: false
