@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -52,7 +52,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "43FFAB8D1EEC25AB007CEE89"
+               BlueprintIdentifier = "43BE31581EEC3BE600C050F5"
                BuildableName = "WaniKaniUITests.xctest"
                BlueprintName = "WaniKaniUITests"
                ReferencedContainer = "container:WaniKani.xcodeproj">

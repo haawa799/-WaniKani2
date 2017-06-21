@@ -41,7 +41,7 @@ class WaniKaniUITests: XCTestCase {
     sleep(25)
   }
 
-  func testExample() {
+  func testExample() { // swiftlint:disable:this function_body_length
 
     //
     continueAfterFailure = true
