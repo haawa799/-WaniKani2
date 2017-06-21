@@ -17,12 +17,12 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
   let presenter: UINavigationController
   let containerViewController: BottomBarContainerViewController
   let sideMenuController: SideMenuHolderViewController
-  fileprivate let settingsSuit: SettingsSuit
+  private let settingsSuit: SettingsSuit
   let type: WebSessionType
 
   let childrenCoordinators: [Coordinator]
 
-  fileprivate var sideMenuVisible = false
+  private var sideMenuVisible = false
 
   weak var delegate: ReviewCoordinatorDelegate?
 
@@ -47,7 +47,7 @@ class ReviewCoordinator: NSObject, Coordinator, BottomBarContainerDelegate {
     updateStatusBar(hide: settingsSuit.hideStatusBarEnabled)
   }
 
-  fileprivate func updateStatusBar(hide: Bool) {
+  private func updateStatusBar(hide: Bool) {
     UIApplication.shared.isStatusBarHidden = hide
   }
 }

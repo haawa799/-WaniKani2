@@ -16,12 +16,12 @@ enum ReviewItem {
 }
 
 struct SearchItemCellViewModel: ViewModel {
-    fileprivate let _color: UIColor
-    fileprivate let _text: String
-    fileprivate let _subTitle: String
-    fileprivate let _identifier: String
-    fileprivate var _item: ReviewItem
-    fileprivate let _imageURL: URL?
+    private let _color: UIColor
+    private let _text: String
+    private let _subTitle: String
+    private let _identifier: String
+    private var _item: ReviewItem
+    private let _imageURL: URL?
 
     init(kanji: KanjiInfo) {
         _color = UIColor(red:0.89, green:0.09, blue:0.60, alpha:1.00)

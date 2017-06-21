@@ -16,7 +16,7 @@ protocol SearchItemsDataProviderDelegate: class {
 
 class SearchItemsDataProvider {
 
-    fileprivate let persistance: Persistance
+    private let persistance: Persistance
 
     init(persistance: Persistance) {
         self.persistance = persistance
@@ -35,7 +35,7 @@ class SearchItemsDataProvider {
         }
     }
 
-    fileprivate func updateList(results: (radicals: [RadicalInfo], kanji: [KanjiInfo], words: [WordInfo])) {
+    private func updateList(results: (radicals: [RadicalInfo], kanji: [KanjiInfo], words: [WordInfo])) {
 
         var sections = [ListSection]()
 

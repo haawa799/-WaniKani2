@@ -11,12 +11,12 @@ import RealmSwift
 import WaniModel
 
 public class RealmUserSpecific: Object {
-  public dynamic var srs: String?
+  @objc public dynamic var srs: String?
   public let srsNumeric = RealmOptional<Int>()
-  public dynamic var unlockedDate: Date?
-  public dynamic var availableDate: Date?
-  public dynamic var burned: Bool = false
-  public dynamic var burnedDate: Date?
+  @objc public dynamic var unlockedDate: Date?
+  @objc public dynamic var availableDate: Date?
+  @objc public dynamic var burned: Bool = false
+  @objc public dynamic var burnedDate: Date?
   public let meaningCorrect = RealmOptional<Int>()
   public let meaningIncorrect = RealmOptional<Int>()
   public let meaningMaxStreak = RealmOptional<Int>()
@@ -25,9 +25,9 @@ public class RealmUserSpecific: Object {
   public let readingIncorrect = RealmOptional<Int>()
   public let readingMaxStreak = RealmOptional<Int>()
   public let readingCurrentStreak = RealmOptional<Int>()
-  public dynamic var meaningNote: String?
-  public dynamic var userSynonyms: String?
-  public dynamic var readingNote: String?
+  @objc public dynamic var meaningNote: String?
+  @objc public dynamic var userSynonyms: String?
+  @objc public dynamic var readingNote: String?
 
   var userSpecific: UserSpecific {
     var specific = UserSpecific(burned: burned)

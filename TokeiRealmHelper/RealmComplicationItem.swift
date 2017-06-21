@@ -11,14 +11,14 @@ import RealmSwift
 import WaniModel
 
 public class RealmComplicationItem: Object {
-  public dynamic var text = ""
-  public dynamic var subText: String?
-  public dynamic var date: Date = Date()
+  @objc public dynamic var text = ""
+  @objc public dynamic var subText: String?
+  @objc public dynamic var date: Date = Date()
 
   public var itemType: RealmReviewItem.ItemType {
     return RealmReviewItem.ItemType(rawValue: type)!
   }
-  public dynamic var type: Int = 0
+  @objc public dynamic var type: Int = 0
 
   public static func newItem(itemInfo: Item, date: Date) -> RealmComplicationItem {
     let item = RealmComplicationItem()

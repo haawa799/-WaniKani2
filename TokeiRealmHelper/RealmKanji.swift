@@ -11,15 +11,15 @@ import RealmSwift
 import WaniModel
 
 public class RealmKanji: RealmReviewItem {
-  public dynamic var character = ""
-  public dynamic var meaning: String?
-  public dynamic var onyomi: String?
-  public dynamic var kunyomi: String?
-  public dynamic var nanori: String?
-  public dynamic var importantReading: String?
-  public dynamic var level = 0
-  public dynamic var percentage: String?
-  public dynamic var userSpecific: RealmUserSpecific?
+  @objc public dynamic var character = ""
+  @objc public dynamic var meaning: String?
+  @objc public dynamic var onyomi: String?
+  @objc public dynamic var kunyomi: String?
+  @objc public dynamic var nanori: String?
+  @objc public dynamic var importantReading: String?
+  @objc public dynamic var level = 0
+  @objc public dynamic var percentage: String?
+  @objc public dynamic var userSpecific: RealmUserSpecific?
 
   public override var item: Item? {
     var kanji = KanjiInfo(character: character, level: level)

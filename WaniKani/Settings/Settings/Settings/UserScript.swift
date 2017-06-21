@@ -10,7 +10,7 @@ import UIKit
 
 struct UserScript {
 
-  fileprivate(set) var name: String
+  private(set) var name: String
 
   init(filename: String, scriptName: String) {
     name = scriptName
@@ -25,6 +25,6 @@ struct UserScript {
     script = modifier(script)
   }
 
-  fileprivate(set) var script: String = ""
+  private(set) var script: String = ""
 
 }

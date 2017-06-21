@@ -16,11 +16,11 @@ class DataBrowserCoordinator: NSObject, Coordinator {
     static let defaultsDownloadKey = "defaultsDownloadKey"
   }
 
-  fileprivate let presenter: UINavigationController
-  fileprivate let dataProvider: DataProvider
-  fileprivate let searchDataProvider: SearchItemsDataProvider
-  fileprivate weak var dataBrowserViewController: DataBrowserViewController?
-  fileprivate var downloadingCoordinator: DownloadingCoordinator?
+  private let presenter: UINavigationController
+  private let dataProvider: DataProvider
+  private let searchDataProvider: SearchItemsDataProvider
+  private weak var dataBrowserViewController: DataBrowserViewController?
+  private var downloadingCoordinator: DownloadingCoordinator?
 
   init(presenter: UINavigationController, persistance: Persistance, dataProvider: DataProvider) {
     self.presenter = presenter
@@ -32,21 +32,21 @@ class DataBrowserCoordinator: NSObject, Coordinator {
     presenter.tabBarItem = tabItem
   }
 
-  fileprivate func showKanji(kanji: KanjiInfo) {
+  private func showKanji(kanji: KanjiInfo) {
     let kanjiViewController: KanjiDetailViewController = KanjiDetailViewController.instantiateViewController()
     kanjiViewController.kanji = kanji
     kanjiViewController.navigationItem.title = kanji.character
     presenter.pushViewController(kanjiViewController, animated: true)
   }
 
-  fileprivate func showRadical(radical: RadicalInfo) {
+  private func showRadical(radical: RadicalInfo) {
     let radicalViewController: RadicalDetailViewController = RadicalDetailViewController.instantiateViewController()
     radicalViewController.radical = radical
     radicalViewController.navigationItem.title = radical.character
     presenter.pushViewController(radicalViewController, animated: true)
   }
 
-  fileprivate func showWord(word: WordInfo) {
+  private func showWord(word: WordInfo) {
     let wordDetailViewController: WordDetailViewController = WordDetailViewController.instantiateViewController()
     wordDetailViewController.word = word
     wordDetailViewController.navigationItem.title = word.character

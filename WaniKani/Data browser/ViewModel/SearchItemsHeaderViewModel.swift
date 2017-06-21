@@ -9,7 +9,7 @@
 import UIKit
 
 struct SearchItemsHeaderViewModel: ViewModel {
-    fileprivate let _text: String
+    private let _text: String
 
     init(_ text: String) {
         _text = text

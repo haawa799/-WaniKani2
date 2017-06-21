@@ -12,6 +12,13 @@ class SingleTabViewController: UIViewController {
 
   var isTabBarShrinked: Bool = false
 
+  func didShrink() {
+
+  }
+
+  func didUnshrink() {
+
+  }
 }
 
 // MARK: - UIViewController
@@ -29,20 +36,12 @@ extension SingleTabViewController {
     }
   }
 
-  func didShrink() {
-
-  }
-
-  func didUnshrink() {
-
-  }
-
 }
 
 // MARK: - Private
 extension SingleTabViewController {
 
-  fileprivate func shrink() -> Bool {
+  private func shrink() -> Bool {
     guard isTabBarShrinked == false else { return false }
     hideTabBar(true)
     isTabBarShrinked = true
@@ -50,7 +49,7 @@ extension SingleTabViewController {
     return true
   }
 
-  fileprivate func unshrink() -> Bool {
+  private func unshrink() -> Bool {
     guard isTabBarShrinked == true else { return false }
     showTabBar(true)
     isTabBarShrinked = false

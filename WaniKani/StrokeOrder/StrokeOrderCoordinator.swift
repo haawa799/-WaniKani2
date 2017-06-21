@@ -10,9 +10,9 @@ import UIKit
 
 class StrokeOrderCoordinator: Coordinator {
 
-    fileprivate let strokesViewController: StrokeOrderViewController
-    fileprivate let presenter: UIViewController
-    fileprivate let kanji: [String]
+    private let strokesViewController: StrokeOrderViewController
+    private let presenter: UIViewController
+    private let kanji: [String]
 
     init(presenter: UIViewController, kanji: [String]) {
         self.kanji = kanji

@@ -19,7 +19,7 @@ class LabelWithAdaptiveTextHeight: UILabel {
   }
 
   // Returns an UIFont that fits the new label's height.
-  fileprivate func fontToFitHeight() -> UIFont {
+  private func fontToFitHeight() -> UIFont {
 
     var minFontSize: CGFloat = 4
     var maxFontSize: CGFloat = 67
@@ -31,7 +31,7 @@ class LabelWithAdaptiveTextHeight: UILabel {
       if let labelText: NSString = text as NSString? {
         let labelHeight = frame.size.height * heightKoefitient
         let testStringHeight = labelText.size(
-          attributes: [NSFontAttributeName: font.withSize(fontSizeAverage)]
+          withAttributes: [NSAttributedStringKey.font: font.withSize(fontSizeAverage)]
           ).height
         textAndLabelHeightDiff = labelHeight - testStringHeight
         if fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize {

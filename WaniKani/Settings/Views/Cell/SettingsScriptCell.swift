@@ -22,10 +22,10 @@ class SettingsScriptCell: UICollectionViewCell, FlippableView, SingleReuseIdenti
   weak var delegate: SettingsScriptCellDelegate?
   var identifier: String?
 
-  @IBOutlet fileprivate weak var titleLabel: UILabel!
-  @IBOutlet fileprivate weak var flatSwitch: AIFlatSwitch!
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var flatSwitch: AIFlatSwitch!
 
-  @objc @IBAction fileprivate func switchValueChanged(_ sender: AIFlatSwitch) {
+  @objc @IBAction private func switchValueChanged(_ sender: AIFlatSwitch) {
     delegate?.scriptCellChangedState(self, state: sender.isSelected)
   }
 

@@ -23,9 +23,9 @@ class DashboardCoordinator: Coordinator, DashboardViewControllerDelegate/*, Revi
   let dashboardViewController: DashboardViewController
   let dataProvider: DataProvider
   let settingsSuit: SettingsSuit
-  fileprivate let awardManager: AwardsManager
+  private let awardManager: AwardsManager
 
-  fileprivate var reviewCoordinator: ReviewCoordinator?
+  private var reviewCoordinator: ReviewCoordinator?
 
   init(dataProvider: DataProvider, presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit) {
     self.awardManager = awardManager

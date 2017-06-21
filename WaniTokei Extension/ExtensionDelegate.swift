@@ -13,8 +13,8 @@ import WaniModel
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
 
   func applicationDidFinishLaunching() {
-    WCSession.default().delegate = self
-    WCSession.default().activate()
+    WCSession.default.delegate = self
+    WCSession.default.activate()
   }
 
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

@@ -74,7 +74,7 @@ class AwardsManager: NSObject {
     }
 
   private let player: GKLocalPlayer = GKLocalPlayer.localPlayer()
-  fileprivate let presenter: UIViewController
+  private let presenter: UIViewController
 
   //initiate gamecenter
   func authenticateLocalPlayer() {

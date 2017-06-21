@@ -12,7 +12,7 @@ import StrokeDrawingView
 
 class KanjiGraphicInfo {
 
-  fileprivate static let kanjiProvider: KanjiProvider! = {
+  private static let kanjiProvider: KanjiProvider! = {
       guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
           return nil
       }

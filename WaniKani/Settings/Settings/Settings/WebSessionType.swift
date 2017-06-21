@@ -16,7 +16,7 @@ enum BarAction {
 
 enum WebSessionType: BottomBarContainerDataSource {
 
-  fileprivate struct Constants {
+  private struct Constants {
     static let defaultReviewItems = [
       BarItemData.item(title: "review.bottombar.button.title.submit.to.gamcenter".localized),
       BarItemData.spacing,

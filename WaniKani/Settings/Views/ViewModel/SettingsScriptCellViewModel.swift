@@ -10,9 +10,9 @@ import Foundation
 
 struct SettingsScriptCellViewModel: SettingsScriptCellDataSource {
 
-  fileprivate let titleString: String
-  fileprivate let state: Bool
-  fileprivate let identifier: String
+  private let titleString: String
+  private let state: Bool
+  private let identifier: String
 
   init(setting: Setting) {
     identifier = setting.key.rawValue

@@ -17,7 +17,7 @@ class WatchConnectivityManager: NSObject {
     }
 
     var session: WCSession {
-        return WCSession.default()
+        return WCSession.default
     }
 
     let apiKey: String

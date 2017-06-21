@@ -10,8 +10,8 @@ import UIKit
 
 struct DashboardHeaderViewModel: DashboardHeaderDatasource {
 
-  fileprivate let titleString: String
-  fileprivate var color: UIColor?
+  private let titleString: String
+  private var color: UIColor?
 
   init(title: String, color: UIColor?) {
     titleString = title

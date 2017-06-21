@@ -72,7 +72,7 @@ public struct SettingsSuit {
     public var pasword: String
   public let userDefaults: UserDefaults
 
-  fileprivate func settingWithID(identifier: String) -> Setting? {
+  private func settingWithID(identifier: String) -> Setting? {
     let setting = SettingsSuitSettings.allSettings.filter ({ $0.key.rawValue == identifier }).first
     return setting
   }

@@ -15,9 +15,9 @@ import UserNotifications
 
 class ApplicationCoordinator: NSObject, Coordinator {
 
-  fileprivate var tabsCoordinator: TabsCoordinator?
-  fileprivate let waniLoginCoordinator: WaniLoginCoordinator
-  fileprivate var persistance: Persistance!
+  private var tabsCoordinator: TabsCoordinator?
+  private let waniLoginCoordinator: WaniLoginCoordinator
+  private var persistance: Persistance!
   var fetcher: WaniKitManager?
 
   let window: UIWindow
@@ -51,7 +51,7 @@ class ApplicationCoordinator: NSObject, Coordinator {
     self.rootViewController.present(alertController, animated: true, completion: nil)
   }
 
-  fileprivate func logout() {
+  private func logout() {
     // Remove all cache
     if let oldCookies = HTTPCookieStorage.shared.cookies {
         debugPrint(oldCookies)

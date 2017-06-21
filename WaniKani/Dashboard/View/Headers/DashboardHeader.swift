@@ -27,7 +27,7 @@ class DashboardHeader: UICollectionReusableView, SingleReuseIdentifier, ViewMode
   @IBOutlet weak var realHeaderWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var realHeader: UIView!
   @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet fileprivate var coloredViews: [UIView]!
+  @IBOutlet private var coloredViews: [UIView]!
 
   var color: UIColor? = nil {
     didSet {

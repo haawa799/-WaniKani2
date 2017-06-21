@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  fileprivate lazy var applicationCoordinator: ApplicationCoordinator = {
+  private lazy var applicationCoordinator: ApplicationCoordinator = {
     return ApplicationCoordinator(window: self.window!)
   }()
 

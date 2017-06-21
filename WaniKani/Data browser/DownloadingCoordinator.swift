@@ -17,9 +17,9 @@ class DownloadingCoordinator: Coordinator {
   weak var delegate: DownloadingCoordinatorDelegate?
   let syncQueue = DispatchQueue(label: "Syncer queue")
 
-  fileprivate let presenter: UINavigationController
-  fileprivate let dataProvider: DataProvider
-  fileprivate let downloadViewController: DownloadingViewController = DownloadingViewController.instantiateViewController()
+  private let presenter: UINavigationController
+  private let dataProvider: DataProvider
+  private let downloadViewController: DownloadingViewController = DownloadingViewController.instantiateViewController()
 
   init(presenter: UINavigationController, dataProvider: DataProvider) {
     self.presenter = presenter

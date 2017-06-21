@@ -38,11 +38,11 @@ public class RealmReviewItem: Object {
     return ItemType(rawValue: type)!
   }
 
-  public dynamic var type: Int = 0
-  public dynamic var text: String = ""
-  public dynamic var radical: RealmRadical?
-  public dynamic var kanji: RealmKanji?
-  public dynamic var word: RealmWord?
+  @objc public dynamic var type: Int = 0
+  @objc public dynamic var text: String = ""
+  @objc public dynamic var radical: RealmRadical?
+  @objc public dynamic var kanji: RealmKanji?
+  @objc public dynamic var word: RealmWord?
 
   public static func newItem(itemInfo: Item?) -> RealmReviewItem? {
     guard let itemInfo = itemInfo else { return nil }

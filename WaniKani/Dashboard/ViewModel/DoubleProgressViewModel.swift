@@ -11,11 +11,11 @@ import WaniModel
 
 struct DoubleProgressViewModel: DoubleProgressBarProgressDataSource {
 
-  fileprivate let topProgressString: String
-  fileprivate let botProgressString: String
-  fileprivate let topProgress: CGFloat
-  fileprivate let botProgress: CGFloat
-  fileprivate let userLevelString: String
+  private let topProgressString: String
+  private let botProgressString: String
+  private let topProgress: CGFloat
+  private let botProgress: CGFloat
+  private let userLevelString: String
 
   init(dashboard: DashboardInfo) {
     guard let topMax = dashboard.levelProgressionInfo.kanjiTotal,

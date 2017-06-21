@@ -16,7 +16,7 @@ class StrokeOrderViewController: UIViewController, StoryboardInstantiable {
         }
     }
 
-    fileprivate var kanji = [KanjiGraphicInfo]() {
+    private var kanji = [KanjiGraphicInfo]() {
         didSet {
             pageControl?.numberOfPages = kanji.count
             pageControl?.isHidden = kanji.count < 2

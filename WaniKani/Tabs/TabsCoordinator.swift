@@ -17,14 +17,14 @@ open class TabsCoordinator: Coordinator {
 
     weak var delegate: TabsCoordinatorDelegate?
 
-  fileprivate let applicationSettingsSuit: SettingsSuit
-  fileprivate let dashboardNavigationController = UINavigationController()
-  fileprivate let dashboardCoordinator: DashboardCoordinator
-  fileprivate let settingsNavigationController = UINavigationController()
-  fileprivate let settingsCoordinator: SettingsCoordinator
-  fileprivate let dataBrowserNavigationController = UINavigationController()
-  fileprivate let dataBrowserCoordinator: DataBrowserCoordinator
-  fileprivate let awardManager: AwardsManager
+  private let applicationSettingsSuit: SettingsSuit
+  private let dashboardNavigationController = UINavigationController()
+  private let dashboardCoordinator: DashboardCoordinator
+  private let settingsNavigationController = UINavigationController()
+  private let settingsCoordinator: SettingsCoordinator
+  private let dataBrowserNavigationController = UINavigationController()
+  private let dataBrowserCoordinator: DataBrowserCoordinator
+  private let awardManager: AwardsManager
 
   let presenter: UITabBarController
   let dataProvider: DataProvider

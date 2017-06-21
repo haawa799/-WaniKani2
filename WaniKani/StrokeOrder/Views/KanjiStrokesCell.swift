@@ -24,7 +24,7 @@ class KanjiStrokesCell: UICollectionViewCell, SingleReuseIdentifier {
         }
     }
 
-    fileprivate func drawKanji(kanji: KanjiGraphicInfo?) {
+    private func drawKanji(kanji: KanjiGraphicInfo?) {
         guard let kanji = kanji else { return }
         strokesView?.stopForeverAnimation()
         strokesView?.clean()

@@ -39,7 +39,7 @@ class BottomBarContainerViewController: UIViewController, StoryboardInstantiable
     }
   }
 
-  fileprivate func reloadToolBarItems(dataSource: BottomBarContainerDataSource) {
+  private func reloadToolBarItems(dataSource: BottomBarContainerDataSource) {
     var items = [UIBarButtonItem]()
     for index in 0..<dataSource.numberOfItems() {
       let item: UIBarButtonItem
@@ -84,7 +84,7 @@ extension BottomBarContainerViewController {
 // MARK: - Actions
 extension BottomBarContainerViewController {
 
-  func toolBarItemsAction(_ sender: UIBarButtonItem) {
+  @objc func toolBarItemsAction(_ sender: UIBarButtonItem) {
     let index = sender.tag
     delegate?.toolBarItemPressed(index: index)
   }
@@ -115,15 +115,15 @@ extension BottomBarContainerViewController {
     }
   }
 
-  func escapePressed(_ sender: UIKeyCommand) {
+  @objc func escapePressed(_ sender: UIKeyCommand) {
     // delegate?.leftButtonPressed()
   }
 
-  func leftArrowPressed(_ sender: UIKeyCommand) {
+  @objc func leftArrowPressed(_ sender: UIKeyCommand) {
     // delegate?.rightButtonPressed()
   }
 
-  func focusPressed(_ sender: UIKeyCommand) {
+  @objc func focusPressed(_ sender: UIKeyCommand) {
     delegate?.focusShortcutUsed()
   }
 }

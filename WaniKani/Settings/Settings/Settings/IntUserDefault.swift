@@ -12,7 +12,7 @@ struct IntUserDefault {
   let key: String
 
   var delegate: SettingsDelegate?
-  fileprivate var internalValue: AnyObject!
+  private var internalValue: AnyObject!
 
   var value: Int {
     didSet {

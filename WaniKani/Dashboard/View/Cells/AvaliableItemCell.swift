@@ -16,13 +16,13 @@ protocol DisclosureVisibilityData: ViewModel {
 
 class AvaliableItemCell: UICollectionViewCell, FlippableView, SingleReuseIdentifier, ViewModelSetupable {
 
-  fileprivate struct ConstraintConstant {
+  private struct ConstraintConstant {
     static let expanded: CGFloat = 40
     static let nonExpanded: CGFloat = 22
   }
 
-  @IBOutlet fileprivate weak var disclosureButton: UIButton!
-  @IBOutlet fileprivate weak var leftLabel: UILabel!
+  @IBOutlet private weak var disclosureButton: UIButton!
+  @IBOutlet private weak var leftLabel: UILabel!
   @IBOutlet weak var rightLabel: UILabel!
   @IBOutlet weak var rightLabelTrailingConstraint: NSLayoutConstraint!
 

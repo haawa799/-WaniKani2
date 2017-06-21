@@ -17,9 +17,9 @@ protocol DataBrowserViewControllerDelegate: class {
 
 class DataBrowserViewController: UIViewController, BluredBackground, StoryboardInstantiable {
 
-    fileprivate let layout: SearchLayout = SearchLayout()
+    private let layout: SearchLayout = SearchLayout()
 
-    fileprivate var listViewModel = ListViewModel(sections: []) {
+    private var listViewModel = ListViewModel(sections: []) {
         didSet {
             collectionView.reloadData()
         }
@@ -75,7 +75,7 @@ class DataBrowserViewController: UIViewController, BluredBackground, StoryboardI
         view.addGestureRecognizer(tapGesture)
     }
 
-    @objc fileprivate func tap() {
+    @objc private func tap() {
         searchBar.textField.resignFirstResponder()
     }
 

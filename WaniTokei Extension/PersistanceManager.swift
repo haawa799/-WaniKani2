@@ -80,10 +80,10 @@ class PersistanceManager {
       allDates.append(contentsOf: items)
     }
 
-    let allItems = allDates.enumerated().map { (index, date) -> RealmComplicationItem in
+    let allItems = allDates.enumerated().map { (__val: (Int, Date)) -> RealmComplicationItem in let (index, date) = __val
       let count = topTen.count
-      let index = index % count
-      let itemInfo = topTen[index]
+      let realIndex = index % count
+      let itemInfo = topTen[realIndex]
       return RealmComplicationItem.newItem(itemInfo: itemInfo, date: date)
     }
 

@@ -71,7 +71,7 @@ class KanjiDetailViewController: UIViewController, BluredBackground, StoryboardI
 
     @IBOutlet weak var mainStackView: UIStackView!
 
-    fileprivate var kanjiStrings = [String]() {
+    private var kanjiStrings = [String]() {
         didSet {
             updateStrokeOrderViewController()
         }
@@ -94,7 +94,7 @@ class KanjiDetailViewController: UIViewController, BluredBackground, StoryboardI
         }
     }
 
-    fileprivate func updateStrokeOrderViewController() {
+    private func updateStrokeOrderViewController() {
         strokeOrderViewController?.kanjiStrings = self.kanjiStrings
     }
 

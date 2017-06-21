@@ -44,19 +44,19 @@ public class GCHelper: NSObject, GKMatchmakerViewControllerDelegate, GKGameCente
     /// The match object provided by GameKit.
     public var match: GKMatch!
 
-    fileprivate weak var delegate: GCHelperDelegate?
-    fileprivate var invite: GKInvite!
-    fileprivate var invitedPlayer: GKPlayer!
-    fileprivate var playersDict = [String: AnyObject]()
-    fileprivate weak var presentingViewController: UIViewController!
+    private weak var delegate: GCHelperDelegate?
+    private var invite: GKInvite!
+    private var invitedPlayer: GKPlayer!
+    private var playersDict = [String: AnyObject]()
+    private weak var presentingViewController: UIViewController!
 
-    fileprivate var authenticated = false {
+    private var authenticated = false {
         didSet {
             debugPrint("Authentication changed: player\(authenticated ? " " : " not ")authenticated")
         }
     }
 
-    fileprivate var matchStarted = false
+    private var matchStarted = false
 
     /// The shared instance of GCHelper, allowing you to access the same instance across all uses of the library.
     public class var sharedInstance: GCHelper {
@@ -73,7 +73,7 @@ public class GCHelper: NSObject, GKMatchmakerViewControllerDelegate, GKGameCente
 
     // MARK: Private functions
 
-    @objc fileprivate func authenticationChanged() {
+    @objc private func authenticationChanged() {
         if GKLocalPlayer.localPlayer().isAuthenticated && !authenticated {
             authenticated = true
         } else {
@@ -81,7 +81,7 @@ public class GCHelper: NSObject, GKMatchmakerViewControllerDelegate, GKGameCente
         }
     }
 
-    fileprivate func lookupPlayers() {
+    private func lookupPlayers() {
         guard let playerIDs = match.players.map({ $0.playerID }) as? [String] else { return }
 
         GKPlayer.loadPlayers(forIdentifiers: playerIDs) { (players, error) in

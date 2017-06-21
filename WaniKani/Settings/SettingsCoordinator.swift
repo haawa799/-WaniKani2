@@ -21,7 +21,7 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
     let childrenCoordinators: [Coordinator]
     let suit: SettingsSuit
     let watchManager: WatchConnectivityManager
-    fileprivate let awardManager: AwardsManager
+    private let awardManager: AwardsManager
 
     init(presenter: UINavigationController, awardManager: AwardsManager, settingsSuit: SettingsSuit, watchManager: WatchConnectivityManager) {
         self.watchManager = watchManager

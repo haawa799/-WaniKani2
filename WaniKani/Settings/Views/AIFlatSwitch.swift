@@ -46,11 +46,11 @@ import UIKit
     }
   }
 
-  fileprivate var trailCircle: CAShapeLayer = CAShapeLayer()
-  fileprivate var circle: CAShapeLayer = CAShapeLayer()
-  fileprivate var checkmark: CAShapeLayer = CAShapeLayer()
-  fileprivate var checkmarkMidPoint: CGPoint = CGPoint.zero
-  fileprivate var selectedInternal: Bool = false
+  private var trailCircle: CAShapeLayer = CAShapeLayer()
+  private var circle: CAShapeLayer = CAShapeLayer()
+  private var checkmark: CAShapeLayer = CAShapeLayer()
+  private var checkmarkMidPoint: CGPoint = CGPoint.zero
+  private var selectedInternal: Bool = false
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -109,7 +109,7 @@ import UIKit
     }
   }
 
-  fileprivate func configure() {
+  private func configure() {
 
     self.backgroundColor = UIColor.clear
     configureShapeLayer(trailCircle)
@@ -122,12 +122,12 @@ import UIKit
     self.addTarget(self, action: #selector(AIFlatSwitch.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
   }
 
-  internal func onTouchUpInside(_ sender: AnyObject) {
+  @objc internal func onTouchUpInside(_ sender: AnyObject) {
     self.setSelected(!self.isSelected, animated: true)
     self.sendActions(for: UIControlEvents.valueChanged)
   }
 
-  fileprivate func configureShapeLayer(_ shapeLayer: CAShapeLayer) {
+  private func configureShapeLayer(_ shapeLayer: CAShapeLayer) {
     shapeLayer.lineJoin = kCALineJoinRound
     shapeLayer.lineCap = kCALineCapRound
     shapeLayer.lineWidth = self.lineWidth
@@ -149,7 +149,7 @@ import UIKit
     }
   }
 
-  fileprivate func resetValues(_ animated: Bool) {
+  private func resetValues(_ animated: Bool) {
     CATransaction.begin()
     CATransaction.setDisableActions(true)
     if (selectedInternal && animated) || (selectedInternal == false) && (animated == false) {
@@ -168,7 +168,7 @@ import UIKit
     CATransaction.commit()
   }
   // swiftlint:disable:next function_body_length
-  fileprivate func addAnimationsForSelected(_ selected: Bool) {
+  private func addAnimationsForSelected(_ selected: Bool) {
     let circleAnimationDuration = animationDuration * 0.5
 
     let checkmarkEndDuration = animationDuration * 0.8

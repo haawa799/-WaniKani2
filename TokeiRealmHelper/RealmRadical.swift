@@ -11,12 +11,12 @@ import RealmSwift
 import WaniModel
 
 public class RealmRadical: RealmReviewItem {
-  public dynamic var character: String?
-  public dynamic var meaning: String?
-  public dynamic var image: String?
-  public dynamic var level = 0
-  public dynamic var percentage: String?
-  public dynamic var userSpecific: RealmUserSpecific?
+  @objc public dynamic var character: String?
+  @objc public dynamic var meaning: String?
+  @objc public dynamic var image: String?
+  @objc public dynamic var level = 0
+  @objc public dynamic var percentage: String?
+  @objc public dynamic var userSpecific: RealmUserSpecific?
 
   public override var item: Item? {
     var radical = RadicalInfo(level: level)

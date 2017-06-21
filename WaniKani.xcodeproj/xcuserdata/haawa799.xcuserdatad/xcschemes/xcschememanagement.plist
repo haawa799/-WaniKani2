@@ -22,9 +22,14 @@
 		<key>WaniKaniUITests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>WaniTokei (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>WaniTokei Extension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -98,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>5D32BDD01EE6F0CA00ABE009</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D32BDDC1EE6F0CA00ABE009</key>
 		<dict>
 			<key>primary</key>
 			<true/>

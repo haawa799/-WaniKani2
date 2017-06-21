@@ -49,7 +49,7 @@ class KanjiPracticeViewController: UIViewController, StoryboardInstantiable {
     drawingView.clearCanvas()
   }
 
-  fileprivate func updateStrokeOrderViewController() {
+  private func updateStrokeOrderViewController() {
     strokeOrderViewController?.kanjiStrings = self.kanjiStrings
   }
 

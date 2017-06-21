@@ -19,9 +19,9 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
   // MARK: Outlets
   @IBOutlet weak var topView: UIView!
 
-  fileprivate weak var dashboardHeaderViewController: DashboardHeaderViewController?
+  private weak var dashboardHeaderViewController: DashboardHeaderViewController?
 
-  @IBOutlet fileprivate weak var collectionView: UICollectionView! {
+  @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
       collectionView?.alwaysBounceVertical = true
       collectionView?.dataSource = self
@@ -51,20 +51,15 @@ class DashboardViewController: SingleTabViewController, StoryboardInstantiable, 
   }
 
   // MARK: Private
-  fileprivate var collectionViewModel: ListViewModel?
-  fileprivate var isPulledDown = false
-  fileprivate var stratchyLayout: DashboardLayout? {
+  private var collectionViewModel: ListViewModel?
+  private var isPulledDown = false
+  private var stratchyLayout: DashboardLayout? {
     return collectionView.collectionViewLayout as? DashboardLayout
   }
 
   deinit {
     self.collectionView.dg_removePullToRefresh()
   }
-
-}
-
-// MARK: - SingleTabViewController
-extension DashboardViewController {
 
   override func didShrink() {
     dashboardHeaderViewController?.isVisible = false
@@ -155,7 +150,7 @@ extension DashboardViewController {
 // MARK: - Private functions
 extension DashboardViewController {
 
-  fileprivate func addPullToRefresh() {
+  private func addPullToRefresh() {
     let loadingView = DGElasticPullToRefreshLoadingViewCircle()
     loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
     collectionView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
@@ -168,7 +163,7 @@ extension DashboardViewController {
     collectionView.dg_setPullToRefreshBackgroundColor(UIColor.clear)
   }
 
-  fileprivate func reloadCollectionView(_ flipCells: Bool) {
+  private func reloadCollectionView(_ flipCells: Bool) {
     endLoadingIfNeeded()
     if flipCells {
       flipVisibleCells()
@@ -176,7 +171,7 @@ extension DashboardViewController {
     collectionView?.reloadData()
   }
 
-  fileprivate func flipVisibleCells() {
+  private func flipVisibleCells() {
     var delayFromFirst: Float = 0.0
     let deltaTime: Float = 0.1
     guard let cells = collectionView?.visibleCells else { return }
@@ -213,8 +208,8 @@ extension DashboardViewController {
     }
   }
 
-  func itemSelected(_ sender: UIKeyCommand) {
-    guard let index = Int(sender.input) else { return }
+  @objc func itemSelected(_ sender: UIKeyCommand) {
+    guard let index = Int(sender.input!) else { return }
     let indexPath = IndexPath(row: index - 1, section: 1)
     delegate?.didSelectCell(indexPath)
   }

@@ -10,8 +10,8 @@ import UIKit
 
 struct GameCenterCellViewModel: GameCenterCollectionViewCellDatasource {
 
-    fileprivate let _icon: UIImage?
-    fileprivate let titleString: String
+    private let _icon: UIImage?
+    private let titleString: String
 
     init(setting: Setting, icon: UIImage? = nil) {
         titleString = setting.description ?? ""

@@ -17,7 +17,7 @@ class KanjiStrokesCellLayout: UICollectionViewFlowLayout {
         }
     }
 
-    fileprivate var myItemSize: CGSize {
+    private var myItemSize: CGSize {
         guard let collectionView = collectionView else { return .zero }
         return collectionView.bounds.size
     }

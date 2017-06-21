@@ -16,7 +16,7 @@ protocol DoubleProgressBarProgressDataSource: ViewModel {
   var levelString: String { get }
 }
 
-fileprivate struct DoubleProgressBarDrawingData {
+private struct DoubleProgressBarDrawingData {
   let bezier: CAShapeLayer
   let strokeColor: UIColor
   let lineWidth: CGFloat
@@ -50,13 +50,13 @@ class DoubleProgressBar: UIControl {
   }
 
   // MARK: Private
-  fileprivate var topProgress: CGFloat = 0.0 {
+  private var topProgress: CGFloat = 0.0 {
     didSet {
       oldTopProgress = oldValue
       setNeedsDisplay()
     }
   }
-  fileprivate var botProgress: CGFloat = 0.0 {
+  private var botProgress: CGFloat = 0.0 {
     didSet {
       oldBotProgress = oldValue
       setNeedsDisplay()
@@ -64,24 +64,24 @@ class DoubleProgressBar: UIControl {
   }
 
   // Subviews
-  fileprivate var inCircleLabel: LabelWithAdaptiveTextHeight!
-  fileprivate var topLabel: LabelWithAdaptiveTextHeight!
-  fileprivate var botLabel: LabelWithAdaptiveTextHeight!
+  private var inCircleLabel: LabelWithAdaptiveTextHeight!
+  private var topLabel: LabelWithAdaptiveTextHeight!
+  private var botLabel: LabelWithAdaptiveTextHeight!
 
   // Colors
-  fileprivate struct DefaultColor {
+  private struct DefaultColor {
     static let defaultGrayColor = UIColor(red:0.7, green:0.7, blue:0.7, alpha:0.15)
     static let defaultTopColor = UIColor(red:0.92, green:0.12, blue:0.39, alpha:1)
     static let defaultBotColor = UIColor(red:0, green:0.64, blue:0.96, alpha:1)
   }
 
   // Drawing related
-  fileprivate var oldBotProgress: CGFloat = 0.0
-  fileprivate var oldTopProgress: CGFloat = 0.0
-  fileprivate var bottomPath: UIBezierPath!
-  fileprivate var topPath: UIBezierPath!
-  fileprivate var topLayer: CAShapeLayer?
-  fileprivate var botLayer: CAShapeLayer?
+  private var oldBotProgress: CGFloat = 0.0
+  private var oldTopProgress: CGFloat = 0.0
+  private var bottomPath: UIBezierPath!
+  private var topPath: UIBezierPath!
+  private var topLayer: CAShapeLayer?
+  private var botLayer: CAShapeLayer?
 
   // MARK: Initialization
   override init(frame: CGRect) {
@@ -148,7 +148,7 @@ extension DoubleProgressBar {
 // MARK: - Private
 extension DoubleProgressBar {
 
-  fileprivate func recalculatePathes() {
+  private func recalculatePathes() {
 
     self.insertSublayersIfNeeded()
     self.insertSubviewsIfNeeded()
@@ -181,7 +181,7 @@ extension DoubleProgressBar {
     }
   }
 
-  fileprivate func insertSubviewsIfNeeded() {
+  private func insertSubviewsIfNeeded() {
     if inCircleLabel == nil {
       inCircleLabel = LabelWithAdaptiveTextHeight(frame: CGRect.zero)
       inCircleLabel.heightKoefitient = 0.4
@@ -204,7 +204,7 @@ extension DoubleProgressBar {
     }
   }
 
-  fileprivate func insertSublayersIfNeeded() {
+  private func insertSublayersIfNeeded() {
     if topLayer == nil {
       topLayer = CAShapeLayer()
       layer.addSublayer(topLayer!)
@@ -215,7 +215,7 @@ extension DoubleProgressBar {
     }
   }
 
-  fileprivate func updateSubviewsFrames(_ margin: CGFloat, labelHeight: CGFloat, progresBarHeight: CGFloat) {
+  private func updateSubviewsFrames(_ margin: CGFloat, labelHeight: CGFloat, progresBarHeight: CGFloat) {
     let topLabelFrame = CGRect(x: margin, y: 0.5 * margin, width: 0.5 * bounds.width, height: labelHeight)
     topLabel.frame = topLabelFrame
     topLabel.textColor = textColor

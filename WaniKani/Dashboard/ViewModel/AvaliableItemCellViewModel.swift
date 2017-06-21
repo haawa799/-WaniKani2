@@ -10,11 +10,11 @@ import UIKit
 
 struct AvaliableItemCellViewModel: AvaliableItemCellDataSource {
 
-  fileprivate let numberOfReviewsForMaxPower = 300
-  fileprivate let rightLabelColor: UIColor
-  fileprivate let leftTitleString: String
-  fileprivate let rightTitleString: String
-  fileprivate let isDisclosureVisible: Bool
+  private let numberOfReviewsForMaxPower = 300
+  private let rightLabelColor: UIColor
+  private let leftTitleString: String
+  private let rightTitleString: String
+  private let isDisclosureVisible: Bool
 
   init(title: String, number: Int) {
     let numberOfReviews = number

@@ -10,9 +10,9 @@ import UIKit
 
 class KanjiPracticeCoordinator: Coordinator {
 
-  fileprivate let presenter: UINavigationController
-  fileprivate let kanji: [String]
-  fileprivate let kanjiPracticeViewController: KanjiPracticeViewController = KanjiPracticeViewController.instantiateViewController()
+  private let presenter: UINavigationController
+  private let kanji: [String]
+  private let kanjiPracticeViewController: KanjiPracticeViewController = KanjiPracticeViewController.instantiateViewController()
 
   init(presenter: UINavigationController, kanji: [String]) {
     presenter.isNavigationBarHidden = true

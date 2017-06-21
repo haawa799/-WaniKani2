@@ -11,7 +11,7 @@ import WaniModel
 
 struct SRSViewModel: SRSViewDataSource {
 
-  fileprivate let topTitleString: String
+  private let topTitleString: String
 
   init(srs: SRSLevelInfo) {
     topTitleString = "\(srs.total)"

@@ -14,8 +14,8 @@ protocol ReviewWebViewControllerDelegate: class {
 
 class ReviewWebViewController: UIViewController, StoryboardInstantiable {
 
-  fileprivate var settingsSuit: SettingsSuit?
-  fileprivate var lastSize = CGSize.zero
+  private var settingsSuit: SettingsSuit?
+  private var lastSize = CGSize.zero
 
   // Public API:
   convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, settingsSuit: SettingsSuit?) {
@@ -34,15 +34,15 @@ class ReviewWebViewController: UIViewController, StoryboardInstantiable {
     }
   }
 
-  fileprivate var type = WebSessionType.lesson
+  private var type = WebSessionType.lesson
 
-    fileprivate(set) var newScoreEarned = 0 {
+    private(set) var newScoreEarned = 0 {
         didSet {
             debugPrint("::: SCORE: \(newScoreEarned)")
         }
     }
-  fileprivate var oldOffset: CGFloat?
-  fileprivate var ignoreResizing = false
+  private var oldOffset: CGFloat?
+  private var ignoreResizing = false
 
   @IBOutlet weak var webView: UIWebView! {
     didSet {
@@ -66,11 +66,11 @@ class ReviewWebViewController: UIViewController, StoryboardInstantiable {
     NotificationCenter.default.addObserver(self, selector: #selector(foreground), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
   }
 
-  func foreground() {
+  @objc func foreground() {
     ignoreResizing = false
   }
 
-  func background() {
+  @objc func background() {
     ignoreResizing = true
   }
 }

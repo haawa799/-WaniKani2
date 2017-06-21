@@ -10,7 +10,7 @@ import UIKit
 
 // All names relates to screen size only
 // swiftlint:disable cyclomatic_complexity
-fileprivate enum ScreenLayout {
+private enum ScreenLayout {
   case iPhone7PlusPortrait
   case iPhone7PlusLandscape
   case iPhone7Portrait
@@ -30,8 +30,8 @@ fileprivate enum ScreenLayout {
 
 struct ScreenLayoutConfiguration {
 
-  fileprivate let size: CGSize
-  fileprivate let layout: ScreenLayout
+  private let size: CGSize
+  private let layout: ScreenLayout
 
   init?(size: CGSize) {
     self.size = size

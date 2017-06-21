@@ -32,7 +32,7 @@ class SettingsViewController: SingleTabViewController, StoryboardInstantiable, B
     }
   }
 
-  fileprivate var collectionViewModel: ListViewModel?
+  private var collectionViewModel: ListViewModel?
 
   var settingSuit: SettingsSuit? {
     didSet {
