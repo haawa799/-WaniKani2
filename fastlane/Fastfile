@@ -31,9 +31,7 @@ platform :ios do
 
   desc "Submit a new Beta Build to Apple TestFlight"
   lane :beta do
-    increment_build_number({
-      build_number: '8'
-    })
+    increment_build_number
     increment_version_number(
       version_number: '2.0.0'
     )

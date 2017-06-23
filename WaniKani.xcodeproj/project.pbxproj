@@ -73,6 +73,14 @@
 		433D3D691E3BA7C0001C631D /* StatusBarTweeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D3D681E3BA7C0001C631D /* StatusBarTweeks.swift */; };
 		43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43620A441D8C28FA00C1BA72 /* Assets.xcassets */; };
 		43AAD0981E5B229800149169 /* ResizingScriptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */; };
+		43AF02C21EFD2A0B005B1082 /* RageProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF02C11EFD2A0B005B1082 /* RageProducts.swift */; };
+		43AF02C41EFD2A21005B1082 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF02C31EFD2A21005B1082 /* MasterViewController.swift */; };
+		43AF02C61EFD2A36005B1082 /* MasterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF02C51EFD2A36005B1082 /* MasterViewController.storyboard */; };
+		43AF02C81EFD2BA5005B1082 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF02C71EFD2BA5005B1082 /* ProductCell.swift */; };
+		43B23CF81EFD10AB00ED4892 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B23CF71EFD10AB00ED4892 /* StoreKit.framework */; };
+		43B23CFB1EFD191D00ED4892 /* ShibaPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B23CFA1EFD191D00ED4892 /* ShibaPurchaseViewController.swift */; };
+		43B23CFD1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B23CFC1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard */; };
+		43B23CFF1EFD1BD900ED4892 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B23CFE1EFD1BD900ED4892 /* IAPHelper.swift */; };
 		43B354AD1E30FBC100DABAAB /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */; };
 		43B89E431D94140F0047380B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B89E421D94140F0047380B /* DateExtensions.swift */; };
 		43BA2B8A1E8AAEC60021BB20 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2B801E8AAEC60021BB20 /* Cely.framework */; };
@@ -317,6 +325,14 @@
 		43620A471D8C28FB00C1BA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43620A491D8C28FB00C1BA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43AAD0971E5B229800149169 /* ResizingScriptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingScriptUtils.swift; sourceTree = "<group>"; };
+		43AF02C11EFD2A0B005B1082 /* RageProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RageProducts.swift; sourceTree = "<group>"; };
+		43AF02C31EFD2A21005B1082 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		43AF02C51EFD2A36005B1082 /* MasterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MasterViewController.storyboard; sourceTree = "<group>"; };
+		43AF02C71EFD2BA5005B1082 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		43B23CF71EFD10AB00ED4892 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		43B23CFA1EFD191D00ED4892 /* ShibaPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShibaPurchaseViewController.swift; sourceTree = "<group>"; };
+		43B23CFC1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShibaPurchaseViewController.storyboard; sourceTree = "<group>"; };
+		43B23CFE1EFD1BD900ED4892 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		43B354AC1E30FBC100DABAAB /* TabsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		43B89E421D94140F0047380B /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		43BA2B801E8AAEC60021BB20 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
@@ -450,6 +466,7 @@
 				43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */,
 				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
 				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
+				43B23CF81EFD10AB00ED4892 /* StoreKit.framework in Frameworks */,
 				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
 				5D32BDF71EE6F10800ABE009 /* GameKit.framework in Frameworks */,
 			);
@@ -601,6 +618,7 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43B23CF71EFD10AB00ED4892 /* StoreKit.framework */,
 				43177C141EE7322D001716F1 /* Realm.framework */,
 				43177C151EE7322D001716F1 /* RealmSwift.framework */,
 				43177C161EE7322D001716F1 /* WaniModel.framework */,
@@ -674,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				5D32BDF81EE6F11200ABE009 /* WaniKani.entitlements */,
+				43B23CF91EFD190300ED4892 /* Purchase */,
 				5D9C1DAA1ECD830B00D42ABA /* Data browser */,
 				5DF2D8561ECC422300D209A1 /* KanjiPractice */,
 				5DABA1171EC3285000C25F85 /* StrokeOrder */,
@@ -692,6 +711,20 @@
 				43BE76061E3F3A870032950B /* Strings+Localization.swift */,
 			);
 			path = WaniKani;
+			sourceTree = "<group>";
+		};
+		43B23CF91EFD190300ED4892 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				43AF02C71EFD2BA5005B1082 /* ProductCell.swift */,
+				43AF02C31EFD2A21005B1082 /* MasterViewController.swift */,
+				43AF02C51EFD2A36005B1082 /* MasterViewController.storyboard */,
+				43AF02C11EFD2A0B005B1082 /* RageProducts.swift */,
+				43B23CFE1EFD1BD900ED4892 /* IAPHelper.swift */,
+				43B23CFA1EFD191D00ED4892 /* ShibaPurchaseViewController.swift */,
+				43B23CFC1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard */,
+			);
+			path = Purchase;
 			sourceTree = "<group>";
 		};
 		43B354AB1E30FBC100DABAAB /* Tabs */ = {
@@ -1051,6 +1084,9 @@
 							com.apple.GameCenter = {
 								enabled = 1;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 						};
 					};
 					43BE31581EEC3BE600C050F5 = {
@@ -1115,6 +1151,7 @@
 				433A42451EDCB1010077D965 /* DownloadingViewController.storyboard in Resources */,
 				5DABA1141EC326C100C25F85 /* ReviewWebViewController.xib in Resources */,
 				43D99C551D9919560071C26D /* ignore.js in Resources */,
+				43AF02C61EFD2A36005B1082 /* MasterViewController.storyboard in Resources */,
 				430876AE1D9021A200FE71FE /* DashboardViewController.storyboard in Resources */,
 				5DBA81871ED814DF0083B1C6 /* RadicalDetailViewController.storyboard in Resources */,
 				430876B31D9021A200FE71FE /* ReviewCell.xib in Resources */,
@@ -1138,6 +1175,7 @@
 				43D99C831D994D1B0071C26D /* BottomBarContainerViewController.storyboard in Resources */,
 				5D9C1DAE1ECD846E00D42ABA /* DataBrowserViewController.storyboard in Resources */,
 				430876B11D9021A200FE71FE /* AvaliableItemCell.xib in Resources */,
+				43B23CFD1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard in Resources */,
 				43D99C561D9919560071C26D /* reorder.js in Resources */,
 				43620A451D8C28FA00C1BA72 /* Assets.xcassets in Resources */,
 				43BE76031E3F39F30032950B /* Localizable.strings in Resources */,
@@ -1283,6 +1321,7 @@
 				430876B91D9021A200FE71FE /* SliceView.swift in Sources */,
 				43F4F3841D915AF200A9BB08 /* ProgressViewController.swift in Sources */,
 				5D9E855F1EDBEE9F00C33D8A /* AwardsManager.swift in Sources */,
+				43AF02C21EFD2A0B005B1082 /* RageProducts.swift in Sources */,
 				430876AD1D9021A200FE71FE /* DashboardCoordinator.swift in Sources */,
 				430876D11D9021B300FE71FE /* Array.swift in Sources */,
 				43D99C981D99563C0071C26D /* SideMenuHolderViewController.swift in Sources */,
@@ -1292,9 +1331,11 @@
 				43D99C681D99227F0071C26D /* SettingsScriptCell.swift in Sources */,
 				5DBA818C1ED8257B0083B1C6 /* PreviewSize.swift in Sources */,
 				430876BD1D9021A200FE71FE /* DashboardViewModel.swift in Sources */,
+				43B23CFB1EFD191D00ED4892 /* ShibaPurchaseViewController.swift in Sources */,
 				43D99C731D99340D0071C26D /* SettingsCoordinator.swift in Sources */,
 				430876B71D9021A200FE71FE /* DoubleProgressBar.swift in Sources */,
 				5DABA1151EC326C100C25F85 /* RightMenuViewController.swift in Sources */,
+				43AF02C41EFD2A21005B1082 /* MasterViewController.swift in Sources */,
 				43F4F37C1D91527900A9BB08 /* SRSViewController.swift in Sources */,
 				43F4F3801D91547F00A9BB08 /* SRSViewModel.swift in Sources */,
 				430876901D90216F00FE71FE /* ApplicationCoordinator.swift in Sources */,
@@ -1312,6 +1353,7 @@
 				5D56A5611EE8188600A96BBF /* Defaults.swift in Sources */,
 				430876B41D9021A200FE71FE /* DashboardLayout.swift in Sources */,
 				430876BE1D9021A200FE71FE /* DoubleProgressViewModel.swift in Sources */,
+				43AF02C81EFD2BA5005B1082 /* ProductCell.swift in Sources */,
 				430876D91D9021B300FE71FE /* ViewModel.swift in Sources */,
 				43D99C6E1D9923E70071C26D /* AIFlatSwitch.swift in Sources */,
 				5D93F02A1ECEF8B200687D03 /* DataBrowserViewController.swift in Sources */,
@@ -1326,6 +1368,7 @@
 				5D5ECC891ED5C4B500BF6D58 /* SearchItemsHeaderViewModel.swift in Sources */,
 				430876D61D9021B300FE71FE /* ScreenBackgound.swift in Sources */,
 				430876D01D9021B300FE71FE /* SingleTabViewController.swift in Sources */,
+				43B23CFF1EFD1BD900ED4892 /* IAPHelper.swift in Sources */,
 				43F4F37E1D9152A200A9BB08 /* SRSView.swift in Sources */,
 				430876B01D9021A200FE71FE /* AvaliableItemCell.swift in Sources */,
 				5D56A5681EE8475C00A96BBF /* WatchSyncViewController.swift in Sources */,
@@ -1436,6 +1479,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1486,6 +1530,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

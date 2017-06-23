@@ -46,6 +46,11 @@ class SettingsCoordinator: Coordinator, SettingsViewControllerDelegate {
         presenter.pushViewController(syncViewController, animated: true)
     }
 
+  func showPurchsesScreen() {
+    let purchaseViewController: MasterViewController = MasterViewController.instantiateViewController()
+    presenter.pushViewController(purchaseViewController, animated: true)
+  }
+
 }
 
 // SettingsViewControllerDelegate
@@ -53,7 +58,7 @@ extension SettingsCoordinator {
 
     func cellPressed(_ indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
-        case (3, 3): self.delegate?.logOutPressed()
+        case (3, 3): showPurchsesScreen()//self.delegate?.logOutPressed()
         case (3, 2): self.showWatchSyncScreen()
         case (3, 1): awardManager.showGameCenterViewController()
         default: break

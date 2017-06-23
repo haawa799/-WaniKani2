@@ -41,7 +41,7 @@ struct DashboardViewModel: ViewModel {
     let section1 = ListSection(header: header1Item, items: [item1_0, item1_1])
 
     // Section 2
-    let header2ViewModel = DashboardHeaderViewModel(title: Constants.firstHeaderTitle, color: ColorConstants.dashboardColor)
+    let header2ViewModel = DashboardHeaderViewModel(title: Constants.secondHeaderTitle, color: ColorConstants.dashboardColor)
     let header2Item = ListCellDataItem(viewModel: header2ViewModel, reuseIdentifier: DashboardHeader.nibName)
     let waitingString = dashboardInfo.studyQueueInfo.nextReviewDate?.waitingTime()?.string ?? ""
     let item2_0ViewModel = AvaliableItemCellViewModel(title: "Next review", disclosureTitle: waitingString, isDisclosureVisible: false)
