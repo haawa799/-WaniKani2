@@ -21,16 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     applicationCoordinator.start()
     return true
   }
-    @available(iOS 9.0, *)
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        completionHandler(handleShortcut(shortcutItem: shortcutItem))
-    }
 
-    @available(iOS 9.0, *)
-    private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
-        guard let shortcut = ShortcutIdentifier(string: shortcutItem.type) else { return false }
-        applicationCoordinator.handelShortCut(shortcut: shortcut)
-        return true
-    }
+  func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    applicationCoordinator.doBackgroundFetch(completionHandler: completionHandler)
+  }
+
+  @available(iOS 9.0, *)
+  func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+    completionHandler(handleShortcut(shortcutItem: shortcutItem))
+  }
+
+  @available(iOS 9.0, *)
+  private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
+    guard let shortcut = ShortcutIdentifier(string: shortcutItem.type) else { return false }
+    applicationCoordinator.handelShortCut(shortcut: shortcut)
+    return true
+  }
 
 }

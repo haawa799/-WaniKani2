@@ -23,6 +23,7 @@ class ApplicationCoordinator: NSObject, Coordinator {
   let window: UIWindow
   let rootViewController = ColorfullTabBarController()
   let awardManager: AwardsManager
+  private(set) var dataProvider: DataProvider?
 
   init(window: UIWindow) {
     self.window = window
@@ -30,10 +31,11 @@ class ApplicationCoordinator: NSObject, Coordinator {
     self.awardManager = AwardsManager(presenter: rootViewController)
   }
 
-    func presentTabs(apiKey: String, userName: String, password: String, persistance: Persistance) {
+  func presentTabs(apiKey: String, userName: String, password: String, persistance: Persistance) {
     window.rootViewController = rootViewController
     let dataProvider = DataProvider(apiKey: apiKey, persistance: persistance)
     dataProvider.delegate = self
+    self.dataProvider = dataProvider
     let tabsCoordinator = TabsCoordinator(dataProvider: dataProvider, awardManager: awardManager, presenter: rootViewController, persistance: persistance, apiKey: apiKey, userName: userName, pasword: password)
     tabsCoordinator.delegate = self
     tabsCoordinator.start()
@@ -54,13 +56,28 @@ class ApplicationCoordinator: NSObject, Coordinator {
   fileprivate func logout() {
     // Remove all cache
     if let oldCookies = HTTPCookieStorage.shared.cookies {
-        debugPrint(oldCookies)
-        for oldCookie in oldCookies {
-            HTTPCookieStorage.shared.deleteCookie(oldCookie)
-        }
+      debugPrint(oldCookies)
+      for oldCookie in oldCookies {
+        HTTPCookieStorage.shared.deleteCookie(oldCookie)
+      }
     }
     Defaults.nuke()
     waniLoginCoordinator.logOut()
+  }
+
+  func doBackgroundFetch(completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    guard let dataProvider = dataProvider else {
+      completionHandler(.failed)
+      return
+    }
+
+    dataProvider.fetchDashboard { (dashboard) in
+      guard dashboard != nil else {
+        completionHandler(.failed)
+        return
+      }
+      completionHandler(.newData)
+    }
   }
 
 }
@@ -70,10 +87,10 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
     if #available(iOS 10.0, *) {
       UNUserNotificationCenter.current().delegate = self
-//      UNUserNotificationCenter.current().requestAuthorization(
-//        options: [.alert, .sound, .badge],
-//        completionHandler: { (_, _) in
-//      })
+      //      UNUserNotificationCenter.current().requestAuthorization(
+      //        options: [.alert, .sound, .badge],
+      //        completionHandler: { (_, _) in
+      //      })
     }
     window.rootViewController = rootViewController
     waniLoginCoordinator.start(delegate: self, window: window)
@@ -134,7 +151,7 @@ extension ApplicationCoordinator: UNUserNotificationCenterDelegate {
 
 // MARK: - TabsCoordinatorDelegate
 extension ApplicationCoordinator: TabsCoordinatorDelegate {
-    func logOutPressed() {
-        displayLogoutPrompt()
-    }
+  func logOutPressed() {
+    displayLogoutPrompt()
+  }
 }

@@ -58,7 +58,7 @@ extension SettingsCoordinator {
 
     func cellPressed(_ indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
-        case (3, 3): showPurchsesScreen()//self.delegate?.logOutPressed()
+        case (3, 3): self.delegate?.logOutPressed() //showPurchsesScreen()//
         case (3, 2): self.showWatchSyncScreen()
         case (3, 1): awardManager.showGameCenterViewController()
         default: break

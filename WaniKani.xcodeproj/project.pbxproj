@@ -77,7 +77,6 @@
 		43AF02C41EFD2A21005B1082 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF02C31EFD2A21005B1082 /* MasterViewController.swift */; };
 		43AF02C61EFD2A36005B1082 /* MasterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF02C51EFD2A36005B1082 /* MasterViewController.storyboard */; };
 		43AF02C81EFD2BA5005B1082 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF02C71EFD2BA5005B1082 /* ProductCell.swift */; };
-		43B23CF81EFD10AB00ED4892 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B23CF71EFD10AB00ED4892 /* StoreKit.framework */; };
 		43B23CFB1EFD191D00ED4892 /* ShibaPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B23CFA1EFD191D00ED4892 /* ShibaPurchaseViewController.swift */; };
 		43B23CFD1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B23CFC1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard */; };
 		43B23CFF1EFD1BD900ED4892 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B23CFE1EFD1BD900ED4892 /* IAPHelper.swift */; };
@@ -329,7 +328,6 @@
 		43AF02C31EFD2A21005B1082 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		43AF02C51EFD2A36005B1082 /* MasterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MasterViewController.storyboard; sourceTree = "<group>"; };
 		43AF02C71EFD2BA5005B1082 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		43B23CF71EFD10AB00ED4892 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		43B23CFA1EFD191D00ED4892 /* ShibaPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShibaPurchaseViewController.swift; sourceTree = "<group>"; };
 		43B23CFC1EFD192500ED4892 /* ShibaPurchaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShibaPurchaseViewController.storyboard; sourceTree = "<group>"; };
 		43B23CFE1EFD1BD900ED4892 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
@@ -466,7 +464,6 @@
 				43BA2B901E8AAEC60021BB20 /* RESideMenuKit.framework in Frameworks */,
 				43BA2B911E8AAEC60021BB20 /* WaniKit.framework in Frameworks */,
 				43BA2B921E8AAEC60021BB20 /* WaniLoginKit.framework in Frameworks */,
-				43B23CF81EFD10AB00ED4892 /* StoreKit.framework in Frameworks */,
 				43BA2B931E8AAEC60021BB20 /* WaniModel.framework in Frameworks */,
 				5D32BDF71EE6F10800ABE009 /* GameKit.framework in Frameworks */,
 			);
@@ -618,7 +615,6 @@
 		430876DA1D902F1D00FE71FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43B23CF71EFD10AB00ED4892 /* StoreKit.framework */,
 				43177C141EE7322D001716F1 /* Realm.framework */,
 				43177C151EE7322D001716F1 /* RealmSwift.framework */,
 				43177C161EE7322D001716F1 /* WaniModel.framework */,
@@ -1085,7 +1081,7 @@
 								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1479,7 +1475,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1530,7 +1526,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
