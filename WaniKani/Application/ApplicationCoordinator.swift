@@ -87,10 +87,10 @@ extension ApplicationCoordinator: CelyWindowManagerDelegate {
   func start() {
     if #available(iOS 10.0, *) {
       UNUserNotificationCenter.current().delegate = self
-      //      UNUserNotificationCenter.current().requestAuthorization(
-      //        options: [.alert, .sound, .badge],
-      //        completionHandler: { (_, _) in
-      //      })
+      UNUserNotificationCenter.current().requestAuthorization(
+        options: [.alert, .sound, .badge],
+        completionHandler: { (_, _) in
+      })
     }
     window.rootViewController = rootViewController
     waniLoginCoordinator.start(delegate: self, window: window)
